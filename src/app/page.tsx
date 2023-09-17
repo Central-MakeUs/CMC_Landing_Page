@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
-import react from './react.jpeg'
 import css from './page.module.scss'
+import react from './react.jpeg'
 
 const Home = () => {
   return (
