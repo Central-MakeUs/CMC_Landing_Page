@@ -1,0 +1,15 @@
+@use '../utils/' as *;
+
+$break: rem(500px);
+
+@mixin mobile {
+  @media (max-width: #{$break}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$break}) {
+    @content;
+  }
+}
