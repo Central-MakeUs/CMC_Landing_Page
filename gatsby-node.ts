@@ -5,7 +5,7 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ act
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        styles: path.resolve(__dirname, 'src/styles'),
+        '@/styles': path.resolve(__dirname, 'src/styles'),
       },
     },
   })
