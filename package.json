@@ -28,16 +28,25 @@
     ]
   },
   "dependencies": {
+    "clsx": "^2.0.0",
     "gatsby": "^5.12.4",
+    "gatsby-plugin-image": "^3.12.0",
+    "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-sass": "^6.12.0",
+    "gatsby-plugin-sharp": "^5.12.0",
+    "gatsby-source-filesystem": "^5.12.0",
+    "gatsby-transformer-sharp": "^5.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.67.0"
+    "react-modal": "^3.16.1",
+    "sass": "^1.67.0",
+    "svg-react-loader": "^0.4.6"
   },
   "devDependencies": {
     "@types/node": "^20.3.3",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "@types/react-modal": "^3.16.1",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
     "eslint": "^8.49.0",

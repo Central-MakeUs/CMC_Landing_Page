@@ -10,7 +10,20 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   jsxRuntime: 'automatic',
-  plugins: ['gatsby-plugin-sass'],
+  plugins: [
+    'gatsby-plugin-sass',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /images/,
+        },
+      },
+    },
+  ],
 }
 
 export default config
