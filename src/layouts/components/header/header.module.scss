@@ -1,0 +1,21 @@
+@use '@/styles/abstracts' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(24, 22, 119, 0.2);
+  backdrop-filter: blur(18.5px);
+
+  @include mobile {
+    height: 48px;
+    padding-left: 28px;
+    padding-right: 25px;
+  }
+}
+
+.menu_button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
