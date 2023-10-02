@@ -1,9 +1,11 @@
 @use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  position: sticky;
   background-color: rgba(24, 22, 119, 0.2);
   backdrop-filter: blur(18.5px);
 
@@ -12,10 +14,78 @@
     padding-left: 28px;
     padding-right: 25px;
   }
-}
 
-.menu_button {
-  border: 0;
-  background-color: transparent;
-  cursor: pointer;
+  @include desktop {
+    gap: 33px;
+    height: 139px;
+    padding: 0px 70px;
+    padding-top: 34px;
+  }
+
+  .flexible_space {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    position: relative;
+
+    span {
+      display: block;
+      position: absolute;
+      width: 96%;
+      height: 1px;
+      background-color: #ffffff;
+      opacity: 0.7;
+    }
+
+    .star {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .nav {
+    @include mobile {
+      display: none;
+    }
+
+    @include desktop {
+      display: flex;
+      align-items: center;
+      gap: 33px;
+
+      a {
+        color: #615dff;
+        font-family: 'Pretendard';
+        font-size: rem(24px);
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      .active {
+        color: #ffffff;
+      }
+
+      .apply_button {
+        padding: 9px 43px;
+        border-radius: 27px;
+        background: #3c37ff;
+        color: #ffffff;
+        font-size: rem(18px);
+      }
+    }
+  }
+
+  .menu_button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include mobile {
+      display: block;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
 }

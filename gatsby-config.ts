@@ -20,6 +20,11 @@ const config: GatsbyConfig = {
       options: {
         rule: {
           include: /images/,
+          options: {
+            props: {
+              className: 'my-class',
+            },
+          },
         },
       },
     },

@@ -18,6 +18,7 @@ export const Modal = ({ isOpen, pathname }: ModalProps) => {
       <Link to="/project" className={clsx({ [css.active]: pathname === '/project' })}>
         Project
       </Link>
+      {/* TODO: URL 링크 변경 */}
       <a href="https://www.makeus.in/cmc" className={css.apply_button}>
         <span>지원하기</span>
       </a>
