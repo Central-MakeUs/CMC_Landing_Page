@@ -51,6 +51,6 @@
     "no-unused-expressions": "off",
     "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/no-explicit-any": "warn",
-    "no-restricted-exports": "off",
+    "no-restricted-exports": "off"
   }
 }
