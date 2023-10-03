@@ -16,9 +16,11 @@ export const Header = ({ pathname }: Props) => {
   const { isOpen, toggleModal } = useModal()
   return (
     <header className={css.header}>
-      <Link to="/">
-        <CMCLogo />
-      </Link>
+      <h1 className={css.heading_logo}>
+        <Link to="/">
+          <CMCLogo />
+        </Link>
+      </h1>
       <div className={css.flexible_space}>
         <span />
         <Star className={css.star} />
