@@ -1,0 +1,63 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #615DFF;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.076px;
+  border: 1px solid #615DFF;
+  border-radius: 100%;
+
+  @include mobile {
+    width: 200px;
+    height: 43px;
+    font-size: rem(16px);
+  }
+
+  @include desktop {
+    width: 275px;
+    height: 60px;
+    font-size: rem(24px);
+  }
+}
+
+.description {
+  text-align: center;
+  color: #ffffff;
+  white-space: pre-line;
+  letter-spacing: -0.076px;
+  font-weight: 600;
+
+  @include mobile {
+    margin-top: 40px;
+    font-size: rem(18px);
+    line-height: 144%;
+  }
+
+  @include desktop {
+    margin-top: 75px;
+    font-size: rem(45px);
+    line-height: 130.336%; /* 58.651px */
+  }
+}
+
+.background_container {
+  position: absolute;
+  top: -120px;
+  width: 100%;
+}
+
+.background {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 587px;
+  height: 100%;
+  max-height: 587px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: radial-gradient(46.86% 46.86% at 50% 53.14%, rgba(97, 93, 255, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%);
+}
