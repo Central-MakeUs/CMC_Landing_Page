@@ -5,6 +5,8 @@ export const useModal = () => {
   const toggleModal = useCallback(() => {
     setIsOpen((prev) => !prev)
   }, [])
-
-  return { isOpen, toggleModal }
+  const closeModal = useCallback(() => {
+    setIsOpen(false)
+  }, [])
+  return { isOpen, toggleModal, closeModal }
 }

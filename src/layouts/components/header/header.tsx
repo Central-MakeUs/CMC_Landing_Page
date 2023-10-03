@@ -13,7 +13,7 @@ type Props = {
 }
 
 export const Header = ({ pathname }: Props) => {
-  const { isOpen, toggleModal } = useModal()
+  const { isOpen, toggleModal, closeModal } = useModal()
   return (
     <header className={css.header}>
       <h1 className={css.heading_logo}>
@@ -35,6 +35,7 @@ export const Header = ({ pathname }: Props) => {
         <Link to="/project/" className={clsx({ [css.active]: pathname === '/project/' })}>
           Project
         </Link>
+        {/* TODO: URL 링크 수정 */}
         <a href="https://www.makeus.in/cmc" className={css.apply_button}>
           지원하기
         </a>
@@ -42,7 +43,7 @@ export const Header = ({ pathname }: Props) => {
       <button type="button" onClick={toggleModal} className={css.menu_button}>
         <Hamburger />
       </button>
-      <Modal isOpen={isOpen} pathname={pathname} />
+      <Modal isOpen={isOpen} pathname={pathname} closeModal={closeModal} />
     </header>
   )
 }
