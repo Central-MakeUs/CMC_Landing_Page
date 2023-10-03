@@ -10,9 +10,9 @@ export const SectionHeader = ({ title, description }: Props) => {
     <>
       <h2 className={css.heading}>{title}</h2>
       <p className={css.description}>{description}</p>
-      {/* <div className={css.background_container}> */}
-      {/*  <div className={css.background} /> */}
-      {/* </div> */}
+      <div className={css.background_container}>
+        <div className={css.background} />
+      </div>
     </>
   )
 }

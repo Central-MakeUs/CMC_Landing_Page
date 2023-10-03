@@ -31,6 +31,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <section className={css.identity}>
+        <SectionHeader title="cmc identity" description={'CMC는 도전을 즐기며,\n새로운 도전에 맞서는 사람들입니다'} />
+      </section>
     </main>
   )
 }

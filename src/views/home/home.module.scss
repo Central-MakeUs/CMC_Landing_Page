@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position:relative;
+  position: relative;
   width: 100%;
 
   .grid_container {
@@ -75,5 +75,21 @@
         }
       }
     }
+  }
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+  @include mobile {
+
+  }
+
+  @include desktop {
+    margin-top: 320px;
   }
 }
