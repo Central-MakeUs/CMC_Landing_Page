@@ -23,13 +23,16 @@ export const Header = ({ pathname }: Props) => {
       </h1>
       <div className={css.flexible_space}>
         <span />
-        <Star className={css.star} />
+        <div className={css.star_container}>
+          <span />
+          <Star />
+        </div>
       </div>
       <nav className={css.nav}>
         <Link to="/" className={clsx({ [css.active]: pathname === '/' })}>
           About
         </Link>
-        <Link to="/project" className={clsx({ [css.active]: pathname === '/project' })}>
+        <Link to="/project/" className={clsx({ [css.active]: pathname === '/project/' })}>
           Project
         </Link>
         <a href="https://www.makeus.in/cmc" className={css.apply_button}>

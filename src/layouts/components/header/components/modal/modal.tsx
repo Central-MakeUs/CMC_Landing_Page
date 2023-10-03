@@ -15,7 +15,7 @@ export const Modal = ({ isOpen, pathname }: ModalProps) => {
       <Link to="/" className={clsx({ [css.active]: pathname === '/' })}>
         About
       </Link>
-      <Link to="/project" className={clsx({ [css.active]: pathname === '/project' })}>
+      <Link to="/project/" className={clsx({ [css.active]: pathname === '/project/' })}>
         Project
       </Link>
       {/* TODO: URL 링크 변경 */}
