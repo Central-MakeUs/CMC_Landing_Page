@@ -1,0 +1,56 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.footer {
+  width: 100%;
+  background-color: #151437;
+
+  @include mobile {
+  }
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 173px;
+    padding-left: 61px;
+    padding-right: 70px;
+  }
+
+  .info {
+    .name {
+      @include mobile {
+      }
+
+      @include desktop {
+        display: block;
+        color: #6c68ff;
+        font-size: rem(25px);
+        font-weight: 700;
+        line-height: 147.336%;
+      }
+    }
+
+    .copyright {
+      @include mobile {
+      }
+
+      @include desktop {
+        color: rgba(108, 104, 255, 0.5);
+        font-size: rem(20px);
+        font-weight: 400;
+        line-height: 147.336%;
+      }
+    }
+  }
+
+  .contact {
+    @include mobile {
+    }
+
+    @include desktop {
+      display: flex;
+      gap: 26px;
+    }
+  }
+}
