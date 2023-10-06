@@ -6,6 +6,8 @@
   align-items: center;
   justify-content: space-between;
   position: sticky;
+  top: 0;
+  z-index: 1;
   background-color: rgba(24, 22, 119, 0.2);
   backdrop-filter: blur(18.5px);
 
