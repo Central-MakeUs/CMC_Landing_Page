@@ -5,11 +5,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #615DFF;
+  color: #615dff;
   font-weight: 600;
   line-height: normal;
   letter-spacing: -0.076px;
-  border: 1px solid #615DFF;
+  border: 1px solid #615dff;
   border-radius: 100%;
   text-transform: uppercase;
 
@@ -57,7 +57,7 @@
   }
 
   @include desktop {
-    top: 50px;
+    top: 40px;
     width: 300px;
     height: 300px;
   }
@@ -72,5 +72,5 @@
   max-height: 587px;
   aspect-ratio: 1 / 1;
   border-radius: 100%;
-  background: radial-gradient(46.86% 46.86% at 50% 53.14%, rgba(97, 93, 255, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%);
+  background: radial-gradient(46.86% 46.86% at 50% 53.14%, rgba(97, 93, 255, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
 }

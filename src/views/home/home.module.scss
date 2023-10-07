@@ -8,6 +8,14 @@
   position: relative;
   width: 100%;
 
+  @include mobile {
+    margin-top: 200px;
+  }
+
+  @include desktop {
+    margin-top: 300px;
+  }
+
   .grid_container {
     display: grid;
     justify-content: center;
@@ -25,12 +33,10 @@
     @include desktop {
       grid-template-columns: repeat(auto-fill, 280px);
       gap: 60px;
-      height: 153px;
+      min-height: 153px;
       margin-top: 110px;
       padding: 0 65px;
     }
-
-
 
     div {
       display: flex;
@@ -58,7 +64,7 @@
 
         &:nth-child(2) {
           display: block;
-          color: #615DFF;
+          color: #615dff;
           text-align: center;
           font-weight: 700;
           line-height: normal;
@@ -86,7 +92,7 @@
   width: 100%;
 
   @include mobile {
-
+    margin-top: 180px;
   }
 
   @include desktop {
