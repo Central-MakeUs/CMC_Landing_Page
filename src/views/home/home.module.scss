@@ -98,4 +98,77 @@
   @include desktop {
     margin-top: 320px;
   }
+
+  .people {
+    display: flex;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 25px;
+      margin-top: 60px;
+      padding: 0px 28px;
+    }
+
+    @include desktop {
+      gap: 29px;
+      margin-top: 112px;
+      padding: 0px 132px;
+    }
+
+    figure {
+      position: relative;
+
+      .image {
+        @include mobile {
+          aspect-ratio: 1.96 / 1;
+        }
+
+        @include desktop {
+          aspect-ratio: 1.21 / 1;
+        }
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, #000 58.66%);
+        z-index: 1;
+        transition: backdrop-filter 0.3s ease-in-out;
+
+        &:hover {
+          backdrop-filter: blur(2.5px);
+        }
+      }
+
+      figcaption {
+        position: absolute;
+        color: #fff;
+        font-weight: 700;
+        line-height: 130.336%;
+        letter-spacing: -0.04px;
+        z-index: 1;
+        pointer-events: none;
+
+        @include mobile {
+          top: 24px;
+          left: 24px;
+          font-size: rem(20px);
+        }
+
+        @include desktop {
+          top: 3vw;
+          left: 3vw;
+          font-size: 2.8vw;
+        }
+      }
+
+      p {
+        opacity: 0;
+      }
+    }
+  }
 }
