@@ -84,9 +84,9 @@
         }
 
         @include desktop {
-          top: 3vw;
-          left: 3vw;
-          font-size: 2.8vw;
+          top: 44px;
+          left: 44px;
+          font-size: rem(40px);
         }
       }
 
