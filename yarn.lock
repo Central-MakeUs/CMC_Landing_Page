@@ -5113,6 +5113,7 @@ __metadata:
     eslint-plugin-simple-import-sort: ^10.0.0
     gatsby: ^5.12.4
     gatsby-plugin-image: ^3.12.0
+    gatsby-plugin-manifest: ^5.12.0
     gatsby-plugin-react-svg: ^3.3.0
     gatsby-plugin-sass: ^6.12.0
     gatsby-plugin-sharp: ^5.12.0
@@ -7811,6 +7812,21 @@ __metadata:
     gatsby-source-filesystem:
       optional: true
   checksum: cdc8b2b2ef2a216e09e0607c96c1020ba27e60bcfa887d54cff623dc74677b86e1eb52259b4115681c15d84e4cec43d4cbdfcf0751dd6f7495f461e1af046134
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-manifest@npm:^5.12.0":
+  version: 5.12.0
+  resolution: "gatsby-plugin-manifest@npm:5.12.0"
+  dependencies:
+    "@babel/runtime": ^7.20.13
+    gatsby-core-utils: ^4.12.0
+    gatsby-plugin-utils: ^4.12.0
+    semver: ^7.5.3
+    sharp: ^0.32.1
+  peerDependencies:
+    gatsby: ^5.0.0-next
+  checksum: 6c8459995bde0b33cb8ea8473990d95be968ef37d931eb5e2840cbbd6258dbb57da4e93f9057982c0620b1fa159c131033c792efddafbd801b09c610aa0b6953
   languageName: node
   linkType: hard
 
