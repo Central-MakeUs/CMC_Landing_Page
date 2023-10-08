@@ -11,12 +11,10 @@
     "lint:pt": "prettier --write \"${*}**/*.{ts,tsx,json}\"",
     "lint:es": "eslint --ext .ts,.tsx,.js --fix .",
     "lint": "yarn lint:pt && yarn lint:es",
-    "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "deploy:gh-domain": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "deploy": "gatsby clean && gatsby build && gh-pages -d public",
     "typecheck": "tsc --noEmit",
     "prepare": "husky install"
   },
