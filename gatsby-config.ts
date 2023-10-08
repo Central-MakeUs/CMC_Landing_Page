@@ -3,8 +3,9 @@ import type { GatsbyConfig } from 'gatsby'
 const config: GatsbyConfig = {
   pathPrefix: '/CMC_Landing_Page',
   siteMetadata: {
-    title: `CMC`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: 'CMC',
+    description: '우리만의 룰을 세워 세상을 바꾸는 조직, CMC',
+    siteUrl: 'https://central.makeus.in',
   },
   graphqlTypegen: true,
   jsxRuntime: 'automatic',
@@ -30,6 +31,13 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         icon: 'src/images/favicon.png',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
       },
     },
   ],
