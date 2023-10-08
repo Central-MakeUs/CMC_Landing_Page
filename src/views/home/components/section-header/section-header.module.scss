@@ -51,9 +51,9 @@
   z-index: -1;
 
   @include mobile {
-    top: 0;
-    width: 200px;
-    height: 200px;
+    top: 40px;
+    width: 150px;
+    height: 150px;
   }
 
   @include desktop {
