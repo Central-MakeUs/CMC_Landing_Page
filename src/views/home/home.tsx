@@ -1,4 +1,7 @@
-import { ChallengerSection, IdentitySection, IntroSection } from './components'
+import { FloatingButton } from '@/components'
+
+import { ChallengerSection, FeaturesSection, IdentitySection, IntroSection } from './components'
+import * as css from './home.module.scss'
 
 const HomePage = () => {
   return (
@@ -6,6 +9,9 @@ const HomePage = () => {
       <IntroSection />
       <IdentitySection />
       <ChallengerSection />
+      <FeaturesSection />
+      <FloatingButton />
+      <div className={css.space} />
     </main>
   )
 }

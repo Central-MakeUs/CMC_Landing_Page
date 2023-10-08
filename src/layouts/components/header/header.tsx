@@ -1,12 +1,13 @@
 import clsx from 'clsx'
 import { Link } from 'gatsby'
 
+import Star from '@/images/star.svg'
+
 import { Modal } from './components'
 import * as css from './header.module.scss'
 import { useModal } from './hooks'
 import CMCLogo from './images/cmc-logo.svg'
 import Hamburger from './images/hamburger.svg'
-import Star from './images/star.svg'
 
 type Props = {
   pathname: string

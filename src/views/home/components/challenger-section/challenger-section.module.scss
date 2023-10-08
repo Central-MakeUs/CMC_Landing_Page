@@ -100,7 +100,7 @@
         display: grid;
         row-gap: 56px;
         column-gap: 60px;
-        grid-template-columns: repeat(auto-fill, 620px);
+        grid-template-columns: repeat(auto-fill, minmax(auto, 620px));
         justify-content: center;
         width: 100%;
       }
@@ -110,7 +110,6 @@
         flex-direction: column;
         justify-content: space-between;
         max-width: 622px;
-        min-width: 622px;
         min-height: 272px;
         padding: 60px;
         padding-bottom: 50px;

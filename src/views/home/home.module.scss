@@ -1,0 +1,11 @@
+@use '@/styles/abstracts' as *;
+
+.space {
+  @include mobile {
+    height: 45px;
+  }
+
+  @include desktop {
+    height: 250px;
+  }
+}

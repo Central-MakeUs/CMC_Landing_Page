@@ -1,0 +1,165 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.features {
+  @include mobile {
+    margin-top: 174px;
+  }
+
+  @include desktop {
+    margin-top: 376px;
+  }
+
+  .grid_container {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+    margin-top: 40px;
+
+    @include mobile {
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(5, auto);
+      padding: 0 28px;
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(5, auto);
+      padding: 0 140px;
+    }
+
+    .experience {
+      @include mobile {
+        max-width: 145px;
+      }
+
+      @include desktop {
+        padding-top: 17px;
+      }
+
+      h3 {
+        color: #6c68ff;
+        font-weight: 700;
+
+        @include mobile {
+          font-size: rem(18px);
+          line-height: 28px;
+        }
+
+        @include desktop {
+          font-size: rem(34px);
+          line-height: 1;
+        }
+      }
+
+      p {
+        color: #ffffff;
+        font-weight: 500;
+
+        @include mobile {
+          margin-top: 10px;
+          font-size: rem(12px);
+          line-height: 20px;
+        }
+
+        @include desktop {
+          margin-top: 32px;
+          font-size: rem(21px);
+          line-height: 32px;
+          letter-spacing: -0.076px;
+        }
+      }
+    }
+
+    .mobile_vertical_divider {
+      @include mobile {
+        display: block;
+        width: 1px;
+        min-height: 175px;
+        height: 90%;
+        margin: 0 17px;
+        background-color: #7874ff;
+      }
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .mobile_horizontal_divider {
+      @include mobile {
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin: 20px 0;
+        background-color: #7874ff;
+      }
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .mobile_empty_space {
+      @include mobile {
+        display: block;
+      }
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .pc_vertical_divider {
+      @include mobile {
+        display: none;
+      }
+
+      @include desktop {
+        display: block;
+        width: 1px;
+        height: 272px;
+        margin: 0 30px;
+        background-color: #7874ff;
+      }
+    }
+
+    .pc_horizontal_divider {
+      @include mobile {
+        display: none;
+      }
+
+      @include desktop {
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin: 30px 0;
+        background-color: #7874ff;
+      }
+    }
+
+    .pc_empty_space {
+      @include mobile {
+        display: none;
+      }
+
+      @include desktop {
+        display: block;
+      }
+    }
+
+    .pc_horizontal_space {
+      @include mobile {
+        display: none;
+      }
+
+      @include desktop {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .end {
+      justify-self: flex-end;
+    }
+  }
+}

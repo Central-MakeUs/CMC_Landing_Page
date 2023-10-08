@@ -13,7 +13,11 @@ export const ChallengerSection = () => {
       <Section.Header title="cmc challenger" description={'CMC는 기획자 디자이너 개발자가\n함께 모여 성장합니다'} />
       <div className={css.role}>
         <nav>
-          <button type="button" className={clsx({ [css.active_button]: currentTab === Tab.PLAN })}>
+          <button
+            type="button"
+            onClick={() => setCurrentTab(Tab.PLAN)}
+            className={clsx({ [css.active_button]: currentTab === Tab.PLAN })}
+          >
             Plan
           </button>
           <button
