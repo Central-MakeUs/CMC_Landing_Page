@@ -4,7 +4,7 @@ const config: GatsbyConfig = {
   pathPrefix: '/CMC_Landing_Page',
   siteMetadata: {
     title: `CMC`,
-    siteUrl: `https://central.makeus.in/ `,
+    siteUrl: `https://www.yourdomain.tld`,
   },
   graphqlTypegen: true,
   jsxRuntime: 'automatic',
