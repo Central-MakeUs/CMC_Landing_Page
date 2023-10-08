@@ -10,11 +10,10 @@ export const Footer = () => {
         <span className={css.copyright}>Copyrightⓒ 2023 All rights reserved by MakeUs Challenge</span>
       </div>
       <div className={css.contact}>
-        {/* TODO: 제대로 된 링크 넣기 */}
-        <a href="/">
+        <a href="https://www.instagram.com/central_makeus_challenge/">
           <Instagram className={css.icon} />
         </a>
-        <a href="/">
+        <a href="http://pf.kakao.com/_xcwDJT">
           <KakaoTalk className={css.icon} />
         </a>
       </div>
