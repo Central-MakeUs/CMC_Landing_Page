@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcmc_landing_page=self.webpackChunkcmc_landing_page||[]).push([[534],{8225:function(n,e,c){c.r(e),c.d(e,{Head:function(){return i},default:function(){return a}});var t=c(1874);var a=()=>(0,t.jsx)("div",{children:"프로젝트"});const i=()=>(0,t.jsx)("title",{children:"CMC"})}}]);
+//# sourceMappingURL=component---src-pages-project-tsx-9cbc10189457827b1e3b.js.map
