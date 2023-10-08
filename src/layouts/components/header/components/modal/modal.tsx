@@ -1,5 +1,5 @@
 import { clsx } from 'clsx'
-import { Link } from 'gatsby'
+import { Link, withPrefix } from 'gatsby'
 import ReactModal from 'react-modal'
 
 import * as css from './modal.module.scss'
@@ -13,10 +13,14 @@ type ModalProps = {
 export const Modal = ({ isOpen, pathname, closeModal }: ModalProps) => {
   return (
     <ReactModal isOpen={isOpen} className={css.modal} overlayClassName={css.overlay}>
-      <Link to="/" className={clsx({ [css.active]: pathname === '/' })} onClick={closeModal}>
+      <Link to="/" className={clsx({ [css.active]: pathname === withPrefix('/') })} onClick={closeModal}>
         About
       </Link>
-      <Link to="/project/" className={clsx({ [css.active]: pathname === '/project/' })} onClick={closeModal}>
+      <Link
+        to="/project/"
+        className={clsx({ [css.active]: pathname === withPrefix('/project/') })}
+        onClick={closeModal}
+      >
         Project
       </Link>
       {/* TODO: URL 링크 변경 */}

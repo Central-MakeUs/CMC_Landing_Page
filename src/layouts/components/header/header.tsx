@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { Link } from 'gatsby'
+import { Link, withPrefix } from 'gatsby'
 
 import Star from '@/images/star.svg'
 
@@ -30,10 +30,10 @@ export const Header = ({ pathname }: Props) => {
         </div>
       </div>
       <nav className={css.nav}>
-        <Link to="/" className={clsx({ [css.active]: pathname === '/' })}>
+        <Link to="/" className={clsx({ [css.active]: pathname === withPrefix('/') })}>
           About
         </Link>
-        <Link to="/project/" className={clsx({ [css.active]: pathname === '/project/' })}>
+        <Link to="/project/" className={clsx({ [css.active]: pathname === withPrefix('/project/') })}>
           Project
         </Link>
         {/* TODO: URL 링크 수정 */}

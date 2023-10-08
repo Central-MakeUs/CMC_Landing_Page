@@ -1,9 +1,10 @@
 import type { GatsbyConfig } from 'gatsby'
 
 const config: GatsbyConfig = {
+  pathPrefix: '/CMC_Landing_Page',
   siteMetadata: {
     title: `CMC`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://central.makeus.in/ `,
   },
   graphqlTypegen: true,
   jsxRuntime: 'automatic',
