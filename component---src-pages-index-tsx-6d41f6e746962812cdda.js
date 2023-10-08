@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkcmc_landing_page=self.webpackChunkcmc_landing_page||[]).push([[691],{3335:function(n,e,c){c.r(e),c.d(e,{Head:function(){return i}});var a=c(1874);e.default=()=>(0,a.jsx)("main",{children:"홈"});const i=()=>(0,a.jsx)("title",{children:"CMC"})}}]);
-//# sourceMappingURL=component---src-pages-index-tsx-6d41f6e746962812cdda.js.map
