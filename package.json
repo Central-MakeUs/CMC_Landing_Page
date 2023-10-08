@@ -14,7 +14,7 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
-    "deploy:gh-domain": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy:gh-domain": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
