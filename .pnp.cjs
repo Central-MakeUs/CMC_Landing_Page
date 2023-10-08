@@ -15322,16 +15322,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["postcss", [\
-        ["npm:7.0.36", {\
-          "packageLocation": "./.yarn/cache/postcss-npm-7.0.36-de66d123d0-4cfc0989b9.zip/node_modules/postcss/",\
-          "packageDependencies": [\
-            ["postcss", "npm:7.0.36"],\
-            ["chalk", "npm:2.4.2"],\
-            ["source-map", "npm:0.6.1"],\
-            ["supports-color", "npm:6.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:8.4.31", {\
           "packageLocation": "./.yarn/cache/postcss-npm-8.4.31-385051a82b-1d8611341b.zip/node_modules/postcss/",\
           "packageDependencies": [\
@@ -17053,7 +17043,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["convert-source-map", "npm:1.7.0"],\
             ["es6-iterator", "npm:2.0.3"],\
             ["loader-utils", "npm:1.4.2"],\
-            ["postcss", "npm:7.0.36"],\
+            ["postcss", "npm:8.4.31"],\
             ["rework", "npm:1.0.1"],\
             ["rework-visit", "npm:1.0.0"],\
             ["source-map", "npm:0.6.1"]\
@@ -18265,14 +18255,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/supports-color-npm-5.5.0-183ac537bc-95f6f4ba5a.zip/node_modules/supports-color/",\
           "packageDependencies": [\
             ["supports-color", "npm:5.5.0"],\
-            ["has-flag", "npm:3.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:6.1.0", {\
-          "packageLocation": "./.yarn/cache/supports-color-npm-6.1.0-7d19cd7f55-74358f9535.zip/node_modules/supports-color/",\
-          "packageDependencies": [\
-            ["supports-color", "npm:6.1.0"],\
             ["has-flag", "npm:3.0.0"]\
           ],\
           "linkType": "HARD"\
