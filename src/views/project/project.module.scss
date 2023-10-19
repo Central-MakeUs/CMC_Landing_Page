@@ -1,0 +1,116 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.main {
+  @include mobile {
+    padding: 0 28px;
+  }
+
+  @include desktop {
+    padding: 0 70px;
+  }
+}
+
+.background_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+  @include mobile {
+    margin-top: 72px;
+  }
+
+  @include desktop {
+    margin-top: 190px;
+  }
+
+  h2 {
+    color: #ffffff;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130.336%;
+    letter-spacing: -0.076px;
+
+    @include mobile {
+      font-size: rem(28px);
+    }
+
+    @include desktop {
+      font-size: rem(50px);
+    }
+  }
+
+  .background_container {
+    position: absolute;
+    z-index: -1;
+
+    @include mobile {
+      top: -90px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @include desktop {
+      top: -70px;
+      width: 200px;
+      height: 200px;
+    }
+
+    .background {
+      position: absolute;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 587px;
+      height: 100%;
+      max-height: 587px;
+      aspect-ratio: 1 / 1;
+      border-radius: 100%;
+      background: radial-gradient(46.86% 46.86% at 50% 53.14%, rgba(97, 93, 255, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  color: #32307b;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130.336%;
+  letter-spacing: -0.076px;
+
+  @include mobile {
+    gap: 25px;
+    margin-top: 70px;
+    font-size: rem(20px);
+  }
+
+  @include desktop {
+    gap: 55px;
+    margin-top: 100px;
+    font-size: rem(35px);
+  }
+
+  button {
+    border: 0;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .active {
+    color: #615dff;
+  }
+}
+
+.grid_container {
+  @include mobile {
+    margin-top: 28px;
+  }
+
+  @include desktop {
+    margin-top: 65px;
+  }
+}
