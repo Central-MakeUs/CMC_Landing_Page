@@ -5118,6 +5118,7 @@ __metadata:
     gatsby-plugin-sass: ^6.12.0
     gatsby-plugin-sharp: ^5.12.0
     gatsby-source-filesystem: ^5.12.0
+    gatsby-transformer-json: ^5.12.0
     gatsby-transformer-sharp: ^5.12.0
     gh-pages: ^6.0.0
     husky: ^8.0.0
@@ -8006,6 +8007,18 @@ __metadata:
     lodash: ^4.17.21
     node-fetch: ^2.6.11
   checksum: fe09ae76fbcf25face16531af6c037841824bdc9fd03e9cc7320a653077f5664b1623353d4eb74ec512c23368ccb402391c2ee08509c66c2a03019735a67951d
+  languageName: node
+  linkType: hard
+
+"gatsby-transformer-json@npm:^5.12.0":
+  version: 5.12.0
+  resolution: "gatsby-transformer-json@npm:5.12.0"
+  dependencies:
+    "@babel/runtime": ^7.20.13
+    bluebird: ^3.7.2
+  peerDependencies:
+    gatsby: ^5.0.0-next
+  checksum: 4a47db7e751eb125b73e7559dc69f0af4af94b98bbfed2fa0430f6ce845c22679ed7635c0fcd3a7a910ec185f1654ac673242660434512d827213db3b54507ed
   languageName: node
   linkType: hard
 
