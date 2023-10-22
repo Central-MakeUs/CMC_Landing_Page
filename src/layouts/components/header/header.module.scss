@@ -25,6 +25,18 @@
 
   .heading_logo {
     flex-shrink: 0;
+
+    .logo {
+      display: block;
+
+      @include mobile {
+        width: 30px;
+      }
+
+      @include desktop {
+        width: 46px;
+      }
+    }
   }
 
   .flexible_space {
