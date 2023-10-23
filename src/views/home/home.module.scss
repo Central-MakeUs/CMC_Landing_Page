@@ -9,3 +9,13 @@
     height: 250px;
   }
 }
+
+.image_container {
+  @include mobile {
+    padding: 0px 28px;
+  }
+
+  @include desktop {
+    padding: 0px 70px;
+  }
+}

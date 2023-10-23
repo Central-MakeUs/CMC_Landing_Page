@@ -1,4 +1,5 @@
 import type { HeadProps } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import { FloatingButton, Seo } from '@/components'
 
@@ -8,6 +9,9 @@ import * as css from './home.module.scss'
 const HomePage = () => {
   return (
     <main>
+      <section className={css.image_container}>
+        <StaticImage src="./images/main.png" alt="CMC" />
+      </section>
       <IntroSection />
       <IdentitySection />
       <ChallengerSection />
