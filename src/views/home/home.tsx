@@ -5,13 +5,18 @@ import { FloatingButton, Seo } from '@/components'
 
 import { ChallengerSection, FeaturesSection, IdentitySection, IntroSection } from './components'
 import * as css from './home.module.scss'
+import BottomArrow from './images/bottom-arrow.svg'
 
 const HomePage = () => {
   return (
     <main>
       <section className={css.image_container}>
-        <StaticImage src="./images/main.png" alt="CMC" />
+        <StaticImage src="./images/desktop-main.png" alt="CMC" className={css.desktop_main} />
+        <StaticImage src="./images/mobile-main.png" alt="CMC" className={css.mobile_main} />
       </section>
+      <div className={css.mobile_button}>
+        <BottomArrow />
+      </div>
       <IntroSection />
       <IdentitySection />
       <ChallengerSection />

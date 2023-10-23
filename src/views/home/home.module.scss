@@ -12,10 +12,42 @@
 
 .image_container {
   @include mobile {
-    padding: 0px 28px;
   }
 
   @include desktop {
     padding: 0px 70px;
+  }
+
+  .desktop_main {
+    @include desktop {
+      display: block;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .mobile_main {
+    @include desktop {
+      display: none;
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+}
+
+.mobile_button {
+  @include mobile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  @include desktop {
+    display: none;
   }
 }
