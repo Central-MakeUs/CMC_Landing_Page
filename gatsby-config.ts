@@ -40,6 +40,20 @@ const config: GatsbyConfig = {
         path: './src/images/',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'logo-images',
+        path: './src/data/logo',
+      },
+    },
+    'gatsby-transformer-json',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './src/data/',
+      },
+    },
   ],
 }
 

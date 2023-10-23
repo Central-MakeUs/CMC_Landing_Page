@@ -19,12 +19,24 @@
 
   @include desktop {
     gap: 33px;
-    height: 139px;
-    padding: 34px 70px 0px;
+    height: 110px;
+    padding: 0 70px;
   }
 
   .heading_logo {
     flex-shrink: 0;
+
+    .logo {
+      display: block;
+
+      @include mobile {
+        width: 30px;
+      }
+
+      @include desktop {
+        width: 46px;
+      }
+    }
   }
 
   .flexible_space {

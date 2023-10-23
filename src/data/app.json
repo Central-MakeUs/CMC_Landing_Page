@@ -1,0 +1,202 @@
+[
+  {
+    "name": "밥플레이스",
+    "year": "10",
+    "description": "밥 미션을 수행하고, 포인트를 적립하라!",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/밥플레이스/id1634665858",
+      "android": "https://play.google.com/store/apps/details?id=com.bob_frontend&pli=1"
+    },
+    "logo": "./logo/10/bob-place.png"
+  },
+  {
+    "name": "한입",
+    "year": "10",
+    "description": "덕질을 하는 사용자들이 보다 편하게 굿즈를 나눔 혹은 판매할 수 있는 교류 플랫폼",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/한입-hannip/id1635377027?l=en",
+      "android": "https://play.google.com/store/apps/details?id=com.hannib&hl=ko&gl=KR"
+    },
+    "logo": "./logo/10/hannib.png"
+  },
+  {
+    "name": "ATRACKER",
+    "year": "10",
+    "description": "취준 관리 앱",
+    "link": {
+      "ios": "",
+      "android": ""
+    },
+    "logo": "./logo/10/atracker.png"
+  },
+  {
+    "name": "원케이크",
+    "year": "10",
+    "description": "원하는 지역의 케이크 가게들을 모아보고\n커스텀 케이크를 간편하게 주문할 수 있도록 돕는 서비스!",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/onecake/id1635032032",
+      "android": "https://play.google.com/store/apps/details?id=com.onecake_frontend"
+    },
+    "logo": "./logo/10/onecake.png"
+  },
+  {
+    "name": "마침표",
+    "year": "10",
+    "description": "성장하고 변화하는 진짜 나를 알아보며 행복해지기 위한 마음관리 어플",
+    "link": {
+      "ios": "",
+      "android": ""
+    },
+    "logo": "./logo/10/machimpyo.png"
+  },
+  {
+    "name": "와플",
+    "year": "10",
+    "description": "일정 공유 장소 아카이빙 서비스",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/와플-일정-공유-장소-아카이빙-서비스/id1635155102",
+      "android": "https://play.google.com/store/apps/details?id=com.wapple.android"
+    },
+    "logo": "./logo/10/waffle.png"
+  },
+  {
+    "name": "BidiT",
+    "year": "10",
+    "description": "국내에는 없었던 새로운 중고거래 플랫폼",
+    "link": {
+      "ios": "",
+      "android": "https://play.google.com/store/apps/details?id=com.alexk.bidit"
+    },
+    "logo": "./logo/10/bidit.png"
+  },
+  {
+    "name": "작심친구",
+    "year": "10",
+    "description": "함께 이기는 윈윈 챌린지",
+    "link": {
+      "ios": "",
+      "android": ""
+    },
+    "logo": "./logo/10/friend.png"
+  },
+  {
+    "name": "FINPO",
+    "year": "10",
+    "description": "나만의 청년정책 알림 서비스",
+    "link": {
+      "ios": "",
+      "android": ""
+    },
+    "logo": "./logo/10/finpo.png"
+  },
+  {
+    "name": "finder",
+    "year": "10",
+    "description": "MBTI 기반 Q&A 네트워킹 서비스 / 질문자와 답변자의 니즈를 모두 만족시키는 MBTI 과몰입러 필수 APP",
+    "link": {
+      "ios": "",
+      "android": ""
+    },
+    "logo": "./logo/10/finder.png"
+  },
+  {
+    "name": "롬롬교환소",
+    "year": "11",
+    "description": "씀씀이를 줄이는 교환의 경제, 물물교환 서비스",
+    "link": {
+      "ios": "",
+      "android": ""
+    },
+    "logo": "./logo/11/romrom.png"
+  },
+  {
+    "name": "가치가자",
+    "year": "11",
+    "description": "한눈에 쉽게 확인하는 항공 교통약자 서비스",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/가치가자/id6444365638",
+      "android": ""
+    },
+    "logo": "./logo/11/together.png"
+  },
+  {
+    "name": "Sparky",
+    "year": "11",
+    "description": "탭 세번으로 끝나는 스크랩",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/sparky-탭-세-번으로-끝나는-스크랩/id6444295657",
+      "android": ""
+    },
+    "logo": "./logo/11/sparky.png"
+  },
+  {
+    "name": "MELLY",
+    "year": "11",
+    "description": "소중한 사람과 함께쓰는 장소기반 기록장",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/멜리-melly-장소-기반-추억-기록장/id6444202109",
+      "android": ""
+    },
+    "logo": "./logo/11/melly.png"
+  },
+  {
+    "name": "planter",
+    "year": "11",
+    "description": "반려식물 케어 매칭 플랫폼",
+    "link": {
+      "ios": "",
+      "android": ""
+    },
+    "logo": "./logo/11/planter.png"
+  },
+  {
+    "name": "OEUVRE",
+    "year": "11",
+    "description": "사진이 작품이 되는 공간, OEUVRE",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/oeuvre/id6443660575",
+      "android": "https://play.google.com/store/apps/details?id=com.curator.oeuvre&pcampaignid=web_share"
+    },
+    "logo": "./logo/11/oeuvre.jpg"
+  },
+  {
+    "name": "Chalkak",
+    "year": "11",
+    "description": "Chalkak과 함께 필카를 더욱 쉽게 즐겨보세요.",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/chalkak/id6444452971",
+      "android": "https://play.google.com/store/apps/details?id=com.chalkak&pcampaignid=web_share"
+    },
+    "logo": "./logo/11/chalkak.png"
+  },
+  {
+    "name": "마이타민",
+    "year": "11",
+    "description": "매일 섭취하는 마음 비타민, 마이타민!",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/mitamin/id6444240698",
+      "android": "https://play.google.com/store/apps/details?id=kr.ac.kpu.ce2017154024.mytamin&pcampaignid=web_share"
+    },
+    "logo": "./logo/11/mytamin.png"
+  },
+  {
+    "name": "오늘의 조약돌",
+    "year": "11",
+    "description": "미래의 나를 위해 오늘 내가 해야하는 일을 정리해보세요",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/오늘의조약돌-pebbles-목표를-위한-오늘-관리/id6444320103",
+      "android": "https://play.google.com/store/apps/details?id=com.todaypebble.pebbles&pcampaignid=web_share"
+    },
+    "logo": "./logo/11/rock.png"
+  },
+  {
+    "name": "내친소",
+    "year": "11",
+    "description": "실제 친구가 직접 추천한 친구들을 소개받아봐!",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/내친소-신뢰기반-친구-소개-소개팅-친구만들기/id1669032147",
+      "android": "https://play.google.com/store/apps/details?id=com.retrieverSalon.naechinso&pcampaignid=web_share"
+    },
+    "logo": "./logo/11/naechinso.png"
+  }
+]
