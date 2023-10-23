@@ -1,103 +1,183 @@
 [
   {
-    "name": "밥플레이스",
-    "year": "10",
-    "description": "밥 미션을 수행하고, 포인트를 적립하라!",
+    "name": "Qfeed",
+    "year": "13",
+    "description": "친구에 자신의 마음을 표현하고 싶지만, 주변 친구들과의 관계가 망가질까 주저하지 마세요.",
     "link": {
-      "ios": "https://apps.apple.com/kr/app/밥플레이스/id1634665858",
-      "android": "https://play.google.com/store/apps/details?id=com.bob_frontend&pli=1"
+      "ios": "",
+      "android": "https://play.google.com/store/apps/details?id=com.qfeed&pcampaignid=web_share"
     },
-    "logo": "./logo/10/bob-place.png"
+    "logo": "./logo/13/qfeed.png"
   },
   {
-    "name": "한입",
-    "year": "10",
-    "description": "덕질을 하는 사용자들이 보다 편하게 굿즈를 나눔 혹은 판매할 수 있는 교류 플랫폼",
+    "name": "Fithub",
+    "year": "13",
+    "description": "‘특별한’ 운동 정보 탐색 및 공유 플랫폼 서비스",
     "link": {
-      "ios": "https://apps.apple.com/kr/app/한입-hannip/id1635377027?l=en",
-      "android": "https://play.google.com/store/apps/details?id=com.hannib&hl=ko&gl=KR"
+      "ios": "https://apps.apple.com/kr/app/fithub/id6450687753",
+      "android": "https://play.google.com/store/apps/details?id=com.proteam.fithub&pcampaignid=web_share"
     },
-    "logo": "./logo/10/hannib.png"
+    "logo": "./logo/13/fithub.png"
   },
   {
-    "name": "ATRACKER",
-    "year": "10",
-    "description": "취준 관리 앱",
+    "name": "오프너",
+    "year": "13",
+    "description": "오프라인 이벤트의 새로운 시대를 열 오픈오프",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/오픈오프/id6451419698",
+      "android": "https://play.google.com/store/apps/details?id=com.opener.openoff&pcampaignid=web_share"
+    },
+    "logo": "./logo/13/openoff.png"
+  },
+  {
+    "name": "지금",
+    "year": "13",
+    "description": "금융 루틴을 만들고, 함께 도전하며, 금융 습관을 만드는 챌린지 앱 지금입니다!",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/지금-지금-실천하는-금융-챌린지/id6461050868",
+      "android": "https://play.google.com/store/apps/details?id=com.cider.cider"
+    },
+    "logo": "./logo/13/now.png"
+  },
+  {
+    "name": "Zenefit",
+    "year": "13",
+    "description": "Zenefit은 청년층을 타겟으로 개인마다 신청 가능한 모든 복지 정책의 예상 수혜금액을 계산해주는 혜택 관리 플랫폼",
     "link": {
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/10/atracker.png"
+    "logo": "./logo/13/zenefit.png"
   },
   {
-    "name": "원케이크",
-    "year": "10",
-    "description": "원하는 지역의 케이크 가게들을 모아보고\n커스텀 케이크를 간편하게 주문할 수 있도록 돕는 서비스!",
+    "name": "올아카이브",
+    "year": "13",
+    "description": "링크부터 스크린샷까지 손쉽게 관리하고 큐레이션하는 아카이빙 서비스",
     "link": {
-      "ios": "https://apps.apple.com/kr/app/onecake/id1635032032",
-      "android": "https://play.google.com/store/apps/details?id=com.onecake_frontend"
+      "ios": "https://apps.apple.com/kr/app/올카이브-all-chive/id6462470996",
+      "android": "https://play.google.com/store/apps/details?id=com.allchivemobile"
     },
-    "logo": "./logo/10/onecake.png"
+    "logo": "./logo/13/allchive.png"
   },
   {
-    "name": "마침표",
-    "year": "10",
-    "description": "성장하고 변화하는 진짜 나를 알아보며 행복해지기 위한 마음관리 어플",
+    "name": "PLAYTE",
+    "year": "13",
+    "description": "나만의 레시피를 업로드하고, 나누고, 즐기는 레시피 커뮤니티 서비스!",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/playte-플레이트/id6463757225",
+      "android": "https://play.google.com/store/apps/details?id=com.cmc.recipe&hl=ko"
+    },
+    "logo": "./logo/13/playte.png"
+  },
+  {
+    "name": "프롬유",
+    "year": "12",
+    "description": "일상을 공유하고, 다른 커플의 이야기를 들을 수 있는 따뜻한 앱",
+    "link": {
+      "ios": "",
+      "android": "https://play.google.com/store/apps/details?id=com.fromu.fromu&pcampaignid=web_share"
+    },
+    "logo": "./logo/12/fromu.png"
+  },
+  {
+    "name": "Workus",
+    "year": "12",
+    "description": "나에게 딱 맞는 워크 스페이스 추천 서비스",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/workus/id6446238129",
+      "android": ""
+    },
+    "logo": "./logo/12/workus.png"
+  },
+  {
+    "name": "필드메이트",
+    "year": "12",
+    "description": "고객별 기술 업무관리 어플",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/fieldmate/id6446427396",
+      "android": ""
+    },
+    "logo": "./logo/12/fieldmate.png"
+  },
+  {
+    "name": "Runway",
+    "year": "12",
+    "description": "온라인과 오프라인을 연결해주는 O4O 서비스",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/런웨이-runway-내-손-안의-간편한-패션-쇼핑-지도/id1671808515",
+      "android": "https://play.google.com/store/apps/details?id=com.cmc12th.runway&hl=ko"
+    },
+    "logo": "./logo/12/runway.png"
+  },
+  {
+    "name": "eatery",
+    "year": "12",
+    "description": "Find eat, Mark eat, Write eat! eatery",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/eatery-잇터리/id6446631695",
+      "android": "https://play.google.com/store/apps/details?id=com.bobplace.eatery&pcampaignid=web_share"
+    },
+    "logo": "./logo/12/eatery.png"
+  },
+  {
+    "name": "SOLE",
+    "year": "12",
+    "description": "코스 기록 및 큐레이션 서비스",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/sole-쏠-코스-기록-공유/id6446045060",
+      "android": "https://play.google.com/store/apps/details?id=cmc.sole.android&pcampaignid=web_share"
+    },
+    "logo": "./logo/12/sole.png"
+  },
+  {
+    "name": "일편마다",
+    "year": "12",
+    "description": "부모와 자녀의 속마음 소통앱 - 일편마다",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/부모와-자녀-간의-깊은-대화-일편마다/id6446275837",
+      "android": ""
+    },
+    "logo": "./logo/12/ilpyun.png"
+  },
+  {
+    "name": "SAY",
+    "year": "12",
+    "description": "재미있고, 부담 없이, 함께하는! 컨셉 과몰입 루틴 서비스",
     "link": {
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/10/machimpyo.png"
+    "logo": "./logo/12/say.png"
   },
   {
-    "name": "와플",
-    "year": "10",
-    "description": "일정 공유 장소 아카이빙 서비스",
+    "name": "HEET",
+    "year": "12",
+    "description": "힙하게 만나는 나의 일상",
     "link": {
-      "ios": "https://apps.apple.com/kr/app/와플-일정-공유-장소-아카이빙-서비스/id1635155102",
-      "android": "https://play.google.com/store/apps/details?id=com.wapple.android"
+      "ios": "https://apps.apple.com/kr/app/heet/id6446604089",
+      "android": ""
     },
-    "logo": "./logo/10/waffle.png"
+    "logo": "./logo/12/heet.png"
   },
   {
-    "name": "BidiT",
-    "year": "10",
-    "description": "국내에는 없었던 새로운 중고거래 플랫폼",
-    "link": {
-      "ios": "",
-      "android": "https://play.google.com/store/apps/details?id=com.alexk.bidit"
-    },
-    "logo": "./logo/10/bidit.png"
-  },
-  {
-    "name": "작심친구",
-    "year": "10",
-    "description": "함께 이기는 윈윈 챌린지",
+    "name": "STITCH",
+    "year": "12",
+    "description": "쉽고 간편한 플로깅을 위한 조깅 앱",
     "link": {
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/10/friend.png"
+    "logo": "./logo/12/stitch.png"
   },
   {
-    "name": "FINPO",
-    "year": "10",
-    "description": "나만의 청년정책 알림 서비스",
+    "name": "지팡스",
+    "year": "12",
+    "description": "지팡스",
     "link": {
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/10/finpo.png"
-  },
-  {
-    "name": "finder",
-    "year": "10",
-    "description": "MBTI 기반 Q&A 네트워킹 서비스 / 질문자와 답변자의 니즈를 모두 만족시키는 MBTI 과몰입러 필수 APP",
-    "link": {
-      "ios": "",
-      "android": ""
-    },
-    "logo": "./logo/10/finder.png"
+    "logo": "./logo/12/jipangs.png"
   },
   {
     "name": "롬롬교환소",
@@ -198,5 +278,105 @@
       "android": "https://play.google.com/store/apps/details?id=com.retrieverSalon.naechinso&pcampaignid=web_share"
     },
     "logo": "./logo/11/naechinso.png"
+  },
+  {
+    "name": "밥플레이스",
+    "year": "10",
+    "description": "밥 미션을 수행하고, 포인트를 적립하라!",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/밥플레이스/id1634665858",
+      "android": "https://play.google.com/store/apps/details?id=com.bob_frontend&pli=1"
+    },
+    "logo": "./logo/10/bob-place.png"
+  },
+  {
+    "name": "한입",
+    "year": "10",
+    "description": "덕질을 하는 사용자들이 보다 편하게 굿즈를 나눔 혹은 판매할 수 있는 교류 플랫폼",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/한입-hannip/id1635377027?l=en",
+      "android": "https://play.google.com/store/apps/details?id=com.hannib&hl=ko&gl=KR"
+    },
+    "logo": "./logo/10/hannib.png"
+  },
+  {
+    "name": "ATRACKER",
+    "year": "10",
+    "description": "취준 관리 앱",
+    "link": {
+      "ios": "",
+      "android": ""
+    },
+    "logo": "./logo/10/atracker.png"
+  },
+  {
+    "name": "원케이크",
+    "year": "10",
+    "description": "원하는 지역의 케이크 가게들을 모아보고\n커스텀 케이크를 간편하게 주문할 수 있도록 돕는 서비스!",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/onecake/id1635032032",
+      "android": "https://play.google.com/store/apps/details?id=com.onecake_frontend"
+    },
+    "logo": "./logo/10/onecake.png"
+  },
+  {
+    "name": "마침표",
+    "year": "10",
+    "description": "성장하고 변화하는 진짜 나를 알아보며 행복해지기 위한 마음관리 어플",
+    "link": {
+      "ios": "",
+      "android": ""
+    },
+    "logo": "./logo/10/machimpyo.png"
+  },
+  {
+    "name": "와플",
+    "year": "10",
+    "description": "일정 공유 장소 아카이빙 서비스",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/와플-일정-공유-장소-아카이빙-서비스/id1635155102",
+      "android": "https://play.google.com/store/apps/details?id=com.wapple.android"
+    },
+    "logo": "./logo/10/waffle.png"
+  },
+  {
+    "name": "BidiT",
+    "year": "10",
+    "description": "국내에는 없었던 새로운 중고거래 플랫폼",
+    "link": {
+      "ios": "",
+      "android": "https://play.google.com/store/apps/details?id=com.alexk.bidit"
+    },
+    "logo": "./logo/10/bidit.png"
+  },
+  {
+    "name": "작심친구",
+    "year": "10",
+    "description": "함께 이기는 윈윈 챌린지",
+    "link": {
+      "ios": "",
+      "android": ""
+    },
+    "logo": "./logo/10/friend.png"
+  },
+  {
+    "name": "FINPO",
+    "year": "10",
+    "description": "나만의 청년정책 알림 서비스",
+    "link": {
+      "ios": "",
+      "android": ""
+    },
+    "logo": "./logo/10/finpo.png"
+  },
+  {
+    "name": "finder",
+    "year": "10",
+    "description": "MBTI 기반 Q&A 네트워킹 서비스 / 질문자와 답변자의 니즈를 모두 만족시키는 MBTI 과몰입러 필수 APP",
+    "link": {
+      "ios": "",
+      "android": ""
+    },
+    "logo": "./logo/10/finder.png"
   }
 ]

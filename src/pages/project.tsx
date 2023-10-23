@@ -14,7 +14,7 @@ export const query = graphql`
         name
         logo {
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED)
+            gatsbyImageData(placeholder: DOMINANT_COLOR)
           }
         }
       }
