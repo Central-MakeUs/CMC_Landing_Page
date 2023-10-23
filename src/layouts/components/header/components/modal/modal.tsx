@@ -23,8 +23,7 @@ export const Modal = ({ isOpen, pathname, closeModal }: ModalProps) => {
       >
         Project
       </Link>
-      {/* TODO: URL 링크 변경 */}
-      <a href="https://www.makeus.in/cmc" className={css.apply_button} onClick={closeModal}>
+      <a href="https://forms.gle/dMehpCFYYSJYUB1U9" className={css.apply_button} onClick={closeModal}>
         <span>지원하기</span>
       </a>
     </ReactModal>
