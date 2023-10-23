@@ -1,4 +1,4 @@
-import type { CreateWebpackConfigArgs, GatsbyNode } from 'gatsby'
+import type { CreateSchemaCustomizationArgs, CreateWebpackConfigArgs, GatsbyNode } from 'gatsby'
 import path from 'path'
 
 export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ actions }: CreateWebpackConfigArgs) => {
@@ -8,7 +8,39 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({ act
         '@/styles': path.resolve(__dirname, 'src/styles'),
         '@/images': path.resolve(__dirname, 'src/images'),
         '@/components': path.resolve(__dirname, 'src/components'),
+        '@/utils': path.resolve(__dirname, 'src/utils'),
       },
     },
   })
+}
+
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] = ({
+  actions,
+}: CreateSchemaCustomizationArgs) => {
+  const { createTypes } = actions
+
+  // TODO: ogImage 타입 추가
+  createTypes(`
+    type SiteSiteMetadata {
+      title: String!
+      siteUrl: String!
+      description: String!
+    }
+
+    type Site implements Node {
+      siteMetadata: SiteSiteMetadata!
+    }
+
+    type Link {
+      android: String!
+      ios: String!
+    }
+
+    type AppJson implements Node {
+      link: Link!
+      year: String!
+      description: String!
+      name: String!
+    }
+  `)
 }

@@ -38,7 +38,7 @@ export const FeaturesSection = () => {
         <div className={css.mobile_horizontal_divider} />
         <div className={css.mobile_empty_space} />
         <div className={css.pc_vertical_divider} />
-        <div className={clsx(css.mobile_horizontal_divider, css.mobile_end)} />
+        <div className={css.mobile_horizontal_divider} />
         <div className={css.experience}>
           <h3>기획 멘토링</h3>
           <p>

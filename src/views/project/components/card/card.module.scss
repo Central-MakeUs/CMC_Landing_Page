@@ -1,4 +1,104 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
 .card {
+  overflow: hidden;
   border-radius: 20px;
   background: #17163e;
+
+  figure {
+    .image {
+      aspect-ratio: 1.92 / 1;
+    }
+
+    figcaption {
+      @include mobile {
+        padding: 23px 22px;
+      }
+
+      @include desktop {
+        padding: 35px 30px;
+      }
+
+      .name {
+        color: #fff;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        @include mobile {
+          font-size: rem(20px);
+        }
+
+        @include desktop {
+          font-size: rem(26px);
+        }
+      }
+
+      .year {
+        display: block;
+        color: #9492ff;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        @include mobile {
+          margin-top: 16px;
+          font-size: rem(16px);
+        }
+
+        @include desktop {
+          margin-top: 10px;
+          font-size: rem(20px);
+        }
+      }
+
+      .description {
+        overflow: hidden;
+        height: 54px;
+        color: #fff;
+        font-style: normal;
+        font-weight: 600;
+
+        @include mobile {
+          margin-top: 10px;
+          font-size: rem(13px);
+          line-height: 149.336%;
+        }
+
+        @include desktop {
+          margin-top: 12px;
+          font-size: rem(18px);
+          line-height: 1.3;
+        }
+      }
+
+      .link_group {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 30px;
+        color: #9492ff;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        @include mobile {
+          margin-top: 30px;
+          font-size: rem(20px);
+        }
+
+        @include desktop {
+          margin-top: 30px;
+          font-size: rem(25px);
+        }
+
+        .divider {
+          width: 1px;
+          height: 100%;
+          background-color: #9492ff;
+        }
+      }
+    }
+  }
 }
