@@ -19,12 +19,12 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
 }: CreateSchemaCustomizationArgs) => {
   const { createTypes } = actions
 
-  // TODO: ogImage 타입 추가
   createTypes(`
     type SiteSiteMetadata {
       title: String!
       siteUrl: String!
       description: String!
+      OGImage: String!
     }
 
     type Site implements Node {
