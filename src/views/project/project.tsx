@@ -1,8 +1,8 @@
 import clsx from 'clsx'
-import type { PageProps } from 'gatsby'
+import type { HeadProps, PageProps } from 'gatsby'
 import { useMemo, useState } from 'react'
 
-import { FloatingButton } from '@/components'
+import { FloatingButton, Seo } from '@/components'
 import { getRefinedImage } from '@/utils'
 
 import { Card } from './components'
@@ -63,4 +63,6 @@ const ProjectPage = ({
 
 export default ProjectPage
 
-export const Head = () => <title>CMC</title>
+export const Head = ({ location: { pathname } }: HeadProps) => {
+  return <Seo pathname={pathname} />
+}
