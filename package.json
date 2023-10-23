@@ -41,7 +41,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
-    "sass": "^1.67.0",
+    "sass": "^1.69.4",
     "svg-react-loader": "^0.4.6"
   },
   "devDependencies": {
