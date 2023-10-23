@@ -5113,7 +5113,7 @@ __metadata:
     eslint-plugin-simple-import-sort: ^10.0.0
     gatsby: ^5.12.4
     gatsby-plugin-image: ^3.12.0
-    gatsby-plugin-manifest: ^5.12.0
+    gatsby-plugin-manifest: ^5.12.2
     gatsby-plugin-react-svg: ^3.3.0
     gatsby-plugin-sass: ^6.12.0
     gatsby-plugin-sharp: ^5.12.0
@@ -7816,18 +7816,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-manifest@npm:^5.12.0":
-  version: 5.12.0
-  resolution: "gatsby-plugin-manifest@npm:5.12.0"
+"gatsby-plugin-manifest@npm:^5.12.2":
+  version: 5.12.2
+  resolution: "gatsby-plugin-manifest@npm:5.12.2"
   dependencies:
     "@babel/runtime": ^7.20.13
     gatsby-core-utils: ^4.12.0
-    gatsby-plugin-utils: ^4.12.0
+    gatsby-plugin-utils: ^4.12.2
     semver: ^7.5.3
-    sharp: ^0.32.1
+    sharp: ^0.32.6
   peerDependencies:
     gatsby: ^5.0.0-next
-  checksum: 6c8459995bde0b33cb8ea8473990d95be968ef37d931eb5e2840cbbd6258dbb57da4e93f9057982c0620b1fa159c131033c792efddafbd801b09c610aa0b6953
+  checksum: e2d16044bbcb8988929d96176da6fb0dce96cded5c2ed16a3c28164d54b1255dd96810f7c3a7b7205ec674955d41eed30e7f2df0066b1eca4ea68fab8687923b
   languageName: node
   linkType: hard
 
@@ -7937,6 +7937,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-plugin-utils@npm:^4.12.2":
+  version: 4.12.2
+  resolution: "gatsby-plugin-utils@npm:4.12.2"
+  dependencies:
+    "@babel/runtime": ^7.20.13
+    fastq: ^1.15.0
+    fs-extra: ^11.1.1
+    gatsby-core-utils: ^4.12.0
+    gatsby-sharp: ^1.12.1
+    graphql-compose: ^9.0.10
+    import-from: ^4.0.0
+    joi: ^17.9.2
+    mime: ^3.0.0
+  peerDependencies:
+    gatsby: ^5.0.0-next
+    graphql: ^16.0.0
+  checksum: 8eb4a9d081898a04d9c920a65d263fbac38de0e571329de05e37610df8cc3a97ad90fc3da3158b72f57106120d3667a8fdf265bc806ab6a830b5b9e011369f31
+  languageName: node
+  linkType: hard
+
 "gatsby-react-router-scroll@npm:^6.12.0":
   version: 6.12.0
   resolution: "gatsby-react-router-scroll@npm:6.12.0"
@@ -7968,6 +7988,15 @@ __metadata:
   dependencies:
     sharp: ^0.32.1
   checksum: 082d778c5f7c6f292afad05dfbed5b4a699abcf9cb9b979f726466105c7548a3a7a7cd3f7ad9252bbacfccd187b4353b84344a26592e469eef9698aa1b832e8c
+  languageName: node
+  linkType: hard
+
+"gatsby-sharp@npm:^1.12.1":
+  version: 1.12.1
+  resolution: "gatsby-sharp@npm:1.12.1"
+  dependencies:
+    sharp: ^0.32.6
+  checksum: 8e535b030c431e1e831cbac678faf33b749624bd4559410b6a67c1d42c1eacbc7b95ab2dfe9b9fe6619e22fc78adc6c4337d7df122b26f7b56e5845671c3c96d
   languageName: node
   linkType: hard
 
@@ -13160,7 +13189,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.32.1":
+"sharp@npm:^0.32.1, sharp@npm:^0.32.6":
   version: 0.32.6
   resolution: "sharp@npm:0.32.6"
   dependencies:
