@@ -4,10 +4,12 @@
 .main {
   @include mobile {
     padding: 0 28px;
+    padding-bottom: 30px;
   }
 
   @include desktop {
     padding: 0 70px;
+    padding-bottom: 40px;
   }
 }
 
