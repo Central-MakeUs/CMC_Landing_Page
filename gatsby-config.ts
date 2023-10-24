@@ -5,7 +5,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: 'CMC',
     description: '우리만의 룰을 세워 세상을 바꾸는 조직, CMC',
-    siteUrl: 'https://central.makeus.in',
+    siteUrl: 'https://cmc.makeus.in/',
     OGImage: './src/images/OGImage.png',
   },
   graphqlTypegen: true,
