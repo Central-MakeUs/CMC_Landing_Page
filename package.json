@@ -13,8 +13,7 @@
     "lint": "yarn lint:pt && yarn lint:es",
     "start": "gatsby develop",
     "build": "gatsby build",
-    "deploy:gh-domain": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public",
-    "deploy": "gatsby clean && gatsby build && gh-pages -d public",
+    "deploy": "gatsby clean && gatsby build && cp CNAME public/ && gh-pages -d public",
     "typecheck": "tsc --noEmit",
     "prepare": "husky install"
   },
