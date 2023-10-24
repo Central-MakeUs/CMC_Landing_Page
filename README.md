@@ -1,49 +1,78 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# CMC 홈페이지
 
-## 🚀 Quick start
+## Project setup
 
-1.  **Create a Gatsby site.**
+```bash
+// 저장소 복제
+$ git clone https://github.com/Central-MakeUs/CMC_Landing_Page.git
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+// clone한 폴더로 이동
+$ cd CMC_Landing_Page
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+// yarn 환경구성
+$ yarn install
+```
 
-2.  **Start developing.**
+## Project 데이터 추가방법
 
-    Navigate into your new site’s directory and start it up.
+현재 프로젝트 구조에서 `src` 폴더안의 `data`안에 **`app.json` 파일과 `logo` 폴더**가 존재합니다.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+```bash
+├── src
+    └── data
+          ├── logo
+          └── app.json
+```
 
-3.  **Open the code and start customizing!**
+각 파일에 대해 설명하면 다음과 같습니다.
 
-    Your site is now running at http://localhost:8000!
+- `logo`: 기수별 로고 이미지가 저장되어있는 폴더입니다.
+- `app.json`: 홈페이지에 표시될 프로젝트 데이터가 저장되어있는 파일입니다.
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+### logo
 
-4.  **Learn more**
+예를들어 13기 프로젝트들의 로고 이미지를 저장하고 싶다면 `logo` 폴더안에 `13기` 폴더를 생성하고, 그 안에 로고 이미지들을 저장하면 됩니다.
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+### app.json
 
-## 🚀 Quick start (Netlify)
+현재 데이터들은 기수 기준 내림차순으로 들어가 있습니다.따라서 13기 프로젝트 데이터 -> 12기 프로젝트 데이터 -> ... 순으로 들어갑니다.
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+데이터를 넣을때에는 아래와 같은 형식으로 넣어주시면 됩니다.
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+```json
+[
+  {
+    "name": "Qfeed",
+    "year": "13",
+    "description": "친구에 자신의 마음을 표현하고 싶지만, 주변 친구들과의 관계가 망가질까 주저하지 마세요.",
+    "link": {
+      "ios": "", // 링크가 없으면 빈칸
+      "android": "https://play.google.com/store/apps/details?id=com.qfeed&pcampaignid=web_share"
+    },
+    "logo": "./logo/13/qfeed.png"
+  },
+  ...
+]
+```
+
+따라서 14기면 아래와 같은 형식으로 프로젝트 데이터가 들어갑니다.
+
+```json
+[
+  {
+    "name": "프로젝트 이름",
+    "year": "14",
+    "description": "프로젝트 설명",
+    "link": {
+      "ios": "{링크 없으면 빈칸으로 두세요}",
+      "android": "링크주소"
+    },
+    "logo": "./logo/14/{파일이름}.png"
+  },
+  ...
+]
+```
+
+> ‼️ logo 경로를 잘 맞춰주셔야 합니다! ‼️
+
+로고 경로가 맞지 않으면 오류가 발생할 수 있습니다.
