@@ -12,9 +12,11 @@
 
 .image_container {
   @include mobile {
+    margin-top: 20px;
   }
 
   @include desktop {
+    margin-top: -20px;
     padding: 0px 70px;
   }
 
