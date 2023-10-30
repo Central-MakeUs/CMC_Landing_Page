@@ -15,6 +15,7 @@ type Props = {
 
 export const Header = ({ pathname }: Props) => {
   const { isOpen, toggleModal, closeModal } = useModal()
+
   return (
     <header className={css.header}>
       <h1 className={css.heading_logo}>
@@ -33,7 +34,7 @@ export const Header = ({ pathname }: Props) => {
         <Link to="/" className={clsx({ [css.active]: pathname === withPrefix('/') })}>
           About
         </Link>
-        <Link to="/project/" className={clsx({ [css.active]: pathname === withPrefix('/project/') })}>
+        <Link to="/project" className={clsx({ [css.active]: pathname === withPrefix('/project') })}>
           Project
         </Link>
         <a href="https://forms.gle/dMehpCFYYSJYUB1U9" className={css.apply_button}>

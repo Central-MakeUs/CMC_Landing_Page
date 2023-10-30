@@ -40,12 +40,10 @@ export const Seo = ({ title, description, heroImage, pathname, children }: Props
   const { title: defaultTitle, description: defaultDescription, siteUrl } = data.site.siteMetadata
   const { publicURL: defaultImage } = data.file
 
-  const isHome = pathname === '/'
-
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    url: `${siteUrl}${isHome ? '' : pathname}`,
+    url: `${siteUrl}${pathname}`,
     image: `${siteUrl}${heroImage || defaultImage}`,
   }
 

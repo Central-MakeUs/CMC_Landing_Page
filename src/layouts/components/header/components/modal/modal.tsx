@@ -16,11 +16,7 @@ export const Modal = ({ isOpen, pathname, closeModal }: ModalProps) => {
       <Link to="/" className={clsx({ [css.active]: pathname === withPrefix('/') })} onClick={closeModal}>
         About
       </Link>
-      <Link
-        to="/project/"
-        className={clsx({ [css.active]: pathname === withPrefix('/project/') })}
-        onClick={closeModal}
-      >
+      <Link to="/project" className={clsx({ [css.active]: pathname === withPrefix('/project') })} onClick={closeModal}>
         Project
       </Link>
       <a href="https://forms.gle/dMehpCFYYSJYUB1U9" className={css.apply_button} onClick={closeModal}>

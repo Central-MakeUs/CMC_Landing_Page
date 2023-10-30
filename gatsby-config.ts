@@ -10,7 +10,17 @@ const config: GatsbyConfig = {
   },
   graphqlTypegen: true,
   jsxRuntime: 'automatic',
+  trailingSlash: 'never',
   plugins: [
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://cmc.makeus.in/',
+        sitemap: 'https://cmc.makeus.in/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
+    'gatsby-plugin-advanced-sitemap',
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
