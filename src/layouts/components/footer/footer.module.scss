@@ -47,6 +47,7 @@
       line-height: 147.336%;
 
       @include mobile {
+        padding-bottom: 27px;
         font-size: rem(11px);
       }
 

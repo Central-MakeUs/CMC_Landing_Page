@@ -59,6 +59,8 @@
       @include mobile {
         display: block;
         margin-top: 36px;
+        width: 316px;
+        min-height: 140px;
         padding: 22px 20px;
         border-radius: 13px;
         background: rgba(17, 16, 69, 0.64);
@@ -87,7 +89,7 @@
         font-size: rem(13px);
         font-weight: 500;
         line-height: 20px;
-        white-space: pre-line;
+        word-break: break-word;
       }
     }
 
