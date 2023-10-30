@@ -16,6 +16,8 @@
   }
 
   @include desktop {
+    display: flex;
+    justify-content: center;
     margin-top: -20px;
     padding: 0px 70px;
   }
@@ -23,6 +25,7 @@
   .desktop_main {
     @include desktop {
       display: block;
+      max-width: 1300px;
     }
 
     @include mobile {

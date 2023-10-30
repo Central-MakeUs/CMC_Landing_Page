@@ -8,8 +8,7 @@ export const Cards: Record<Tab, { name: string; description: string }> = {
   },
   Design: {
     name: 'Designer',
-    description:
-      '사용자가 편안하게 사용 가능한 화면을 디자인 함으로써, 사용자에게 최적의 시각적, 기능적 경험을 제공합니다.',
+    description: '사용자가 편안하게 사용 가능한 화면을 디자인 함으로써, 최적의 시각적, 기능적 경험을 제공합니다.',
   },
   Client: {
     name: 'Client Developer',

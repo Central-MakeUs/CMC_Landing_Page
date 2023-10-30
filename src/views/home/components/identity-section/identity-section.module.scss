@@ -32,7 +32,7 @@
       position: relative;
       max-width: 373px;
       min-width: 308px;
-      border-radius: 20px;
+      border-radius: 10px;
       overflow: hidden;
       transform: translateZ(0);
 
@@ -109,10 +109,10 @@
         text-align: center;
         font-style: normal;
         font-weight: 600;
-        line-height: 28px;
+        line-height: 1.8;
 
         @include mobile {
-          font-size: rem(13px);
+          font-size: rem(12px);
         }
 
         @include desktop {
