@@ -18,33 +18,35 @@ export const Header = ({ pathname }: Props) => {
 
   return (
     <header className={css.header}>
-      <h1 className={css.heading_logo}>
-        <Link to="/">
-          <StaticImage src="../../../images/favicon.png" alt="CMC" className={css.logo} />
-        </Link>
-      </h1>
-      <div className={css.flexible_space}>
-        <span />
-        <div className={css.star_container}>
+      <div className={css.header_container}>
+        <h1 className={css.heading_logo}>
+          <Link to="/">
+            <StaticImage src="../../../images/favicon.png" alt="CMC" className={css.logo} />
+          </Link>
+        </h1>
+        <div className={css.flexible_space}>
           <span />
-          <Star />
+          <div className={css.star_container}>
+            <span />
+            <Star />
+          </div>
         </div>
+        <nav className={css.nav}>
+          <Link to="/" className={clsx({ [css.active]: pathname === withPrefix('/') })}>
+            About
+          </Link>
+          <Link to="/project" className={clsx({ [css.active]: pathname === withPrefix('/project') })}>
+            Project
+          </Link>
+          <a href="https://forms.gle/dMehpCFYYSJYUB1U9" className={css.apply_button}>
+            지원하기
+          </a>
+        </nav>
+        <button type="button" onClick={toggleModal} className={css.menu_button}>
+          <Hamburger />
+        </button>
+        <Modal isOpen={isOpen} pathname={pathname} closeModal={closeModal} />
       </div>
-      <nav className={css.nav}>
-        <Link to="/" className={clsx({ [css.active]: pathname === withPrefix('/') })}>
-          About
-        </Link>
-        <Link to="/project" className={clsx({ [css.active]: pathname === withPrefix('/project') })}>
-          Project
-        </Link>
-        <a href="https://forms.gle/dMehpCFYYSJYUB1U9" className={css.apply_button}>
-          지원하기
-        </a>
-      </nav>
-      <button type="button" onClick={toggleModal} className={css.menu_button}>
-        <Hamburger />
-      </button>
-      <Modal isOpen={isOpen} pathname={pathname} closeModal={closeModal} />
     </header>
   )
 }

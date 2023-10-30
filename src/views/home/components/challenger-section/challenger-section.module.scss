@@ -8,6 +8,7 @@
 
   @include desktop {
     margin-top: 385px;
+    width: 100%;
   }
 
   .role {
@@ -23,7 +24,6 @@
 
     @include desktop {
       margin-top: 96px;
-      padding: 0 70px;
     }
 
     nav {
@@ -100,8 +100,8 @@
 
       @include desktop {
         display: grid;
-        row-gap: 56px;
-        column-gap: 60px;
+        row-gap: 60px;
+        column-gap: 56px;
         grid-template-columns: repeat(auto-fill, minmax(auto, 620px));
         justify-content: center;
         width: 100%;

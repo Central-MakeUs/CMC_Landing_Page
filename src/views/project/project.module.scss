@@ -8,6 +8,8 @@
   }
 
   @include desktop {
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 0 70px;
     padding-bottom: 40px;
   }
@@ -123,7 +125,7 @@
   }
 
   @include desktop {
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     margin-top: 65px;
   }
 }

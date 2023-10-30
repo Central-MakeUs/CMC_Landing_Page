@@ -1,58 +1,63 @@
 @use '@/styles/abstracts' as *;
 
-.space {
-  @include mobile {
-    height: 45px;
-  }
-
+.main {
   @include desktop {
-    height: 250px;
-  }
-}
-
-.image_container {
-  @include mobile {
-    margin-top: 20px;
-  }
-
-  @include desktop {
-    display: flex;
-    justify-content: center;
-    margin-top: -20px;
     padding: 0px 70px;
   }
 
-  .desktop_main {
-    @include desktop {
-      display: block;
-      max-width: 1300px;
+  .space {
+    @include mobile {
+      height: 45px;
     }
 
+    @include desktop {
+      height: 250px;
+    }
+  }
+
+  .image_container {
     @include mobile {
+      margin-top: 20px;
+    }
+
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      margin-top: -20px;
+    }
+
+    .desktop_main {
+      @include desktop {
+        display: block;
+        max-width: 1300px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .mobile_main {
+      @include desktop {
+        display: none;
+      }
+
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+
+  .mobile_button {
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 60px;
+    }
+
+    @include desktop {
       display: none;
     }
-  }
-
-  .mobile_main {
-    @include desktop {
-      display: none;
-    }
-
-    @include mobile {
-      display: block;
-    }
-  }
-}
-
-.mobile_button {
-  @include mobile {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 60px;
-  }
-
-  @include desktop {
-    display: none;
   }
 }

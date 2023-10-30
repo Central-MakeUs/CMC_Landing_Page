@@ -3,80 +3,87 @@
 
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   background-color: #151437;
 
-  @include mobile {
-    height: 100px;
-    padding-top: 27px;
-    padding-left: 23px;
-    padding-right: 28px;
-  }
-
-  @include desktop {
-    align-items: center;
-    height: 173px;
-    padding-left: 61px;
-    padding-right: 70px;
-  }
-
-  .info {
-    @include mobile {
-      width: 208px;
-    }
-
-    .name {
-      display: block;
-      color: #6c68ff;
-      font-weight: 700;
-      line-height: 147.336%;
-
-      @include mobile {
-        font-size: rem(13px);
-      }
-
-      @include desktop {
-        font-size: rem(25px);
-      }
-    }
-
-    .copyright {
-      color: rgba(108, 104, 255, 0.5);
-      font-weight: 400;
-      line-height: 147.336%;
-
-      @include mobile {
-        padding-bottom: 27px;
-        font-size: rem(11px);
-      }
-
-      @include desktop {
-        font-size: rem(20px);
-      }
-    }
-  }
-
-  .contact {
+  .footer_container {
     display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    width: 100%;
 
     @include mobile {
-      gap: 10px;
+      height: 100px;
+      padding-top: 27px;
+      padding-left: 23px;
+      padding-right: 28px;
     }
 
     @include desktop {
-      gap: 26px;
+      align-items: center;
+      height: 173px;
+      padding-left: 61px;
+      padding-right: 70px;
     }
 
-    .icon {
+    .info {
       @include mobile {
-        width: 28px;
-        height: 28px;
+        width: 208px;
+      }
+
+      .name {
+        display: block;
+        color: #6c68ff;
+        font-weight: 700;
+        line-height: 147.336%;
+
+        @include mobile {
+          font-size: rem(13px);
+        }
+
+        @include desktop {
+          font-size: rem(25px);
+        }
+      }
+
+      .copyright {
+        color: rgba(108, 104, 255, 0.5);
+        font-weight: 400;
+        line-height: 147.336%;
+
+        @include mobile {
+          padding-bottom: 27px;
+          font-size: rem(11px);
+        }
+
+        @include desktop {
+          font-size: rem(20px);
+        }
+      }
+    }
+
+    .contact {
+      display: flex;
+
+      @include mobile {
+        gap: 10px;
       }
 
       @include desktop {
-        width: 48px;
-        height: 48px;
+        gap: 26px;
+      }
+
+      .icon {
+        @include mobile {
+          width: 28px;
+          height: 28px;
+        }
+
+        @include desktop {
+          width: 48px;
+          height: 48px;
+        }
       }
     }
   }

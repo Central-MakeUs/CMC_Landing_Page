@@ -3,122 +3,129 @@
 
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: sticky;
   top: 0;
   z-index: 10;
   background-color: rgba(24, 22, 119, 0.2);
   backdrop-filter: blur(18.5px);
 
-  @include mobile {
-    height: 66px;
-    padding-left: 28px;
-    padding-right: 25px;
-  }
+  .header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    width: 100%;
 
-  @include desktop {
-    gap: 33px;
-    height: 110px;
-    padding: 0 70px;
-  }
-
-  .heading_logo {
-    flex-shrink: 0;
-
-    .logo {
-      display: block;
-
-      @include mobile {
-        width: 30px;
-      }
-
-      @include desktop {
-        width: 46px;
-      }
-    }
-  }
-
-  .flexible_space {
     @include mobile {
-      display: none;
+      height: 66px;
+      padding-left: 28px;
+      padding-right: 25px;
     }
 
     @include desktop {
-      display: flex;
-      align-items: center;
-      flex: 1;
-      position: relative;
+      gap: 33px;
+      height: 110px;
+      padding: 0 70px;
+    }
 
-      span {
-        flex-shrink: 999999;
+    .heading_logo {
+      flex-shrink: 0;
+
+      .logo {
         display: block;
-        width: 100%;
-        height: 1px;
-        background-color: #ffffff;
-        opacity: 0.7;
+
+        @include mobile {
+          width: 30px;
+        }
+
+        @include desktop {
+          width: 46px;
+        }
+      }
+    }
+
+    .flexible_space {
+      @include mobile {
+        display: none;
       }
 
-      .star_container {
+      @include desktop {
+        display: flex;
+        align-items: center;
+        flex: 1;
         position: relative;
 
         span {
+          flex-shrink: 999999;
           display: block;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 50%;
+          width: 100%;
           height: 1px;
           background-color: #ffffff;
           opacity: 0.7;
         }
+
+        .star_container {
+          position: relative;
+
+          span {
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50%;
+            height: 1px;
+            background-color: #ffffff;
+            opacity: 0.7;
+          }
+        }
       }
     }
-  }
 
-  .nav {
-    @include mobile {
-      display: none;
-    }
-
-    @include desktop {
-      display: flex;
-      align-items: center;
-      gap: 33px;
-
-      a {
-        color: #ffffff;
-        font-size: rem(24px);
-        font-weight: 600;
-        line-height: normal;
+    .nav {
+      @include mobile {
+        display: none;
       }
 
-      .active {
-        color: #615dff;
-      }
+      @include desktop {
+        display: flex;
+        align-items: center;
+        gap: 33px;
 
-      .apply_button {
-        min-width: 147px;
-        padding: 9px 42px;
-        border-radius: 27px;
-        background: #3c37ff;
-        color: #ffffff;
-        font-size: rem(18px);
+        a {
+          color: #ffffff;
+          font-size: rem(24px);
+          font-weight: 600;
+          line-height: normal;
+        }
+
+        .active {
+          color: #615dff;
+        }
+
+        .apply_button {
+          min-width: 147px;
+          padding: 9px 42px;
+          border-radius: 27px;
+          background: #3c37ff;
+          color: #ffffff;
+          font-size: rem(18px);
+        }
       }
     }
-  }
 
-  .menu_button {
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
+    .menu_button {
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
 
-    @include mobile {
-      display: block;
-    }
+      @include mobile {
+        display: block;
+      }
 
-    @include desktop {
-      display: none;
+      @include desktop {
+        display: none;
+      }
     }
   }
 }

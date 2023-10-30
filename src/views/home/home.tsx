@@ -9,7 +9,7 @@ import BottomArrow from './images/bottom-arrow.svg'
 
 const HomePage = () => {
   return (
-    <main>
+    <main className={css.main}>
       <section className={css.image_container}>
         <StaticImage src="./images/desktop-main.png" alt="CMC" className={css.desktop_main} />
         <StaticImage src="./images/mobile-main.png" alt="CMC" className={css.mobile_main} />
