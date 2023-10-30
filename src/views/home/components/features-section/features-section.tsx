@@ -56,7 +56,7 @@ export const FeaturesSection = () => {
         <div className={css.pc_horizontal_divider} />
         <div className={css.pc_horizontal_space}>
           <div className={css.pc_horizontal_divider} />
-          <Star />
+          <Star className={css.star} />
         </div>
         <div className={css.experience}>
           <h3>GUI 멘토링</h3>
