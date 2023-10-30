@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://cmc.makeus.in/sitemap.xml
+Host: https://cmc.makeus.in
