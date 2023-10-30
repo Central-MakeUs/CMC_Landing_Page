@@ -32,6 +32,9 @@
       position: relative;
       max-width: 373px;
       min-width: 308px;
+      border-radius: 20px;
+      overflow: hidden;
+      transform: translateZ(0);
 
       .image {
         @include mobile {
