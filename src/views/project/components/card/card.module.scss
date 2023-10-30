@@ -56,7 +56,10 @@
 
       .description {
         overflow: hidden;
-        height: 54px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        min-height: 39px;
         color: #fff;
         font-style: normal;
         font-weight: 600;
