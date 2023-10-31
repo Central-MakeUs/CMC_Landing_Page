@@ -23,8 +23,8 @@
   a {
     font-size: rem(18px);
     font-weight: 600;
-    line-height: 144%;
     letter-spacing: -0.076px;
+    line-height: 1;
     color: #ffffff;
   }
 
@@ -38,11 +38,11 @@
     background: #3c37ff;
 
     span {
+      display: block;
       color: #fff;
       text-align: center;
       font-size: rem(13px);
       font-weight: 600;
-      line-height: normal;
     }
   }
 }
