@@ -1,5 +1,15 @@
 [
   {
+    "name": "커튼콜",
+    "year": "13",
+    "description": "연극과 뮤지컬의 매력에 빠지다.",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/%EC%BB%A4%ED%8A%BC%EC%BD%9C/id6450673014",
+      "android": "https://play.google.com/store/apps/details?id=com.cmc.curtaincall&pli=1"
+    },
+    "logo": "./logo/13/curtaincall.png"
+  },
+  {
     "name": "Qfeed",
     "year": "13",
     "description": "친구에 자신의 마음을 표현하고 싶지만, 주변 친구들과의 관계가 망가질까 주저하지 마세요.",
