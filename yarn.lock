@@ -5179,7 +5179,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-modal: ^3.16.1
-    sass: ^1.67.0
+    sass: ^1.69.6
     svg-react-loader: ^0.4.6
     typescript: ^5.2.2
   languageName: unknown
@@ -13221,16 +13221,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.67.0":
-  version: 1.69.0
-  resolution: "sass@npm:1.69.0"
+"sass@npm:^1.69.6":
+  version: 1.69.6
+  resolution: "sass@npm:1.69.6"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: eabea31ea3b1dd529c7eff345c8b6468afe6ab8011bd4f95caa2cffb8fb115cc055ea21de425be6197f7ed22516f5652eccb98d315d592ea152ada553f964b8a
+  checksum: 9e98eecd283ce6ca5d75ee233e4ec193cb00706d0e119ab6843c44236d3beed2ba28d0af0b4b6bdb4da76feadf426f559d364a69ae54c010467059d130238a36
   languageName: node
   linkType: hard
 
