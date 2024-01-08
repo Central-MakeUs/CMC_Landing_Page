@@ -62,7 +62,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:f16f66e634d9fb1fade8e4bc1e78f48d67a151538a322f129df74a3e55614c2d39a096a350220d00cb1660e38cb754ecda52b227e97c78f5ee2afb6b6d5369f2#npm:18.2.0"],\
             ["react-modal", "virtual:f16f66e634d9fb1fade8e4bc1e78f48d67a151538a322f129df74a3e55614c2d39a096a350220d00cb1660e38cb754ecda52b227e97c78f5ee2afb6b6d5369f2#npm:3.16.1"],\
-            ["sass", "npm:1.69.0"],\
+            ["sass", "npm:1.69.7"],\
             ["svg-react-loader", "npm:0.4.6"],\
             ["typescript", "patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
           ],\
@@ -7532,7 +7532,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:f16f66e634d9fb1fade8e4bc1e78f48d67a151538a322f129df74a3e55614c2d39a096a350220d00cb1660e38cb754ecda52b227e97c78f5ee2afb6b6d5369f2#npm:18.2.0"],\
             ["react-modal", "virtual:f16f66e634d9fb1fade8e4bc1e78f48d67a151538a322f129df74a3e55614c2d39a096a350220d00cb1660e38cb754ecda52b227e97c78f5ee2afb6b6d5369f2#npm:3.16.1"],\
-            ["sass", "npm:1.69.0"],\
+            ["sass", "npm:1.69.7"],\
             ["svg-react-loader", "npm:0.4.6"],\
             ["typescript", "patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
           ],\
@@ -11386,7 +11386,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/sass", null],\
             ["gatsby", "virtual:f16f66e634d9fb1fade8e4bc1e78f48d67a151538a322f129df74a3e55614c2d39a096a350220d00cb1660e38cb754ecda52b227e97c78f5ee2afb6b6d5369f2#npm:5.12.5"],\
             ["resolve-url-loader", "npm:3.1.5"],\
-            ["sass", "npm:1.69.0"],\
+            ["sass", "npm:1.69.7"],\
             ["sass-loader", "virtual:de88627134e30ca8a0345f3ba29f03fe474db69ed3ad790ab62694f9c039b2afc6bc9c14fd5029659d5c8fc182350bafab7cec3d3993b4d51e8a942efb4fad57#npm:10.4.1"]\
           ],\
           "packagePeers": [\
@@ -17585,10 +17585,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["sass", [\
-        ["npm:1.69.0", {\
-          "packageLocation": "./.yarn/cache/sass-npm-1.69.0-b7f282719b-eabea31ea3.zip/node_modules/sass/",\
+        ["npm:1.69.7", {\
+          "packageLocation": "./.yarn/cache/sass-npm-1.69.7-ac434a094c-c67cd32b69.zip/node_modules/sass/",\
           "packageDependencies": [\
-            ["sass", "npm:1.69.0"],\
+            ["sass", "npm:1.69.7"],\
             ["chokidar", "npm:3.5.3"],\
             ["immutable", "npm:4.3.4"],\
             ["source-map-js", "npm:1.0.2"]\
@@ -17617,7 +17617,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["loader-utils", "npm:2.0.4"],\
             ["neo-async", "npm:2.6.2"],\
             ["node-sass", null],\
-            ["sass", "npm:1.69.0"],\
+            ["sass", "npm:1.69.7"],\
             ["schema-utils", "npm:3.3.0"],\
             ["semver", "npm:7.5.4"],\
             ["webpack", null]\
