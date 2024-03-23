@@ -38,7 +38,7 @@ export const Header = ({ pathname }: Props) => {
           <Link to="/project" className={clsx({ [css.active]: pathname === withPrefix('/project') })}>
             Project
           </Link>
-          <a href="https://forms.gle/dMehpCFYYSJYUB1U9" className={css.apply_button}>
+          <a href="https://forms.gle/LWfsozJbsrhkpyCr5" className={css.apply_button}>
             지원하기
           </a>
         </nav>

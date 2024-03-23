@@ -19,7 +19,7 @@ export const Modal = ({ isOpen, pathname, closeModal }: ModalProps) => {
       <Link to="/project" className={clsx({ [css.active]: pathname === withPrefix('/project') })} onClick={closeModal}>
         Project
       </Link>
-      <a href="https://forms.gle/dMehpCFYYSJYUB1U9" className={css.apply_button} onClick={closeModal}>
+      <a href="https://forms.gle/LWfsozJbsrhkpyCr5" className={css.apply_button} onClick={closeModal}>
         <span>지원하기</span>
       </a>
     </ReactModal>
