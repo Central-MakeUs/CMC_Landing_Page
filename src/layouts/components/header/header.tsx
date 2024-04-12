@@ -2,9 +2,8 @@ import clsx from 'clsx'
 import { Link, withPrefix } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
-import Star from '@/images/star.svg'
-
 import { Modal } from './components'
+import { Links } from './constant'
 import * as css from './header.module.scss'
 import { useModal } from './hooks'
 import Hamburger from './images/hamburger.svg'
@@ -26,19 +25,14 @@ export const Header = ({ pathname }: Props) => {
         </h1>
         <div className={css.flexible_space}>
           <span />
-          <div className={css.star_container}>
-            <span />
-            <Star />
-          </div>
         </div>
         <nav className={css.nav}>
-          <Link to="/" className={clsx({ [css.active]: pathname === withPrefix('/') })}>
-            About
-          </Link>
-          <Link to="/project" className={clsx({ [css.active]: pathname === withPrefix('/project') })}>
-            Project
-          </Link>
-          <a href="https://forms.gle/LWfsozJbsrhkpyCr5" className={css.apply_button}>
+          {Links.map((link) => (
+            <Link to={link.path} className={clsx({ [css.active]: pathname === withPrefix(link.path) })}>
+              {link.name}
+            </Link>
+          ))}
+          <a href="https://forms.gle/LWfsozJbsrhkpyCr5" target="_blank" rel="noreferrer" className={css.apply_button}>
             지원하기
           </a>
         </nav>
