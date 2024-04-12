@@ -11,10 +11,10 @@ export const Footer = () => {
           <span className={css.copyright}>Copyrightⓒ 2023 All rights reserved by MakeUs Challenge</span>
         </div>
         <div className={css.contact}>
-          <a href="https://www.instagram.com/cmc__official/">
+          <a href="https://www.instagram.com/cmc__official/" target="_blank" rel="noreferrer">
             <Instagram className={css.icon} />
           </a>
-          <a href="http://pf.kakao.com/_xcwDJT">
+          <a href="http://pf.kakao.com/_xcwDJT" target="_blank" rel="noreferrer">
             <KakaoTalk className={css.icon} />
           </a>
         </div>
