@@ -1,0 +1,102 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+$typo-styles: (
+  'display1': (
+    'size': 44px,
+    'line-height': 56px,
+    'weight': 700,
+  ),
+  'display2': (
+    'size': 40px,
+    'line-height': 48px,
+    'weight': 700,
+  ),
+  'display3': (
+    'size': 32px,
+    'line-height': 39px,
+    'weight': 700,
+  ),
+  'title1': (
+    'size': 26px,
+    'line-height': 38px,
+    'weight': 700,
+  ),
+  'title2n': (
+    'size': 24px,
+    'line-height': 36px,
+    'weight': 700,
+  ),
+  'title2': (
+    'size': 22px,
+    'line-height': 33px,
+    'weight': 700,
+  ),
+  'title3': (
+    'size': 20px,
+    'line-height': 25px,
+    'weight': 700,
+  ),
+  'headline': (
+    'size': 18px,
+    'line-height': 23px,
+    'weight': 700,
+  ),
+  'subhead': (
+    'size': 15px,
+    'line-height': 20px,
+    'weight': 500,
+  ),
+  'body-bold1': (
+    'size': 17px,
+    'line-height': 24px,
+    'weight': 700,
+  ),
+  'body-medium1': (
+    'size': 17px,
+    'line-height': 24px,
+    'weight': 500,
+  ),
+  'body-b2': (
+    'size': 14px,
+    'line-height': 19px,
+    'weight': 700,
+  ),
+  'body-medium2': (
+    'size': 14px,
+    'line-height': 19px,
+    'weight': 500,
+  ),
+  'caption-bold1': (
+    'size': 13px,
+    'line-height': 17px,
+    'weight': 700,
+  ),
+  'caption-medium1': (
+    'size': 13px,
+    'line-height': 17px,
+    'weight': 500,
+  ),
+  'caption-medium2': (
+    'size': 11px,
+    'line-height': 15px,
+    'weight': 500,
+  ),
+);
+
+@function typo-style($name, $property) {
+  $style: map-get($typo-styles, $name);
+  @return map-get($style, $property);
+}
+
+@mixin typo($name) {
+  font-size: rem(typo-style($name, 'size'));
+  line-height: rem(typo-style($name, 'line-height'));
+  font-weight: typo-style($name, 'weight');
+}
+
+@each $name, $values in $typo-styles {
+  .text-#{$name} {
+    @include typo($name);
+  }
+}
