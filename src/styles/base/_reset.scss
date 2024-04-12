@@ -19,7 +19,7 @@ img {
 }
 
 html {
-  background-color: #151437;
+  background-color: #1f003d;
   color: text-color(strong);
 }
 
@@ -32,7 +32,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: 'Pretendard';
-  background: linear-gradient(180deg, #000 0%, #615dff 140.23%);
+  background: background-color(primary);
 }
 
 /* 6. Improve media defaults */
