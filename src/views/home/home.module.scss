@@ -2,6 +2,7 @@
 
 .main {
   background-color: #290052;
+  overflow-x: hidden;
 
   @include desktop {
     padding: 10px 40px 0;
@@ -14,19 +15,6 @@
 
     @include desktop {
       height: 250px;
-    }
-  }
-
-  .mobile_button {
-    @include mobile {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      margin-top: 60px;
-    }
-
-    @include desktop {
-      display: none;
     }
   }
 }

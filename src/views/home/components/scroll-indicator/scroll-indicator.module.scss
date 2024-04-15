@@ -1,0 +1,41 @@
+@use '@/styles/abstracts' as *;
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.arrow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.5s,
+    visibility 0.5s;
+
+  & > svg {
+    z-index: 3;
+    animation: float 2s ease-in-out infinite;
+  }
+
+  @include mobile {
+    margin-top: -20px;
+  }
+
+  @include desktop {
+    margin-top: 20px;
+  }
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
