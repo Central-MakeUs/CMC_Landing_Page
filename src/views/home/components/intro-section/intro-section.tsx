@@ -1,34 +1,32 @@
-import { Section } from '../section'
+import { StaticImage } from 'gatsby-plugin-image'
+
+import { AuraCircle } from '@/components'
+
 import * as css from './intro-section.module.scss'
 
 export const IntroSection = () => {
   return (
-    <Section className={css.intro}>
-      <Section.Header
-        title="introduction"
-        description={'우리만의 룰을 세워 세상을 바꾸는\n우리는 CMC ‘챌린저’입니다'}
-      />
-      <div className={css.grid_container}>
-        <div>
-          <span>현재까지 CMC의 팀</span>
-          <span>80+</span>
-        </div>
-        <div>
-          <span>
-            지금까지 런칭된 앱 수<br />
-            (Android, iOS 스토어)
-          </span>
-          <span>130+</span>
-        </div>
-        <div>
-          <span>CMC앱 전체 다운로드 수</span>
-          <span>5000+</span>
-        </div>
-        <div>
-          <span>CMC 챌린저의 외주연계 횟수</span>
-          <span>100+</span>
-        </div>
+    <section className={css.intro}>
+      <StaticImage src="../../images/desktop-main.png" alt="CMC" className={css.desktop_main} />
+      <StaticImage src="../../images/mobile-main.png" alt="CMC" className={css.mobile_main} />
+
+      <div className={css.light}>
+        <StaticImage src="../../images/light-main.png" alt="CMC" className={css.light_main} />
+        <StaticImage src="../../images/light-four.png" alt="CMC" className={css.light_four} />
+        <StaticImage src="../../images/light-eight.png" alt="CMC" className={css.light_eight} />
+        <StaticImage src="../../images/light-two.png" alt="CMC" className={css.light_two} />
       </div>
-    </Section>
+
+      <div className={css.desktop_aura}>
+        <AuraCircle size="14%" top="20%" left="0%" opacity={0.2} />
+        <AuraCircle size="50%" top="10%" left="18%" />
+        <AuraCircle size="20%" top="50%" left="68%" />
+        <AuraCircle size="9%" top="83%" left="88%" opacity={0.2} />
+      </div>
+
+      <div className={css.mobile_aura}>
+        <AuraCircle size="400px" top="30%" left="calc(50% - 200px)" />
+      </div>
+    </section>
   )
 }

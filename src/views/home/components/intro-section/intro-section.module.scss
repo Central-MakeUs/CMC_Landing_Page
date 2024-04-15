@@ -1,78 +1,147 @@
 @use '@/styles/abstracts' as *;
 @use '@/styles/utils' as *;
 
-.intro {
-  @include mobile {
-    margin-top: 135px;
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(-50%, -30%) translateY(0);
   }
+  50% {
+    transform: translate(-50%, -30%) translateY(-20px);
+  }
+}
+
+@keyframes twinkling {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.intro {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  background-color: #290052;
 
   @include desktop {
-    margin-top: 300px;
+    margin-top: -20px;
   }
 
-  .grid_container {
-    display: grid;
-    justify-content: center;
-    width: 100%;
+  .desktop_main {
+    @include desktop {
+      z-index: 1;
+      display: block;
+      max-width: 1440px;
+    }
 
     @include mobile {
-      grid-template-rows: repeat(2, 1fr);
-      grid-template-columns: repeat(2, 152px);
-      gap: 40px;
-      height: 200px;
-      margin-top: 60px;
-      padding: 0 28px;
+      display: none;
+    }
+  }
+
+  .mobile_main {
+    @include desktop {
+      display: none;
+    }
+
+    @include mobile {
+      z-index: 1;
+      display: block;
+      max-width: 460px;
+    }
+  }
+
+  .light {
+    & > div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      aspect-ratio: 1 / 1;
+      transform: translate(-50%, -30%);
+    }
+
+    .light_main {
+      z-index: 2;
+      mix-blend-mode: hard-light;
+      animation: float 3s ease-in-out infinite;
+
+      @include mobile {
+        width: 308px;
+      }
+
+      @include desktop {
+        width: 40%;
+      }
+    }
+
+    .light_four {
+      animation: twinkling 2s infinite;
+
+      @include mobile {
+        width: 272px;
+        transform: translate(-88%, -36%);
+      }
+
+      @include desktop {
+        width: 40%;
+        transform: translate(-82%, -30%);
+      }
+    }
+
+    .light_eight {
+      animation: twinkling 3s infinite;
+
+      @include mobile {
+        width: 472px;
+        transform: translate(-42%, -62%);
+      }
+
+      @include desktop {
+        width: 36%;
+        transform: translate(0%, -30%);
+      }
+    }
+
+    .light_two {
+      animation: twinkling 5s infinite;
+
+      @include mobile {
+        width: 400px;
+        aspect-ratio: 3 / 1;
+        transform: translate(-44%, 70%) scaleX(-1);
+      }
+
+      @include desktop {
+        width: 20%;
+        aspect-ratio: 4 / 2;
+        transform: translate(-128%, 148%);
+      }
+    }
+  }
+
+  .desktop_aura {
+    @include mobile {
+      display: none;
     }
 
     @include desktop {
-      grid-template-columns: repeat(auto-fit, minmax(280px, auto));
-      gap: 60px;
-      min-height: 153px;
-      margin-top: 110px;
+      display: block;
+    }
+  }
+
+  .mobile_aura {
+    @include mobile {
+      display: block;
     }
 
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      max-width: 280px;
-
-      span {
-        &:nth-child(1) {
-          display: block;
-          color: #ffffff;
-          text-align: center;
-          font-weight: 700;
-          line-height: normal;
-
-          @include mobile {
-            font-size: rem(12px);
-          }
-
-          @include desktop {
-            font-size: rem(24px);
-            letter-spacing: -0.076px;
-          }
-        }
-
-        &:nth-child(2) {
-          display: block;
-          color: #615dff;
-          text-align: center;
-          font-weight: 700;
-          line-height: normal;
-          letter-spacing: -0.076px;
-
-          @include mobile {
-            font-size: rem(23px);
-          }
-
-          @include desktop {
-            font-size: rem(45px);
-            letter-spacing: -0.076px;
-          }
-        }
-      }
+    @include desktop {
+      display: none;
     }
   }
 }

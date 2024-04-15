@@ -1,8 +1,10 @@
 @use '@/styles/abstracts' as *;
 
 .main {
+  background-color: #290052;
+
   @include desktop {
-    padding: 0px 70px;
+    padding: 10px 40px 0;
   }
 
   .space {
@@ -12,39 +14,6 @@
 
     @include desktop {
       height: 250px;
-    }
-  }
-
-  .image_container {
-    @include mobile {
-      margin-top: 20px;
-    }
-
-    @include desktop {
-      display: flex;
-      justify-content: center;
-      margin-top: -20px;
-    }
-
-    .desktop_main {
-      @include desktop {
-        display: block;
-        max-width: 1300px;
-      }
-
-      @include mobile {
-        display: none;
-      }
-    }
-
-    .mobile_main {
-      @include desktop {
-        display: none;
-      }
-
-      @include mobile {
-        display: block;
-      }
     }
   }
 

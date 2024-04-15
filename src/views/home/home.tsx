@@ -1,5 +1,4 @@
 import type { HeadProps } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 
 import { FloatingButton, Seo } from '@/components'
 
@@ -10,14 +9,10 @@ import BottomArrow from './images/bottom-arrow.svg'
 const HomePage = () => {
   return (
     <main className={css.main}>
-      <section className={css.image_container}>
-        <StaticImage src="./images/desktop-main.png" alt="CMC" className={css.desktop_main} />
-        <StaticImage src="./images/mobile-main.png" alt="CMC" className={css.mobile_main} />
-      </section>
+      <IntroSection />
       <div className={css.mobile_button}>
         <BottomArrow />
       </div>
-      <IntroSection />
       <IdentitySection />
       <ChallengerSection />
       <FeaturesSection />
