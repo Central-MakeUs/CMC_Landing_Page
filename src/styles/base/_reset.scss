@@ -20,7 +20,7 @@ img {
 
 html {
   background-color: #1f003d;
-  color: text-color(strong);
+  color: color(text-strong);
 }
 
 /*
@@ -32,7 +32,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: 'Pretendard';
-  background: background-color(primary);
+  background: color(background-primary);
 }
 
 /* 6. Improve media defaults */

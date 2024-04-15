@@ -1,5 +1,4 @@
 @use '@/styles/abstracts' as *;
-@use '@/styles/base' as *;
 @use '@/styles/utils' as *;
 
 .modal {
@@ -24,7 +23,7 @@
     font-size: rem(17px);
     line-height: rem(22px);
     font-weight: 700;
-    color: text-color(normal);
+    color: color(text-normal);
   }
 
   .active {
@@ -38,7 +37,7 @@
 
     span {
       @include typo(body-bold2);
-      color: text-color(normal);
+      color: color(text-normal);
 
       display: block;
     }

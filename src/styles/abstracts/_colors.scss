@@ -1,72 +1,32 @@
-// Color
 $colors: (
   'primary-assistive': #efe0ff,
   'primary-alternative': #b36afb,
   'primary-normal': #8000ff,
   'primary-strong': #6b06d0,
   'primary-heavy': #5707a6,
-
   'semantic-red': #fa333f,
   'semantic-black': #000,
   'semantic-white': #fff,
-
   'fill-strong': #5d298e,
   'fill-normal': #522183,
   'fill-assistive': #2e104c,
   'fill-disable': #26212c,
-
   'line-normal': #42285d,
   'line-alternative': #33174f,
+  'background-primary': linear-gradient(180deg, #290052 0%, #150029 100%),
+  'background-secondary': #390b65,
+  'background-tertiary': #481579,
+  'text-strong': #fff,
+  'text-normal': #efeaf5,
+  'text-alternative': #b3a2c3,
+  'text-assistive': #705a87,
+  'text-disable': #3d3644,
 );
 
 @function color($name) {
   @if map-has-key($colors, $name) {
     @return map-get($colors, $name);
   } @else {
-    @return null;
-  }
-}
-
-// Background
-$background-colors: (
-  'primary': linear-gradient(180deg, #290052 0%, #150029 100%),
-  'secondary': #390b65,
-  'tertiary': #481579,
-);
-
-@each $name, $values in $background-colors {
-  .background-#{$name} {
-    background: $values;
-  }
-}
-
-@function background-color($name) {
-  @if map-has-key($background-colors, $name) {
-    @return map-get($background-colors, $name);
-  } @else {
-    @return null;
-  }
-}
-
-// Text
-$text-colors: (
-  'strong': #fff,
-  'normal': #efeaf5,
-  'alternative': #b3a2c3,
-  'assistive': #705a87,
-  'disable': #3d3644,
-);
-
-@each $name, $values in $text-colors {
-  .text-#{$name} {
-    color: $values;
-  }
-}
-
-@function text-color($name) {
-  @if map-has-key($text-colors, $name) {
-    @return map-get($text-colors, $name);
-  } @else {
-    @return null;
+    @error "Color name `#{$color-name}` is not defined in the given map.";
   }
 }

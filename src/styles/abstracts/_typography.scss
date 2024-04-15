@@ -1,5 +1,4 @@
-@use '@/styles/abstracts' as *;
-@use '@/styles/utils' as *;
+@use '@/styles/utils' as utils;
 
 $typo-styles: (
   'display1': (
@@ -89,14 +88,9 @@ $typo-styles: (
   @return map-get($style, $property);
 }
 
+// 해당 함수 사용
 @mixin typo($name) {
-  font-size: rem(typo-style($name, 'size'));
-  line-height: rem(typo-style($name, 'line-height'));
+  font-size: utils.rem(typo-style($name, 'size'));
+  line-height: utils.rem(typo-style($name, 'line-height'));
   font-weight: typo-style($name, 'weight');
-}
-
-@each $name, $values in $typo-styles {
-  .text-#{$name} {
-    @include typo($name);
-  }
 }
