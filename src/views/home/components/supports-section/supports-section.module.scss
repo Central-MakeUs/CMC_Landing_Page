@@ -1,0 +1,39 @@
+@use '@/styles/abstracts' as *;
+
+.space {
+  @include mobile {
+    height: 160px;
+  }
+
+  @include desktop {
+    height: 300px;
+  }
+}
+
+.supports {
+  width: 100%;
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include desktop {
+    max-width: 1000px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .supports_company {
+    @include mobile {
+      width: 80%;
+      max-width: 400px;
+    }
+
+    @include desktop {
+      max-width: 440px;
+    }
+  }
+}
