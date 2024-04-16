@@ -24,7 +24,7 @@
 
     @include desktop {
       gap: 33px;
-      padding: 28px 80px;
+      padding: 10px 80px;
     }
 
     .heading_logo {
@@ -38,7 +38,7 @@
         }
 
         @include desktop {
-          width: 42px;
+          width: 30px;
         }
       }
     }
@@ -72,11 +72,11 @@
       @include desktop {
         display: flex;
         align-items: center;
-        gap: 48px;
+        gap: 20px;
 
         a {
-          font-size: rem(24px);
-          line-height: rem(30px);
+          font-size: rem(16px);
+          line-height: rem(20px);
           font-weight: 600;
         }
 
@@ -85,9 +85,11 @@
         }
 
         .apply_button {
-          @include typo(headline);
+          font-size: rem(16px);
+          line-height: rem(20px);
+          font-weight: 600;
 
-          padding: 8px 24px;
+          padding: 6px 20px;
           border-radius: 99px;
           background: color(primary-normal);
         }
