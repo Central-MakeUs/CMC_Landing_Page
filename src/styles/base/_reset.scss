@@ -50,7 +50,9 @@ input,
 button,
 textarea,
 select {
+  all: unset;
   font: inherit;
+  cursor: pointer;
 }
 
 /* 8. Avoid text overflows */
@@ -62,6 +64,9 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  word-break: keep-all;
+  white-space: pre-wrap;
+  text-align: center;
 }
 
 a {
