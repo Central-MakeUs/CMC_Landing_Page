@@ -2,11 +2,18 @@
 @use '@/styles/utils' as *;
 
 .section {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  width: 100%;
+
+  @include mobile {
+    padding: 40px 20px;
+  }
+
+  @include desktop {
+    padding: 40px 40px;
+  }
 }
 
 .heading {
@@ -82,4 +89,45 @@
   aspect-ratio: 1 / 1;
   border-radius: 100%;
   background: radial-gradient(46.86% 46.86% at 50% 53.14%, rgba(97, 93, 255, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.star {
+  @include mobile {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 16px;
+  }
+
+  @include desktop {
+    width: 44px;
+    height: 44px;
+    margin-bottom: 20px;
+  }
+}
+
+.head {
+  @include mobile {
+    font-size: rem(24px);
+    line-height: rem(30px);
+    margin-bottom: 12px;
+  }
+
+  @include desktop {
+    @include typo(display1);
+    margin-bottom: 16px;
+  }
+}
+
+.desc {
+  font-weight: 500;
+
+  @include mobile {
+    font-size: rem(14px);
+    line-height: rem(19px);
+  }
+
+  @include desktop {
+    font-size: rem(26px);
+    line-height: rem(32px);
+  }
 }
