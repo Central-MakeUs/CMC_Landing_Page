@@ -1,0 +1,191 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.desktop_title {
+  object-fit: contain;
+
+  @include mobile {
+    display: none;
+  }
+
+  @include desktop {
+    width: 700px;
+    padding: 16px 0;
+  }
+}
+
+.mobile_title {
+  object-fit: contain;
+
+  @include mobile {
+    width: 300px;
+    padding: 20px 0;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.description {
+  font-weight: 700;
+  color: color(text-normal);
+
+  & > span {
+    color: color(primary-alternative);
+  }
+
+  @include mobile {
+    width: 300px;
+    font-size: rem(14px);
+    line-height: rem(19px);
+  }
+
+  @include desktop {
+    width: 650px;
+    font-size: rem(24px);
+    line-height: rem(30px);
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mobile {
+    margin: 60px 0;
+    padding: 24px 32px 6px;
+    gap: 16px;
+  }
+
+  @include desktop {
+    margin: 80px 0;
+    padding: 40px 80px 10px;
+    gap: 32px;
+  }
+
+  .card_title {
+    @include mobile {
+      @include typo(title3);
+    }
+
+    @include desktop {
+      @include typo(display3);
+    }
+  }
+
+  .card_time {
+    font-weight: 700;
+
+    @include mobile {
+      font-size: rem(44px);
+      line-height: rem(56px);
+    }
+
+    @include desktop {
+      font-size: rem(80px);
+      line-height: rem(96px);
+    }
+  }
+}
+
+.shine {
+  & > div {
+    position: absolute;
+  }
+
+  .shine_left_top {
+    @include mobile {
+      width: 106px;
+      height: 80px;
+      left: -40px;
+      top: -40px;
+    }
+
+    @include desktop {
+      width: 160px;
+      height: 133px;
+      left: -60px;
+      top: -66px;
+    }
+
+    @include applyTwinkling();
+  }
+
+  .shine_right_top {
+    @include mobile {
+      width: 80px;
+      height: 50px;
+      right: -50px;
+      top: -30px;
+    }
+
+    @include desktop {
+      width: 128px;
+      height: 97px;
+      right: -70px;
+      top: -50px;
+    }
+
+    @include applyTwinkling(3s);
+  }
+
+  .shine_left_bottom {
+    @include mobile {
+      width: 195px;
+      height: 173px;
+      left: -92px;
+      bottom: -84px;
+    }
+
+    @include desktop {
+      width: 260px;
+      height: 194px;
+      left: -122px;
+      bottom: -96px;
+    }
+
+    @include applyTwinkling(5s);
+  }
+
+  .shine_right_bottom {
+    @include mobile {
+      width: 120px;
+      height: 120px;
+      right: -54px;
+      bottom: -40px;
+    }
+
+    @include desktop {
+      width: 230px;
+      height: 250px;
+      right: -104px;
+      bottom: -96px;
+    }
+
+    @include applyTwinkling(4s);
+  }
+}
+
+.desktop_aura {
+  @include mobile {
+    display: none;
+  }
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.mobile_aura {
+  @include mobile {
+    display: block;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}

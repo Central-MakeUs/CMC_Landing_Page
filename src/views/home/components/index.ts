@@ -1,5 +1,7 @@
 export * from './challenger-section'
+export * from './counter-section'
 export * from './features-section'
 export * from './identity-section'
 export * from './intro-section'
 export * from './scroll-indicator'
+export * from './supports-section'

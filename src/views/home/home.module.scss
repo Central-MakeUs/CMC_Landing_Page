@@ -1,20 +1,16 @@
 @use '@/styles/abstracts' as *;
 
-.main {
-  background-color: #290052;
-  overflow-x: hidden;
+.space {
+  @include mobile {
+    height: 45px;
+  }
 
   @include desktop {
-    padding: 10px 40px 0;
+    height: 250px;
   }
+}
 
-  .space {
-    @include mobile {
-      height: 45px;
-    }
-
-    @include desktop {
-      height: 250px;
-    }
-  }
+.gradient_background {
+  margin-top: 240px;
+  background: color(background-primary);
 }
