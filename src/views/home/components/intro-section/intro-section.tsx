@@ -18,10 +18,10 @@ export const IntroSection = () => {
       </div>
 
       <div className={css.desktop_aura}>
-        <AuraCircle size="14%" top="20%" left="0%" opacity={0.2} />
-        <AuraCircle size="50%" top="10%" left="18%" />
-        <AuraCircle size="20%" top="50%" left="68%" />
-        <AuraCircle size="9%" top="83%" left="88%" opacity={0.2} />
+        <AuraCircle size="14%" top="10%" left="0%" opacity={0.2} />
+        <AuraCircle size="50%" top="12%" left="18%" />
+        <AuraCircle size="20%" top="46%" left="68%" />
+        <AuraCircle size="9%" top="64%" left="88%" opacity={0.2} />
       </div>
 
       <div className={css.mobile_aura}>

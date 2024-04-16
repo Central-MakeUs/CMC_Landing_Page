@@ -1,0 +1,16 @@
+@keyframes twinkling {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@mixin applyTwinkling($duration: 2s, $timing-function: ease-in-out, $iteration-count: infinite) {
+  animation-name: twinkling;
+  animation-duration: $duration;
+  animation-timing-function: $timing-function;
+  animation-iteration-count: $iteration-count;
+}

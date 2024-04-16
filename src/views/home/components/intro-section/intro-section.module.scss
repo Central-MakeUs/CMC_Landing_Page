@@ -4,20 +4,10 @@
 @keyframes float {
   0%,
   100% {
-    transform: translate(-50%, -30%) translateY(0);
+    transform: translate(-50%, -50%) translateY(0);
   }
   50% {
-    transform: translate(-50%, -30%) translateY(-20px);
-  }
-}
-
-@keyframes twinkling {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.3;
+    transform: translate(-50%, -50%) translateY(-5%);
   }
 }
 
@@ -28,15 +18,12 @@
   z-index: 1;
   background-color: #290052;
 
-  @include desktop {
-    margin-top: -20px;
-  }
-
   .desktop_main {
     @include desktop {
       z-index: 1;
       display: block;
-      max-width: 1440px;
+      max-width: 1200px;
+      margin-bottom: 200px;
     }
 
     @include mobile {
@@ -76,51 +63,51 @@
       }
 
       @include desktop {
-        width: 40%;
+        width: 34%;
       }
     }
 
     .light_four {
-      animation: twinkling 2s infinite;
+      @include applyTwinkling();
 
       @include mobile {
         width: 272px;
-        transform: translate(-88%, -36%);
+        transform: translate(-88%, -50%);
       }
 
       @include desktop {
         width: 40%;
-        transform: translate(-82%, -30%);
+        transform: translate(-80%, -50%);
       }
     }
 
     .light_eight {
-      animation: twinkling 3s infinite;
+      @include applyTwinkling(3s);
 
       @include mobile {
         width: 472px;
-        transform: translate(-42%, -62%);
+        transform: translate(-28%, -68%);
       }
 
       @include desktop {
         width: 36%;
-        transform: translate(0%, -30%);
+        transform: translate(-10%, -50%);
       }
     }
 
     .light_two {
-      animation: twinkling 5s infinite;
+      @include applyTwinkling(5s);
 
       @include mobile {
         width: 400px;
         aspect-ratio: 3 / 1;
-        transform: translate(-44%, 70%) scaleX(-1);
+        transform: translate(-44%, 30%) scaleX(-1);
       }
 
       @include desktop {
         width: 20%;
         aspect-ratio: 4 / 2;
-        transform: translate(-128%, 148%);
+        transform: translate(-110%, 44%);
       }
     }
   }
