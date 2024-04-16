@@ -1,0 +1,30 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.button {
+  background-color: color(primary-normal);
+  border-radius: 99px;
+  color: #f5f1f8;
+  font-weight: 700;
+  text-align: center;
+
+  &:hover {
+    background-color: color(primary-strong);
+  }
+
+  &:active {
+    background-color: color(primary-heavy);
+  }
+
+  @include mobile {
+    padding: 8px 16px;
+    font-size: rem(14px);
+    line-height: rem(19px);
+  }
+
+  @include desktop {
+    padding: 16px 32px;
+    font-size: rem(26px);
+    line-height: rem(32px);
+  }
+}
