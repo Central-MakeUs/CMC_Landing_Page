@@ -1,0 +1,68 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.card {
+  flex: 1;
+  background: radial-gradient(46.86% 46.86% at 50% 53.14%, #9c30e8 0%, #3c006600 100%);
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    margin-top: 8px;
+    font-weight: 700;
+
+    @include mobile {
+      font-size: rem(24px);
+      line-height: rem(30px);
+    }
+
+    @include desktop {
+      font-size: rem(32px);
+      line-height: rem(39px);
+    }
+  }
+
+  .description {
+    margin-top: 16px;
+    font-weight: 500;
+
+    @include mobile {
+      font-size: rem(17px);
+      line-height: rem(22px);
+    }
+
+    @include desktop {
+      font-size: rem(22px);
+      line-height: rem(28px);
+    }
+  }
+}
+
+.cards {
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @include desktop {
+    gap: 80px;
+  }
+
+  .icon {
+    @include mobile {
+      width: 32px;
+      height: 32px;
+    }
+
+    @include desktop {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
