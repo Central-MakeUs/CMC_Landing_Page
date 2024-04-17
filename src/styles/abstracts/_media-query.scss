@@ -1,6 +1,6 @@
 @use '../utils/' as *;
 
-$break: rem(768px);
+$break: rem(1000px);
 
 @mixin mobile {
   @media (max-width: #{$break}) {
