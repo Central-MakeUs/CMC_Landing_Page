@@ -1,6 +1,6 @@
 import { StaticImage } from 'gatsby-plugin-image'
 
-import { Section } from '../section'
+import { Section } from '../../../../components/section'
 import * as css from './supports-section.module.scss'
 
 export const SupportsSection = () => {

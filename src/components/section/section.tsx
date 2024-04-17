@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import { StaticImage } from 'gatsby-plugin-image'
-import type { ReactNode } from 'react'
+import React, { forwardRef, ForwardRefExoticComponent, ReactNode, RefAttributes } from 'react'
 
 import * as css from './section.module.scss'
 
@@ -9,16 +9,20 @@ type Props = {
   children: ReactNode
 }
 
-export const Section = ({ className, children }: Props) => {
-  return <section className={clsx(css.section, className)}>{children}</section>
-}
+const SectionComponent = forwardRef<HTMLDivElement, Props>(({ className, children }, ref) => {
+  return (
+    <section ref={ref} className={clsx(css.section, className)}>
+      {children}
+    </section>
+  )
+})
 
 type HeaderProps = {
   title: string
   description: string
 }
 
-Section.Header = ({ title, description }: HeaderProps) => {
+const Header = ({ title, description }: HeaderProps) => {
   return (
     <>
       <h2 className={css.heading}>{title}</h2>
@@ -35,7 +39,7 @@ type HeadProps = {
   description?: string
 }
 
-Section.Head = ({ title, description }: HeadProps) => {
+const Head = ({ title, description }: HeadProps) => {
   return (
     <>
       <StaticImage src="./images/star.png" alt="" className={css.star} />
@@ -44,3 +48,12 @@ Section.Head = ({ title, description }: HeadProps) => {
     </>
   )
 }
+
+interface WithHeader {
+  Header: React.ComponentType<HeaderProps>
+  Head: React.ComponentType<HeadProps>
+}
+
+export const Section = SectionComponent as ForwardRefExoticComponent<Props & RefAttributes<HTMLDivElement>> & WithHeader
+Section.Header = Header
+Section.Head = Head

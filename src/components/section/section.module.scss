@@ -43,7 +43,7 @@
 
 .description {
   text-align: center;
-  color: #ffffff;
+  color: #efeaf5;
   white-space: pre-line;
   letter-spacing: -0.076px;
   font-weight: 600;
@@ -116,10 +116,15 @@
     @include typo(display1);
     margin-bottom: 16px;
   }
+
+  span {
+    color: #b36afb;
+  }
 }
 
 .desc {
   font-weight: 500;
+  color: #efeaf5;
 
   @include mobile {
     font-size: rem(14px);
