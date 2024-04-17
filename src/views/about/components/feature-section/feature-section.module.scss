@@ -1,0 +1,53 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.space {
+  @include desktop {
+    height: 60px;
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 308px;
+  min-height: 231px;
+  padding: 40px 10px;
+  background-color: rgb(58, 10, 102, 0.7);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: color(text-normal);
+
+  .title {
+    font-weight: 700;
+    font-size: rem(22px);
+    line-height: rem(28px);
+
+    span {
+      color: #b3a2c3;
+      font-weight: 500;
+      font-size: rem(14px);
+      line-height: rem(19px);
+    }
+  }
+
+  .figure {
+    font-weight: 700;
+    font-size: rem(44px);
+    line-height: rem(56px);
+  }
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 26px;
+  width: 100%;
+  max-width: 1200px;
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
