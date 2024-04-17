@@ -1,0 +1,284 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.button {
+  background-color: color(fill-normal);
+  color: color(text-normal);
+  border-radius: 16px;
+  flex: 1;
+  font-weight: 700;
+  text-align: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @include mobile {
+    width: 328px;
+    padding: 12px 10px;
+    font-size: rem(17px);
+    line-height: rem(22px);
+  }
+
+  @include desktop {
+    max-width: 308px;
+    padding: 16px 20px;
+    font-size: rem(24px);
+    line-height: rem(30px);
+  }
+}
+
+.button_active {
+  background-color: #b36afb;
+}
+
+.client_card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #390b65;
+  border-radius: 16px;
+  padding: 20px 24px;
+
+  .client_title {
+    font-weight: 700;
+
+    @include mobile {
+      font-size: rem(17px);
+      line-height: rem(22px);
+    }
+
+    @include desktop {
+      font-size: rem(22px);
+      line-height: rem(28px);
+    }
+  }
+
+  .client_description {
+    font-weight: 500;
+
+    @include mobile {
+      font-size: rem(13px);
+      line-height: rem(17px);
+    }
+
+    @include desktop {
+      font-size: rem(18px);
+      line-height: rem(23px);
+    }
+  }
+
+  .client_caption {
+    font-weight: 700;
+    color: #b3a2c3;
+
+    @include mobile {
+      font-size: rem(13px);
+      line-height: rem(17px);
+    }
+
+    @include desktop {
+      font-size: rem(14px);
+      line-height: rem(19px);
+    }
+  }
+}
+
+.card {
+  background-color: rgb(57, 11, 101, 0.7);
+  border-radius: 24px;
+  color: #efeaf5;
+  display: flex;
+
+  @include mobile {
+    padding: 24px;
+    width: 328px;
+  }
+
+  @include desktop {
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .icon_desktop {
+    @include mobile {
+      display: none;
+    }
+
+    @include desktop {
+      width: 103px;
+      height: 103px;
+    }
+  }
+
+  .icon_mobile {
+    @include mobile {
+      width: 50px;
+      height: 50px;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      gap: 16px;
+    }
+
+    @include desktop {
+      gap: 8px;
+    }
+
+    & * {
+      text-align: start;
+    }
+
+    .card_mobile {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    h4 {
+      font-weight: 700;
+
+      @include mobile {
+        font-size: rem(20px);
+        line-height: rem(25px);
+      }
+
+      @include desktop {
+        font-size: rem(32px);
+        line-height: rem(39px);
+      }
+    }
+
+    .title_mobile {
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .title_desktop {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .detail_description {
+      font-weight: 500;
+
+      @include mobile {
+        font-size: rem(14px);
+        line-height: rem(19px);
+      }
+
+      @include desktop {
+        font-size: rem(22px);
+        line-height: rem(28px);
+      }
+    }
+  }
+}
+
+.main {
+  .sub_title {
+    color: #b36afb;
+    font-weight: 700;
+
+    @include mobile {
+      font-size: rem(13px);
+      line-height: rem(17px);
+      margin-top: 14px;
+    }
+
+    @include desktop {
+      font-size: rem(22px);
+      line-height: rem(28px);
+      margin-top: 6px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .caption {
+    color: #b36afb;
+    font-weight: 500;
+
+    @include mobile {
+      font-size: rem(11px);
+      line-height: rem(15px);
+      margin-top: 8px;
+    }
+
+    @include desktop {
+      font-size: rem(14px);
+      line-height: rem(19px);
+      margin-top: 2px;
+    }
+  }
+
+  .buttons {
+    width: 100%;
+    padding: 40px 16px 16px;
+    display: flex;
+    justify-content: center;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @include desktop {
+      gap: 16px;
+    }
+  }
+
+  .cards_mobile {
+    display: none;
+
+    @include mobile {
+      width: 328px;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  .card_active {
+    @include mobile {
+      display: block;
+    }
+  }
+
+  .cards_desktop {
+    @include mobile {
+      display: none;
+    }
+
+    @include desktop {
+      width: 100%;
+      max-width: 1310px;
+      padding: 0 16px;
+    }
+  }
+
+  .card_client {
+    display: flex;
+    gap: 16px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+}

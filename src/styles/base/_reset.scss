@@ -53,6 +53,7 @@ select {
   all: unset;
   font: inherit;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 /* 8. Avoid text overflows */
@@ -72,6 +73,12 @@ h6 {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+  font-style: normal;
 }
 
 /*
