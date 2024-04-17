@@ -1,13 +1,14 @@
 import { StaticImage } from 'gatsby-plugin-image'
+import { forwardRef } from 'react'
 
-import { AuraCircle, Button, GlassCard } from '@/components'
+import { AuraCircle, Button, GlassCard, Section } from '@/components'
 
-import { Section } from '../section'
+import { CountdownTimer } from '../countdown-timer'
 import * as css from './counter-section.module.scss'
 
-export const CounterSection = () => {
+export const CounterSection = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <Section>
+    <Section ref={ref}>
       <StaticImage
         src="./images/desktop-title.png"
         alt="Central Makeus Challenge"
@@ -28,7 +29,7 @@ export const CounterSection = () => {
 
       <GlassCard extendClass={css.card}>
         <p className={css.card_title}>15기 모집 시작까지</p>
-        <p className={css.card_time}>99 : 00: 00</p>
+        <CountdownTimer />
         <Button>알림 받기</Button>
 
         <div className={css.shine}>
@@ -64,4 +65,4 @@ export const CounterSection = () => {
       </div>
     </Section>
   )
-}
+})

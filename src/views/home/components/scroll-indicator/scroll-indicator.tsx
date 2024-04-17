@@ -4,12 +4,16 @@ import { useScrollIndicator } from './hooks'
 import BottomArrow from './images/bottom-arrow.svg'
 import * as css from './scroll-indicator.module.scss'
 
-export const ScrollIndicator = () => {
+interface Props {
+  onClick: () => void
+}
+
+export const ScrollIndicator = ({ onClick }: Props) => {
   const { isVisible } = useScrollIndicator()
 
   return (
-    <div className={clsx(css.arrow, { [css.visible]: isVisible })}>
+    <button type="button" className={clsx(css.arrow, { [css.visible]: isVisible })} onClick={onClick}>
       <BottomArrow />
-    </div>
+    </button>
   )
 }
