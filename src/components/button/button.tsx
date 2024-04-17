@@ -4,8 +4,8 @@ import * as css from './button.module.scss'
 
 export const Button = ({ children }: PropsWithChildren) => {
   return (
-    <button type="button" className={css.button}>
+    <a href="https://forms.gle/LWfsozJbsrhkpyCr5" target="_blank" rel="noreferrer" className={css.button}>
       {children}
-    </button>
+    </a>
   )
 }
