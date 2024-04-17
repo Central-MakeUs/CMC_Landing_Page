@@ -1,7 +1,12 @@
+import clsx from 'clsx'
 import { PropsWithChildren } from 'react'
 
 import * as css from './main.module.scss'
 
-export const Main = ({ children }: PropsWithChildren) => {
-  return <main className={css.main}>{children}</main>
+interface Props extends PropsWithChildren {
+  className?: string
+}
+
+export const Main = ({ className, children }: Props) => {
+  return <main className={clsx(css.main, className)}>{children}</main>
 }
