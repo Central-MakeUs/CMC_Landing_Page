@@ -1,0 +1,16 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.time {
+  font-weight: 700;
+
+  @include mobile {
+    font-size: rem(44px);
+    line-height: rem(56px);
+  }
+
+  @include desktop {
+    font-size: rem(80px);
+    line-height: rem(96px);
+  }
+}
