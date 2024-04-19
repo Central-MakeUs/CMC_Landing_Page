@@ -13,29 +13,30 @@
   padding: 0;
 }
 
+/* 3. Disable text selection and touch callouts */
 img {
   -webkit-user-select: none;
   user-select: none;
 }
 
+/* 4. Set a universal background color and text color */
 html {
-  background-color: #1f003d;
+  background: color(background-primary);
   color: color(text-strong);
 }
 
 /*
   Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
+  5. Add accessible line-height
+  6. Improve text rendering
 */
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: 'Pretendard';
-  background: color(background-primary);
 }
 
-/* 6. Improve media defaults */
+/* 7. Improve media defaults */
 img,
 picture,
 video,
@@ -45,7 +46,7 @@ svg {
   max-width: 100%;
 }
 
-/* 7. Remove built-in form typography styles */
+/* 8. Remove built-in form typography styles */
 input,
 button,
 textarea,
@@ -56,7 +57,7 @@ select {
   box-sizing: border-box;
 }
 
-/* 8. Avoid text overflows */
+/* 9. Avoid text overflows */
 p,
 h1,
 h2,
@@ -70,11 +71,13 @@ h6 {
   text-align: center;
 }
 
+/* 10. Removing underline and ensuring color consistency with the surrounding text. */
 a {
   text-decoration: none;
   color: inherit;
 }
 
+/* 11. Remove list styles */
 ul,
 li {
   list-style: none;
@@ -82,7 +85,7 @@ li {
 }
 
 /*
-  9. Create a root stacking context
+  12. Create a root stacking context
 */
 #___gatsby {
   isolation: isolate;
