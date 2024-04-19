@@ -17,6 +17,7 @@ export const AuraCircle = ({ size, top = '50%', left = '50%', opacity = 0.4 }: P
     top,
     left,
     opacity,
+    pointerEvents: 'none',
   }
 
   return <div className={css.round} style={style} />
