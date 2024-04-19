@@ -6,12 +6,12 @@
 }
 
 .card {
-  width: 80%;
   display: flex;
   flex-direction: column;
   position: relative;
 
   @include mobile {
+    width: 100%;
     max-width: 328px;
     gap: 24px;
     padding: 32px 24px;
@@ -19,6 +19,7 @@
   }
 
   @include desktop {
+    width: 80%;
     max-width: 1064px;
     gap: 40px;
     padding: 48px 40px;
@@ -27,7 +28,7 @@
 
   ul {
     > li:first-of-type {
-      border-top: 1px solid #fff;
+      border-top: 1px solid #ffffff60;
     }
   }
 
@@ -49,7 +50,7 @@
     display: flex;
     align-items: center;
     color: #efeaf5;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ffffff60;
 
     @include mobile {
       padding: 12px 0;
