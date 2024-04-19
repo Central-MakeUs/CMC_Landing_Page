@@ -7,17 +7,8 @@
       "ios": "https://apps.apple.com/kr/app/%EC%BB%A4%ED%8A%BC%EC%BD%9C/id6450673014",
       "android": "https://play.google.com/store/apps/details?id=com.cmc.curtaincall&pli=1"
     },
-    "logo": "./logo/13/curtaincall.png"
-  },
-  {
-    "name": "Qfeed",
-    "year": "13",
-    "description": "친구에 자신의 마음을 표현하고 싶지만, 주변 친구들과의 관계가 망가질까 주저하지 마세요.",
-    "link": {
-      "ios": "",
-      "android": "https://play.google.com/store/apps/details?id=com.qfeed&pcampaignid=web_share"
-    },
-    "logo": "./logo/13/qfeed.png"
+    "logo": "./logo/13/curtaincall.png",
+    "rank": "1"
   },
   {
     "name": "Fithub",
@@ -27,37 +18,8 @@
       "ios": "https://apps.apple.com/kr/app/fithub/id6450687753",
       "android": "https://play.google.com/store/apps/details?id=com.proteam.fithub&pcampaignid=web_share"
     },
-    "logo": "./logo/13/fithub.png"
-  },
-  {
-    "name": "오프너",
-    "year": "13",
-    "description": "오프라인 이벤트의 새로운 시대를 열 오픈오프",
-    "link": {
-      "ios": "https://apps.apple.com/kr/app/오픈오프/id6451419698",
-      "android": "https://play.google.com/store/apps/details?id=com.opener.openoff&pcampaignid=web_share"
-    },
-    "logo": "./logo/13/openoff.png"
-  },
-  {
-    "name": "지금",
-    "year": "13",
-    "description": "금융 루틴을 만들고, 함께 도전하며, 금융 습관을 만드는 챌린지 앱 지금입니다!",
-    "link": {
-      "ios": "https://apps.apple.com/kr/app/지금-지금-실천하는-금융-챌린지/id6461050868",
-      "android": "https://play.google.com/store/apps/details?id=com.cider.cider"
-    },
-    "logo": "./logo/13/now.png"
-  },
-  {
-    "name": "Zenefit",
-    "year": "13",
-    "description": "Zenefit은 청년층을 타겟으로 개인마다 신청 가능한 모든 복지 정책의 예상 수혜금액을 계산해주는 혜택 관리 플랫폼",
-    "link": {
-      "ios": "",
-      "android": ""
-    },
-    "logo": "./logo/13/zenefit.png"
+    "logo": "./logo/13/fithub.png",
+    "rank": "2"
   },
   {
     "name": "올아카이브",
@@ -67,7 +29,52 @@
       "ios": "https://apps.apple.com/kr/app/올카이브-all-chive/id6462470996",
       "android": "https://play.google.com/store/apps/details?id=com.allchivemobile"
     },
-    "logo": "./logo/13/allchive.png"
+    "logo": "./logo/13/allchive.png",
+    "rank": "3"
+  },
+  {
+    "name": "오프너",
+    "year": "13",
+    "description": "오프라인 이벤트의 새로운 시대를 열 오픈오프",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/오픈오프/id6451419698",
+      "android": "https://play.google.com/store/apps/details?id=com.opener.openoff&pcampaignid=web_share"
+    },
+    "logo": "./logo/13/openoff.png",
+    "rank": "4"
+  },
+  {
+    "name": "Qfeed",
+    "year": "13",
+    "description": "친구에 자신의 마음을 표현하고 싶지만, 주변 친구들과의 관계가 망가질까 주저하지 마세요.",
+    "link": {
+      "ios": "",
+      "android": "https://play.google.com/store/apps/details?id=com.qfeed&pcampaignid=web_share"
+    },
+    "logo": "./logo/13/qfeed.png",
+    "rank": "4"
+  },
+  {
+    "name": "지금",
+    "year": "13",
+    "description": "금융 루틴을 만들고, 함께 도전하며, 금융 습관을 만드는 챌린지 앱 지금입니다!",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/지금-지금-실천하는-금융-챌린지/id6461050868",
+      "android": "https://play.google.com/store/apps/details?id=com.cider.cider"
+    },
+    "logo": "./logo/13/now.png",
+    "rank": "4"
+  },
+  {
+    "name": "Zenefit",
+    "year": "13",
+    "description": "Zenefit은 청년층을 타겟으로 개인마다 신청 가능한 모든 복지 정책의 예상 수혜금액을 계산해주는 혜택 관리 플랫폼",
+    "link": {
+      "ios": "",
+      "android": ""
+    },
+    "logo": "./logo/13/zenefit.png",
+    "rank": "4"
   },
   {
     "name": "PLAYTE",
@@ -77,37 +84,8 @@
       "ios": "https://apps.apple.com/kr/app/playte-플레이트/id6463757225",
       "android": "https://play.google.com/store/apps/details?id=com.cmc.recipe&hl=ko"
     },
-    "logo": "./logo/13/playte.png"
-  },
-  {
-    "name": "프롬유",
-    "year": "12",
-    "description": "일상을 공유하고, 다른 커플의 이야기를 들을 수 있는 따뜻한 앱",
-    "link": {
-      "ios": "",
-      "android": "https://play.google.com/store/apps/details?id=com.fromu.fromu&pcampaignid=web_share"
-    },
-    "logo": "./logo/12/fromu.png"
-  },
-  {
-    "name": "Workus",
-    "year": "12",
-    "description": "나에게 딱 맞는 워크 스페이스 추천 서비스",
-    "link": {
-      "ios": "https://apps.apple.com/kr/app/workus/id6446238129",
-      "android": ""
-    },
-    "logo": "./logo/12/workus.png"
-  },
-  {
-    "name": "필드메이트",
-    "year": "12",
-    "description": "고객별 기술 업무관리 어플",
-    "link": {
-      "ios": "https://apps.apple.com/kr/app/fieldmate/id6446427396",
-      "android": ""
-    },
-    "logo": "./logo/12/fieldmate.png"
+    "logo": "./logo/13/playte.png",
+    "rank": "4"
   },
   {
     "name": "Runway",
@@ -117,7 +95,41 @@
       "ios": "https://apps.apple.com/kr/app/런웨이-runway-내-손-안의-간편한-패션-쇼핑-지도/id1671808515",
       "android": "https://play.google.com/store/apps/details?id=com.cmc12th.runway&hl=ko"
     },
-    "logo": "./logo/12/runway.png"
+    "logo": "./logo/12/runway.png",
+    "rank": "1"
+  },
+  {
+    "name": "프롬유",
+    "year": "12",
+    "description": "일상을 공유하고, 다른 커플의 이야기를 들을 수 있는 따뜻한 앱",
+    "link": {
+      "ios": "",
+      "android": "https://play.google.com/store/apps/details?id=com.fromu.fromu&pcampaignid=web_share"
+    },
+    "logo": "./logo/12/fromu.png",
+    "rank": "2"
+  },
+  {
+    "name": "필드메이트",
+    "year": "12",
+    "description": "고객별 기술 업무관리 어플",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/fieldmate/id6446427396",
+      "android": ""
+    },
+    "logo": "./logo/12/fieldmate.png",
+    "rank": "3"
+  },
+  {
+    "name": "Workus",
+    "year": "12",
+    "description": "나에게 딱 맞는 워크 스페이스 추천 서비스",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/workus/id6446238129",
+      "android": ""
+    },
+    "logo": "./logo/12/workus.png",
+    "rank": "4"
   },
   {
     "name": "eatery",
@@ -127,7 +139,8 @@
       "ios": "https://apps.apple.com/kr/app/eatery-잇터리/id6446631695",
       "android": "https://play.google.com/store/apps/details?id=com.bobplace.eatery&pcampaignid=web_share"
     },
-    "logo": "./logo/12/eatery.png"
+    "logo": "./logo/12/eatery.png",
+    "rank": "4"
   },
   {
     "name": "SOLE",
@@ -137,7 +150,8 @@
       "ios": "https://apps.apple.com/kr/app/sole-쏠-코스-기록-공유/id6446045060",
       "android": "https://play.google.com/store/apps/details?id=cmc.sole.android&pcampaignid=web_share"
     },
-    "logo": "./logo/12/sole.png"
+    "logo": "./logo/12/sole.png",
+    "rank": "4"
   },
   {
     "name": "일편마다",
@@ -147,7 +161,8 @@
       "ios": "https://apps.apple.com/kr/app/부모와-자녀-간의-깊은-대화-일편마다/id6446275837",
       "android": ""
     },
-    "logo": "./logo/12/ilpyun.png"
+    "logo": "./logo/12/ilpyun.png",
+    "rank": "4"
   },
   {
     "name": "SAY",
@@ -157,7 +172,8 @@
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/12/say.png"
+    "logo": "./logo/12/say.png",
+    "rank": "4"
   },
   {
     "name": "HEET",
@@ -167,7 +183,8 @@
       "ios": "https://apps.apple.com/kr/app/heet/id6446604089",
       "android": ""
     },
-    "logo": "./logo/12/heet.png"
+    "logo": "./logo/12/heet.png",
+    "rank": "4"
   },
   {
     "name": "STITCH",
@@ -177,7 +194,8 @@
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/12/stitch.png"
+    "logo": "./logo/12/stitch.png",
+    "rank": "4"
   },
   {
     "name": "지팡스",
@@ -187,7 +205,8 @@
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/12/jipangs.png"
+    "logo": "./logo/12/jipangs.png",
+    "rank": "4"
   },
   {
     "name": "롬롬교환소",
@@ -197,7 +216,8 @@
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/11/romrom.png"
+    "logo": "./logo/11/romrom.png",
+    "rank": "4"
   },
   {
     "name": "가치가자",
@@ -207,7 +227,8 @@
       "ios": "https://apps.apple.com/kr/app/가치가자/id6444365638",
       "android": ""
     },
-    "logo": "./logo/11/together.png"
+    "logo": "./logo/11/together.png",
+    "rank": "4"
   },
   {
     "name": "Sparky",
@@ -217,7 +238,8 @@
       "ios": "https://apps.apple.com/kr/app/sparky-탭-세-번으로-끝나는-스크랩/id6444295657",
       "android": ""
     },
-    "logo": "./logo/11/sparky.png"
+    "logo": "./logo/11/sparky.png",
+    "rank": "4"
   },
   {
     "name": "MELLY",
@@ -227,7 +249,8 @@
       "ios": "https://apps.apple.com/kr/app/멜리-melly-장소-기반-추억-기록장/id6444202109",
       "android": ""
     },
-    "logo": "./logo/11/melly.png"
+    "logo": "./logo/11/melly.png",
+    "rank": "4"
   },
   {
     "name": "planter",
@@ -237,7 +260,8 @@
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/11/planter.png"
+    "logo": "./logo/11/planter.png",
+    "rank": "4"
   },
   {
     "name": "OEUVRE",
@@ -247,7 +271,8 @@
       "ios": "https://apps.apple.com/kr/app/oeuvre/id6443660575",
       "android": "https://play.google.com/store/apps/details?id=com.curator.oeuvre&pcampaignid=web_share"
     },
-    "logo": "./logo/11/oeuvre.jpg"
+    "logo": "./logo/11/oeuvre.jpg",
+    "rank": "4"
   },
   {
     "name": "Chalkak",
@@ -257,7 +282,8 @@
       "ios": "https://apps.apple.com/kr/app/chalkak/id6444452971",
       "android": "https://play.google.com/store/apps/details?id=com.chalkak&pcampaignid=web_share"
     },
-    "logo": "./logo/11/chalkak.png"
+    "logo": "./logo/11/chalkak.png",
+    "rank": "4"
   },
   {
     "name": "마이타민",
@@ -267,7 +293,8 @@
       "ios": "https://apps.apple.com/kr/app/mitamin/id6444240698",
       "android": "https://play.google.com/store/apps/details?id=kr.ac.kpu.ce2017154024.mytamin&pcampaignid=web_share"
     },
-    "logo": "./logo/11/mytamin.png"
+    "logo": "./logo/11/mytamin.png",
+    "rank": "4"
   },
   {
     "name": "오늘의 조약돌",
@@ -277,7 +304,8 @@
       "ios": "https://apps.apple.com/kr/app/오늘의조약돌-pebbles-목표를-위한-오늘-관리/id6444320103",
       "android": "https://play.google.com/store/apps/details?id=com.todaypebble.pebbles&pcampaignid=web_share"
     },
-    "logo": "./logo/11/rock.png"
+    "logo": "./logo/11/rock.png",
+    "rank": "4"
   },
   {
     "name": "내친소",
@@ -287,7 +315,8 @@
       "ios": "https://apps.apple.com/kr/app/내친소-신뢰기반-친구-소개-소개팅-친구만들기/id1669032147",
       "android": "https://play.google.com/store/apps/details?id=com.retrieverSalon.naechinso&pcampaignid=web_share"
     },
-    "logo": "./logo/11/naechinso.png"
+    "logo": "./logo/11/naechinso.png",
+    "rank": "4"
   },
   {
     "name": "밥플레이스",
@@ -297,7 +326,8 @@
       "ios": "https://apps.apple.com/kr/app/밥플레이스/id1634665858",
       "android": "https://play.google.com/store/apps/details?id=com.bob_frontend&pli=1"
     },
-    "logo": "./logo/10/bob-place.png"
+    "logo": "./logo/10/bob-place.png",
+    "rank": "4"
   },
   {
     "name": "한입",
@@ -307,7 +337,8 @@
       "ios": "https://apps.apple.com/kr/app/한입-hannip/id1635377027?l=en",
       "android": "https://play.google.com/store/apps/details?id=com.hannib&hl=ko&gl=KR"
     },
-    "logo": "./logo/10/hannib.png"
+    "logo": "./logo/10/hannib.png",
+    "rank": "4"
   },
   {
     "name": "ATRACKER",
@@ -317,7 +348,8 @@
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/10/atracker.png"
+    "logo": "./logo/10/atracker.png",
+    "rank": "4"
   },
   {
     "name": "원케이크",
@@ -327,7 +359,8 @@
       "ios": "https://apps.apple.com/kr/app/onecake/id1635032032",
       "android": "https://play.google.com/store/apps/details?id=com.onecake_frontend"
     },
-    "logo": "./logo/10/onecake.png"
+    "logo": "./logo/10/onecake.png",
+    "rank": "4"
   },
   {
     "name": "마침표",
@@ -337,7 +370,8 @@
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/10/machimpyo.png"
+    "logo": "./logo/10/machimpyo.png",
+    "rank": "4"
   },
   {
     "name": "와플",
@@ -347,7 +381,8 @@
       "ios": "https://apps.apple.com/kr/app/와플-일정-공유-장소-아카이빙-서비스/id1635155102",
       "android": "https://play.google.com/store/apps/details?id=com.wapple.android"
     },
-    "logo": "./logo/10/waffle.png"
+    "logo": "./logo/10/waffle.png",
+    "rank": "4"
   },
   {
     "name": "BidiT",
@@ -357,7 +392,8 @@
       "ios": "",
       "android": "https://play.google.com/store/apps/details?id=com.alexk.bidit"
     },
-    "logo": "./logo/10/bidit.png"
+    "logo": "./logo/10/bidit.png",
+    "rank": "4"
   },
   {
     "name": "작심친구",
@@ -367,7 +403,8 @@
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/10/friend.png"
+    "logo": "./logo/10/friend.png",
+    "rank": "4"
   },
   {
     "name": "FINPO",
@@ -377,7 +414,8 @@
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/10/finpo.png"
+    "logo": "./logo/10/finpo.png",
+    "rank": "4"
   },
   {
     "name": "finder",
