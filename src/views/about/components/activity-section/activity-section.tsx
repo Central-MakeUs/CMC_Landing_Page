@@ -44,7 +44,7 @@ export const ActivitySection = () => {
   return (
     <Section className={css.main}>
       <Section.Head title="매 기수 진행되는 정기 활동들" />
-      <nav>
+      <nav className={css.nav}>
         <ul className={css.main_buttons}>
           {Object.keys(Cards).map((key) => {
             const card = Cards[key as Tab]

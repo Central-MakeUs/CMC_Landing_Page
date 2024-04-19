@@ -2,16 +2,17 @@
 @use '@/styles/utils' as *;
 
 .button {
-  padding: 0 16px;
   color: #705a87;
   font-weight: 600;
 
   @include mobile {
+    padding: 0 10px;
     font-size: rem(13px);
     line-height: rem(17px);
   }
 
   @include desktop {
+    padding: 0 16px;
     font-size: rem(26px);
     line-height: rem(32px);
   }
@@ -112,11 +113,18 @@
 }
 
 .main {
-  .main_buttons {
-    display: flex;
+  .nav {
+    width: 100vw;
 
-    > li:not(:first-of-type) {
-      border-left: 1px solid #705a87;
+    .main_buttons {
+      display: flex;
+      justify-content: center;
+
+      @include hide-scrollbar;
+
+      > li:not(:first-of-type) {
+        border-left: 1px solid #705a87;
+      }
     }
   }
 }
