@@ -12,6 +12,7 @@ export const query = graphql`
         description
         year
         name
+        rank
         logo {
           childImageSharp {
             gatsbyImageData(placeholder: DOMINANT_COLOR)

@@ -2,6 +2,8 @@
 @use '@/styles/utils' as *;
 
 .main {
+  background: color(background-primary);
+
   @include mobile {
     padding: 0 28px;
     padding-bottom: 30px;
@@ -79,53 +81,74 @@
 }
 
 .nav {
+  width: 100vw;
+
   ul {
     display: flex;
-    list-style: none;
-    color: #32307b;
-    font-style: normal;
+    color: color(text-assistive);
     font-weight: 600;
-    line-height: 130.336%;
-    letter-spacing: -0.076px;
+    overflow-x: scroll;
+
+    > li:not(:first-of-type) {
+      border-left: 1px solid #705a87;
+    }
+
+    @include hide-scrollbar;
 
     @include mobile {
-      gap: 25px;
-      margin-top: 70px;
-      font-size: rem(20px);
+      padding: 24px 30px 32px;
+      font-size: rem(13px);
+      line-height: rem(17px);
+    }
+
+    @media (min-width: 600px) and (max-width: 1000px) {
+      justify-content: center;
     }
 
     @include desktop {
-      gap: 55px;
-      margin-top: 100px;
-      font-size: rem(35px);
+      justify-content: center;
+      padding: 32px 20px 40px;
+      font-size: rem(26px);
+      line-height: rem(34px);
+    }
+
+    li {
+      @include mobile {
+        padding: 0 12px;
+      }
+
+      @include desktop {
+        padding: 0 16px;
+      }
+    }
+
+    button {
+      width: max-content;
     }
   }
 
-  button {
-    border: 0;
-    background-color: transparent;
-    color: inherit;
-    cursor: pointer;
-  }
-
   .active {
-    color: #615dff;
+    color: color(primary-assistive);
   }
 }
 
 .grid_container {
   display: grid;
-  row-gap: 50px;
-  column-gap: 22px;
+  row-gap: 16px;
+  column-gap: 16px;
   list-style: none;
 
-  @include mobile {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    margin-top: 28px;
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 400px;
   }
 
-  @include desktop {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    margin-top: 65px;
+  @media (min-width: 600px) and (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

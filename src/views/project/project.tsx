@@ -1,8 +1,9 @@
 import clsx from 'clsx'
 import type { HeadProps, PageProps } from 'gatsby'
-import { useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 
-import { FloatingButton, Seo } from '@/components'
+import { Section, Seo } from '@/components'
+import { Main } from '@/layouts'
 import { getRefinedImage } from '@/utils'
 
 import { Card } from './components'
@@ -20,44 +21,43 @@ const ProjectPage = ({
     () => (currentTag === 'All' ? apps : apps.filter((node) => node.year === currentTag)),
     [currentTag, apps],
   )
+  const getProjectsLengthByYear = useCallback((year: string) => apps.filter((app) => app.year === year).length, [apps])
 
   return (
-    <main className={css.main}>
-      <div className={css.background_header}>
-        <h2>CMC PROJECT</h2>
-        <div className={css.background_container}>
-          <div className={css.background} />
-        </div>
-      </div>
-      <nav className={css.nav}>
-        <ul>
-          {tags.map((menu) => (
-            <li key={menu}>
-              <button
-                type="button"
-                onClick={() => setCurrentTag(menu)}
-                className={clsx({ [css.active]: currentTag === menu })}
-              >
-                {menu === 'All' ? '전체' : menu}
-              </button>
-            </li>
+    <Main className={css.main}>
+      <Section>
+        <Section.Head title="Challenger’s Project" description="챌린저들의 다양한 프로젝트를 확인해보세요" />
+
+        <nav className={css.nav}>
+          <ul>
+            {tags.map((menu) => (
+              <li key={menu}>
+                <button
+                  type="button"
+                  onClick={() => setCurrentTag(menu)}
+                  className={clsx({ [css.active]: currentTag === menu })}
+                >
+                  {menu === 'All' ? `전체(${apps.length}개)` : `${menu}기(${getProjectsLengthByYear(menu)}개)`}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <ul className={css.grid_container}>
+          {refinedProjects.map(({ id, name, description, year, logo, link, rank }) => (
+            <Card
+              key={id}
+              name={name}
+              year={year}
+              image={getRefinedImage(logo?.childImageSharp?.gatsbyImageData)}
+              description={description}
+              link={link}
+              rank={rank}
+            />
           ))}
         </ul>
-      </nav>
-      <ul className={css.grid_container}>
-        {refinedProjects.map(({ id, name, description, year, logo, link }) => (
-          <Card
-            key={id}
-            name={name}
-            year={year}
-            image={getRefinedImage(logo?.childImageSharp?.gatsbyImageData)}
-            description={description}
-            link={link}
-          />
-        ))}
-      </ul>
-      <FloatingButton />
-    </main>
+      </Section>
+    </Main>
   )
 }
 
