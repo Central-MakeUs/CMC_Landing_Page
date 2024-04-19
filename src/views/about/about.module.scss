@@ -1,0 +1,22 @@
+@use '@/styles/abstracts' as *;
+
+.main {
+  background: color(background-primary);
+  @include mobile {
+    gap: 80px;
+  }
+
+  @include desktop {
+    gap: 120px;
+  }
+}
+
+.space {
+  @include mobile {
+    height: 40px;
+  }
+
+  @include desktop {
+    height: 80px;
+  }
+}

@@ -1,0 +1,45 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.button {
+  position: relative;
+
+  @include mobile {
+    margin-top: 40px;
+  }
+
+  @include desktop {
+    margin-top: 60px;
+  }
+
+  .button_apply {
+    background-color: color(primary-normal);
+    font-weight: 700;
+    border-radius: 99px;
+    color: #f5f1f8;
+
+    &:hover {
+      background-color: color(primary-strong);
+    }
+
+    &:active {
+      background-color: color(primary-heavy);
+    }
+
+    @include mobile {
+      font-size: rem(14px);
+      line-height: rem(19px);
+      padding: 12px 24px;
+    }
+
+    @include desktop {
+      font-size: rem(28px);
+      line-height: rem(32px);
+      padding: 24px 48px;
+    }
+  }
+
+  .button_effect {
+    // TODO
+  }
+}
