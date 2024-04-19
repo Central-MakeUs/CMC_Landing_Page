@@ -20,7 +20,6 @@ const HomePage = () => {
     <Main>
       <IntroSection />
       <ScrollIndicator onClick={scrollToNextSection} />
-      {/* <FloatingButton /> */}
 
       <div className={css.gradient_background}>
         <CounterSection ref={nextSectionRef} />
