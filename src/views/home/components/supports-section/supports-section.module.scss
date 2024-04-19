@@ -21,9 +21,7 @@
 
   @include desktop {
     max-width: 1000px;
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
   }
 
   .supports_company {
