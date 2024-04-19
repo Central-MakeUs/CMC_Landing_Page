@@ -2,6 +2,8 @@ import type { PageProps } from 'gatsby'
 import type { ReactNode } from 'react'
 import Modal from 'react-modal'
 
+import { FloatingButton } from '@/components'
+
 import { Footer, Header } from './components'
 
 type Props = {
@@ -15,6 +17,7 @@ export const Layout = ({ location, children }: Omit<PageProps, 'children'> & Pro
     <>
       <Header pathname={location.pathname} />
       {children}
+      <FloatingButton />
       <Footer />
     </>
   )
