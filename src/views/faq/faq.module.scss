@@ -1,0 +1,177 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.button {
+  padding: 0 16px;
+  color: #705a87;
+  font-weight: 600;
+
+  @include mobile {
+    font-size: rem(13px);
+    line-height: rem(17px);
+  }
+
+  @include desktop {
+    font-size: rem(26px);
+    line-height: rem(32px);
+  }
+}
+
+.button_active {
+  color: #efe0ff;
+}
+
+.main {
+  background: color(background-primary);
+  .section {
+    .main_buttons {
+      display: flex;
+
+      > li:not(:first-of-type) {
+        border-left: 1px solid #705a87;
+      }
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+
+      @include mobile {
+        width: 96%;
+        margin-top: 32px;
+        gap: 8px;
+      }
+
+      @include desktop {
+        width: 80%;
+        max-width: 1280px;
+        margin-top: 40px;
+        gap: 24px;
+      }
+
+      .card {
+        background-color: rgb(57, 11, 101, 0.7);
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        @include mobile {
+          padding: 16px 24px;
+        }
+
+        @include desktop {
+          padding: 28px 32px;
+        }
+
+        & * {
+          text-align: start;
+          color: #efeaf5;
+        }
+
+        .question {
+          font-weight: 700;
+
+          @include mobile {
+            font-size: rem(18px);
+            line-height: rem(23px);
+          }
+
+          @include desktop {
+            font-size: rem(32px);
+            line-height: rem(39px);
+          }
+        }
+
+        .line {
+          height: 1px;
+          background-color: #42285d;
+        }
+
+        .answer {
+          font-weight: 500;
+          word-break: break-all;
+
+          @include mobile {
+            font-size: rem(14px);
+            line-height: rem(19px);
+          }
+
+          @include desktop {
+            font-size: rem(22px);
+            line-height: rem(28px);
+          }
+        }
+      }
+    }
+  }
+
+  .sns_group {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      margin-top: 8px;
+      width: 96%;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    @include desktop {
+      margin-top: 24px;
+      width: 80%;
+      max-width: 1280px;
+      gap: 16px;
+    }
+
+    .sns_button {
+      background-color: color(fill-normal);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      font-weight: 700;
+      color: #efeaf5;
+
+      &:hover {
+        background-color: color(fill-strong);
+      }
+
+      &:active {
+        background-color: color(fill-assistive);
+      }
+
+      @include mobile {
+        border-radius: 16px;
+        padding: 12px 16px;
+        gap: 4px;
+        font-size: rem(14px);
+        line-height: rem(19px);
+      }
+
+      @include desktop {
+        border-radius: 24px;
+        padding: 24px;
+        gap: 12px;
+        font-size: rem(32px);
+        line-height: rem(39px);
+      }
+
+      .sns_icon {
+        @include mobile {
+          width: 19px;
+          height: 19px;
+        }
+
+        @include desktop {
+          width: 39px;
+          height: 39px;
+        }
+      }
+    }
+  }
+}
+
+.space {
+  height: 400px;
+}
