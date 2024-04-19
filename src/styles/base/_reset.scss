@@ -15,8 +15,11 @@
 
 /* 3. Disable text selection and touch callouts */
 img {
-  -webkit-user-select: none;
   user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 /* 4. Set a universal background color and text color */
