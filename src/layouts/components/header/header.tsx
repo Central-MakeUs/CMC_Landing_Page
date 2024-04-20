@@ -28,7 +28,7 @@ export const Header = ({ pathname }: Props) => {
         </div>
         <nav className={css.nav}>
           {Links.map((link) => (
-            <Link to={link.path} className={clsx({ [css.active]: pathname === withPrefix(link.path) })}>
+            <Link key={link.name} to={link.path} className={clsx({ [css.active]: pathname === withPrefix(link.path) })}>
               {link.name}
             </Link>
           ))}

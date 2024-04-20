@@ -16,6 +16,7 @@ export const Modal = ({ isOpen, pathname, closeModal }: ModalProps) => {
     <ReactModal isOpen={isOpen} className={css.modal} overlayClassName={css.overlay}>
       {Links.map((link) => (
         <Link
+          key={link.name}
           to={link.path}
           className={clsx({ [css.active]: pathname === withPrefix(link.path) })}
           onClick={closeModal}
