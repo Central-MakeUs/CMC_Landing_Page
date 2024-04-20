@@ -1,4 +1,4 @@
-import type { HeadProps } from 'gatsby'
+import type { HeadProps, PageProps } from 'gatsby'
 
 import { Seo } from '@/components'
 import { Main } from '@/layouts'
@@ -11,10 +11,14 @@ import {
   ChallengerSection,
   FeatureSection,
   IdentitySection,
-  // ProductSection,
+  ProductSection,
 } from './components'
 
-const AboutPage = () => {
+const AboutPage = ({
+  data: {
+    allAppJson: { nodes: apps },
+  },
+}: PageProps<Queries.ProjectImgQuery>) => {
   return (
     <Main className={css.main}>
       <FeatureSection />
@@ -22,7 +26,7 @@ const AboutPage = () => {
       <ChallengerSection />
       <ActivitySection />
       <AdditionalSection />
-      {/* <ProductSection /> */}
+      <ProductSection apps={apps} />
       <ApplySection />
       <div className={css.space} />
     </Main>
