@@ -15,6 +15,7 @@ const RecruitPage = () => {
         <PlanCard title="CMC 합류 여정" plans={RecruitPlans} showButton />
         <PlanCard title="CMC 정기 세션" plans={SessionPlans} />
         <AuraEffect />
+        <div className={css.space} />
       </Section>
     </Main>
   )
