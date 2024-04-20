@@ -94,3 +94,12 @@ $typo-styles: (
   line-height: utils.rem(typo-style($name, 'line-height'));
   font-weight: typo-style($name, 'weight');
 }
+
+/*
+ * typo system에 정의되어 있지 않은 경우
+ * ex. font(24px, 30px)
+*/
+@mixin font($size, $line-height) {
+  font-size: utils.rem($size);
+  line-height: utils.rem($line-height);
+}
