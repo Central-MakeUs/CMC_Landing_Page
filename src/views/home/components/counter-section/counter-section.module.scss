@@ -2,28 +2,27 @@
 @use '@/styles/utils' as *;
 
 .counter_title_desktop {
-  object-fit: contain;
+  @include desktop {
+    object-fit: contain;
+    display: block;
+    width: 700px;
+    padding: 16px 0;
+  }
 
   @include mobile {
     display: none;
-  }
-
-  @include desktop {
-    width: 700px;
-    padding: 16px 0;
   }
 }
 
 .counter_title_mobile {
-  object-fit: contain;
-
-  @include mobile {
-    width: 300px;
-    padding: 20px 0;
-  }
-
   @include desktop {
     display: none;
+  }
+
+  @include mobile {
+    object-fit: contain;
+    width: 300px;
+    padding: 20px 0;
   }
 }
 
