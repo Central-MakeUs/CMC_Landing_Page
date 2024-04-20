@@ -1,5 +1,93 @@
 [
   {
+    "name": "Blue Club",
+    "year": "14",
+    "description": "특수고용직 노동자의 파트너, 블루클럽",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/블루클럽-blueclub/id6477823755",
+      "android": "https://play.google.com/store/apps/details?id=org.blueclub&pcampaignid=web_share"
+    },
+    "logo": "./logo/14/blue-club.png",
+    "rank": "1"
+  },
+  {
+    "name": "패키",
+    "year": "14",
+    "description": "마음으로 채우는 특별한 선물박스 커스텀 앱, 패키(Packy) 입니다.",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/패키/id6477327987",
+      "android": "https://play.google.com/store/apps/details?id=com.packy"
+    },
+    "logo": "./logo/14/packy.png",
+    "rank": "2"
+  },
+  {
+    "name": "팝콘메이트",
+    "year": "14",
+    "description": "영화ㆍ영상 전공생들의 영화덕질 플랫폼",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/popcorn-mate/id6476854398",
+      "android": "https://play.google.com/store/apps/details?id=com.popcornmate"
+    },
+    "logo": "./logo/14/popcorn-mate.png",
+    "rank": "3"
+  },
+  {
+    "name": "데이캐럿",
+    "year": "14",
+    "description": "DayCarat은 취준생을 위한 ‘경험 기록 서비스’입니다.",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/데이캐럿/id6476876242",
+      "android": "https://play.google.com/store/apps/details?id=com.makeus.daycarat"
+    },
+    "logo": "./logo/14/day-carat.png",
+    "rank": "4"
+  },
+  {
+    "name": "피어나",
+    "year": "14",
+    "description": "소프트 스킬 기반 프로젝트 동료 탐색 & 제안 서비스",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/피어나-나와-꼭-맞는-동료가-피어나는-곳/id6477722172",
+      "android": "https://play.google.com/store/apps/details?id=com.peerna"
+    },
+    "logo": "./logo/14/peerna.png",
+    "rank": "4"
+  },
+  {
+    "name": "그냥,그렇다고",
+    "year": "14",
+    "description": "현재 나의 기분을 감정 이모지와 함께 간단히 말하고, 공감 버튼만으로 소통하는 서비스.",
+    "link": {
+      "ios": "",
+      "android": "https://play.google.com/store/apps/details?id=com.sowhat.justsayitt"
+    },
+    "logo": "./logo/14/just-like-that.png",
+    "rank": "4"
+  },
+  {
+    "name": "달달쇼핑",
+    "year": "14",
+    "description": "결제액의 일부를 환급 받을 수 있는 쇼핑몰 앱",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/달달쇼핑/id6477835653",
+      "android": "https://play.google.com/store/apps/details?id=com.daldalShopping"
+    },
+    "logo": "./logo/14/daldal-shoping.png",
+    "rank": "4"
+  },
+  {
+    "name": "Easybud",
+    "year": "14",
+    "description": " 복식부기 원리를 가계부에 도입해, 사용자들의 재정 상황을 투명하고 정확하게 이해할 수 있도록 돕는 플랫폼",
+    "link": {
+      "ios": "",
+      "android": "https://play.google.com/store/apps/details?id=com.easybud"
+    },
+    "logo": "./logo/14/easy-bud.png",
+    "rank": "4"
+  },
+  {
     "name": "커튼콜",
     "year": "13",
     "description": "연극과 뮤지컬의 매력에 빠지다.",
