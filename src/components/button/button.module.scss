@@ -17,14 +17,12 @@
   }
 
   @include mobile {
-    padding: 8px 16px;
-    font-size: rem(14px);
-    line-height: rem(19px);
+    padding: rem(8px) rem(16px);
+    @include font(14px, 19px);
   }
 
   @include desktop {
-    padding: 16px 32px;
-    font-size: rem(26px);
-    line-height: rem(32px);
+    padding: rem(10px) rem(20px);
+    @include font(22px, 28px);
   }
 }

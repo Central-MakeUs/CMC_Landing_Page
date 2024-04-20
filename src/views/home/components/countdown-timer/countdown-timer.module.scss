@@ -5,12 +5,10 @@
   font-weight: 700;
 
   @include mobile {
-    font-size: rem(44px);
-    line-height: rem(56px);
+    @include font(44px, 56px);
   }
 
   @include desktop {
-    font-size: rem(80px);
-    line-height: rem(96px);
+    @include font(60px, 72px);
   }
 }

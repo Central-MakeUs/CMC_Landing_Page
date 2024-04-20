@@ -37,14 +37,12 @@
 
   @include mobile {
     width: 300px;
-    font-size: rem(14px);
-    line-height: rem(19px);
+    @include font(14px, 19px);
   }
 
   @include desktop {
-    width: 650px;
-    font-size: rem(24px);
-    line-height: rem(30px);
+    width: rem(650px);
+    @include font(24px, 30px);
   }
 }
 
@@ -57,16 +55,16 @@
 
   @include mobile {
     width: 340px;
-    margin: 60px 0;
+    margin: 40px 0;
     padding: 24px 10px 6px;
     gap: 16px;
   }
 
   @include desktop {
-    width: 600px;
-    margin: 80px 0;
-    padding: 40px 60px 10px;
-    gap: 32px;
+    width: 580px;
+    margin: 76px 0;
+    padding: 40px 20px 10px;
+    gap: 28px;
   }
 
   .card_title {

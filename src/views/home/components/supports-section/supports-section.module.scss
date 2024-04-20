@@ -12,21 +12,20 @@
 
 .supports {
   width: 100%;
+  display: flex;
 
   @include mobile {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   @include desktop {
     max-width: 1000px;
-    display: flex;
   }
 
   .supports_company {
     @include mobile {
-      width: 80%;
+      width: 60%;
       max-width: 400px;
     }
 
