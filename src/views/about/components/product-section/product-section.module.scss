@@ -6,13 +6,13 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc((12% + 8px) * -19));
+    transform: translateX(calc((12% + 8px) * -23));
   }
 }
 
 @keyframes slide2 {
   0% {
-    transform: translateX(calc((12% + 8px) * -20));
+    transform: translateX(calc((12% + 8px) * -24));
   }
   100% {
     transform: translateX(0);
@@ -26,13 +26,13 @@
 
   .carouselSlide,
   .carouselSlide2 {
-    width: calc((12% + 8px) * 19); // 이미지 하나의 너비 X 이미지 갯수
+    width: calc((12% + 8px) * 23); // 이미지 하나의 너비 X 이미지 갯수
     display: flex;
     gap: 8px;
     animation: slide 50s linear infinite;
 
     &.carouselSlide2 {
-      width: calc((12% + 8px) * 20); // 이미지 하나의 너비 X 이미지 갯수
+      width: calc((12% + 8px) * 24); // 이미지 하나의 너비 X 이미지 갯수
       animation-name: slide2;
       margin-top: 8px;
     }

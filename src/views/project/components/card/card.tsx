@@ -20,7 +20,7 @@ export const Card = ({ name, description, year, rank, image, link }: Props) => {
   return (
     <li className={css.card}>
       <figure>
-        <GatsbyImage image={image} alt={name} className={css.image} />
+        <GatsbyImage image={image} alt={name} className={css.image} objectPosition="50% top" />
         <figcaption>
           <div className={css.card_info}>
             <div className={css.card_info_text}>

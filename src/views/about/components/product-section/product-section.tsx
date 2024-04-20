@@ -27,6 +27,7 @@ export const ProductSection = ({ apps }: Props) => {
         image={getRefinedImage(app.logo?.childImageSharp?.gatsbyImageData)}
         alt=""
         className={css.carouselItem}
+        objectPosition="50% top"
       />
     ))
 

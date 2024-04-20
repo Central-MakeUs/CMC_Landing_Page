@@ -108,8 +108,7 @@
     @include desktop {
       justify-content: center;
       padding: 32px 20px 40px;
-      font-size: rem(26px);
-      line-height: rem(34px);
+      @include font(20px, 26px);
     }
 
     li {
