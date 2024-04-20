@@ -1,7 +1,7 @@
 @use '@/styles/abstracts' as *;
 @use '@/styles/utils' as *;
 
-.desktop_title {
+.counter_title_desktop {
   object-fit: contain;
 
   @include mobile {
@@ -14,7 +14,7 @@
   }
 }
 
-.mobile_title {
+.counter_title_mobile {
   object-fit: contain;
 
   @include mobile {

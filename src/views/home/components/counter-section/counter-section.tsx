@@ -12,13 +12,13 @@ export const CounterSection = forwardRef<HTMLDivElement>((props, ref) => {
       <StaticImage
         src="./images/desktop-title.png"
         alt="Central Makeus Challenge"
-        className={css.desktop_title}
+        className={css.counter_title_desktop}
         objectFit="contain"
       />
       <StaticImage
         src="./images/mobile-title.png"
         alt="Central Makeus Challenge"
-        className={css.mobile_title}
+        className={css.counter_title_mobile}
         objectFit="contain"
       />
 
