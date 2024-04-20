@@ -10,13 +10,13 @@
   }
 
   @include mobile {
-    display: none;
+    height: 0;
   }
 }
 
 .counter_title_mobile {
   @include desktop {
-    display: none;
+    height: 0;
   }
 
   @include mobile {
