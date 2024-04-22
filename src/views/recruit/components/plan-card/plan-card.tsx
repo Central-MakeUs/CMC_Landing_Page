@@ -32,7 +32,7 @@ export const PlanCard = ({ title, plans, showButton = false }: RenderCardProps) 
       <h3 className={css.card_title}>{title}</h3>
       <ul>{renderPlans(plans)}</ul>
       <LightEffect />
-      {showButton && <Button className={css.card_button}>CMC 15기에 지원하러 가기</Button>}
+      {showButton && <Button className={css.card_button}>CMC 15기 지원하러 가기</Button>}
     </GlassCard>
   )
 }
