@@ -1,19 +1,19 @@
 export const RecruitPlans: Record<string, { name: string; date: string }> = {
   Application: {
-    name: '접수 기간',
+    name: '서류 접수',
     date: '24.04.24 ~ 24.05.03',
   },
   Document: {
-    name: '서류 전형',
-    date: '24.05.04 ~ 24.05.05',
+    name: '서류 발표',
+    date: '24.05.06',
   },
   Interview: {
-    name: 'CMC 핏 인터뷰',
-    date: '24.05.08 ~ 24.05.13',
+    name: '인터뷰',
+    date: '24.05.08 ~ 24.05.12',
   },
   Joining: {
-    name: 'CMC 합류 안내',
-    date: '24.05.15',
+    name: '최종 합류',
+    date: '24.05.13',
   },
 }
 
@@ -22,13 +22,13 @@ export const SessionPlans: Record<string, { name: string; date: string }> = {
     name: 'OT',
     date: '24.05.18',
   },
-  Hackaton: {
-    name: '해커톤',
-    date: '24.05.25 ~ 24.05.26',
-  },
   Study: {
     name: '파트별 스터디',
-    date: '24.06.01',
+    date: '24.05.25',
+  },
+  Hackaton: {
+    name: '해커톤',
+    date: '24.06.01 ~ 24.06.02',
   },
   Presentation: {
     name: '기획자 발표',
@@ -55,11 +55,11 @@ export const SessionPlans: Record<string, { name: string; date: string }> = {
     date: '24.08.10',
   },
   Launching: {
-    name: '런칭 데이',
+    name: '런칭데이',
     date: '24.08.24',
   },
   Demo: {
-    name: '데모 데이',
+    name: '데모데이',
     date: '24.08.31',
   },
 }
