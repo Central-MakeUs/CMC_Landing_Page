@@ -42,7 +42,7 @@ type HeadProps = {
 const Head = ({ title, description }: HeadProps) => {
   return (
     <>
-      <StaticImage src="./images/star.png" alt="" className={css.star} />
+      <StaticImage src="./images/star.png" alt="" className={css.star} placeholder="blurred" />
       <h2 className={css.head}>{title}</h2>
       {description && <p className={css.desc}>{description}</p>}
     </>

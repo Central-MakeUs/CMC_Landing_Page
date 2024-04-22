@@ -28,6 +28,7 @@ export const ProductSection = ({ apps }: Props) => {
         alt=""
         className={css.carouselItem}
         objectPosition="50% top"
+        loading="eager"
       />
     ))
 

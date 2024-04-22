@@ -20,7 +20,7 @@ export const Header = ({ pathname }: Props) => {
       <div className={css.header_container}>
         <h1 className={css.heading_logo}>
           <Link to="/">
-            <StaticImage src="../../../images/favicon.png" alt="CMC" className={css.logo} />
+            <StaticImage src="../../../images/favicon.png" alt="CMC" className={css.logo} placeholder="blurred" />
           </Link>
         </h1>
         <div className={css.flexible_space}>
