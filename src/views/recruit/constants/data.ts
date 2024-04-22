@@ -30,21 +30,9 @@ export const SessionPlans: Record<string, { name: string; date: string }> = {
     name: '해커톤',
     date: '24.06.01 ~ 24.06.02',
   },
-  Presentation: {
-    name: '기획자 발표',
-    date: '24.06.08',
-  },
-  PlanFeedback: {
-    name: '기획 피드백',
-    date: '24.06.22',
-  },
   TeamBuilding: {
     name: '최종 팀빌딩',
     date: '24.06.29',
-  },
-  GUI: {
-    name: 'GUI 피드백',
-    date: '24.07.13',
   },
   Gathering1: {
     name: '1차 모각작',
