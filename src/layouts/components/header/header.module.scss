@@ -2,6 +2,7 @@
 @use '@/styles/utils' as *;
 
 .header {
+  min-height: rem(50px);
   display: flex;
   justify-content: center;
   position: sticky;
@@ -19,12 +20,10 @@
     width: 100%;
 
     @include mobile {
-      min-height: rem(50px);
       padding: 12px 16px;
     }
 
     @include desktop {
-      min-height: rem(52px);
       gap: 33px;
       padding: 10px 80px;
     }
