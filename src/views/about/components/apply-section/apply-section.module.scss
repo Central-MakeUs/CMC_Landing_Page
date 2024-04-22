@@ -5,38 +5,21 @@
   position: relative;
 
   @include mobile {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   @include desktop {
-    margin-top: 60px;
+    margin-top: 40px;
   }
 
-  .button_apply {
-    background-color: color(primary-normal);
-    font-weight: 700;
-    border-radius: 99px;
-    color: #f5f1f8;
+  @include mobile {
+    padding: 12px 24px;
+  }
 
-    &:hover {
-      background-color: color(primary-strong);
-    }
-
-    &:active {
-      background-color: color(primary-heavy);
-    }
-
-    @include mobile {
-      font-size: rem(14px);
-      line-height: rem(19px);
-      padding: 12px 24px;
-    }
-
-    @include desktop {
-      font-size: rem(28px);
-      line-height: rem(32px);
-      padding: 24px 48px;
-    }
+  @include desktop {
+    font-size: rem(28px);
+    line-height: rem(32px);
+    padding: 24px 48px;
   }
 
   .button_effect {
