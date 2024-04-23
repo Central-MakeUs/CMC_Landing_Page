@@ -2,7 +2,7 @@ import { clsx } from 'clsx'
 import { Link, withPrefix } from 'gatsby'
 import ReactModal from 'react-modal'
 
-import { Button } from '@/components'
+import { ApplyButton } from '@/components'
 
 import { Links } from '../../constant'
 import * as css from './modal.module.scss'
@@ -26,9 +26,9 @@ export const Modal = ({ isOpen, pathname, closeModal }: ModalProps) => {
           {link.name}
         </Link>
       ))}
-      <Button availableDisabled className={css.apply_button} onClick={closeModal}>
+      <ApplyButton availableDisabled className={css.apply_button} onClick={closeModal}>
         지원하기
-      </Button>
+      </ApplyButton>
     </ReactModal>
   )
 }

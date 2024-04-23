@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { useCallback, useEffect, useState } from 'react'
 
-import { Button } from '@/components'
+import { ApplyButton } from '@/components'
 import { RecruitDate, RecruitStatus, RecruitStatusEnum } from '@/constants'
 
 import * as css from './countdown-timer.module.scss'
@@ -68,7 +68,7 @@ export const CountdownTimer = () => {
       >
         {`${formatTime(timeLeft.hours)} : ${formatTime(timeLeft.minutes)} : ${formatTime(timeLeft.seconds)}`}
       </p>
-      <Button href={RecruitStatus[recruitStatus].link}>{RecruitStatus[recruitStatus].buttonText}</Button>
+      <ApplyButton href={RecruitStatus[recruitStatus].link}>{RecruitStatus[recruitStatus].buttonText}</ApplyButton>
     </div>
   )
 }

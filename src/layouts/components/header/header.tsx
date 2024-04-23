@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { Link, withPrefix } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
-import { Button } from '@/components'
+import { ApplyButton } from '@/components'
 
 import { Modal } from './components'
 import { Links } from './constant'
@@ -34,9 +34,9 @@ export const Header = ({ pathname }: Props) => {
               {link.name}
             </Link>
           ))}
-          <Button availableDisabled className={css.apply_button}>
+          <ApplyButton availableDisabled className={css.apply_button}>
             지원하기
-          </Button>
+          </ApplyButton>
         </nav>
         <button type="button" onClick={toggleModal} className={css.menu_button}>
           <Hamburger />

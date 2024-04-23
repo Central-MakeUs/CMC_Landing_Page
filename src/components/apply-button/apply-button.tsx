@@ -3,13 +3,13 @@ import { AnchorHTMLAttributes, useEffect, useState } from 'react'
 
 import { RecruitDate, RecruitStatus, RecruitStatusEnum } from '@/constants'
 
-import * as css from './button.module.scss'
+import * as css from './apply-button.module.scss'
 
 interface Props extends AnchorHTMLAttributes<HTMLAnchorElement> {
   availableDisabled?: boolean
 }
 
-export const Button = ({ className, availableDisabled = false, children, ...props }: Props) => {
+export const ApplyButton = ({ className, availableDisabled = false, children, ...props }: Props) => {
   const [recruitStatus, setRecruitStatus] = useState<RecruitStatusEnum>(RecruitStatusEnum.BEFORE_RECRUITING)
 
   useEffect(() => {
