@@ -20,10 +20,8 @@
   }
 
   a {
-    font-size: rem(17px);
-    line-height: rem(22px);
     font-weight: 700;
-    color: color(text-normal);
+    @include font(17px, 22px);
   }
 
   .active {
@@ -31,16 +29,8 @@
   }
 
   .apply_button {
-    padding: 8px 24px;
-    border-radius: 99px;
-    background: color(primary-normal);
-
-    span {
-      @include typo(body-bold2);
-      color: color(text-normal);
-
-      display: block;
-    }
+    padding: rem(8px) (24px);
+    @include typo(body-bold2);
   }
 }
 

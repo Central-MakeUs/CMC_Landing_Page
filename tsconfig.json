@@ -35,6 +35,7 @@
       "@/styles": ["styles"],
       "@/layouts": ["layouts"],
       "@/components": ["components"],
+      "@/constants": ["constants"],
       "@/images": ["images"],
       "@/utils": ["utils"]
     } /* Specify a set of entries that re-map imports to additional lookup locations. */,

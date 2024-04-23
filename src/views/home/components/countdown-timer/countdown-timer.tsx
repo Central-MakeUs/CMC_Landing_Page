@@ -1,8 +1,13 @@
-import { useEffect, useState } from 'react'
+import clsx from 'clsx'
+import { useCallback, useEffect, useState } from 'react'
+
+import { Button } from '@/components'
+import { RecruitDate, RecruitStatus, RecruitStatusEnum } from '@/constants'
 
 import * as css from './countdown-timer.module.scss'
 
 export const CountdownTimer = () => {
+  const [recruitStatus, setRecruitStatus] = useState<RecruitStatusEnum>(RecruitStatusEnum.BEFORE_RECRUITING)
   const [timeLeft, setTimeLeft] = useState({
     hours: 0,
     minutes: 0,
@@ -10,11 +15,22 @@ export const CountdownTimer = () => {
   })
 
   useEffect(() => {
-    const targetDate = new Date('2024-04-24T00:00:00') // 목표 날짜 설정
+    const { startDate, endDate } = RecruitDate
 
     const updateTimer = () => {
       const now = new Date()
-      const difference = targetDate.getTime() - now.getTime()
+      let difference = 0
+
+      if (now.getTime() < startDate.getTime()) {
+        difference = startDate.getTime() - now.getTime()
+        setRecruitStatus(RecruitStatusEnum.BEFORE_RECRUITING)
+      } else if (now.getTime() <= endDate.getTime()) {
+        difference = endDate.getTime() - now.getTime()
+        setRecruitStatus(RecruitStatusEnum.RECRUITING)
+      } else {
+        difference = 0
+        setRecruitStatus(RecruitStatusEnum.AFTER_RECRUITING)
+      }
 
       let timeLeft = { hours: 0, minutes: 0, seconds: 0 }
 
@@ -38,13 +54,21 @@ export const CountdownTimer = () => {
     return () => clearInterval(intervalId)
   }, [])
 
-  const formatTime = (time: number) => {
+  const formatTime = useCallback((time: number) => {
     return time < 10 ? `0${time}` : time
-  }
+  }, [])
 
   return (
-    <p className={css.time}>
-      {`${formatTime(timeLeft.hours)} : ${formatTime(timeLeft.minutes)} : ${formatTime(timeLeft.seconds)}`}
-    </p>
+    <div className={css.timer}>
+      <p className={css.timer_title}>{RecruitStatus[recruitStatus].title}</p>
+      <p
+        className={clsx(css.timer_time, {
+          [css.timer_time_inactive]: recruitStatus === RecruitStatusEnum.AFTER_RECRUITING,
+        })}
+      >
+        {`${formatTime(timeLeft.hours)} : ${formatTime(timeLeft.minutes)} : ${formatTime(timeLeft.seconds)}`}
+      </p>
+      <Button href={RecruitStatus[recruitStatus].link}>{RecruitStatus[recruitStatus].buttonText}</Button>
+    </div>
   )
 }

@@ -2,6 +2,8 @@ import clsx from 'clsx'
 import { Link, withPrefix } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
+import { Button } from '@/components'
+
 import { Modal } from './components'
 import { Links } from './constant'
 import * as css from './header.module.scss'
@@ -32,9 +34,9 @@ export const Header = ({ pathname }: Props) => {
               {link.name}
             </Link>
           ))}
-          <a href="https://forms.gle/LWfsozJbsrhkpyCr5" target="_blank" rel="noreferrer" className={css.apply_button}>
+          <Button availableDisabled className={css.apply_button}>
             지원하기
-          </a>
+          </Button>
         </nav>
         <button type="button" onClick={toggleModal} className={css.menu_button}>
           <Hamburger />

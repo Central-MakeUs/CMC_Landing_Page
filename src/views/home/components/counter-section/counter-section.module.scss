@@ -47,33 +47,15 @@
 
 .card {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   @include mobile {
     width: 340px;
-    margin: 40px 0;
-    padding: 24px 10px 6px;
-    gap: 16px;
+    margin-top: 40px;
   }
 
   @include desktop {
     width: 580px;
-    margin: 76px 0;
-    padding: 40px 20px 10px;
-    gap: 28px;
-  }
-
-  .card_title {
-    @include mobile {
-      @include typo(title3);
-    }
-
-    @include desktop {
-      @include typo(display3);
-    }
+    margin-top: 76px;
   }
 }
 

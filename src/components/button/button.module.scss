@@ -26,3 +26,9 @@
     @include font(22px, 28px);
   }
 }
+
+.button_disabled {
+  pointer-events: none;
+  background-color: color(fill-assistive);
+  color: color(text-assistive);
+}

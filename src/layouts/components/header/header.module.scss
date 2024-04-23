@@ -86,13 +86,9 @@
         }
 
         .apply_button {
-          font-size: rem(16px);
-          line-height: rem(20px);
           font-weight: 600;
-
-          padding: 6px 20px;
-          border-radius: 99px;
-          background: color(primary-normal);
+          @include font(16px, 20px);
+          padding: rem(6px) (20px);
         }
       }
     }

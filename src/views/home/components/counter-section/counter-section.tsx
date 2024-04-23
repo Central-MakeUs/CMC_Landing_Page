@@ -1,7 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image'
 import { forwardRef } from 'react'
 
-import { AuraCircle, Button, GlassCard, Section } from '@/components'
+import { AuraCircle, GlassCard, Section } from '@/components'
 
 import { CountdownTimer } from '../countdown-timer'
 import * as css from './counter-section.module.scss'
@@ -28,9 +28,7 @@ export const CounterSection = forwardRef<HTMLDivElement>((props, ref) => {
       </h3>
 
       <GlassCard extendClass={css.card}>
-        <p className={css.card_title}>15기 모집 시작까지</p>
         <CountdownTimer />
-        <Button>알림 받기</Button>
 
         <div className={css.shine}>
           <StaticImage src="./images/shine-left-top.png" alt="" className={css.shine_left_top} objectFit="contain" />

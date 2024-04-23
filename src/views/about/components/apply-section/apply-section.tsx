@@ -6,7 +6,7 @@ export const ApplySection = () => {
   return (
     <Section>
       <Section.Head title="CMC와 함께 도전하세요" />
-      <Button className={css.button}>
+      <Button availableDisabled className={css.button}>
         CMC 15기 지원하기
         <div className={css.button_effect} />
       </Button>
