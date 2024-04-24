@@ -1,7 +1,7 @@
 import type { HeadProps } from 'gatsby'
 import { useRef } from 'react'
 
-import { Seo } from '@/components'
+import { ScrollRevealContainer, Seo } from '@/components'
 import { Main } from '@/layouts'
 
 import { CounterSection, IntroSection, ScrollIndicator, SupportsSection } from './components'
@@ -22,8 +22,12 @@ const HomePage = () => {
       <ScrollIndicator onClick={scrollToNextSection} />
 
       <div className={css.gradient_background}>
-        <CounterSection ref={nextSectionRef} />
-        <SupportsSection />
+        <ScrollRevealContainer>
+          <CounterSection ref={nextSectionRef} />
+        </ScrollRevealContainer>
+        <ScrollRevealContainer>
+          <SupportsSection />
+        </ScrollRevealContainer>
         <div className={css.space} />
       </div>
     </Main>

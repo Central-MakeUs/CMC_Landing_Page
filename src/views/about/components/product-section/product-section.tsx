@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-import { Section } from '@/components'
+import { ScrollRevealContainer, Section } from '@/components'
 import { getRefinedImage } from '@/utils'
 
 import * as css from './product-section.module.scss'
@@ -38,7 +38,9 @@ export const ProductSection = ({ apps }: Props) => {
 
   return (
     <Section>
-      <Section.Head title={`CMC에서 제작한\n프로덕트를 만나보세요`} />
+      <ScrollRevealContainer className={css.center}>
+        <Section.Head title={`CMC에서 제작한\n프로덕트를 만나보세요`} />
+      </ScrollRevealContainer>
       <div className={css.carouselContainer}>
         <div className={css.carouselSlide}>{renderImages(firstSlideItems)}</div>
         <div className={css.carouselSlide2}>{renderImages(secondSlideItems)}</div>

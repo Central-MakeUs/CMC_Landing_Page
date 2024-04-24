@@ -1,6 +1,6 @@
 import type { HeadProps, PageProps } from 'gatsby'
 
-import { Seo } from '@/components'
+import { ScrollRevealContainer, Seo } from '@/components'
 import { Main } from '@/layouts'
 
 import * as css from './about.module.scss'
@@ -21,13 +21,26 @@ const AboutPage = ({
 }: PageProps<Queries.ProjectImgQuery>) => {
   return (
     <Main className={css.main}>
-      <FeatureSection />
-      <IdentitySection />
-      <ChallengerSection />
-      <ActivitySection />
-      <AdditionalSection />
+      <ScrollRevealContainer>
+        <FeatureSection />
+      </ScrollRevealContainer>
+      <ScrollRevealContainer>
+        <IdentitySection />
+      </ScrollRevealContainer>
+      <ScrollRevealContainer>
+        <ChallengerSection />
+      </ScrollRevealContainer>
+      <ScrollRevealContainer>
+        <ActivitySection />
+      </ScrollRevealContainer>
+      <ScrollRevealContainer>
+        <AdditionalSection />
+      </ScrollRevealContainer>
       <ProductSection apps={apps} />
-      <ApplySection />
+      <ScrollRevealContainer>
+        <ApplySection />
+      </ScrollRevealContainer>
+
       <div className={css.space} />
     </Main>
   )

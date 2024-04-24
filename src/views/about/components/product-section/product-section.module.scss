@@ -46,6 +46,13 @@
   }
 }
 
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .moreButton {
   position: absolute;
   color: #b36afb;
