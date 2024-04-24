@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import type { HeadProps, PageProps } from 'gatsby'
 import { useCallback, useMemo, useState } from 'react'
 
-import { ScrollRevealContainer, Section, Seo } from '@/components'
+import { Section, Seo } from '@/components'
 import { Main } from '@/layouts'
 import { getRefinedImage } from '@/utils'
 
@@ -25,40 +25,38 @@ const ProjectPage = ({
 
   return (
     <Main className={css.main}>
-      <ScrollRevealContainer>
-        <Section>
-          <Section.Head title="Challenger’s Project" description="챌린저들의 다양한 프로젝트를 확인해보세요" />
+      <Section>
+        <Section.Head title="Challenger’s Project" description="챌린저들의 다양한 프로젝트를 확인해보세요" />
 
-          <nav className={css.nav}>
-            <ul>
-              {tags.map((menu) => (
-                <li key={menu}>
-                  <button
-                    type="button"
-                    onClick={() => setCurrentTag(menu)}
-                    className={clsx({ [css.active]: currentTag === menu })}
-                  >
-                    {menu === 'All' ? `전체(${apps.length}개)` : `${menu}기(${getProjectsLengthByYear(menu)}개)`}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </nav>
-          <ul className={css.grid_container}>
-            {refinedProjects.map(({ id, name, description, year, logo, link, rank }) => (
-              <Card
-                key={id}
-                name={name}
-                year={year}
-                image={getRefinedImage(logo?.childImageSharp?.gatsbyImageData)}
-                description={description}
-                link={link}
-                rank={rank}
-              />
+        <nav className={css.nav}>
+          <ul>
+            {tags.map((menu) => (
+              <li key={menu}>
+                <button
+                  type="button"
+                  onClick={() => setCurrentTag(menu)}
+                  className={clsx({ [css.active]: currentTag === menu })}
+                >
+                  {menu === 'All' ? `전체(${apps.length}개)` : `${menu}기(${getProjectsLengthByYear(menu)}개)`}
+                </button>
+              </li>
             ))}
           </ul>
-        </Section>
-      </ScrollRevealContainer>
+        </nav>
+        <ul className={css.grid_container}>
+          {refinedProjects.map(({ id, name, description, year, logo, link, rank }) => (
+            <Card
+              key={id}
+              name={name}
+              year={year}
+              image={getRefinedImage(logo?.childImageSharp?.gatsbyImageData)}
+              description={description}
+              link={link}
+              rank={rank}
+            />
+          ))}
+        </ul>
+      </Section>
     </Main>
   )
 }
