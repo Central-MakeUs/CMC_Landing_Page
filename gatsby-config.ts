@@ -75,7 +75,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: 'GTM-PH4RW45G',
+        trackingId: 'G-N6KW5CY5YH',
         head: false,
         anonymize: true,
       },
