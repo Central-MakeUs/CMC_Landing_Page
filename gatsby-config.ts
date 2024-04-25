@@ -72,6 +72,14 @@ const config: GatsbyConfig = {
         path: './src/data/',
       },
     },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: 'GTM-PH4RW45G',
+        head: false,
+        anonymize: true,
+      },
+    },
   ],
 }
 
