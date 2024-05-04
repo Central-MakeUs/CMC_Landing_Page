@@ -5,7 +5,7 @@ export type RecruitDateType = {
 
 export const RecruitDate: RecruitDateType = {
   startDate: new Date('2024-04-24T00:00:00'),
-  endDate: new Date('2024-05-03T23:59:59'),
+  endDate: new Date('2024-05-06T23:59:59'),
 }
 
 export enum RecruitStatusEnum {
@@ -27,9 +27,9 @@ export const RecruitStatus: Record<RecruitStatusEnum, RecruitStatusType> = {
     link: 'https://forms.gle/LWfsozJbsrhkpyCr5',
   },
   Recruiting: {
-    title: '15기 지원 마감까지',
-    buttonText: '지원하러 가기',
-    link: 'https://forms.gle/ysqvrS7jcWXu8DPE9',
+    title: '15기 개발자 추가모집',
+    buttonText: '개발자 지원하기',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSckYFpx4NLpFeme_L30iOb3eM9ll_uudMw2KRzdwLSqsDWhCA/viewform',
   },
   AfterRecruiting: {
     title: '15기 지원이 마감되었어요!',

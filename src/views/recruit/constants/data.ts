@@ -5,7 +5,7 @@ export const RecruitPlans: Record<string, { name: string; date: string }> = {
   },
   Document: {
     name: '서류 발표',
-    date: '24.05.06',
+    date: '24.05.07',
   },
   Interview: {
     name: '인터뷰',
