@@ -4,12 +4,17 @@
 .card {
   flex: 1;
   background: radial-gradient(46.86% 46.86% at 50% 53.14%, #9c30e8 0%, #3c006600 100%);
+  width: rem(540px);
   aspect-ratio: 1/1;
   border-radius: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include mobile {
+    width: rem(330px);
+  }
 
   .title {
     margin-top: 8px;

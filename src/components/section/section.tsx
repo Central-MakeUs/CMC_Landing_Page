@@ -17,26 +17,9 @@ const SectionComponent = forwardRef<HTMLDivElement, Props>(({ className, childre
   )
 })
 
-type HeaderProps = {
-  title: string
-  description: string
-}
-
-const Header = ({ title, description }: HeaderProps) => {
-  return (
-    <>
-      <h2 className={css.heading}>{title}</h2>
-      <p className={css.description}>{description}</p>
-      <div className={css.background_container}>
-        <div className={css.background} />
-      </div>
-    </>
-  )
-}
-
 type HeadProps = {
   title: ReactNode
-  description?: string
+  description?: ReactNode
 }
 
 const Head = ({ title, description }: HeadProps) => {
@@ -50,10 +33,8 @@ const Head = ({ title, description }: HeadProps) => {
 }
 
 interface WithHeader {
-  Header: React.ComponentType<HeaderProps>
   Head: React.ComponentType<HeadProps>
 }
 
 export const Section = SectionComponent as ForwardRefExoticComponent<Props & RefAttributes<HTMLDivElement>> & WithHeader
-Section.Header = Header
 Section.Head = Head

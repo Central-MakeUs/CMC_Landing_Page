@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useState } from 'react'
 
-import { Section } from '@/components'
+import { Br, Section } from '@/components'
 
 import * as css from './challenger-section.module.scss'
 import { Cards, Tab } from './constants'
@@ -58,8 +58,10 @@ const Card = ({ type, title, description }: CardProps) => {
           {type === Tab.DESIGN && <StaticImage src="./images/symbol-design.png" alt="" className={css.icon_mobile} />}
           {type === Tab.CLIENT && <StaticImage src="./images/symbol-client.png" alt="" className={css.icon_mobile} />}
           {type === Tab.SERVER && <StaticImage src="./images/symbol-server.png" alt="" className={css.icon_mobile} />}
-          <h4 className={css.title_desktop}>{`CMC에서의 ${title}는?`}</h4>
-          <h4 className={css.title_mobile}>{`CMC에서의\n${title}는?`}</h4>
+          <h4>
+            CMC에서의 <Br mobile />
+            {title}는?
+          </h4>
         </div>
         <p className={css.detail_description}>{description}</p>
         {type === Tab.CLIENT && (
@@ -88,10 +90,18 @@ export const ChallengerSection = () => {
     <Section className={css.main}>
       <Section.Head
         title="CMC는 이렇게 도전합니다."
-        description="각 분야의 전문가 5명이 하나의 팀을 이뤄 3개월 동안 전문적인 기술과 노하우를 바탕으로 프로덕트를 제작합니다."
+        description={
+          <>
+            각 분야의 전문가 5명이 하나의 팀을 이뤄
+            <Br mobile />
+            3개월 동안 전문적인 기술과 노하우를 바탕으로
+            <Br mobile />
+            프로덕트를 제작합니다.
+          </>
+        }
       />
       <p className={css.sub_title}>
-        PM & Planer (1명) / Designer (1명) /<br /> Client (2명) / Server (1명)
+        PM & Planer (1명) / Designer (1명) /<Br mobile /> Client (2명) / Server (1명)
       </p>
       <p className={css.caption}>※ web은 2명, ios 1명 & aos 1명은 짝지어서 런칭하게 됩니다.</p>
 

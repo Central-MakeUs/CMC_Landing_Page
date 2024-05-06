@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { Section } from '@/components'
+import { Br, Section } from '@/components'
 
 import * as css from './feature-section.module.scss'
 
@@ -25,8 +25,9 @@ const FeatureCard = ({ title, description = '', figure }: FeatureCardProps) => {
 const Title: ReactNode = (
   <>
     각 분야 검증된 <span>&apos;전문가&apos;</span>들의 모임
-    <br />
-    수익형 앱 런칭 동아리 CMC로 여러분을 초대합니다.
+    <Br mobile desktop />
+    수익형 앱 런칭 동아리
+    <Br mobile /> CMC로 여러분을 초대합니다.
   </>
 )
 

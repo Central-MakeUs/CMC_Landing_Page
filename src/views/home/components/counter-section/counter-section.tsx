@@ -1,7 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image'
 import { forwardRef } from 'react'
 
-import { AuraCircle, GlassCard, Section } from '@/components'
+import { AuraCircle, Br, GlassCard, Section } from '@/components'
 
 import { CountdownTimer } from '../countdown-timer'
 import * as css from './counter-section.module.scss'
@@ -23,8 +23,11 @@ export const CounterSection = forwardRef<HTMLDivElement>((props, ref) => {
       />
 
       <h3 className={css.description}>
-        CMC는 <span>실력있는</span> ‘기획자, 디자이너, 개발자’들이 <span>3개월</span> 동안 함께
-        <span> 수익 창출</span>을 위한 <span>MVP 프로덕트</span>를 제작하는 <span>IT 커뮤니티</span> 입니다.
+        CMC는 <span>실력있는</span> ‘기획자, 디자이너, 개발자’들이 <Br mobile />
+        <span>3개월</span> 동안 함께
+        <Br desktop />
+        <span> 수익 창출</span>을 위한 <span>MVP 프로덕트</span>를 <Br mobile />
+        제작하는 <span>IT 커뮤니티</span> 입니다.
       </h3>
 
       <GlassCard extendClass={css.card}>

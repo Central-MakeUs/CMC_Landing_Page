@@ -159,18 +159,6 @@
       }
     }
 
-    .title_mobile {
-      @include desktop {
-        display: none;
-      }
-    }
-
-    .title_desktop {
-      @include mobile {
-        display: none;
-      }
-    }
-
     .detail_description {
       font-weight: 500;
 
@@ -202,10 +190,6 @@
       font-size: rem(22px);
       line-height: rem(28px);
       margin-top: 6px;
-
-      br {
-        display: none;
-      }
     }
   }
 
