@@ -1,0 +1,17 @@
+@use '@/styles/abstracts' as *;
+
+.br_visible_mobile {
+  display: none;
+
+  @include mobile {
+    display: block !important;
+  }
+}
+
+.br_visible_desktop {
+  display: none;
+
+  @include desktop {
+    display: block !important;
+  }
+}
