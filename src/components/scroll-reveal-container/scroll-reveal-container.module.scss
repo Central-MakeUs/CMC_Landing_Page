@@ -1,4 +1,4 @@
-@keyframes animate {
+@keyframes reveal {
   0% {
     opacity: 0;
     transform: translate3d(0px, 50px, 0px);
@@ -14,6 +14,6 @@
 }
 
 .visible {
-  animation: 0.5s ease-in-out 0s 1 normal forwards running animate;
+  animation: 0.5s ease-in-out 0s 1 normal forwards running reveal;
   opacity: 1;
 }
