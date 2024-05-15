@@ -17,7 +17,10 @@ interface Props {
  * @param {IGatsbyImageData[]} logos 로고 이미지 배열
  * @param {number | string} width 캐러샐의 각 아이템의 너비 (기본값: 10%)
  * @param {boolean} reverse true인 경우 캐러샐은 반대 방향으로 슬라이드됩니다. (기본값: false)
- * @returns
+ *
+ * @example
+ * <Carousel logos={imageArr} /> // 순방향
+ * <Carousel logos={imageArr} reverse /> // 역방향
  */
 export const CarouselSlider = ({ logos, width = '10%', reverse = false }: Props) => {
   const extendSlideItems = [...logos, ...logos.slice(0, 4)] // 끊김 없는 루프 효과를 위해 시야에 보이는 개수인 4개의 항목을 끝에 추가합니다.
