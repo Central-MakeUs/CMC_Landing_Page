@@ -1,49 +1,13 @@
 @use '@/styles/abstracts' as *;
 @use '@/styles/utils' as *;
 
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc((12% + 8px) * -23));
-  }
-}
-
-@keyframes slide2 {
-  0% {
-    transform: translateX(calc((12% + 8px) * -24));
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 .carouselContainer {
   overflow: hidden;
   width: 100vw;
   margin-top: 20px;
-
-  .carouselSlide,
-  .carouselSlide2 {
-    width: calc((12% + 8px) * 23); // 이미지 하나의 너비 X 이미지 갯수
-    display: flex;
-    gap: 8px;
-    animation: slide 50s linear infinite;
-
-    &.carouselSlide2 {
-      width: calc((12% + 8px) * 24); // 이미지 하나의 너비 X 이미지 갯수
-      animation-name: slide2;
-      margin-top: 8px;
-    }
-
-    .carouselItem {
-      flex: 0 0 auto;
-      width: 12%;
-      aspect-ratio: 416 / 280;
-      border-radius: 8px;
-    }
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .center {

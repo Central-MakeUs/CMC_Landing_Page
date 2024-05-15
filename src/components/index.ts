@@ -1,6 +1,7 @@
 export * from './apply-button'
 export * from './aura-circle'
 export * from './br'
+export * from './carousel-slider'
 export * from './floating-button'
 export * from './glass-card'
 export * from './scroll-reveal-container'

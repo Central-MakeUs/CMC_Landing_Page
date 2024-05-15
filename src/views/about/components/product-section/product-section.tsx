@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 
-import { Br, ScrollRevealContainer, Section } from '@/components'
+import { Br, CarouselSlider, ScrollRevealContainer, Section } from '@/components'
 import { getRefinedImage } from '@/utils'
 
 import * as css from './product-section.module.scss'
@@ -19,22 +19,10 @@ interface Props {
 }
 
 export const ProductSection = ({ apps }: Props) => {
-  const renderImages = (items: AppData[]) =>
-    items.map((app, index) => (
-      <GatsbyImage
-        // eslint-disable-next-line react/no-array-index-key
-        key={index}
-        image={getRefinedImage(app.logo?.childImageSharp?.gatsbyImageData)}
-        alt=""
-        className={css.carouselItem}
-        objectPosition="50% top"
-        loading="eager"
-      />
-    ))
-
+  const logos = apps.map((app) => getRefinedImage(app.logo?.childImageSharp?.gatsbyImageData))
   const middleIndex = Math.floor(apps.length / 2)
-  const firstSlideItems = [...apps.slice(0, middleIndex), ...apps.slice(0, 4)]
-  const secondSlideItems = [...apps.slice(middleIndex), ...apps.slice(middleIndex, middleIndex + 4)]
+  const firstRow = logos.slice(0, middleIndex)
+  const secondRow = logos.slice(middleIndex)
 
   return (
     <Section>
@@ -49,8 +37,8 @@ export const ProductSection = ({ apps }: Props) => {
         />
       </ScrollRevealContainer>
       <div className={css.carouselContainer}>
-        <div className={css.carouselSlide}>{renderImages(firstSlideItems)}</div>
-        <div className={css.carouselSlide2}>{renderImages(secondSlideItems)}</div>
+        <CarouselSlider logos={firstRow} />
+        <CarouselSlider logos={secondRow} reverse />
       </div>
 
       <Link to="/project" className={css.moreButton}>
