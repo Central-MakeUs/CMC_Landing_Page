@@ -407,6 +407,17 @@
     "rank": "4"
   },
   {
+    "name": "스럽",
+    "year": "10",
+    "description": "셀럽의 핫한 아이템 정보를 물어보고 공유하는 커뮤니티, 스럽",
+    "link": {
+      "ios": "https://apps.apple.com/kr/app/스럽/id1635250785",
+      "android": ""
+    },
+    "logo": "./logo/10/sluv.png",
+    "rank": "4"
+  },
+  {
     "name": "밥플레이스",
     "year": "10",
     "description": "밥 미션을 수행하고, 포인트를 적립하라!",
@@ -513,6 +524,7 @@
       "ios": "",
       "android": ""
     },
-    "logo": "./logo/10/finder.png"
+    "logo": "./logo/10/finder.png",
+    "rank": "4"
   }
 ]
