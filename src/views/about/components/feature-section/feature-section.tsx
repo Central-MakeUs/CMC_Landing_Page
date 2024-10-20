@@ -24,8 +24,8 @@ const Title: ReactNode = (
   <>
     각 분야 검증된 <span>'전문가'</span>들의 모임
     <Br mobile desktop />
-    수익형 앱 런칭 동아리
-    <Br mobile /> CMC로 여러분을 초대합니다.
+    수익형 앱 런칭 동아리 CMC로
+    <Br mobile /> 여러분을 초대합니다.
   </>
 )
 
