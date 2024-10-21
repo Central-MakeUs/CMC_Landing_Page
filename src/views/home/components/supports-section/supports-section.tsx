@@ -8,7 +8,7 @@ export const SupportsSection = () => {
     <Section>
       <div className={css.space} />
 
-      <Section.Head title="Supports" />
+      <Section.Head title="Supports" description="CMC의 공식 후원사 입니다."/>
 
       <div className={css.supports}>
         <StaticImage src="./images/soft-squared.png" alt="soft squared" className={css.supports_company} />

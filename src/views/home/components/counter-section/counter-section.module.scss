@@ -1,34 +1,70 @@
 @use '@/styles/abstracts' as *;
 @use '@/styles/utils' as *;
 
-.counter_title_desktop {
-  @include desktop {
-    object-fit: contain;
-    display: block;
-    width: 700px;
-    padding: 16px 0;
+.space {
+  @include mobile {
+    height: 100px;
   }
 
-  @include mobile {
-    height: 0;
+  @include desktop {
+    height: 180px;
   }
 }
 
-.counter_title_mobile {
+.flex_row {
+  width: 80%;
+  display: flex;
+  
+  @include mobile {
+    flex-direction: column;
+  }
+
   @include desktop {
-    height: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.star {
+  @include mobile {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 16px;
+  }
+
+  @include desktop {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 20px;
+  }
+}
+
+.head {
+  font-weight: 700;
+  color: color(black-100);
+  text-align: left;
+  
+  & > span {
+    color: color(blue-500);
   }
 
   @include mobile {
-    object-fit: contain;
+    margin-bottom: 30px;
     width: 300px;
-    padding: 20px 0;
+    @include font(24px, 28px);
+  }
+
+  @include desktop {
+    margin-bottom: 97px;
+    width: rem(450px);
+    @include font(35px, 45px);
   }
 }
 
 .description {
-  font-weight: 700;
-  color: color(text-normal);
+  font-weight: 500;
+  color: color(black-100);
+  text-align: left;
 
   & > span {
     color: color(primary-alternative);
@@ -40,119 +76,120 @@
   }
 
   @include desktop {
-    width: rem(650px);
-    @include font(24px, 30px);
+    width: rem(450px);
+    @include font(22px, 28px);
   }
 }
 
 .card {
   position: relative;
-
+  transform: rotate(-4deg);
+  
   @include mobile {
-    width: 340px;
-    margin-top: 40px;
+    width: 300px;
+    height: 200px;
+    margin-top: 60px;
   }
 
   @include desktop {
-    width: 580px;
-    margin-top: 76px;
+    width: rem(480px);
+    height: rem(350px);
   }
-}
 
-.shine {
-  & > div {
+  
+  .card_img {
     position: absolute;
-  }
-
-  .shine_left_top {
+    z-index: 0;
+    
     @include mobile {
-      width: 106px;
-      height: 80px;
-      left: -40px;
-      top: -40px;
+      width: 300px;
     }
 
     @include desktop {
-      width: 160px;
-      height: 133px;
-      left: -60px;
-      top: -66px;
+      width: rem(480px);
+      height: rem(350px);
     }
-
-    @include applyTwinkling();
   }
 
-  .shine_right_top {
+  .card_text {
+    position: absolute;
+    z-index: 2;
+    
     @include mobile {
-      width: 80px;
-      height: 50px;
-      right: -50px;
-      top: -30px;
+      bottom: 10px;
+      left: 17px;
     }
 
     @include desktop {
-      width: 128px;
-      height: 97px;
-      right: -70px;
-      top: -50px;
+      bottom: 30px;
+      left: 30px;
     }
 
-    @include applyTwinkling(3s);
+    .card_h {
+      text-align: left;
+      
+      @include mobile {
+        margin-bottom: 14px;
+        @include font(20px, 30px);
+      }
+
+      @include desktop {
+        margin-bottom: 20px;
+        @include font(32px, 48px);
+      }
+    }
+
+    .card_p {
+      text-align: left;
+      font-weight: 300;
+      color: color(gray-400);
+      
+      @include mobile {
+        @include font(14px, 18px);
+      }
+
+      @include desktop {
+        @include font(20px, 30px);
+      }
+    }
   }
 
-  .shine_left_bottom {
-    @include mobile {
-      width: 195px;
-      height: 173px;
-      left: -92px;
-      bottom: -84px;
-    }
-
-    @include desktop {
-      width: 260px;
-      height: 194px;
-      left: -122px;
-      bottom: -96px;
-    }
-
-    @include applyTwinkling(5s);
-  }
-
-  .shine_right_bottom {
-    @include mobile {
-      width: 120px;
-      height: 120px;
-      right: -54px;
-      bottom: -40px;
-    }
-
-    @include desktop {
-      width: 230px;
-      height: 250px;
-      right: -104px;
-      bottom: -96px;
-    }
-
-    @include applyTwinkling(4s);
-  }
 }
 
-.desktop_aura {
+
+.button {
+  margin-top: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+
   @include mobile {
-    display: none;
+    width: 100%;
+    max-width: 450px;
+    height: 70px;
+    padding: 16px 40px;
+    font-size: rem(20px);
   }
 
   @include desktop {
-    display: block;
-  }
-}
-
-.mobile_aura {
-  @include mobile {
-    display: block;
+    margin-left: 10px;
+    width:458px;
+    height: 90px;
+    padding: 20px 50px;
+    font-size: rem(29px);
   }
 
-  @include desktop {
-    display: none;
+  .button_icon {
+    @include mobile {
+      width: 21px;
+      height: 11px;
+    }
+  
+    @include desktop {
+      width: 37px;
+      height: 21px;
+    }
   }
 }
