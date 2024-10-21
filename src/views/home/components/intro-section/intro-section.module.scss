@@ -16,32 +16,8 @@
   display: flex;
   justify-content: center;
   z-index: 1;
-  background-color: #290052;
-
-  .desktop_main {
-    @include desktop {
-      z-index: 1;
-      display: block;
-      max-width: 1200px;
-      margin-bottom: 200px;
-    }
-
-    @include mobile {
-      display: none;
-    }
-  }
-
-  .mobile_main {
-    @include desktop {
-      display: none;
-    }
-
-    @include mobile {
-      z-index: 1;
-      display: block;
-      max-width: 460px;
-    }
-  }
+  background-color: color(blue-500);
+  height: 100vh;
 
   .light {
     & > div {
@@ -114,23 +90,4 @@
     }
   }
 
-  .desktop_aura {
-    @include mobile {
-      display: none;
-    }
-
-    @include desktop {
-      display: block;
-    }
-  }
-
-  .mobile_aura {
-    @include mobile {
-      display: block;
-    }
-
-    @include desktop {
-      display: none;
-    }
-  }
 }
