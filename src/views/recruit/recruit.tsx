@@ -11,11 +11,11 @@ const RecruitPage = () => {
   return (
     <Main className={css.main}>
       <ScrollRevealContainer>
-        <Section>
-          <Section.Head title="모집안내" description="15기 일정을 소개합니다" />
+        <Section className={css.section}>
+          <div className={css.gradient_circle} />
+          <Section.Head title="Join Us!" description="16기 일정을 소개합니다" />
           <PlanCard title="CMC 합류 여정" plans={RecruitPlans} showButton />
           <PlanCard title="CMC 정기 세션" plans={SessionPlans} />
-          <AuraEffect />
           <div className={css.space} />
         </Section>
       </ScrollRevealContainer>

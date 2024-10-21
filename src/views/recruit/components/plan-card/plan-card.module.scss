@@ -4,8 +4,8 @@
 .item {
   display: flex;
   align-items: center;
-  color: color(text-normal);
-  border-bottom: 1px solid #ffffff60;
+  color: color(black-100);
+  border-bottom: 1px dashed color(blue-500);
 
   @include mobile {
     padding: 12px 0;
@@ -19,14 +19,15 @@
   }
 
   .item_name {
-    font-weight: 700;
     text-align: start;
 
     @include mobile {
+      font-weight: 700;
       width: 100px;
     }
 
     @include desktop {
+      font-weight: 600;
       width: 240px;
     }
   }
@@ -41,6 +42,7 @@
   flex-direction: column;
   position: relative;
   z-index: 1;
+  background-color: white;
 
   @include mobile {
     width: 100%;
@@ -60,7 +62,7 @@
 
   ul {
     > li:first-of-type {
-      border-top: 1px solid #ffffff60;
+      border-top: 1px dashed color(blue-500);
     }
   }
 
@@ -68,15 +70,24 @@
     font-weight: 700;
 
     @include mobile {
-      @include font(24px, 30px);
+      @include font(20px, 30px);
     }
 
     @include desktop {
-      @include font(36px, 50px);
+      @include font(38px, 48px);
     }
   }
 
   .card_button {
     align-self: center;
+    font-weight: 600;
+    
+    @include mobile {
+      padding: 13px 34px;
+    }
+
+    @include desktop {
+      padding: 16px 32px;
+    }
   }
 }
