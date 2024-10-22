@@ -36,9 +36,9 @@ export const Header = ({ pathname }: Props) => {
           ))}
         </nav>
         <nav className={css.nav}>
-          <ApplyButton availableDisabled className={css.apply_button}>
+          <Link className={css.apply_button} to='/apply'>
             지원하기
-          </ApplyButton>
+          </Link>
         </nav>
         <button type="button" onClick={toggleModal} className={css.menu_button}>
           <Hamburger />
