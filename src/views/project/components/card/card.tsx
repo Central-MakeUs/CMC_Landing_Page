@@ -43,13 +43,14 @@ export const Card = ({ name, description, year, rank, image, link }: Props) => {
           <div className={css.link_group}>
             {link.ios && (
               <a href={link.ios} target="_blank" rel="noreferrer">
-                <StaticImage src="../../images/app-store.png" alt="App store 바로가기" className={css.link_img} />
+                <StaticImage src="../../images/app-store.png" alt="App store 바로가기" className={css.link_img_ios} />
                 App Store
               </a>
             )}
+            {link.ios && link.android && '/'}
             {link.android && (
               <a href={link.android} target="_blank" rel="noreferrer">
-                <StaticImage src="../../images/play-store.png" alt="Play store 바로가기" className={css.link_img} />
+                <StaticImage src="../../images/play-store.png" alt="Play store 바로가기" className={css.link_img_and} />
                 Play Store
               </a>
             )}
