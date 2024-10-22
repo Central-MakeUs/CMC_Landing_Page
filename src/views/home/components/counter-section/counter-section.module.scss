@@ -14,7 +14,7 @@
 .flex_row {
   width: 80%;
   display: flex;
-  
+
   @include mobile {
     flex-direction: column;
   }
@@ -43,7 +43,7 @@
   font-weight: 700;
   color: color(black-100);
   text-align: left;
-  
+
   & > span {
     color: color(blue-500);
   }
@@ -84,7 +84,7 @@
 .card {
   position: relative;
   transform: rotate(-4deg);
-  
+
   @include mobile {
     width: 300px;
     height: 200px;
@@ -96,11 +96,10 @@
     height: rem(350px);
   }
 
-  
   .card_img {
     position: absolute;
     z-index: 0;
-    
+
     @include mobile {
       width: 300px;
     }
@@ -114,7 +113,7 @@
   .card_text {
     position: absolute;
     z-index: 2;
-    
+
     @include mobile {
       bottom: 10px;
       left: 17px;
@@ -127,7 +126,7 @@
 
     .card_h {
       text-align: left;
-      
+
       @include mobile {
         margin-bottom: 14px;
         @include font(20px, 30px);
@@ -143,7 +142,7 @@
       text-align: left;
       font-weight: 300;
       color: color(gray-400);
-      
+
       @include mobile {
         @include font(14px, 18px);
       }
@@ -153,9 +152,7 @@
       }
     }
   }
-
 }
-
 
 .button {
   margin-top: 40px;
@@ -175,7 +172,7 @@
 
   @include desktop {
     margin-left: 10px;
-    width:458px;
+    width: 458px;
     height: 90px;
     padding: 20px 50px;
     font-size: rem(29px);
@@ -186,7 +183,7 @@
       width: 21px;
       height: 11px;
     }
-  
+
     @include desktop {
       width: 37px;
       height: 21px;

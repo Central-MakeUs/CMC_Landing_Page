@@ -13,7 +13,7 @@
   }
 
   @include desktop {
-    padding: 80px 40px;
+    padding: 80px 0px;
   }
 }
 
@@ -27,12 +27,14 @@
   @include desktop {
     width: 44px;
     height: 44px;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 }
 
 .head {
   color: color(black-100);
+  text-align: center;
+
   @include mobile {
     font-size: rem(24px);
     line-height: rem(30px);
@@ -51,6 +53,7 @@
 
 .desc {
   font-weight: 500;
+  text-align: center;
   color: color(black-100);
 
   @include mobile {
