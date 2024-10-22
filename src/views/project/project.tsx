@@ -26,6 +26,7 @@ const ProjectPage = ({
   return (
     <Main className={css.main}>
       <Section>
+      <div className={css.gradient_circle} />
         <Section.Head title="Challenger’s Project" description="챌린저들의 다양한 프로젝트를 확인해보세요" />
 
         <nav className={css.nav}>
