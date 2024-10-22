@@ -2,7 +2,7 @@
 @use '@/styles/utils' as *;
 
 .button {
-  color: #705a87;
+  color: color(gray-300);
   font-weight: 600;
 
   @include mobile {
@@ -19,40 +19,41 @@
 }
 
 .button_active {
-  color: #efe0ff;
+  color: color(blue-500);
 }
 
 .card {
   width: 90%;
   max-width: 1280px;
   height: 500px;
-  border-radius: 24px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  border: 1px solid #efe0ff;
+  // border: 1px solid #efe0ff;
 
   @include mobile {
     width: 320px;
     height: 380px;
-    margin: 20px;
+    // margin: 20px;
+    // margin-top: 24px;
   }
 
   @include desktop {
-    margin: 32px;
+    // margin: 32px;
   }
 
   .card_image {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 24px;
-    filter: blur(2.5px);
+    border-radius: 5px;
+    // filter: blur(2.5px);
 
     ::after {
       content: '';
-      background-color: #000000;
+      background-color: rgba(0, 0, 0, 0.5);
       position: absolute;
       top: 0;
       left: 0;
@@ -67,22 +68,22 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
     position: relative;
-    padding: 30px 40px 0;
+    color: white;
+    padding-top: 90px;
 
     .card_name {
-      position: absolute;
-      background-color: #8000ff;
+      // position: absolute;
+
       font-weight: 700;
 
       @include mobile {
         top: 32px;
-        border-radius: 8px;
+        border-radius: 5px;
         padding: 8px 16px;
-        font-size: rem(17px);
+        font-size: rem(22px);
         line-height: rem(22px);
       }
 
@@ -115,7 +116,12 @@
 .main {
   .nav {
     width: 100vw;
-
+    @include desktop {
+      display: none;
+    }
+    @include mobile {
+      display: block; /* 모바일에서만 보이게 설정 */
+    }
     .main_buttons {
       display: flex;
       justify-content: center;
@@ -123,8 +129,115 @@
       @include hide-scrollbar;
 
       > li:not(:first-of-type) {
-        border-left: 1px solid #705a87;
+        border-left: 2px solid color(gray-200);
       }
     }
   }
+}
+
+.cardContainer {
+  @include mobile {
+    display: none;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2개의 열 */
+    grid-template-rows: repeat(2, 1fr); /* 2개의 행 */
+    gap: 20px; /* 이미지 간 간격 */
+    position: relative;
+    margin-top: 30px;
+  }
+}
+
+.card {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 20px;
+
+  @include mobile {
+    width: 100%;
+    height: 247px;
+    // padding: 0px 16px;
+  }
+
+  @include desktop {
+    width: 486px;
+    height: 216px;
+    display: none;
+  }
+}
+
+.card1 {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+
+  @include mobile {
+    width: 100%;
+    height: 247px;
+    padding: 0px 16px;
+  }
+
+  @include desktop {
+    width: 486px;
+    height: 216px;
+    // display: block;
+  }
+  &:hover .overlay {
+    opacity: 1; // 마우스를 올렸을 때 어두운 배경이 나타남
+  }
+
+  &:hover .description {
+    transform: translateY(0); // 마우스를 올렸을 때 설명이 올라옴
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+  object-fit: cover; /* 이미지가 컨테이너에 맞게 비율 유지하며 채워짐 */
+}
+
+.overlay {
+  position: absolute;
+  text-align: start;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: start;
+  padding: 64px 0px 0px 20px;
+}
+
+.description {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: start;
+  padding: 20px;
+  font-size: 16px;
+  transform: translateY(100%); /* 밑에서 올라오도록 설정 */
+  transition: transform 0.3s ease; /* 부드러운 애니메이션 */
+}
+
+.card:hover .overlay {
+  opacity: 1; /* 마우스를 올렸을 때 어두운 배경이 나타남 */
+}
+
+.card:hover .description {
+  transform: translateY(0); /* 마우스를 올렸을 때 설명이 올라옴 */
 }

@@ -33,9 +33,9 @@ const AboutPage = ({
       <ScrollRevealContainer>
         <ActivitySection />
       </ScrollRevealContainer>
-      <ScrollRevealContainer>
+      {/* <ScrollRevealContainer>
         <AdditionalSection />
-      </ScrollRevealContainer>
+      </ScrollRevealContainer> */}
       <ProductSection apps={apps} />
       <ScrollRevealContainer>
         <ApplySection />
