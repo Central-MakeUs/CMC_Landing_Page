@@ -6,10 +6,6 @@
 
   .section {
     
-    @include desktop {
-      padding-top: 200px;
-    }
-
     .gradient_circle{
       position: absolute;
       top: 207px;
@@ -17,15 +13,15 @@
       border-radius: 50%;
       filter: blur(840px);
       z-index: 0;
-
+  
       @include mobile {
         height: 400px;
         width: 400px;
       }
-
+  
       @include desktop {
-        height:466px;
-        width: 466px;
+        height:266px;
+        width: 266px;
       }
     }
   }

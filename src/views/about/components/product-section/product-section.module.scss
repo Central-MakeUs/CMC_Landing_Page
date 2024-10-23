@@ -52,6 +52,9 @@
 
 .h2 {
   text-align: center;
+  font-family: 'Trap', 'Pretendard';
+  font-weight: 600;
+
   @include mobile {
     color: color(black-100);
   }

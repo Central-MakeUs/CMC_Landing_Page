@@ -29,11 +29,7 @@
 
 .main {
   .section {
-  
-    @include desktop {
-      padding-top: 200px;
-    }
-
+    
     .gradient_circle{
       position: absolute;
       top: 207px;
@@ -41,15 +37,15 @@
       border-radius: 50%;
       filter: blur(840px);
       z-index: 0;
-
+  
       @include mobile {
         height: 400px;
         width: 400px;
       }
-
+  
       @include desktop {
-        height:466px;
-        width: 466px;
+        height:266px;
+        width: 266px;
       }
     }
 
@@ -74,6 +70,7 @@
     .cards {
       display: flex;
       flex-direction: column;
+      position: relative;
 
       @include mobile {
         width: 96%;
@@ -91,7 +88,7 @@
 
       .card {
         background-color: white;
-        filter: drop-shadow(0 4px 4px #EDF1FF);
+        box-shadow: 0px 4px 4px 0px #edf1ff;
         display: flex;
         flex-direction: column;
 
