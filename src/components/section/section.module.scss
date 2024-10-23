@@ -34,6 +34,7 @@
 .head {
   color: color(black-100);
   text-align: center;
+  font-family: 'Trap', 'Pretendard';
 
   @include mobile {
     font-size: rem(24px);
@@ -42,7 +43,8 @@
   }
 
   @include desktop {
-    @include typo(display1);
+    font-size: rem(35px);
+    line-height: rem(45px);
     margin-bottom: 16px;
   }
 

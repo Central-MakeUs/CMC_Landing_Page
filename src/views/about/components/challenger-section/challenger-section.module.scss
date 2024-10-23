@@ -154,6 +154,7 @@
     h4 {
       font-weight: 600;
       color: color(blue-500);
+      font-family: 'Trap', 'Pretendard';
 
       @include mobile {
         font-size: rem(20px);

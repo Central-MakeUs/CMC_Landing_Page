@@ -54,6 +54,7 @@
 .title {
   color: color(blue-500);
   font-weight: 500;
+  font-family: 'Trap', 'Pretendard';
   
   @include mobile {
     font-size: rem(38px);
