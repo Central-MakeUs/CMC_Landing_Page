@@ -1,0 +1,27 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+
+.desktop {
+  @include desktop {
+    z-index: 0;
+    display: block;
+    max-width: 1200px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.mobile {
+  @include desktop {
+    display: none;
+  }
+
+  @include mobile {
+    z-index: 0;
+    display: block;
+    max-width: 600px;
+  }
+}

@@ -1,7 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image'
 import { forwardRef } from 'react'
 
-import { Br, Section } from '@/components'
+import { AuraCircle, Br, Section } from '@/components'
 
 import * as css from './counter-section.module.scss'
 import { RecruitCard } from '../recruit-card'
@@ -13,7 +13,7 @@ export const CounterSection = forwardRef<HTMLDivElement>((props, ref) => {
       <div className={css.space} />
       <div className={css.flex_row}>
 
-        <div>
+        <div className={css.flex_col}>
           <StaticImage src="../../../../images/star.png" alt="" className={css.star} placeholder="blurred" />
 
           <h1 className={css.head}>
@@ -28,8 +28,11 @@ export const CounterSection = forwardRef<HTMLDivElement>((props, ref) => {
             MVP 프로덕트를 제작하는 IT 커뮤니티 입니다.
           </h3>
         </div>
-
         <RecruitCard />
+      </div>
+      
+      <div className={css.mobile}>
+        <AuraCircle size="180%" top="15%" left="-40%" opacity={0.2} />
       </div>
     </Section>
   )

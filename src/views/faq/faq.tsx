@@ -3,7 +3,7 @@ import { HeadProps } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useState } from 'react'
 
-import { ScrollRevealContainer, Section, Seo } from '@/components'
+import { ScrollRevealContainer, Section, Seo, AuraEffect } from '@/components'
 import { Main } from '@/layouts'
 
 import { Cards, Tab } from './constants'
@@ -31,7 +31,8 @@ const FaqPage = () => {
       <ScrollRevealContainer>
         <Section className={css.section}>
 
-          <div className={css.gradient_circle} />
+          <AuraEffect />
+
           <Section.Head title="FAQ" />
 
           <nav>
