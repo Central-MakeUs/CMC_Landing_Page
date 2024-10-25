@@ -2,13 +2,7 @@
 @use '@/styles/utils' as *;
 
 .space {
-  @include mobile {
-    height: 80px;
-  }
-
-  @include desktop {
-    height: 200px;
-  }
+  height: 300px;
 }
 
 
