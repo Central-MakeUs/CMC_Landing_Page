@@ -3,13 +3,13 @@ import { CSSProperties } from 'react'
 import * as css from './aura-circle.module.scss'
 
 interface Props {
-  size: string
+  size?: string
   top?: string
   left?: string
   opacity?: number
 }
 
-export const AuraCircle = ({ size, top = '50%', left = '50%', opacity = 0.4 }: Props) => {
+export const AuraCircle = ({ size = '60%', top = '0%', left = '20%', opacity = 0.2 }: Props) => {
   const style: CSSProperties = {
     width: size,
     aspectRatio: '1',

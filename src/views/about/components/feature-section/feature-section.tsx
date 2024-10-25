@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { Br, Section } from '@/components'
+import { AuraEffect, Br, Section } from '@/components'
 
 import * as css from './feature-section.module.scss'
 
@@ -32,6 +32,8 @@ const Title: ReactNode = (
 export const FeatureSection = () => {
   return (
     <Section>
+      <AuraEffect />
+      
       <div className={css.space} />
       <Section.Head title={Title} />
       <div className={css.cards}>

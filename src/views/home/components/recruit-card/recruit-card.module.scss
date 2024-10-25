@@ -3,16 +3,30 @@
 
 
 .container {
-    width: 100%;
+    position: relative;
+    z-index: 1;
+    
+    @include mobile {
+      max-width: 100vw;
+      width: 100%;
+    }
+  
+    @include desktop {
+      margin-left: auto;
+    }
 }
 .card {
     position: relative;
     transform: rotate(-4deg);
   
     @include mobile {
+      left: 4px;
       width: 100%;
-      height: 200px;
+      max-width: 327px;
+      height: 230px;
       margin-top: 60px;
+      
+      margin-inline: auto;
     }
   
     @include desktop {
@@ -25,7 +39,9 @@
       z-index: 0;
   
       @include mobile {
-        width: 300px;
+        width: 100%;
+        max-width: 330px;
+        height: 235px;
       }
   
       @include desktop {
@@ -80,22 +96,26 @@
   }
   
   .button {
-    margin-top: 40px;
+    position: relative;
     border-radius: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     font-weight: 500;
   
     @include mobile {
+      margin-top: 80px;
+      justify-content: center; 
       width: 100%;
-      max-width: 500px;
-      height: 70px;
-      padding: 16px 22px;
-      font-size: rem(20px);
+      max-width: 400px;
+      margin-inline: auto;
+      padding: 20px;
+      font-size: rem(16px);
+      line-height: rem(16px);
     }
   
     @include desktop {
+      margin-top: 40px;
+      justify-content: space-between;
       margin-left: 10px;
       width: 458px;
       height: 90px;
@@ -105,8 +125,10 @@
   
     .button_icon {
       @include mobile {
-        width: 21px;
-        height: 11px;
+        position: absolute;
+        right: 30px;
+        width: 25px;
+        height: 14px;
       }
   
       @include desktop {

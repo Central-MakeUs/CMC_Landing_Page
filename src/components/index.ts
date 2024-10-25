@@ -1,5 +1,6 @@
 export * from './apply-button'
 export * from './aura-circle'
+export * from './aura-effect'
 export * from './br'
 export * from './carousel-slider'
 export * from './floating-button'

@@ -109,9 +109,6 @@
     border-radius: 30px;
 
     
-    > li:not(:first-of-type) {
-      border-left: 2px solid color(blue-800);
-    }
 
     @include hide-scrollbar;
 
@@ -125,6 +122,11 @@
       padding-right: 30px;
       font-weight: 600;
       @include font(13px, 17px);
+
+      
+      > li:not(:first-of-type) {
+        border-left: 2px solid color(blue-800);
+      }
     }
 
     @include desktop {

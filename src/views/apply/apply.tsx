@@ -1,7 +1,7 @@
 import type { HeadProps } from 'gatsby'
 import { useRef } from 'react'
 
-import { Br, ScrollRevealContainer, Section, Seo } from '@/components'
+import { AuraEffect, Br, ScrollRevealContainer, Section, Seo } from '@/components'
 import { Main } from '@/layouts'
 
 import * as css from './apply.module.scss'
@@ -16,7 +16,7 @@ const ApplyPage = () => {
       <ScrollRevealContainer>
         <Section className={css.section}>
 
-          <div className={css.gradient_circle} />
+          <AuraEffect />
 
           <div className={css.head}>
             <StaticImage src="../../images/star.png" alt="" className={css.star} placeholder="blurred" />

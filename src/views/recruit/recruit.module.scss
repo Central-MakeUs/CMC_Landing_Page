@@ -6,24 +6,6 @@
 
   .section {
     
-    .gradient_circle{
-      position: absolute;
-      top: 207px;
-      background-color: color(blue-500);
-      border-radius: 50%;
-      filter: blur(840px);
-      z-index: 0;
-  
-      @include mobile {
-        height: 400px;
-        width: 400px;
-      }
-  
-      @include desktop {
-        height:266px;
-        width: 266px;
-      }
-    }
   }
 }
 
