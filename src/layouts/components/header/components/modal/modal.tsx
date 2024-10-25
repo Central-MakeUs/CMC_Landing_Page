@@ -26,9 +26,10 @@ export const Modal = ({ isOpen, pathname, closeModal }: ModalProps) => {
           {link.name}
         </Link>
       ))}
-      <ApplyButton availableDisabled className={css.apply_button} onClick={closeModal}>
+      
+      <Link className={css.apply_button} to='/apply'  onClick={closeModal}>
         지원하기
-      </ApplyButton>
+      </Link>
     </ReactModal>
   )
 }
