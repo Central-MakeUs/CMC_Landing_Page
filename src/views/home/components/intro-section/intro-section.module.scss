@@ -16,78 +16,217 @@
   display: flex;
   justify-content: center;
   z-index: 1;
-  background-color: color(blue-500);
+  background-color: #111111;
   height: 100vh;
+  overflow: hidden;
+
+  .title {
+    position: absolute;
+    color: white;
+    text-align: right;
+    z-index: 2;
+
+    >h1 {
+      font-weight: 300
+    }
+    
+    @include mobile {
+      @include font(42px, 55px);
+      top: 20px
+    }
+
+    @include desktop {
+      @include font(70px, 100px);
+      left: 5%;
+      top: 10%;
+    }
+
+    .char_m {
+      position: relative;
+      
+      @include mobile {
+        width: 100px;
+        height: 50px;
+        right: -15px;
+        top: 7px;
+      }
+      
+      @include desktop {
+        right: -25px;
+        top: 14px;
+      }
+    }
+
+  }
+
+  .background_gradient {
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(35deg, rgba(17, 17, 17, 0) 55.93%, rgba(12, 54, 140, 0.20) 73.58%, rgba(31, 80, 95, 0.20) 89.4%);
+  
+  
+    @include mobile {
+      right: -100px;
+      height: 100vh;
+      width: 200%;
+      max-width: 620px;
+    }
+
+    @include desktop {
+      right: 0;
+      height: 100vh;
+      width: 55vw;
+      max-width: 760px;
+    }
+  }
 
   .light {
     & > div {
       position: absolute;
       top: 50%;
       left: 50%;
-      z-index: 1;
+      z-index: 2;
       aspect-ratio: 1 / 1;
-      transform: translate(-50%, -30%);
+      transform: translate(-50%, -50%);
     }
 
-    .light_main {
-      mix-blend-mode: hard-light;
-      animation: float 3s ease-in-out infinite;
-
+    .main_video {
       @include mobile {
-        width: 308px;
+        position: relative;
+        top: 12%;
       }
 
       @include desktop {
-        width: 34%;
       }
     }
 
-    .light_four {
+    .light_eight_left {
       z-index: 1;
       @include applyTwinkling();
 
       @include mobile {
-        width: 272px;
-        transform: translate(-88%, -50%);
+        width: 40%;
+        transform: translate(-120%, -280px);
       }
 
       @include desktop {
-        width: 40%;
-        transform: translate(-80%, -50%);
+        width: 22%;
+        transform: translate(-110%, -10%);
       }
     }
 
-    .light_eight {
+    .light_eight_right {
       z-index: 1;
       @include applyTwinkling(3s);
 
       @include mobile {
-        width: 472px;
-        transform: translate(-28%, -68%);
-      }
-
-      @include desktop {
-        width: 36%;
-        transform: translate(-10%, -50%);
-      }
-    }
-
-    .light_two {
-      z-index: 1;
-      @include applyTwinkling(5s);
-
-      @include mobile {
-        width: 400px;
-        aspect-ratio: 3 / 1;
-        transform: translate(-44%, 30%) scaleX(-1);
+        width: 50%;
+        transform: translate(-2%, -49%);
       }
 
       @include desktop {
         width: 20%;
-        aspect-ratio: 4 / 2;
-        transform: translate(-110%, 44%);
+        transform: translate(30%, -130%);
+      }
+    }
+
+    .light_four_left {
+      z-index: 1;
+      @include applyTwinkling();
+
+      @include mobile {
+        width: 27px;
+        transform: translate(-667%, 840%);
+      }
+
+      @include desktop {
+        width: 4%;
+        transform: translate(-940%, -560%);
+      }
+    }
+
+    
+    .light_four_right {
+      z-index: 1;
+      @include applyTwinkling(5s);
+
+      @include mobile {
+        width: 20px;
+        transform: translate(150%, 700%);
+      }
+
+      @include desktop {
+        width: 4%;
+        transform: translate(900%, 100%);
+      }
+    }
+
+    .light_two_left {
+      z-index: 1;
+      @include applyTwinkling(2s);
+
+      @include mobile {
+        width: 20px;
+        transform: translate(-620%, -1640%) scaleX(-1);
+      }
+
+      @include desktop {
+        width: 2%;
+        transform: translate(-2110%, 360%) scaleX(-1);
+      }
+    }
+    
+    .light_two_right {
+      z-index: 1;
+      @include applyTwinkling(4s);
+
+      @include mobile {
+        width: 20px;
+        transform: translate(790%, 970%) scaleX(-1);
+      }
+
+      @include desktop {
+        width: 2%;
+        transform: translate(2010%, -1020%);
       }
     }
   }
 
+}
+
+
+.index {
+  color: #636363;
+  font-family: 'Trap';
+  letter-spacing: 1.2px;
+  
+  @include mobile {
+    position: absolute;
+    bottom: 9%;
+    left: 10%;
+    @include font(14px, 20px);
+  }
+
+  @include desktop {
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    @include font(23px, 32px);
+  }
+
+  >li>span {
+    margin-right: 30px;
+  }
+
+  .line {
+    height: 62px;
+    width: 13px;
+    margin-block: 6px;
+    border-right: 1px solid #636363;
+    
+    @include mobile {
+      width: 10px;
+      height: 40px;
+    }
+  }
 }

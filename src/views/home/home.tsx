@@ -19,7 +19,7 @@ const HomePage = () => {
   return (
     <Main>
       <IntroSection />
-      <ScrollIndicator onClick={scrollToNextSection} />
+      {/* <ScrollIndicator onClick={scrollToNextSection} /> */}
 
       <div className={css.gradient_background}>
         <ScrollRevealContainer>
