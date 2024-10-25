@@ -29,9 +29,12 @@
 }
 
 .flex_col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .star {
