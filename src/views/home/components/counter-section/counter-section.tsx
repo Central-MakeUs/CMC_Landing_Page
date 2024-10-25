@@ -1,9 +1,10 @@
 import { StaticImage } from 'gatsby-plugin-image'
-import { forwardRef, ReactElement } from 'react'
+import { forwardRef } from 'react'
 
-import { ApplyButton, AuraCircle, Br, GlassCard, Section } from '@/components'
+import { Br, Section } from '@/components'
 
 import * as css from './counter-section.module.scss'
+import { RecruitCard } from '../recruit-card'
 
 
 export const CounterSection = forwardRef<HTMLDivElement>((props, ref) => {
@@ -28,25 +29,7 @@ export const CounterSection = forwardRef<HTMLDivElement>((props, ref) => {
           </h3>
         </div>
 
-        <div>
-          <div className={css.card}>
-            <StaticImage src="./images/card.png" alt="card" className={css.card_img} />
-            <div className={css.card_text}>
-              <h2 className={css.card_h}>CMC 16기 다음 여정에 <Br />참여해주세요</h2>
-              <p className={css.card_p}>
-                아직 모집기간이 아니에요!<Br />
-                알림 설정을 해주시면 <Br />
-                다음 모집 알림을 전달드릴게요!
-              </p>
-            </div>
-          </div>
-
-          <ApplyButton className={css.button}>
-            모집알림 신청하기
-            <StaticImage src="./images/button-sign.png" alt="click" className={css.button_icon} />
-          </ApplyButton>
-        </div>
-
+        <RecruitCard />
       </div>
     </Section>
   )
