@@ -12,7 +12,7 @@
   }
 
   @include desktop {
-    padding: 80px 40px;
+    padding: 80px 0px;
   }
 }
 
@@ -26,11 +26,16 @@
   @include desktop {
     width: 44px;
     height: 44px;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 }
 
 .head {
+  z-index: 1;
+  color: color(black-100);
+  text-align: center;
+  font-family: 'Trap', 'Pretendard';
+
   @include mobile {
     font-size: rem(24px);
     line-height: rem(30px);
@@ -38,18 +43,21 @@
   }
 
   @include desktop {
-    @include typo(display1);
+    font-size: rem(35px);
+    line-height: rem(45px);
     margin-bottom: 16px;
   }
 
   span {
-    color: #b36afb;
+    color: color(blue-500);
   }
 }
 
 .desc {
+  z-index: 1;
   font-weight: 500;
-  color: #efeaf5;
+  text-align: center;
+  color: color(black-100);
 
   @include mobile {
     font-size: rem(14px);
@@ -57,7 +65,7 @@
   }
 
   @include desktop {
-    font-size: rem(26px);
+    font-size: rem(22px);
     line-height: rem(32px);
   }
 }

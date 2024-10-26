@@ -1,153 +1,106 @@
 @use '@/styles/abstracts' as *;
 @use '@/styles/utils' as *;
 
-.counter_title_desktop {
-  @include desktop {
-    object-fit: contain;
-    display: block;
-    width: 700px;
-    padding: 16px 0;
+.space {
+  @include mobile {
+    height: 100px;
   }
 
-  @include mobile {
-    height: 0;
+  @include desktop {
+    height: 180px;
   }
 }
 
-.counter_title_mobile {
+.flex_row {
+  display: flex;
+
+  @include mobile {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
   @include desktop {
-    height: 0;
+    max-width: 1000px;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.flex_col {
+  
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.star {
+  @include mobile {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 16px;
+  }
+
+  @include desktop {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 20px;
+  }
+}
+
+.head {
+  z-index: 1;
+  position: relative;
+  color: color(black-100);
+  font-family: 'Trap';
+
+  & > span {
+    color: color(blue-500);
   }
 
   @include mobile {
-    object-fit: contain;
+    text-align: center;
+    margin-bottom: 22px;
     width: 300px;
-    padding: 20px 0;
+    font-weight: 700;
+    @include font(20px, 24px);
+  }
+
+  @include desktop {
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 97px;
+    width: rem(450px);
+    @include font(35px, 45px);
   }
 }
 
 .description {
-  font-weight: 700;
-  color: color(text-normal);
+  z-index: 1;
+  font-weight: 500;
+  color: color(black-100);
 
   & > span {
     color: color(primary-alternative);
   }
 
   @include mobile {
+    text-align: center;
     width: 300px;
-    @include font(14px, 19px);
+    @include font(16px, 24px);
   }
 
   @include desktop {
-    width: rem(650px);
-    @include font(24px, 30px);
+    text-align: left;
+    width: rem(450px);
+    @include font(22px, 28px);
   }
 }
 
-.card {
-  position: relative;
-
-  @include mobile {
-    width: 340px;
-    margin-top: 40px;
-  }
-
-  @include desktop {
-    width: 580px;
-    margin-top: 76px;
-  }
-}
-
-.shine {
-  & > div {
-    position: absolute;
-  }
-
-  .shine_left_top {
-    @include mobile {
-      width: 106px;
-      height: 80px;
-      left: -40px;
-      top: -40px;
-    }
-
-    @include desktop {
-      width: 160px;
-      height: 133px;
-      left: -60px;
-      top: -66px;
-    }
-
-    @include applyTwinkling();
-  }
-
-  .shine_right_top {
-    @include mobile {
-      width: 80px;
-      height: 50px;
-      right: -50px;
-      top: -30px;
-    }
-
-    @include desktop {
-      width: 128px;
-      height: 97px;
-      right: -70px;
-      top: -50px;
-    }
-
-    @include applyTwinkling(3s);
-  }
-
-  .shine_left_bottom {
-    @include mobile {
-      width: 195px;
-      height: 173px;
-      left: -92px;
-      bottom: -84px;
-    }
-
-    @include desktop {
-      width: 260px;
-      height: 194px;
-      left: -122px;
-      bottom: -96px;
-    }
-
-    @include applyTwinkling(5s);
-  }
-
-  .shine_right_bottom {
-    @include mobile {
-      width: 120px;
-      height: 120px;
-      right: -54px;
-      bottom: -40px;
-    }
-
-    @include desktop {
-      width: 230px;
-      height: 250px;
-      right: -104px;
-      bottom: -96px;
-    }
-
-    @include applyTwinkling(4s);
-  }
-}
-
-.desktop_aura {
-  @include mobile {
-    display: none;
-  }
-
-  @include desktop {
-    display: block;
-  }
-}
-
-.mobile_aura {
+.mobile {
   @include mobile {
     display: block;
   }

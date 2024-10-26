@@ -6,11 +6,6 @@
   }
 
   @include desktop {
-    height: 250px;
+    height: 200px;
   }
-}
-
-.gradient_background {
-  margin-top: 240px;
-  background: color(background-primary);
 }

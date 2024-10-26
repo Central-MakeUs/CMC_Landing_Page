@@ -24,7 +24,7 @@ interface ItemProps {
 const Card = ({ icon, title, description }: ItemProps) => {
   return (
     <div className={css.card}>
-      {icon}
+      {/* {icon} */}
       <p className={css.title}>{title}</p>
       <p className={css.description}>{description}</p>
     </div>
@@ -36,6 +36,8 @@ export const IdentitySection = () => {
     <Section>
       <Section.Head title={Title} />
       <div className={css.cards}>
+        <StaticImage className={css.backgroundImg} src="./images/background_desktop.png" alt=""></StaticImage>
+        <StaticImage className={css.backgroundImgMobile} src="./images/background_mobile.png" alt=""></StaticImage>
         <Card
           icon={<StaticImage src="./images/light-worker.png" alt="" className={css.icon} />}
           title="직장인이신가요?"

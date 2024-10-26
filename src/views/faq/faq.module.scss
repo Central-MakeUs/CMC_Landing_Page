@@ -2,42 +2,61 @@
 @use '@/styles/utils' as *;
 
 .button {
-  padding: 0 16px;
-  color: #705a87;
-  font-weight: 600;
+  padding: 11px 22px;
+  color: color(gray-300);
 
   @include mobile {
-    @include font(13px, 17px);
+    font-weight: 500;
+    min-width: 155px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    @include font(16px, 24px);
   }
 
   @include desktop {
-    @include font(22px, 28px);
+    font-weight: 600;
+    border-radius: 30px;
+    @include font(16px, 24px);
   }
 }
 
 .button_active {
-  color: #efe0ff;
+  color: white;
+  background-color: color(blue-500);
 }
 
-.main {
-  background: color(background-primary);
-  .section {
-    .main_buttons {
-      display: flex;
 
-      > li:not(:first-of-type) {
-        border-left: 1px solid #705a87;
+.main {
+  .section {
+
+    .main_buttons {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      border-radius: 30px;
+      
+      @include mobile {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        width: 330px;
+      }
+
+      @include desktop {
+        background-color: color(gray-100);
       }
     }
 
     .cards {
       display: flex;
       flex-direction: column;
+      position: relative;
 
       @include mobile {
         width: 96%;
         max-width: 500px;
-        margin-top: 16px;
+        margin-top: 47px;
         gap: 8px;
       }
 
@@ -49,41 +68,38 @@
       }
 
       .card {
-        background-color: rgb(57, 11, 101, 0.7);
+        background-color: white;
+        box-shadow: 0px 4px 4px 0px #edf1ff;
         display: flex;
         flex-direction: column;
-        gap: 12px;
 
         @include mobile {
-          border-radius: 18px;
-          padding: 16px 24px;
+          gap: 12px;
+          border-radius: 5px;
+          padding: 24px 21px;
         }
 
         @include desktop {
-          border-radius: 24px;
-          padding: 24px 30px 20px;
+          gap: 24px;
+          border-radius: 5px;
+          padding: 38px 71px;
         }
 
         & * {
           text-align: start;
-          color: #efeaf5;
         }
 
         .question {
           font-weight: 700;
+          color: color(blue-500);
 
           @include mobile {
-            @include font(18px, 23px);
+            @include font(20px, 30px);
           }
 
           @include desktop {
-            @include font(24px, 30px);
+            @include font(26px, 18px);
           }
-        }
-
-        .line {
-          height: 1px;
-          background-color: #42285d;
         }
 
         .answer {
@@ -91,7 +107,7 @@
           word-break: break-all;
 
           @include mobile {
-            @include font(14px, 19px);
+            @include font(16px, 25px);
           }
 
           @include desktop {
@@ -105,9 +121,11 @@
   .sns_group {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 5;
 
     @include mobile {
-      margin-top: 16px;
+      margin-top: 61px;
       width: 96%;
       max-width: 500px;
       flex-direction: column;
@@ -122,40 +140,42 @@
     }
 
     .sns_button {
-      background-color: color(fill-normal);
+      color: color(text-normal);
       display: flex;
       justify-content: center;
       align-items: center;
       flex: 1;
-      font-weight: 700;
-      color: color(text-normal);
 
       &:hover {
-        background-color: color(fill-strong);
+        background-color: color(primary-strong);
       }
 
       &:active {
-        background-color: color(fill-assistive);
+        background-color: color(primary-assistive);
       }
 
       @include mobile {
+        font-weight: 600;
+        background-color:#EDF1FF;
+        color: color(blue-500);
         border-radius: 16px;
-        padding: 12px 16px;
-        gap: 4px;
-        @include font(14px, 19px);
+        padding: 23px 16px;
+        gap: 8px;
+        @include font(16px, 16px);
       }
 
       @include desktop {
+        font-weight: 600;
+        background-color: color(blue-500);
         border-radius: 16px;
         padding: 16px;
         gap: 12px;
-        @include font(20px, 26px);
+        @include font(24px, 24px);
       }
 
       .sns_icon {
         @include mobile {
-          width: 19px;
-          height: 19px;
+          display: none;
         }
 
         @include desktop {
@@ -163,6 +183,41 @@
           height: 30px;
         }
       }
+      
+      .sns_icon_kakao {
+        @include mobile {
+          display: none;
+        }
+
+        @include desktop {
+          width: 32px;
+          height: 30px;
+        }
+      }
+
+      .sns_icon_mobile {
+        @include mobile {
+          width: 20px;
+          height: 20px;
+        }
+
+        @include desktop {
+          display: none;
+        }
+      }
+
+      
+      .sns_icon_kakao_mobile {
+        @include mobile {
+          width: 22px;
+          height: 20px;
+        }
+
+        @include desktop {
+          display: none;
+        }
+      }
+
     }
   }
 }

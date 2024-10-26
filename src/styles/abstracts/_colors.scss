@@ -2,8 +2,8 @@ $colors: (
   'primary-assistive': #efe0ff,
   'primary-alternative': #b36afb,
   'primary-normal': #8000ff,
-  'primary-strong': #6b06d0,
-  'primary-heavy': #5707a6,
+  // 'primary-strong': #6b06d0,
+  // 'primary-heavy': #5707a6,
   'semantic-red': #fa333f,
   'semantic-black': #000,
   'semantic-white': #fff,
@@ -13,7 +13,7 @@ $colors: (
   'fill-disable': #26212c,
   'line-normal': #42285d,
   'line-alternative': #33174f,
-  'background-primary': linear-gradient(180deg, #290052 0%, #150029 100%),
+  'background-primary': #fcfdff,
   'background-secondary': #390b65,
   'background-tertiary': #481579,
   'text-strong': #fff,
@@ -21,6 +21,28 @@ $colors: (
   'text-alternative': #b3a2c3,
   'text-assistive': #705a87,
   'text-disable': #3d3644,
+
+  // 16기 색상
+  'blue-100': #cdd9fd,
+  'blue-200': #9cb3fb,
+  'blue-300': #6a8cfa,
+  'blue-400': #1d53ff,
+  // Main_Blue와 같음
+  'blue-500': #0740f6,
+  'blue-600': #0633c5,
+  'blue-700': #042694,
+  'blue-800': #031a62,
+  'blue-900': #010d31,
+
+  'gray-100': #f6f6f6,
+  'gray-200': #ebebeb,
+  'gray-300': #a3a3a3,
+  'gray-400': #606060,
+
+  'black-100': #202632,
+  
+  'primary-strong': #0633c5,
+  'primary-heavy': #042694,
 );
 
 @function color($name) {

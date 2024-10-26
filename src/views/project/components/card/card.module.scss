@@ -3,16 +3,18 @@
 
 .card {
   overflow: hidden;
-  border-radius: 24px;
-  background: rgb(57, 11, 101, 0.75);
+  border-radius: 5px;
   transform: translateZ(0);
+  box-shadow: 0px 4px 4px 0px #edf1ff;
 
   figure {
     .image {
       aspect-ratio: 1.33 / 1;
+      border-radius: 5px;
     }
 
     figcaption {
+      background: white;
       & * {
         text-align: start;
       }
@@ -45,36 +47,36 @@
       }
 
       .name {
-        color: #efeaf5;
+        color: color(black-100);
         font-style: normal;
         font-weight: 700;
 
         @include mobile {
           font-size: rem(20px);
-          line-height: rem(25px);
+          line-height: rem(32px);
         }
 
         @include desktop {
-          font-size: rem(26px);
+          font-size: rem(24px);
           line-height: rem(32px);
         }
       }
 
       .year {
         display: block;
-        color: #b36afb;
+        color: color(blue-500);
         font-style: normal;
         font-weight: 700;
 
         @include mobile {
-          margin-top: 4px;
-          font-size: rem(19px);
+          font-size: rem(16px);
+          line-height: rem(25px);
         }
 
         @include desktop {
           margin-top: 8px;
           font-size: rem(20px);
-          line-height: rem(20px);
+          line-height: rem(25px);
         }
       }
 
@@ -83,21 +85,22 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
-        color: #dccaf2;
+        color: color(black-100);
         font-style: normal;
         font-weight: 500;
         word-break: break-all;
 
         @include mobile {
           min-height: 39px;
-          margin-top: rem(4px);
-          font-size: rem(13px);
+          margin-top: rem(5px);
+          font-size: rem(14px);
+          line-height: rem(23px);
         }
 
         @include desktop {
           min-height: 50px;
           margin-top: rem(10px);
-          font-size: rem(17px);
+          font-size: rem(16px);
         }
       }
 
@@ -105,37 +108,56 @@
         display: flex;
         gap: 8px;
         width: 100%;
-        color: color(text-alternative);
+        color: color(gray-300);
         font-style: normal;
-        font-weight: 700;
+        font-weight: 600;
 
         a:hover {
           color: color(text-normal);
         }
 
+        a {
+          display: flex;
+          align-items: center;
+        }
+
         @include mobile {
-          margin-top: 20px;
-          font-size: rem(13px);
-          line-height: rem(17px);
+          margin-top: 8px;
+          font-size: rem(16px);
+          line-height: rem(23px);
         }
 
         @include desktop {
           margin-top: 24px;
-          font-size: rem(17px);
-          line-height: rem(22px);
+          font-size: rem(18px);
+          line-height: rem(23px);
         }
 
-        .link_img {
+        .link_img_ios {
           @include mobile {
             margin-right: rem(4px);
-            width: rem(17px);
-            height: rem(17px);
+            width: rem(16px);
+            height: rem(16px);
           }
 
           @include desktop {
             margin-right: rem(8px);
-            width: rem(22px);
-            height: rem(22px);
+            width: rem(16px);
+            height: rem(16px);
+          }
+        }
+        
+        .link_img_and {
+          @include mobile {
+            margin-right: rem(4px);
+            width: rem(13px);
+            height: rem(14px);
+          }
+
+          @include desktop {
+            margin-right: rem(8px);
+            width: rem(13px);
+            height: rem(14px);
           }
         }
       }

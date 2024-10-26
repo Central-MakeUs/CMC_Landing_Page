@@ -2,10 +2,8 @@
 @use '@/styles/utils' as *;
 
 .main {
-  background: color(background-primary);
 
   @include mobile {
-    padding: 0 28px;
     padding-bottom: 30px;
   }
 
@@ -14,6 +12,25 @@
     margin: 0 auto;
     padding: 0 70px;
     padding-bottom: 40px;
+  }
+
+  .gradient_circle{
+    position: absolute;
+    top: 207px;
+    background-color: color(blue-500);
+    border-radius: 50%;
+    filter: blur(840px);
+    z-index: 0;
+
+    @include mobile {
+      height: 400px;
+      width: 400px;
+    }
+
+    @include desktop {
+      height:266px;
+      width: 266px;
+    }
   }
 }
 
@@ -80,54 +97,76 @@
   }
 }
 
+
 .nav {
-  width: 100vw;
+  width: max-content;
+  max-width: 100vw;
+  position: relative;
 
   ul {
     display: flex;
-    color: color(text-assistive);
-    font-weight: 600;
     overflow-x: scroll;
+    border-radius: 30px;
 
-    > li:not(:first-of-type) {
-      border-left: 1px solid #705a87;
-    }
+    
 
     @include hide-scrollbar;
-
-    @include mobile {
-      padding: 24px 30px 32px;
-      font-size: rem(13px);
-      line-height: rem(17px);
-    }
 
     @media (min-width: 600px) and (max-width: 1000px) {
       justify-content: center;
     }
+    
+    @include mobile {
+      color: color(blue-600);
+      margin: 24px 0 32px 30px;
+      padding-right: 30px;
+      font-weight: 600;
+      @include font(13px, 17px);
+
+      
+      > li:not(:first-of-type) {
+        border-left: 2px solid color(blue-800);
+      }
+    }
 
     @include desktop {
+      color: color(gray-300);
+      background-color: color(gray-100);
       justify-content: center;
-      padding: 32px 20px 40px;
-      @include font(20px, 26px);
+      margin: 32px 20px 40px;
+      font-weight: 400;
+      @include font(16px, 24px);
     }
 
     li {
-      @include mobile {
-        padding: 0 12px;
-      }
-
-      @include desktop {
-        padding: 0 16px;
-      }
     }
 
     button {
       width: max-content;
+      border-radius: 30px;
+      
+      @include mobile {
+        padding: 0 11px;
+      }
+
+      @include desktop {
+        padding: 10px 26px;
+      }
     }
   }
 
   .active {
-    color: color(primary-assistive);
+    
+    @include mobile {
+      color: color(blue-500);
+      font-weight: 700;
+    }
+
+    @include desktop {
+      color: white;
+      background-color: color(blue-500);
+      font-weight: 600;
+    }
   }
 }
 

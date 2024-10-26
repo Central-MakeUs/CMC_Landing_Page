@@ -6,31 +6,74 @@
   }
 
   @include desktop {
-    height: 300px;
+    height: 180px;
   }
 }
 
 .supports {
-  width: 100%;
+  position: relative;
+  width: 80%;
   display: flex;
 
+
   @include mobile {
+    margin-top: 40px;
+    padding: 40px 20px;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    min-height: 400px;
   }
 
   @include desktop {
+    margin-top: 96px;
+    padding: 50px 70px;
     max-width: 1000px;
+    height: 180px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: color(gray-100);
+    border-radius: 5px;
+  }
+
+  .cover {
+    
+    @include mobile {
+      width: 90vw;
+      max-width: 400px;
+      height: 143px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 13px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px 0px #edf1ff;
+    }
   }
 
   .supports_company {
+
     @include mobile {
-      width: 60%;
-      max-width: 400px;
+      max-width : 200px;
+      height: fit-content;
     }
 
     @include desktop {
-      max-width: 440px;
+      max-width: 210px;
+      min-height: 35px;
+      max-height: 89px;
+      height: fit-content;
     }
+  }
+}
+
+.mobile {
+  @include mobile {
+    display: block;
+  }
+
+  @include desktop {
+    display: none;
   }
 }

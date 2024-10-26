@@ -1,0 +1,104 @@
+@use '@/styles/abstracts' as *;
+@use '@/styles/utils' as *;
+
+.space {
+  height: 300px;
+}
+
+
+.gradient_circle{
+  position: absolute;
+  top: 207px;
+  background-color: color(blue-500);
+  border-radius: 50%;
+  filter: blur(840px);
+  z-index: 0;
+
+  @include mobile {
+    height: 400px;
+    width: 400px;
+  }
+
+  @include desktop {
+    height:266px;
+    width: 266px;
+  }
+}
+
+.star {
+  width: 36px;
+  height: 36px;
+}
+
+
+.head {
+  display: flex;
+
+  @include mobile {
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  @include desktop {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.title {
+  color: color(blue-500);
+  font-weight: 500;
+  font-family: 'Trap', 'Pretendard';
+  
+  @include mobile {
+    font-size: rem(38px);
+    line-height: rem(46px);
+    margin-right: 30px;
+  }
+  
+  @include desktop {
+    font-size: rem(60px);
+    line-height: rem(72px);
+    margin-top: 28px;
+  }
+}
+
+.description {
+  text-align: center;
+  font-weight: 500;
+
+  span {
+    font-weight: 700;
+    color: color(blue-500);
+  }
+
+  
+  @include mobile {
+    margin-top: 25px;
+    font-size: rem(16px);
+    line-height: rem(30px);
+  }
+
+  
+  @include desktop {
+    margin-top: 11px;
+    font-size: rem(24px);
+    line-height: rem(43px);
+  }
+}
+
+.card{
+  background-color: white;
+  border-radius: 24px;
+  position: relative;
+  margin-top: 48px;
+
+  
+  @include mobile {
+    width: 100%;
+  }
+  
+  @include desktop {
+    min-width: rem(630px);
+  }
+}

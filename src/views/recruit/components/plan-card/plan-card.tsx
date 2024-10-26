@@ -1,6 +1,5 @@
 import { ApplyButton, GlassCard } from '@/components'
 
-import { LightEffect } from '../light-effect'
 import * as css from './plan-card.module.scss'
 
 interface Plan {
@@ -31,10 +30,9 @@ export const PlanCard = ({ title, plans, showButton = false }: RenderCardProps) 
     <GlassCard extendClass={css.card}>
       <h3 className={css.card_title}>{title}</h3>
       <ul>{renderPlans(plans)}</ul>
-      <LightEffect />
       {showButton && (
-        <ApplyButton availableDisabled className={css.card_button}>
-          CMC 15기 지원하러 가기
+        <ApplyButton className={css.card_button}>
+          CMC 16기 지원하러 가기
         </ApplyButton>
       )}
     </GlassCard>

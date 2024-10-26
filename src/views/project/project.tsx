@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import type { HeadProps, PageProps } from 'gatsby'
 import { useCallback, useMemo, useState } from 'react'
 
-import { Section, Seo } from '@/components'
+import { AuraEffect, Section, Seo } from '@/components'
 import { Main } from '@/layouts'
 import { getRefinedImage } from '@/utils'
 
@@ -26,6 +26,8 @@ const ProjectPage = ({
   return (
     <Main className={css.main}>
       <Section>
+        <AuraEffect />
+
         <Section.Head title="Challenger’s Project" description="챌린저들의 다양한 프로젝트를 확인해보세요" />
 
         <nav className={css.nav}>

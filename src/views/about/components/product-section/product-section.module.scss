@@ -4,7 +4,7 @@
 .carouselContainer {
   overflow: hidden;
   width: 100vw;
-  margin-top: 20px;
+  margin-top: 56px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -18,15 +18,24 @@
 }
 
 .moreButton {
-  position: absolute;
-  color: #b36afb;
+  // position: absolute;
+  color: color(blue-500);
   font-weight: 600;
+  border-radius: 330px;
+  border: 1px solid color(blue-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @include mobile {
     bottom: rem(10px);
     right: rem(20px);
     font-size: rem(13px);
     line-height: rem(17px);
+    margin-top: 52px;
+    width: 80%;
+    height: 42px;
+    background-color: white;
   }
 
   @include desktop {
@@ -34,5 +43,37 @@
     right: rem(20px);
     font-size: rem(16px);
     line-height: rem(20px);
+    margin-top: 43px;
+    width: 260px;
+    height: 42px;
+    background-color: white;
+  }
+}
+
+.h2 {
+  text-align: center;
+  font-family: 'Trap', 'Pretendard';
+  font-weight: 600;
+
+  @include mobile {
+    color: color(black-100);
+  }
+  @include desktop {
+    color: white;
+    font-size: 35px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0px;
+
+  @include mobile {
+  }
+  @include desktop {
+    background-color: #202632;
   }
 }

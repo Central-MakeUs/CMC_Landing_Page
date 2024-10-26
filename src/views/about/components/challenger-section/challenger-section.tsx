@@ -47,17 +47,17 @@ const Card = ({ type, title, description }: CardProps) => {
   return (
     <div className={css.card}>
       <div className={css.card_desktop}>
-        {type === Tab.PLAN && <StaticImage src="./images/symbol-plan.png" alt="" className={css.icon_desktop} />}
-        {type === Tab.DESIGN && <StaticImage src="./images/symbol-design.png" alt="" className={css.icon_desktop} />}
-        {type === Tab.CLIENT && <StaticImage src="./images/symbol-client.png" alt="" className={css.icon_desktop} />}
-        {type === Tab.SERVER && <StaticImage src="./images/symbol-server.png" alt="" className={css.icon_desktop} />}
+        {type === Tab.PLAN && <StaticImage src="./images/symbol.png" alt="" className={css.icon_desktop} />}
+        {type === Tab.DESIGN && <StaticImage src="./images/symbol.png" alt="" className={css.icon_desktop} />}
+        {type === Tab.CLIENT && <StaticImage src="./images/symbol.png" alt="" className={css.icon_desktop} />}
+        {type === Tab.SERVER && <StaticImage src="./images/symbol.png" alt="" className={css.icon_desktop} />}
       </div>
       <div className={css.detail}>
         <div className={css.card_mobile}>
-          {type === Tab.PLAN && <StaticImage src="./images/symbol-plan.png" alt="" className={css.icon_mobile} />}
-          {type === Tab.DESIGN && <StaticImage src="./images/symbol-design.png" alt="" className={css.icon_mobile} />}
-          {type === Tab.CLIENT && <StaticImage src="./images/symbol-client.png" alt="" className={css.icon_mobile} />}
-          {type === Tab.SERVER && <StaticImage src="./images/symbol-server.png" alt="" className={css.icon_mobile} />}
+          {type === Tab.PLAN && <StaticImage src="./images/symbol.png" alt="" className={css.icon_mobile} />}
+          {type === Tab.DESIGN && <StaticImage src="./images/symbol.png" alt="" className={css.icon_mobile} />}
+          {type === Tab.CLIENT && <StaticImage src="./images/symbol.png" alt="" className={css.icon_mobile} />}
+          {type === Tab.SERVER && <StaticImage src="./images/symbol.png" alt="" className={css.icon_mobile} />}
           <h4>
             CMC에서의 <Br mobile />
             {title}는?
@@ -74,7 +74,7 @@ const Card = ({ type, title, description }: CardProps) => {
             <ClientCard
               clientType="Web"
               description="두 명의 개발자가 함께 크로스플랫폼 앱을 만들고 배포하는 경험을 할 수 있습니다."
-              techStack="사용 기술 : React Native"
+              techStack="사용 기술 : React & React Native"
             />
           </div>
         )}
@@ -92,16 +92,16 @@ export const ChallengerSection = () => {
         title="CMC는 이렇게 도전합니다."
         description={
           <>
-            각 분야의 전문가 5명이 하나의 팀을 이뤄
+            각 분야의 전문가 5명이 하나의 팀을 이뤄&nbsp;
             <Br mobile />
-            3개월 동안 전문적인 기술과 노하우를 바탕으로
+            3개월 동안 전문적인 기술과 노하우를 바탕으로&nbsp;
             <Br mobile />
             프로덕트를 제작합니다.
           </>
         }
       />
       <p className={css.sub_title}>
-        PM & Planer (1명) / Designer (1명) /<Br mobile /> Client (2명) / Server (1명)
+        PM & Planner (1명) / Designer (1명) /<Br mobile /> Client (2명) / Server (1명)
       </p>
       <p className={css.caption}>※ web은 2명, ios 1명 & aos 1명은 짝지어서 런칭하게 됩니다.</p>
 
