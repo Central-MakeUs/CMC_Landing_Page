@@ -17,6 +17,10 @@ jobs:
         with:
           node-version: latest
 
+      - name: Clear cache directories
+        run: |
+          rm -rf .cache public node_modules/.cache
+
       - name: Install dependencies
         run: yarn install --immutable
 
