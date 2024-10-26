@@ -1,15 +1,15 @@
 export const RecruitPlans: Record<string, { name: string; date: string }> = {
   Application: {
     name: '접수 기간',
-    date: '24.10.28 ~ 24.11.03',
+    date: '24.10.28 ~ 24.11.05',
   },
   Document: {
     name: '서류 전형',
-    date: '24.11.05',
+    date: '24.11.07',
   },
   Interview: {
     name: 'CMC 핏 인터뷰',
-    date: '24.11.08 ~ 24.11.11',
+    date: '24.11.09 ~ 24.11.10',
   },
   Joining: {
     name: 'CMC 합류 안내',

@@ -33,6 +33,7 @@
     justify-content: space-around;
     align-items: center;
     background-color: color(gray-100);
+    border-radius: 5px;
   }
 
   .cover {
@@ -59,9 +60,9 @@
     }
 
     @include desktop {
-      max-width: 220px;
+      max-width: 210px;
       min-height: 35px;
-      max-height: 80px;
+      max-height: 89px;
       height: fit-content;
     }
   }

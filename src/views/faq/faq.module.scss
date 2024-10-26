@@ -147,11 +147,11 @@
       flex: 1;
 
       &:hover {
-        background-color: color(fill-strong);
+        background-color: color(primary-strong);
       }
 
       &:active {
-        background-color: color(fill-assistive);
+        background-color: color(primary-assistive);
       }
 
       @include mobile {
@@ -165,7 +165,7 @@
       }
 
       @include desktop {
-        font-weight: 500;
+        font-weight: 600;
         background-color: color(blue-500);
         border-radius: 16px;
         padding: 16px;
@@ -179,10 +179,22 @@
         }
 
         @include desktop {
-          width: 31px;
+          width: 30px;
           height: 30px;
         }
       }
+      
+      .sns_icon_kakao {
+        @include mobile {
+          display: none;
+        }
+
+        @include desktop {
+          width: 32px;
+          height: 30px;
+        }
+      }
+
       .sns_icon_mobile {
         @include mobile {
           width: 20px;
@@ -193,6 +205,19 @@
           display: none;
         }
       }
+
+      
+      .sns_icon_kakao_mobile {
+        @include mobile {
+          width: 22px;
+          height: 20px;
+        }
+
+        @include desktop {
+          display: none;
+        }
+      }
+
     }
   }
 }
