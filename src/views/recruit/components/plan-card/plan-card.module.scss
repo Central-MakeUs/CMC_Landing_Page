@@ -71,6 +71,7 @@
   .card_title {
     font-weight: 700;
     text-align: center;
+    position: relative;
 
     @include mobile {
       @include font(20px, 30px);
@@ -84,6 +85,7 @@
   .card_button {
     align-self: center;
     font-weight: 600;
+    position: relative;
     
     @include mobile {
       padding: 13px 34px;

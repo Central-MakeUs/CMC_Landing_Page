@@ -78,8 +78,8 @@ const FaqPage = () => {
               CMC 인스타 스토리 확인
             </a>
             <a href="http://pf.kakao.com/_xcwDJT" target="_blank" rel="noreferrer" className={css.sns_button}>
-              <StaticImage src="./images/sns-kakao.png" alt="CMC 카카오톡 문의하기 버튼" className={css.sns_icon} />
-              <StaticImage src="./images/sns-kakao-blue.png" alt="CMC 카카오톡 문의하기 버튼" className={css.sns_icon_mobile} objectFit='contain'/>
+              <StaticImage src="./images/sns-kakao.png" alt="CMC 카카오톡 문의하기 버튼" className={css.sns_icon_kakao} />
+              <StaticImage src="./images/sns-kakao-blue.png" alt="CMC 카카오톡 문의하기 버튼" className={css.sns_icon_kakao_mobile} objectFit='contain'/>
               카카오톡 문의
             </a>
           </div>

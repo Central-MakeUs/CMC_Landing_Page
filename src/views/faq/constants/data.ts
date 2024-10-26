@@ -29,7 +29,7 @@ export const Cards: Record<Tab, { name: string; qnas: { question: string; answer
       },
       {
         question: '최종 합격 발표는 언제인가요?',
-        answer: '최종 합격 발표의 경우 5월 13일 중으로 문자를 통해 발표 예정입니다.',
+        answer: '최종 합격 발표의 경우 11월 7일 중으로 문자를 통해 발표 예정입니다.',
       },
       {
         question: '불합격자한테도 연락이 따로 오나요?',
