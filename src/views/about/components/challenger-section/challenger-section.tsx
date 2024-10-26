@@ -74,7 +74,7 @@ const Card = ({ type, title, description }: CardProps) => {
             <ClientCard
               clientType="Web"
               description="두 명의 개발자가 함께 크로스플랫폼 앱을 만들고 배포하는 경험을 할 수 있습니다."
-              techStack="사용 기술 : React Native"
+              techStack="사용 기술 : React & React Native"
             />
           </div>
         )}
@@ -101,7 +101,7 @@ export const ChallengerSection = () => {
         }
       />
       <p className={css.sub_title}>
-        PM & Planer (1명) / Designer (1명) /<Br mobile /> Client (2명) / Server (1명)
+        PM & Planner (1명) / Designer (1명) /<Br mobile /> Client (2명) / Server (1명)
       </p>
       <p className={css.caption}>※ web은 2명, ios 1명 & aos 1명은 짝지어서 런칭하게 됩니다.</p>
 
