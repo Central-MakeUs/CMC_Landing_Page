@@ -23,6 +23,8 @@ export const IntroSection = () => {
           muted
           autoPlay
           loop
+          controls={false}
+          playsInline
           className={css.main_video}
           >
           <source src={Video} type='video/mp4' />

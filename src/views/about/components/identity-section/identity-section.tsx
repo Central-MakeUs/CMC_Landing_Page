@@ -1,5 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image'
 import { ReactElement, ReactNode } from 'react'
+import background_desktop from './images/background_desktop.png'
+import background_mobile from './images/background_mobile.png'
 
 import { Br, Section } from '@/components'
 
@@ -36,7 +38,12 @@ export const IdentitySection = () => {
     <Section>
       <Section.Head title={Title} />
       <div className={css.cards}>
-        <StaticImage className={css.backgroundImg} src="./images/background_desktop.png" alt=""></StaticImage>
+        <StaticImage
+          className={css.backgroundImg}
+          src="./images/background_desktop.png"
+          alt=""
+          style={{ position: 'absolute' }}
+        ></StaticImage>
         <StaticImage className={css.backgroundImgMobile} src="./images/background_mobile.png" alt=""></StaticImage>
         <Card
           icon={<StaticImage src="./images/light-worker.png" alt="" className={css.icon} />}

@@ -15,31 +15,30 @@ const ApplyPage = () => {
     <Main>
       <ScrollRevealContainer>
         <Section className={css.section}>
-
           <AuraEffect />
 
           <div className={css.head}>
             <StaticImage src="../../images/star.png" alt="" className={css.star} placeholder="blurred" />
             <h1 className={css.title}>
-              Centeral <Br mobile />Makeus <Br mobile />Challenge
+              Central <Br mobile />
+              Makeus <Br mobile />
+              Challenge
             </h1>
           </div>
 
           <p className={css.description}>
             CMC는 <Br mobile />
             <span>실력있는</span> '기획자, 디자이너, 개발자'들이 <Br mobile />
-            <span>3개월</span> 동안 함께 <Br desktop/>
+            <span>3개월</span> 동안 함께 <Br desktop />
             <span>수익 창출</span>을 위한 <Br mobile />
             <span>MVP 프로덕트</span>를 제작하는 <span>IT 커뮤니티</span>입니다.
           </p>
-        
 
-          <div className={css.card} >
-            <CountdownTimer/>
+          <div className={css.card}>
+            <CountdownTimer />
           </div>
 
           <div className={css.space} />
-
         </Section>
       </ScrollRevealContainer>
     </Main>

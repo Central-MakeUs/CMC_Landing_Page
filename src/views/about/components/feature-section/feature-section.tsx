@@ -33,18 +33,18 @@ export const FeatureSection = () => {
   return (
     <Section>
       <AuraEffect />
-      
+
       <div className={css.space} />
       <Section.Head title={Title} />
       <div className={css.cards}>
-        <FeatureCard title={`14기`} figure={`기수가 증명하는\n꾸준함’`} />
-        <FeatureCard title="4,000명" figure={`함께 성장하는\n‘Ne(o)rdinary 네트워크’`} />
+        <FeatureCard title={`15기`} figure={`기수가 증명하는\n'꾸준함'`} />
+        <FeatureCard title="4,000명" figure={`함께 성장하는\n'Ne(o)rdinary 네트워크'`} />
         <FeatureCard
           title="200개 +"
-          figure={`런칭된 어플 수로 증명하는 ‘전문성’`}
+          figure={`런칭된 어플 수로 증명하는 '전문성'`}
           description="(Android, iOS 스토어)"
         />
-        <FeatureCard title="100%" description="(13기,14기)" figure={`최근 1년간 런칭률`} />
+        <FeatureCard title="100%" description="(14기,15기)" figure={`최근 1년간 런칭률`} />
       </div>
     </Section>
   )
