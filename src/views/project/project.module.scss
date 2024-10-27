@@ -117,7 +117,7 @@
     }
     
     @include mobile {
-      color: color(blue-600);
+      color: color(gray-300);
       margin: 24px 0 32px 30px;
       padding-right: 30px;
       font-weight: 600;
@@ -125,7 +125,7 @@
 
       
       > li:not(:first-of-type) {
-        border-left: 2px solid color(blue-800);
+        border-left: 2px solid color(gray-200);
       }
     }
 

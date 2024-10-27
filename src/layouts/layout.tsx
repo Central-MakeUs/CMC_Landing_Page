@@ -17,7 +17,7 @@ export const Layout = ({ location, children }: Omit<PageProps, 'children'> & Pro
     <>
       <Header pathname={location.pathname} />
       {children}
-      <FloatingButton />
+      {/* <FloatingButton /> */}
       <Footer />
     </>
   )
