@@ -37,7 +37,7 @@ export const RecruitStatus: Record<RecruitStatusEnum, RecruitStatusType> = {
   Recruiting: {
     title: '16기 모집 마감까지',
     buttonText: '지원하기',
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSckYFpx4NLpFeme_L30iOb3eM9ll_uudMw2KRzdwLSqsDWhCA/viewform',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSeCU77v4eBRO64n0-PjtB04CPXaTH-p-_9Dr9KaQLPYiUTs6A/viewform',
   },
   AfterRecruiting: {
     title: '16기 지원이 마감되었어요!',

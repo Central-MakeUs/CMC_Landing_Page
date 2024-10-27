@@ -10,7 +10,7 @@ declare module '*.svg' {
   export default content
 }
 
-declare module '*.mp4' {
+declare module '*.webp' {
   const content: any
   export default content
 }
