@@ -22,7 +22,7 @@ interface Props {
  * <Carousel logos={imageArr} /> // 순방향
  * <Carousel logos={imageArr} reverse /> // 역방향
  */
-export const CarouselSlider = ({ logos, width = '8%', reverse = false }: Props) => {
+export const CarouselSlider = ({ logos, width = '10%', reverse = false }: Props) => {
   const extendSlideItems = [...logos, ...logos.slice(0, 4)] // 끊김 없는 루프 효과를 위해 시야에 보이는 개수인 4개의 항목을 끝에 추가합니다.
   const carouselRef = useRef<HTMLDivElement>(null)
 
