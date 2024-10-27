@@ -57,6 +57,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  text-align: left;
   z-index: 1;
   margin-top: 50px;
 
@@ -100,7 +101,8 @@
 
   // 모바일
   @include mobile {
-    display: none; // 모바일에서는 데스크탑 이미지를 숨김
+    // display: none; // 모바일에서는 데스크탑 이미지를 숨김
+    height: 0;
   }
 }
 
@@ -114,7 +116,8 @@
 
   // 데스크탑
   @include desktop {
-    display: none; // 데스크탑에서는 모바일 이미지를 숨김
+    // display: none; // 데스크탑에서는 모바일 이미지를 숨김
+    height: 0;
   }
 
   // 모바일
