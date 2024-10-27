@@ -1,5 +1,5 @@
 import { StaticImage } from 'gatsby-plugin-image'
-import Video from '../../images/main.mp4'
+import GIF from '../../../../../static/img/main-mov.webp'
 
 import * as css from './intro-section.module.scss'
 
@@ -19,16 +19,7 @@ export const IntroSection = () => {
       </div>
 
       <div className={css.light}>
-        <video
-          muted
-          autoPlay
-          loop
-          controls={false}
-          playsInline
-          className={css.main_video}
-          >
-          <source src={Video} type='video/mp4' />
-        </video>
+        <img src={GIF} alt='background-mov-CMC' className={css.main_video}/>
 
         <StaticImage src="../../images/light-eight.png" alt="CMC" className={css.light_eight_left} />
         <StaticImage src="../../images/light-eight.png" alt="CMC" className={css.light_eight_right} />
