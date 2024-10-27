@@ -28,6 +28,10 @@
 .star {
   width: 36px;
   height: 36px;
+  
+  @include mobile {
+     margin-top: 8px;
+  }
 }
 
 
