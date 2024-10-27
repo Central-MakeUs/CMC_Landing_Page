@@ -110,12 +110,12 @@
 
       @include mobile {
         width: 40%;
-        transform: translate(-120%, -280px);
+        transform: translate(-120%, -100%);
       }
 
       @include desktop {
         width: 22%;
-        transform: translate(-110%, -10%);
+        transform: translate(-125%, 10%);
       }
     }
 
@@ -125,7 +125,7 @@
 
       @include mobile {
         width: 50%;
-        transform: translate(-2%, -49%);
+        transform: translate(-2%, -9%);
       }
 
       @include desktop {
@@ -170,7 +170,7 @@
 
       @include mobile {
         width: 20px;
-        transform: translate(-620%, -1640%) scaleX(-1);
+        transform: translate(-620%, -1940%) scaleX(-1);
       }
 
       @include desktop {
