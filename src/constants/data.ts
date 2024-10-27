@@ -56,7 +56,7 @@ export const RecruitMent: Record<RecruitStatusEnum, RecruitMentType> = {
   Recruiting: {
     title: '🔈CMC 16기 챌린저를\n찾습니다',
     description: 'CMC 16기를 모집중이에요.\nCMC의 여정에 합류하고 싶은 분들은\n지원을 서둘러주세요!',
-    buttonText: '16기에 지원하기',
+    buttonText: '16기 지원하기',
   },
   AfterRecruiting: {
     title: 'CMC 16기 다음 여정에\n참여해주세요',
