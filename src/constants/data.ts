@@ -26,13 +26,12 @@ export type RecruitMentType = {
   buttonText: string
 }
 
-
 // apply button
 export const RecruitStatus: Record<RecruitStatusEnum, RecruitStatusType> = {
   BeforeRecruiting: {
     title: '16기 모집 시작까지',
     buttonText: '알림 받기',
-    link: 'https://forms.gle/LWfsozJbsrhkpyCr5',
+    link: 'https://forms.gle/8kCz1TVyjxQtEhLV6',
   },
   Recruiting: {
     title: '16기 모집 마감까지',
