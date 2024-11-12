@@ -31,7 +31,7 @@ export const PlanCard = ({ title, plans, showButton = false }: RenderCardProps) 
       <h3 className={css.card_title}>{title}</h3>
       <ul>{renderPlans(plans)}</ul>
       {showButton && (
-        <ApplyButton className={css.card_button}>
+        <ApplyButton className={css.card_button} availableDisabled>
           CMC 16기 지원하러 가기
         </ApplyButton>
       )}
