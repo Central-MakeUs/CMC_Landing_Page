@@ -31,7 +31,10 @@
 .button_active {
   background-color: color(blue-500);
   color: white;
-  border-radius: 12px;
+
+  @include mobile {
+    border-radius: 12px;
+  }
 }
 
 .client_card {

@@ -7,8 +7,6 @@ import { Section } from '@/components'
 import * as css from './activity-section.module.scss'
 import { Cards, Tab } from './constants'
 
-import img1 from './images/img1.png'
-
 interface ButtonProps {
   isActive: boolean
   label: string

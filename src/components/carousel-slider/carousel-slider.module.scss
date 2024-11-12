@@ -23,6 +23,11 @@ $gap: 8px;
     width: var(--slide-item-width);
     aspect-ratio: 416 / 280;
     border-radius: 8px;
+
+    @include mobile {
+      height: 90px;
+      object-fit: contain;
+    }
   }
 }
 

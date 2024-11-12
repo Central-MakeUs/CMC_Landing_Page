@@ -26,16 +26,14 @@
   background-color: color(blue-500);
 }
 
-
 .main {
   .section {
-
     .main_buttons {
       position: relative;
       z-index: 5;
       display: flex;
       border-radius: 30px;
-      
+
       @include mobile {
         flex-wrap: wrap;
         justify-content: center;
@@ -151,12 +149,12 @@
       }
 
       &:active {
-        background-color: color(primary-assistive);
+        background-color: color(primary-strong);
       }
 
       @include mobile {
         font-weight: 600;
-        background-color:#EDF1FF;
+        background-color: #edf1ff;
         color: color(blue-500);
         border-radius: 16px;
         padding: 23px 16px;
@@ -183,7 +181,7 @@
           height: 30px;
         }
       }
-      
+
       .sns_icon_kakao {
         @include mobile {
           display: none;
@@ -206,7 +204,6 @@
         }
       }
 
-      
       .sns_icon_kakao_mobile {
         @include mobile {
           width: 22px;
@@ -217,7 +214,6 @@
           display: none;
         }
       }
-
     }
   }
 }

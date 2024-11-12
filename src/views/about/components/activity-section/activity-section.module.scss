@@ -73,6 +73,9 @@
     position: relative;
     color: white;
     padding-top: 90px;
+    @include mobile {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
 
     .card_name {
       // position: absolute;

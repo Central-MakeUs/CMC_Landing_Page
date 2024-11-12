@@ -1,6 +1,6 @@
 import { HeadProps } from 'gatsby'
 
-import {  ScrollRevealContainer, Section, Seo } from '@/components'
+import { ScrollRevealContainer, Section, Seo } from '@/components'
 import { Main } from '@/layouts'
 
 import { AuraEffect, PlanCard } from './components'
@@ -12,7 +12,6 @@ const RecruitPage = () => {
     <Main className={css.main}>
       <ScrollRevealContainer>
         <Section className={css.section}>
-        
           <AuraEffect />
 
           <Section.Head title="Join Us!" description="16기 일정을 소개합니다" />

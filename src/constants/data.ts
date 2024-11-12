@@ -5,7 +5,7 @@ export type RecruitDateType = {
 
 export const RecruitDate: RecruitDateType = {
   startDate: new Date('2024-10-28T00:00:00'),
-  endDate: new Date('2024-11-05T23:59:59'),
+  endDate: new Date('2024-11-10T23:59:59'),
 }
 
 export enum RecruitStatusEnum {
@@ -36,12 +36,12 @@ export const RecruitStatus: Record<RecruitStatusEnum, RecruitStatusType> = {
   Recruiting: {
     title: '16기 모집 마감까지',
     buttonText: '지원하기',
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSeCU77v4eBRO64n0-PjtB04CPXaTH-p-_9Dr9KaQLPYiUTs6A/viewform',
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSfIzz5r6IDdDg6t9iGGFh6H5qIovAmrPmQfwzsKRmjo_HaDsA/viewform',
   },
   AfterRecruiting: {
     title: '16기 지원이 마감되었어요!',
     buttonText: '17기 사전예약 하기',
-    link: 'https://forms.gle/8kCz1TVyjxQtEhLV6',
+    link: 'https://forms.gle/hCUqiYbDUkLbt8Bx8',
   },
 }
 
@@ -55,7 +55,7 @@ export const RecruitMent: Record<RecruitStatusEnum, RecruitMentType> = {
   Recruiting: {
     title: '🔈CMC 16기 챌린저를\n찾습니다',
     description: 'CMC 16기를 모집중이에요.\nCMC의 여정에 합류하고 싶은 분들은\n지원을 서둘러주세요!',
-    buttonText: '16기 지원하기',
+    buttonText: '16기 추가모집 지원하기',
   },
   AfterRecruiting: {
     title: 'CMC 16기 다음 여정에\n참여해주세요',
