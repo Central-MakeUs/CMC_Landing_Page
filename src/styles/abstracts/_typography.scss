@@ -81,6 +81,129 @@ $typo-styles: (
     'line-height': 15px,
     'weight': 500,
   ),
+
+  // NEW Version
+  'KR/Headline1':
+    (
+      'size': 40px,
+      'line-height': 50px,
+      'weight': 700,
+    ),
+  'KR/Headline2': (
+    'size': 36px,
+    'line-height': 48px,
+    'weight': 600,
+  ),
+  'KR/Headline3': (
+    'size': 30px,
+    'line-height': 40px,
+    'weight': 600,
+  ),
+  'KR/Headline4': (
+    'size': 24px,
+    'line-height': 34px,
+    'weight': 600,
+  ),
+  'KR/Headline5': (
+    'size': 20px,
+    'line-height': 28px,
+    'weight': 600,
+  ),
+  'KR/Headline6': (
+    'size': 16px,
+    'line-height': 24px,
+    'weight': 600,
+  ),
+  'KR/Subtitle1': (
+    'size': 28px,
+    'line-height': 40px,
+    'weight': 400,
+  ),
+  'KR/Subtitle2': (
+    'size': 24px,
+    'line-height': 34px,
+    'weight': 400,
+  ),
+  'KR/Body2': (
+    'size': 22px,
+    'line-height': 30px,
+    'weight': 400,
+  ),
+  'KR/Body3_R': (
+    'size': 20px,
+    'line-height': 28px,
+    'weight': 400,
+  ),
+  'KR/Body3_L': (
+    'size': 20px,
+    'line-height': 28px,
+    'weight': 300,
+  ),
+  'KR/Body4': (
+    'size': 18x,
+    'line-height': 26px,
+    'weight': 400,
+  ),
+  'KR/Body5': (
+    'size': 16px,
+    'line-height': 24px,
+    'weight': 400,
+  ),
+  'KR/Caption1': (
+    'size': 13px,
+    'line-height': 18px,
+    'weight': 600,
+  ),
+  'KR/Caption1_L': (
+    'size': 13px,
+    'line-height': 18px,
+    'weight': 300,
+  ),
+  'KR/Caption2': (
+    'size': 12px,
+    'line-height': 18px,
+    'weight': 300,
+  ),
+  'KR/Caption3': (
+    'size': 10px,
+    'line-height': 16px,
+    'weight': 300,
+  ),
+  'ETC': (
+    'size': 80px,
+    'line-height': 96px,
+    'weight': 700,
+  ),
+  'E_Headline1': (
+    'size': 60px,
+    'line-height': 72px,
+    'weight': 400,
+  ),
+  'E_Headline2': (
+    'size': 40px,
+    'line-height': 50px,
+    'weight': 400,
+  ),
+  'E_Headline3': (
+    'size': 25px,
+    'line-height': 35px,
+    'weight': 400,
+  ),
+  'E_Headline4': (
+    'size': 10px,
+    'line-height': 16px,
+    'weight': 400,
+  ),
+  'E_Display1': (
+    'size': 30px,
+    'line-height': 42px,
+    'weight': 500,
+  ),
+  'E_Display2': (
+    'size': 20px,
+    'line-height': 28px,
+    'weight': 500,
+  ),
 );
 
 @function typo-style($name, $property) {
