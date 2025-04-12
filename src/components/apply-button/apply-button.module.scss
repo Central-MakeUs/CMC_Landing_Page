@@ -9,20 +9,20 @@
   text-align: center;
 
   &:hover {
-    background-color: color(primary-strong);
+    background-color: #202632;
   }
 
   &:active {
-    background-color: color(primary-heavy);
+    background-color: #202632;
   }
 
   @include mobile {
-    padding: rem(8px) rem(16px);
+    padding: 16px 32px;
     @include font(14px, 19px);
   }
 
   @include desktop {
-    padding: rem(10px) rem(20px);
+    padding: 16px 32px;
     @include font(22px, 28px);
   }
 }

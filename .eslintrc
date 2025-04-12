@@ -20,6 +20,7 @@
   ],
   "plugins": ["react", "@typescript-eslint", "react-hooks", "jsx-a11y", "simple-import-sort", "import"],
   "rules": {
+    "react/no-unescaped-entities": "warn",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "linebreak-style": 0,
