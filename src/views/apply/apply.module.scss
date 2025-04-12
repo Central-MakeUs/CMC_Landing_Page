@@ -26,8 +26,8 @@
 }
 
 .star {
-  width: 36px;
-  height: 36px;
+  width: 170px;
+  height: 50px;
   
   @include mobile {
      margin-top: 8px;
@@ -39,7 +39,8 @@
   display: flex;
 
   @include mobile {
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     gap: 32px;
   }
 
@@ -50,59 +51,69 @@
 }
 
 .title {
-  color: color(blue-500);
+  text-align: center;
+  color: #0740F6;
   font-weight: 500;
-  font-family: 'Trap', 'Pretendard';
+  font-family: 'Sun Motter';
   
   @include mobile {
-    font-size: rem(38px);
-    line-height: rem(46px);
-    margin-right: 30px;
+    @include typo(E_Headline3);
+    div {
+      display: inline-block;
+      color: black;
+    }
   }
   
   @include desktop {
-    font-size: rem(60px);
-    line-height: rem(72px);
+    @include typo(E_Headline1);
+    div {
+      display: inline-block;
+    }
     margin-top: 28px;
   }
 }
 
 .description {
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
 
-  span {
-    font-weight: 700;
-    color: color(blue-500);
-  }
 
   
   @include mobile {
     margin-top: 25px;
-    font-size: rem(16px);
-    line-height: rem(30px);
+    @include typo(KR/Body5);
+    
+    span {
+      font-weight: 600;
+      @include typo(KR/Headline6);
+      color: #0633C5;
+    }
   }
 
   
   @include desktop {
     margin-top: 11px;
-    font-size: rem(24px);
-    line-height: rem(43px);
+    @include typo(KR/Subtitle2);
+    span {
+      font-weight: 600;
+      @include typo(KR/Headline4);
+      color: #0633C5;
+    }
   }
 }
 
 .card{
   background-color: white;
-  border-radius: 24px;
+  border-radius: 20px;
   position: relative;
   margin-top: 48px;
 
   
   @include mobile {
-    width: 100%;
+    width: 90%;
   }
   
   @include desktop {
-    min-width: rem(630px);
+    min-width: 632px;
   }
 }
