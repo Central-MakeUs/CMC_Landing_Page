@@ -1,7 +1,7 @@
 import { HeadProps } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
-import { ScrollRevealContainer, Section, Seo } from '@/components'
+import { ScrollRevealContainer, Seo } from '@/components'
 import { Main } from '@/layouts'
 
 import { PlanCard } from './components'
@@ -16,22 +16,17 @@ const RecruitPage = () => {
           <StaticImage src="../../images/recruit_background.png" alt="" className={css.desktop} />
           <StaticImage src="../../images/recruit_background_mobile.png" alt="" className={css.mobile} />
         </div>
-        <Section className={css.section}>
-          {/* <AuraEffect /> */}
-
-          <Section.Head title="Join Us!" description="16기 일정을 소개합니다" />
+        <div className={css.contents}>
+          <StaticImage src="../../images/symbol17.png" alt="" className={css.img} placeholder="blurred" />
+          <h2 className={css.title}>JOIN US!</h2> <p className={css.subTitle}>16기 일정을 소개합니다</p>
           <div className={css.schedule}>
-            <div className={css.bg1}>
-              <StaticImage src="../../images/recruit_bg.png" alt="" />
-            </div>
-            <div className={css.bg2}>
-              <StaticImage src="../../images/recruit_bg2.png" alt="" />
-            </div>
             <PlanCard title="CMC 합류 여정" plans={RecruitPlans} showButton />
             <PlanCard title="CMC 정기 세션" plans={SessionPlans} />
+            <StaticImage src="../../images/stamp1.png" alt="" className={css.stamp} />
+            <div className={css.link}>HTTPS://CMC.MAKEUS.IN/</div>
           </div>
-          <div className={css.space} />
-        </Section>
+        </div>
+        <div className={css.space} />
       </ScrollRevealContainer>
     </Main>
   )

@@ -3,9 +3,9 @@
 
 .main {
   background: color(background-primary);
-
+  
   .section {
-    
+    width:100%;
   }
   .background {
     position:absolute;
@@ -16,7 +16,7 @@
       @include mobile{
         display: block;
       }
-      @include desktop{
+      @include desktop{ 
         display: none;
       }
     }
@@ -29,39 +29,107 @@
         display: block;
       }
     }
-
-
-  }
-  .schedule{
-    position: relative;
-    width: 100%;
-    padding: 0 224px;
   }
 
-  .bg1{
-    
-    position:absolute;
-    z-index: -5;
+  .contents{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
     @include mobile{
-      width:100%;
-
+      padding: 0 16px;
     }
+
     @include desktop{
-     width: 100%;
+      padding: 0 100px;
+    }
 
+    .img{
+      width: 170px;
+      height: 50px;
+  
+      @include mobile{
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+      @include desktop{
+        margin-top: 130px;
+        margin-bottom: 28px;
+      }
     }
-  }
 
-  .bg2{
-    position:absolute;
-    z-index: -8;
-    @include mobile{
-      display: none;
+    //JOIN US!
+    .title{
+      color: #FFF;
+      font-family: 'Sun Motter';
+      font-weight: 400;
+
+      @include mobile {
+        @include typo('E_Headline3')
+      }
+
+      @include desktop {
+        @include typo('E_Headline2');
+      }
     }
-    @include desktop{
-      display: block;
+
+    //16기 일정을 소개합니다
+    .subTitle{
+      color: #FFF;
+      font-weight: 400;
+
+      @include mobile{
+        @include typo('KR/Body5');
+        margin-bottom: 30px;
+      }
+
+      @include desktop{
+        @include typo('KR/Subtitle1');
+        margin-bottom: 60px;
+      }
     }
-  }
+
+    .schedule{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url('/images/recruit_bg.png');
+      
+      @include mobile{
+        background-size: cover;
+        width: 100%;
+        
+      }
+      @include desktop{
+        background-size: contain;
+        width: 80%;
+        
+      }
+    }
+
+    .stamp{
+      width:40%;
+      transform: translate(-50%, -40%);
+    }
+
+    .link{
+      font-family: 'Sun Motter';
+      color: var(--Blue-500, #0740F6);
+      font-weight: 400;
+      @include mobile{
+        @include typo('E_Headline4');
+        margin-bottom: 20px;
+      }
+
+      @include desktop{
+        @include typo('E_Headline2');
+        margin-bottom: 60px;
+      }
+    }
+}
 }
 
 .space {
