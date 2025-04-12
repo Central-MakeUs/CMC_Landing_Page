@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   color: color(black-100);
-  border-bottom: 1px dashed color(blue-500);
+  border-bottom: 1px dashed #9CB3FB;
 
   @include mobile {
     padding: 12px 0;
@@ -20,20 +20,33 @@
 
   .item_name {
     text-align: start;
+    color: #606060;
 
     @include mobile {
       font-weight: 700;
+      @include typo(KR/Caption1);
       width: 100px;
     }
 
     @include desktop {
       font-weight: 600;
+      @include typo(KR/Headline3);
       width: 240px;
     }
   }
 
   .item_date {
     font-weight: 600;
+    @include mobile {
+      font-weight: 600;
+      @include typo(KR/Caption1);
+
+    }
+
+    @include desktop {
+      font-weight: 600;
+      @include typo(KR/Headline3);
+    }
   }
 }
 
@@ -42,9 +55,6 @@
   flex-direction: column;
   position: relative;
   z-index: 2;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px 0px #edf1ff;
 
   @include mobile {
     width: 100%;
@@ -64,31 +74,34 @@
 
   ul {
     > li:first-of-type {
-      border-top: 1px dashed color(blue-500);
+      border-top: 1px dashed #9CB3FB;
     }
   }
 
   .card_title {
     font-weight: 700;
+    color: #0740F6;
     text-align: center;
     position: relative;
 
     @include mobile {
-      @include font(20px, 30px);
+      @include typo(KR/Headline5);
     }
 
     @include desktop {
-      @include font(38px, 48px);
+      @include typo(KR/Headline1);
     }
   }
 
   .card_button {
     align-self: center;
     font-weight: 600;
+    background-color: #0740F6;
+    color: white;
     position: relative;
     
     @include mobile {
-      padding: 13px 34px;
+      padding: 16px 32px;
     }
 
     @include desktop {
