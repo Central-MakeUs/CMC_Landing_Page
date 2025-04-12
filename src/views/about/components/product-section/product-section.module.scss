@@ -10,6 +10,18 @@
   gap: 8px;
 }
 
+.desktopCarousel {
+  @include mobile {
+    display: none;
+  }
+}
+
+.mobileCarousel {
+  @include desktop {
+    display: none;
+  }
+}
+
 .center {
   display: flex;
   flex-direction: column;
@@ -20,9 +32,7 @@
 .moreButton {
   // position: absolute;
   color: color(blue-500);
-  font-weight: 600;
-  border-radius: 330px;
-  border: 1px solid color(blue-100);
+  @include typo('KR/Headline6');
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,15 +40,17 @@
   @include mobile {
     bottom: rem(10px);
     right: rem(20px);
-    font-size: rem(13px);
-    line-height: rem(17px);
     margin-top: 52px;
     width: 80%;
     height: 42px;
     background-color: white;
+    border-radius: 10px;
+    border: 1px solid color(blue-500);
   }
 
   @include desktop {
+    border: 1px solid color(blue-100);
+    border-radius: 330px;
     bottom: rem(50px);
     right: rem(20px);
     font-size: rem(16px);
@@ -52,15 +64,16 @@
 
 .h2 {
   text-align: center;
-  font-family: 'Trap', 'Pretendard';
+  font-family: 'Pretendard';
   font-weight: 600;
 
   @include mobile {
     color: color(black-100);
+    @include typo('KR/Headline5');
   }
   @include desktop {
     color: white;
-    font-size: 35px;
+    @include typo('KR/Headline2');
   }
 }
 

@@ -1,7 +1,7 @@
 @use '@/styles/abstracts' as *;
 @use '@/styles/utils' as *;
 
-$gap: 8px;
+$gap: 5px;
 
 @keyframes slide {
   0% {
@@ -16,13 +16,21 @@ $gap: 8px;
   display: flex;
   gap: $gap;
   width: calc((var(--slide-item-width) + $gap) * var(--slide-item-length));
-  animation: 60s linear infinite running slide;
+  animation: 120s linear infinite running slide;
 
   .carousel_item {
     flex: 0 0 auto;
     width: var(--slide-item-width);
-    aspect-ratio: 416 / 280;
+    aspect-ratio: 290 / 180;
     border-radius: 8px;
+  }
+
+  @include desktop {
+    animation: 120s linear infinite running slide;
+  }
+
+  @include mobile {
+    animation: 60s linear infinite running slide;
   }
 }
 
