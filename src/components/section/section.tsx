@@ -20,13 +20,15 @@ const SectionComponent = forwardRef<HTMLDivElement, Props>(({ className, childre
 type HeadProps = {
   title: ReactNode
   description?: ReactNode
+  white?: boolean
+  isSunMotterFont?: boolean
 }
 
-const Head = ({ title, description }: HeadProps) => {
+const Head = ({ title, description, white, isSunMotterFont }: HeadProps) => {
   return (
     <>
-      <StaticImage src="./images/star.png" alt="" className={css.star} placeholder="blurred" />
-      <h2 className={css.head}>{title}</h2>
+      <StaticImage src="./images/symbol17.png" alt="" className={css.star} placeholder="blurred" />
+      <h2 className={clsx(css.head, white && css.whiteHead, isSunMotterFont && css.sunMotterHead)}>{title}</h2>{' '}
       {description && <p className={css.desc}>{description}</p>}
     </>
   )

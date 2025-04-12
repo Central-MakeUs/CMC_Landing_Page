@@ -29,7 +29,6 @@
 }
 
 .flex_col {
-  
   @include mobile {
     display: flex;
     flex-direction: column;
@@ -38,43 +37,41 @@
 }
 
 .star {
+  width: 170px;
+  height: 50px;
+
   @include mobile {
-    width: 22px;
-    height: 22px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 
   @include desktop {
-    width: 36px;
-    height: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 }
 
+// CONNECTION MOTIVATION COLLABORATION
 .head {
   z-index: 1;
   position: relative;
   color: color(black-100);
-  font-family: 'Trap';
-
-  & > span {
-    color: color(blue-500);
-  }
+  font-family: 'Sun Motter';
 
   @include mobile {
     text-align: center;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     width: 300px;
-    font-weight: 700;
-    @include font(20px, 24px);
+    @include typo('E_Headline3');
   }
 
   @include desktop {
     text-align: left;
-    font-weight: 600;
-    margin-bottom: 97px;
+    margin-bottom: 54px;
     width: rem(450px);
-    @include font(35px, 45px);
+    @include typo('E_Headline2');
+
+    & > span {
+      color: color(blue-500);
+    }
   }
 }
 
@@ -90,13 +87,13 @@
   @include mobile {
     text-align: center;
     width: 300px;
-    @include font(16px, 24px);
+    @include typo('KR/Body5');
   }
 
   @include desktop {
     text-align: left;
     width: rem(450px);
-    @include font(22px, 28px);
+    @include typo('KR/Body2');
   }
 }
 

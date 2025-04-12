@@ -37,10 +37,20 @@ export const ProductSection = ({ apps }: Props) => {
           />
           <h2 className={css.h2}>CMC에서 제작한 <Br mobile />
               프로덕트를 만나보세요</h2>
-      </ScrollRevealContainer>
-      <div className={css.carouselContainer}>
-        <CarouselSlider logos={firstRow} />
-        <CarouselSlider logos={secondRow} reverse />
+        </ScrollRevealContainer>
+        
+        <div className={css.carouselContainer}>
+          <div className={css.desktopCarousel}>
+            <CarouselSlider  logos={logos} width="6%" />
+          </div>
+          
+          <div className={css.mobileCarousel}>
+            <CarouselSlider logos={firstRow} width="15%" />
+          </div>
+          
+          <div className={css.mobileCarousel}>
+            <CarouselSlider logos={secondRow} width="15%" reverse />
+          </div>
       </div>
 
       <button onClick={() => navigate('/project')} className={css.moreButton}>

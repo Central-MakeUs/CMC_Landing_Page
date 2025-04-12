@@ -1,15 +1,16 @@
 import { StaticImage } from 'gatsby-plugin-image'
 
+import { AuraCircle } from '@/components'
+
 import { Section } from '../../../../components/section'
 import * as css from './supports-section.module.scss'
-import { AuraCircle } from '@/components'
 
 export const SupportsSection = () => {
   return (
     <Section>
       <div className={css.space} />
 
-      <Section.Head title="Supports" description="CMC의 공식 후원사 입니다."/>
+      <Section.Head title="SUPPORTS" description="CMC의 공식 후원사 입니다." isSunMotterFont />
 
       <div className={css.mobile}>
         <AuraCircle size="180%" top="15%" left="-40%" opacity={0.2} />

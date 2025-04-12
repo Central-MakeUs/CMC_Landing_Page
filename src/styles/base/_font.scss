@@ -3,31 +3,58 @@
 
 // Trap
 @font-face {
-    font-family: 'Trap';
-    font-weight: 400;
-    font-style: normal;
-    src: url('/font/Trap-Regular.woff2') format('woff2'),
-        url('/font/Trap-Regular.woff') format('woff');
-    font-display: fallback;
-    unicode-range:U+0041-005A, U+0061-007A, U+0030-0039, U+0026;
+  font-family: 'Trap';
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url('/font/Trap-Regular.woff2') format('woff2'),
+    url('/font/Trap-Regular.woff') format('woff');
+  font-display: fallback;
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0026;
 }
 
 @font-face {
-    font-family: 'Trap';
-    font-weight: 600;
-    font-style: normal;
-    src: url('/font/Trap-SemiBold.woff2') format('woff2'),
-        url('/font/Trap-SemiBold.woff') format('woff');
-    font-display: fallback;
-    unicode-range:U+0041-005A, U+0061-007A, U+0030-0039, U+0026;
+  font-family: 'Trap';
+  font-weight: 600;
+  font-style: normal;
+  src:
+    url('/font/Trap-SemiBold.woff2') format('woff2'),
+    url('/font/Trap-SemiBold.woff') format('woff');
+  font-display: fallback;
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0026;
 }
 
 @font-face {
-    font-family: 'Trap';
-    font-weight: 700;
-    font-style: normal;
-    src: url('/font/Trap-Bold.woff2') format('woff2'),
-        url('/font/Trap-Bold.woff') format('woff');
-    font-display: fallback;
-    unicode-range:U+0041-005A, U+0061-007A, U+0030-0039, U+0026;
+  font-family: 'Trap';
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url('/font/Trap-Bold.woff2') format('woff2'),
+    url('/font/Trap-Bold.woff') format('woff');
+  font-display: fallback;
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0026;
+}
+
+// Sun Motter
+@font-face {
+  font-family: 'Sun Motter';
+  src: url('/font/SunMotterRegular.eot');
+  src:
+    local('Sun Motter'),
+    local('SunMotterRegular'),
+    url('/font/SunMotterRegular.eot?#iefix') format('embedded-opentype'),
+    url('/font/SunMotterRegular.woff2') format('woff2'),
+    url('/font/SunMotterRegular.woff') format('woff'),
+    url('/font/SunMotterRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+// DOSGothic
+@font-face {
+  font-family: 'DOSGothic';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
