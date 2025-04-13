@@ -12,13 +12,10 @@ const RecruitPage = () => {
   return (
     <Main className={css.main}>
       <ScrollRevealContainer>
-        <div className={css.background}>
-          <StaticImage src="../../images/recruit_background.png" alt="" className={css.desktop} />
-          <StaticImage src="../../images/recruit_background_mobile.png" alt="" className={css.mobile} />
-        </div>
+        <div className={css.background} />
         <div className={css.contents}>
           <StaticImage src="../../images/symbol17.png" alt="" className={css.img} placeholder="blurred" />
-          <h2 className={css.title}>JOIN US!</h2> <p className={css.subTitle}>16기 일정을 소개합니다</p>
+          <h2 className={css.title}>JOIN US!</h2> <p className={css.subTitle}>17기 일정을 소개합니다</p>
           <div className={css.schedule}>
             <PlanCard title="CMC 합류 여정" plans={RecruitPlans} showButton />
             <PlanCard title="CMC 정기 세션" plans={SessionPlans} />
@@ -29,7 +26,6 @@ const RecruitPage = () => {
             <div className={css.link}>HTTPS://CMC.MAKEUS.IN/</div>
           </div>
         </div>
-        <div className={css.space} />
       </ScrollRevealContainer>
     </Main>
   )
