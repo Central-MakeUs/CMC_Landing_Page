@@ -20,12 +20,7 @@ export const IdentitySection = () => {
     <Section>
       <Section.Head title={Title} />
       <div className={css.cards}>
-        <StaticImage
-          className={css.backgroundImg}
-          src="./images/background_desktop.png"
-          alt=""
-          style={{ position: 'absolute' }}
-        />
+        <StaticImage className={css.backgroundImg} src="./images/background_desktop.png" alt="" />
 
         <StaticImage className={css.backgroundImgMobile} src="./images/background_mobile.png" alt="" />
 
