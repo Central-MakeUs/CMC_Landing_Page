@@ -30,6 +30,8 @@
 }
 
 .moreButton {
+  display: flex;
+  flex-direction: row;
   // position: absolute;
   color: color(blue-500);
   @include typo('KR/Headline6');
@@ -46,6 +48,7 @@
     background-color: white;
     border-radius: 10px;
     border: 1px solid color(blue-500);
+    column-gap: 16px;
   }
 
   @include desktop {
@@ -56,9 +59,10 @@
     font-size: rem(16px);
     line-height: rem(20px);
     margin-top: 43px;
-    width: 260px;
+    width: 280px;
     height: 42px;
     background-color: white;
+    column-gap: 20px;
   }
 }
 
@@ -89,4 +93,9 @@
   @include desktop {
     background-color: #202632;
   }
+}
+
+.arrow_image {
+  width: 24px;
+  height: 24px;
 }
