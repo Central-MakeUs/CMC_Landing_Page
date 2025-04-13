@@ -71,14 +71,14 @@ export const FeatureSection = () => {
         />
 
         <Card
-          title="100%"
+          title="98%"
           figure={
             <>
               최근 1년간
               <Br desktop /> 런칭률
             </>
           }
-          description="(14기,15기)"
+          description="(15기,16기)"
         />
       </div>
     </Section>

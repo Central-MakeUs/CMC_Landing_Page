@@ -8,14 +8,26 @@
   align-items: center;
 }
 
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @include desktop {
   .cardContainer {
     position: relative;
     margin: 26px 15px 0 15px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 
     .card {
+      width: 66%;
       display: flex;
       flex-direction: row;
       column-gap: 30px;

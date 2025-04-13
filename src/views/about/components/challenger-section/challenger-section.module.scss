@@ -27,7 +27,6 @@
 
 .button {
   background-color: '#FFFFFF';
-  color: color(blue-500);
   border-radius: 10px;
   flex: 1;
   font-weight: 500;
@@ -42,6 +41,7 @@
     padding: 12px 10px;
     @include typo('KR/Headline6');
     border: 1px solid color(blue-500);
+    color: color(blue-500);
   }
 
   @include desktop {
@@ -49,14 +49,24 @@
     padding: 10px 20px;
     font-size: rem(16px);
     line-height: rem(30px);
+    color: '#FFFFFF';
   }
 }
 
 .button_active {
-  background-color: color(black-100);
-  border: 1px solid color(black-100);
-  color: white;
-  border-radius: 10px;
+  @include mobile {
+    background-color: color(black-100);
+    border: 1px solid color(black-100);
+    color: white;
+    border-radius: 10px;
+  }
+
+  @include desktop {
+    background-color: color(blue-500);
+    border: 1px solid color(blue-500);
+    color: white;
+    border-radius: 10px;
+  }
 }
 
 .client_card {
