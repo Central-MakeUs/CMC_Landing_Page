@@ -40,10 +40,12 @@
 
     @include mobile{
       padding: 0 16px;
+      margin-bottom: 40px;
     }
 
     @include desktop{
       padding: 0 100px;
+      margin-bottom: 200px;
     }
 
     .img{
@@ -110,7 +112,17 @@
       }
     }
 
+    .explanation {
+      text-align: start;
+      color: #606060;
+      @include mobile{
+        @include typo('E_Headline4');
+      }
+    }
+
     .stamp{
+      position: relative;
+      z-index:10;
       width:40%;
       transform: translate(-50%, -40%);
     }
@@ -130,8 +142,4 @@
       }
     }
 }
-}
-
-.space {
-  height: 300px;
 }
