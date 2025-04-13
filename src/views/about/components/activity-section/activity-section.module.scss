@@ -6,28 +6,47 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include desktop {
+      background-image: url('/images/background.png');
+    }
+
+    @include mobile {
+      background-image: url('/images/background_mobile.png');
+    }
+  }
 }
 
-.container {
-  width: 100%;
-  height: 100%;
+.head {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+  @include desktop {
+    margin-top: 80px;
+  }
+
+  @include mobile {
+    margin-top: 40px;
+  }
 }
 
 @include desktop {
   .cardContainer {
     position: relative;
-    margin: 26px 15px 0 15px;
+    margin-top: 26px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 100%;
 
     .card {
-      width: 66%;
+      width: 100%;
       display: flex;
       flex-direction: row;
       column-gap: 30px;
@@ -97,10 +116,12 @@
     margin: 26px 16px 0 16px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     .card {
       background: linear-gradient(180deg, #fff 22.79%, #cdd9fd 141.98%);
       height: 309px;
+      margin: 0 16px 0 16px;
 
       display: flex;
       flex-direction: column-reverse;
@@ -147,52 +168,6 @@
     .card:last-child {
       border-bottom: 0;
     }
-  }
-}
-
-// 데스크탑 배경
-.backgroundImg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; // 배경 이미지가 전체를 덮도록 조정
-  z-index: -1; // 배경 이미지가 카드 뒤에 위치하도록 설정
-
-  // 데스크탑
-  @include desktop {
-    display: block;
-  }
-
-  // 모바일
-  @include mobile {
-    display: block;
-    // display: none; // 데스크탑에서는 모바일 이미지를 숨김
-    height: 0;
-  }
-}
-
-// 모바일 배경
-.backgroundImgMobile {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  // height: 100%;
-  object-fit: cover; // 배경 이미지가 전체를 덮도록 조정
-  z-index: -2; // 배경 이미지가 카드 뒤에 위치하도록 설정
-  height: 1500px;
-
-  // 데스크탑
-  @include desktop {
-    // display: none; // 데스크탑에서는 모바일 이미지를 숨김
-    height: 0;
-  }
-
-  // 모바일
-  @include mobile {
-    display: block;
   }
 }
 

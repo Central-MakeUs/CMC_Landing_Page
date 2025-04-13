@@ -30,82 +30,82 @@ export const Card = ({ chapter, title, description, image }: CardProps) => {
 export const ActivitySection = () => {
   return (
     <Section className={css.main}>
-      <Section.Head title="매 기수 진행되는 정기 활동들" white />
+      <div className={css.head}>
+        <Section.Head title="매 기수 진행되는 정기 활동들" white />
+      </div>
 
-      <div className={css.container}>
-        {/* 데스크탑용 배경 이미지 */}
-        <StaticImage className={css.backgroundImg} src="./images/background.png" alt="이미지 설명" />
+      {/* 데스크탑용 배경 이미지 */}
+      <div className={css.background} />
 
-        {/* 모바일용 배경 이미지 */}
-        <StaticImage className={css.backgroundImgMobile} src="./images/background_mobile.png" alt="이미지 설명" />
+      {/* 모바일용 배경 이미지 */}
+      {/* <div className={css.backgroundImgMobile} /> */}
 
-        <div className={css.cardContainer}>
-          <StaticImage className={css.fireImage} src="./images/fire.png" alt="fire" />
-          <StaticImage className={css.labtopImage} src="./images/labtop.png" alt="labtop" />
-          <Card
-            chapter="CHAPTER.1"
-            title="UMC와 연합 해커톤"
-            image={<StaticImage className={css.image} src="./images/IMG_5170.png" />}
-            description={
-              <>
-                CMC 정기세션 이전 진행되는 세션으로 단시간 내 IT 프로덕트를 <Br desktop />
-                설계하고, 구현하는 경험을 가집니다.
-              </>
-            }
-          />
+      <div className={css.cardContainer}>
+        <StaticImage className={css.fireImage} src="./images/fire.png" alt="fire" />
+        <StaticImage className={css.labtopImage} src="./images/labtop.png" alt="labtop" />
+        <Card
+          chapter="CHAPTER.1"
+          title="UMC와 연합 해커톤"
+          image={<StaticImage className={css.image} src="./images/IMG_5170.png" />}
+          description={
+            <>
+              CMC 정기세션 이전 진행되는 세션으로 단시간 내 IT 프로덕트를 <Br desktop />
+              설계하고, 구현하는 경험을 가집니다.
+            </>
+          }
+        />
 
-          <Card
-            chapter="CHAPTER.2"
-            title="모각작"
-            image={<StaticImage className={css.image} src="./images/img8.jpeg" />}
-            description={
-              <>
-                모든 파트가 함께 모여 현재까지의 프로젝트 진척도를 점검합니다. <Br desktop />
-                또한, 챌린저 간 진행되는 UT를 통해 프로덕트 사용성을 객관적으로 <Br desktop />
-                평가하고 이를 반영하여 보완합니다.
-              </>
-            }
-          />
+        <Card
+          chapter="CHAPTER.2"
+          title="모각작"
+          image={<StaticImage className={css.image} src="./images/img8.jpeg" />}
+          description={
+            <>
+              모든 파트가 함께 모여 현재까지의 프로젝트 진척도를 점검합니다. <Br desktop />
+              또한, 챌린저 간 진행되는 UT를 통해 프로덕트 사용성을 객관적으로 <Br desktop />
+              평가하고 이를 반영하여 보완합니다.
+            </>
+          }
+        />
 
-          <Card
-            chapter="CHAPTER.3"
-            title="네트워킹 데이"
-            image={<StaticImage className={css.image} src="./images/img6.jpeg" />}
-            description={
-              <>
-                팀 매칭 전, 챌린저들끼리 자유롭게 교류하며 서로를 알아갈 수 있는 네트워킹 데이를
-                <Br desktop />
-                진행합니다. 다양한 게임과 회식 자리를 통해 어울릴 수 있으며, 유대감을 형성합니다.
-              </>
-            }
-          />
+        <Card
+          chapter="CHAPTER.3"
+          title="네트워킹 데이"
+          image={<StaticImage className={css.image} src="./images/img6.jpeg" />}
+          description={
+            <>
+              팀 매칭 전, 챌린저들끼리 자유롭게 교류하며 서로를 알아갈 수 있는 네트워킹 데이를
+              <Br desktop />
+              진행합니다. 다양한 게임과 회식 자리를 통해 어울릴 수 있으며, 유대감을 형성합니다.
+            </>
+          }
+        />
 
-          <Card
-            chapter="CHAPTER.4"
-            title="런칭데이"
-            image={<StaticImage className={css.image} src="./images/img3.png" />}
-            description={
-              <>
-                데모데이 개최 이전에 CMC 전체 챌린저들을 대상으로 런칭된 프로덕트를 <Br desktop />
-                소개합니다. 해당 세션을 통해 프로덕트 구현 과정과 추후 프로덕트 <Br desktop />
-                방향성에 대해 공유합니다.
-              </>
-            }
-          />
+        <Card
+          chapter="CHAPTER.4"
+          title="런칭데이"
+          image={<StaticImage className={css.image} src="./images/img3.png" />}
+          description={
+            <>
+              데모데이 개최 이전에 CMC 전체 챌린저들을 대상으로 런칭된 프로덕트를 <Br desktop />
+              소개합니다. 해당 세션을 통해 프로덕트 구현 과정과 추후 프로덕트 <Br desktop />
+              방향성에 대해 공유합니다.
+            </>
+          }
+        />
 
-          <Card
-            chapter="CHAPTER.5"
-            title="데모데이"
-            image={<StaticImage className={css.image} src="./images/img5.jpeg" />}
-            description={
-              <>
-                VC와 일반 참가자들을 대상으로 부스를 운영하며 지금까지 제작한 <Br desktop />
-                프로덕트를 소개하고 홍보합니다. 데모데이를 통해 초기 사용자를 <Br desktop />
-                모집하고, 런칭된 프로덕트의 시장성을 검증합니다.
-              </>
-            }
-          />
-        </div>
+        <Card
+          chapter="CHAPTER.5"
+          title="데모데이"
+          image={<StaticImage className={css.image} src="./images/img5.jpeg" />}
+          description={
+            <>
+              VC와 일반 참가자들을 대상으로 부스를 운영하며 지금까지 제작한 <Br desktop />
+              프로덕트를 소개하고 홍보합니다. 데모데이를 통해 초기 사용자를 <Br desktop />
+              모집하고, 런칭된 프로덕트의 시장성을 검증합니다.
+            </>
+          }
+        />
       </div>
     </Section>
   )

@@ -9,3 +9,21 @@
     height: 200px;
   }
 }
+
+.backgroundImg {
+  width: 100vw;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+
+  @include desktop {
+    background-image: url('/images/kv_1440_2x.png');
+    aspect-ratio: 1440 / 1050;
+  }
+
+  @include mobile {
+    background-image: url('/images/kv_360@2x.png');
+    aspect-ratio: 360.5/720.5;
+  }
+}
