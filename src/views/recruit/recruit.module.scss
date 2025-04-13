@@ -12,23 +12,12 @@
     z-index: -10;
     width: 100%;
     height: 100%;
-    
-    .mobile{
-      @include mobile{
-        display: block;
-      }
-      @include desktop{ 
-        display: none;
-      }
+    @include mobile{
+      background-image: url('/images/recruit_background_mobile.png');
     }
 
-    .desktop{
-      @include mobile{
-        display: none;
-      }
-      @include desktop{
-        display: block;
-      }
+    @include desktop{
+      background-image: url('/images/recruit_background.png');
     }
   }
 
