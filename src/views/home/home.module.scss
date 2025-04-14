@@ -18,12 +18,12 @@
   background-size: 100% auto;
 
   @include desktop {
-    background-image: url('/images/kv_1440_2x.png');
+    background-image: url('/img/web_arrow_blank_bg_o.gif');
     aspect-ratio: 1440 / 1050;
   }
 
   @include mobile {
-    background-image: url('/images/kv_360@2x.png');
+    background-image: url('/img/mobile_arrow_blank_bg_O.gif');
     aspect-ratio: 360.5/720.5;
   }
 }
