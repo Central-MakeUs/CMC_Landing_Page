@@ -15,7 +15,6 @@
   width: 80%;
   display: flex;
 
-
   @include mobile {
     margin-top: 40px;
     padding: 40px 20px;
@@ -37,7 +36,6 @@
   }
 
   .cover {
-    
     @include mobile {
       width: 90vw;
       max-width: 400px;
@@ -53,9 +51,8 @@
   }
 
   .supports_company {
-
     @include mobile {
-      max-width : 200px;
+      max-width: 200px;
       height: fit-content;
     }
 
@@ -76,4 +73,8 @@
   @include desktop {
     display: none;
   }
+}
+
+.header {
+  color: color(blue-500);
 }

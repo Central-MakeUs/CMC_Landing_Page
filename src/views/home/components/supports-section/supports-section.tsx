@@ -10,7 +10,11 @@ export const SupportsSection = () => {
     <Section>
       <div className={css.space} />
 
-      <Section.Head title="SUPPORTS" description="CMC의 공식 후원사 입니다." isSunMotterFont />
+      <Section.Head
+        title={<p className={css.header}>"SUPPORTS"</p>}
+        description="CMC의 공식 후원사 입니다."
+        isSunMotterFont
+      />
 
       <div className={css.mobile}>
         <AuraCircle size="180%" top="15%" left="-40%" opacity={0.2} />
