@@ -74,11 +74,11 @@ export const FeatureSection = () => {
           title="98%"
           figure={
             <>
-              최근 1년간
+              최근 3년간
               <Br desktop /> 런칭률
             </>
           }
-          description="(15기,16기)"
+          // description="(15기,16기)"
         />
       </div>
     </Section>
