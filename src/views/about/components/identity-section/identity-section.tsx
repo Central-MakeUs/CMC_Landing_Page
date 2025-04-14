@@ -19,10 +19,9 @@ export const IdentitySection = () => {
   return (
     <Section>
       <Section.Head title={Title} />
-      <div className={css.cards}>
-        <StaticImage className={css.backgroundImg} src="./images/background_desktop.png" alt="" />
 
-        <StaticImage className={css.backgroundImgMobile} src="./images/background_mobile.png" alt="" />
+      <div className={css.cards}>
+        <div className={css.background} />
 
         <div className={css.card}>
           <p className={css.title}>“ 직장인이신가요? ”</p>

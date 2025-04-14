@@ -11,7 +11,7 @@ export const SupportsSection = () => {
       <div className={css.space} />
 
       <Section.Head
-        title={<p className={css.header}>"SUPPORTS"</p>}
+        title={<p className={css.header}>SUPPORTS</p>}
         description="CMC의 공식 후원사 입니다."
         isSunMotterFont
       />

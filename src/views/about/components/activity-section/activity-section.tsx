@@ -37,9 +37,6 @@ export const ActivitySection = () => {
       {/* 데스크탑용 배경 이미지 */}
       <div className={css.background} />
 
-      {/* 모바일용 배경 이미지 */}
-      {/* <div className={css.backgroundImgMobile} /> */}
-
       <div className={css.cardContainer}>
         <StaticImage className={css.fireImage} src="./images/fire.png" alt="fire" />
         <StaticImage className={css.labtopImage} src="./images/labtop.png" alt="labtop" />
