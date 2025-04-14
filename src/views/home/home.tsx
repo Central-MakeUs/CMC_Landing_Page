@@ -1,4 +1,5 @@
 import type { HeadProps } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import { useRef } from 'react'
 
 import { ScrollRevealContainer, Seo } from '@/components'
@@ -18,13 +19,15 @@ const HomePage = () => {
 
   return (
     <Main>
-      <IntroSection />
+      {/* <IntroSection /> */}
       {/* <ScrollIndicator onClick={scrollToNextSection} /> */}
+      <div className={css.backgroundImg} />
 
       <div className={css.gradient_background}>
         <ScrollRevealContainer>
           <CounterSection ref={nextSectionRef} />
         </ScrollRevealContainer>
+
         <ScrollRevealContainer>
           <SupportsSection />
         </ScrollRevealContainer>
