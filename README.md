@@ -13,6 +13,24 @@ $ cd CMC_Landing_Page
 $ yarn install
 ```
 
+## VSCODE 기준 추가 세팅
+
+기존에 사용하던 node_modules를 사용하지 않고, pnp + zero-install을 사용합니다. 이때 소스코드는 node_modules를 직접 사용할 수 없기 때문에 extension이랑 sdk, typescript 버전을 세팅해야합니다.
+
+- vscode 기준입니다
+
+1. ZipFS 확장자를 VSCode에 검색해서 설치
+2. 다음 명령어 실행
+
+```
+yarn dlx @yarnpkg/sdks vscode
+```
+
+3. vscode를 다시 실행시킨 후, 컨트롤 + shift + p 를 눌러 'Select TypeScript Version' 클릭
+4. Use Workspace Version 클릭
+
+하면 react의 type을 자동으로 불러오고, 의존성들을 잘 찾게 할 수 있습니다.
+
 ## Project 데이터 추가방법
 
 현재 프로젝트 구조에서 `src` 폴더안의 `data`안에 **`app.json` 파일과 `logo` 폴더**가 존재합니다.
