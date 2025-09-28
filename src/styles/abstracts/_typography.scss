@@ -82,127 +82,172 @@ $typo-styles: (
     'weight': 500,
   ),
 
-  // NEW Version
+  // 17,18기 한글 타이포
   'KR/Headline1':
     (
       'size': 40px,
       'line-height': 50px,
       'weight': 700,
+      'letter-spacing': -0.02em,
     ),
   'KR/Headline2': (
     'size': 36px,
     'line-height': 48px,
     'weight': 600,
+    'letter-spacing': -0.02em,
   ),
   'KR/Headline3': (
     'size': 30px,
     'line-height': 40px,
     'weight': 600,
+    'letter-spacing': -0.02em,
   ),
   'KR/Headline4': (
     'size': 24px,
     'line-height': 34px,
     'weight': 600,
+    'letter-spacing': -0.02em,
   ),
   'KR/Headline5': (
     'size': 20px,
     'line-height': 28px,
     'weight': 600,
+    'letter-spacing': -0.02em,
   ),
   'KR/Headline6': (
     'size': 16px,
     'line-height': 24px,
     'weight': 600,
+    'letter-spacing': -0.02em,
   ),
   'KR/Subtitle1': (
     'size': 28px,
     'line-height': 40px,
     'weight': 400,
+    'letter-spacing': -0.02em,
   ),
   'KR/Subtitle2': (
     'size': 24px,
     'line-height': 34px,
     'weight': 400,
+    'letter-spacing': -0.02em,
   ),
   'KR/Body2': (
     'size': 22px,
     'line-height': 30px,
     'weight': 400,
+    'letter-spacing': -0.02em,
   ),
   'KR/Body3_R': (
     'size': 20px,
     'line-height': 28px,
     'weight': 400,
+    'letter-spacing': -0.02em,
   ),
   'KR/Body3_L': (
     'size': 20px,
     'line-height': 28px,
     'weight': 300,
+    'letter-spacing': -0.02em,
   ),
   'KR/Body4': (
     'size': 18x,
     'line-height': 26px,
     'weight': 400,
+    'letter-spacing': -0.02em,
   ),
   'KR/Body5': (
     'size': 16px,
     'line-height': 24px,
     'weight': 400,
+    'letter-spacing': -0.02em,
   ),
   'KR/Caption1': (
     'size': 13px,
     'line-height': 18px,
     'weight': 600,
+    'letter-spacing': -0.02em,
   ),
   'KR/Caption1_L': (
     'size': 13px,
     'line-height': 18px,
     'weight': 300,
+    'letter-spacing': -0.02em,
   ),
   'KR/Caption2': (
     'size': 12px,
     'line-height': 18px,
     'weight': 300,
+    'letter-spacing': -0.02em,
   ),
   'KR/Caption3': (
     'size': 10px,
     'line-height': 16px,
     'weight': 300,
+    'letter-spacing': -0.02em,
   ),
   'ETC': (
     'size': 80px,
     'line-height': 96px,
     'weight': 700,
+    'letter-spacing': -0.02em,
   ),
-  'E_Headline1': (
-    'size': 60px,
-    'line-height': 72px,
-    'weight': 400,
-  ),
+  // 18기 영문 타이포
+  // Headline1은 수정 예정
+  'E_Headline1':
+    (
+      'size': 60px,
+      'line-height': 72px,
+      'weight': 400,
+      'letter-spacing': -0.01em,
+    ),
   'E_Headline2': (
     'size': 40px,
     'line-height': 50px,
-    'weight': 400,
+    'weight': 700,
+    'letter-spacing': -0.01em,
   ),
   'E_Headline3': (
     'size': 25px,
-    'line-height': 35px,
-    'weight': 400,
+    'line-height': 33px,
+    'weight': 700,
+    'letter-spacing': -0.01em,
   ),
   'E_Headline4': (
-    'size': 10px,
-    'line-height': 16px,
-    'weight': 400,
+    'size': 14px,
+    'line-height': 20px,
+    'weight': 600,
+    'letter-spacing': -0.01em,
+  ),
+  'E_Headline5': (
+    'size': 11px,
+    'line-height': 18px,
+    'weight': 600,
+    'letter-spacing': -0.01em,
   ),
   'E_Display1': (
-    'size': 30px,
-    'line-height': 42px,
-    'weight': 500,
+    'size': 36px,
+    'line-height': 46px,
+    'weight': 700,
+    'letter-spacing': -0.01em,
   ),
   'E_Display2': (
+    'size': 30px,
+    'line-height': 40px,
+    'weight': 500,
+    'letter-spacing': -0.01em,
+  ),
+  'E_Display3': (
+    'size': 24px,
+    'line-height': 30px,
+    'weight': 700,
+    'letter-spacing': -0.01em,
+  ),
+  'E_Display4': (
     'size': 20px,
     'line-height': 28px,
     'weight': 500,
+    'letter-spacing': -0.01em,
   ),
 );
 
