@@ -12,7 +12,7 @@ export const CounterSection = forwardRef<HTMLDivElement>((props, ref) => {
       <div className={css.space} />
       <div className={css.flex_row}>
         <div className={css.flex_col}>
-          <StaticImage src="../../../../images/symbol17.png" alt="" className={css.star} placeholder="blurred" />
+          <StaticImage src="./images/symbol18.png" alt="" className={css.star} placeholder="blurred" />
 
           <h1 className={css.head}>
             <span>C</span>onnection <Br mobile desktop />

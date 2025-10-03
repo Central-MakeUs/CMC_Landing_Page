@@ -16,8 +16,8 @@
   display: flex;
 
   @include mobile {
-    margin-top: 40px;
-    padding: 40px 20px;
+    margin-top: 20px;
+    padding: 0px 16px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -43,10 +43,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 13px;
+      margin-bottom: 10px;
       background-color: white;
-      border-radius: 5px;
-      box-shadow: 0px 4px 4px 0px #edf1ff;
+      border-radius: 20px;
+      box-shadow: 0px 4px 4px 0px #edf5ff;
     }
   }
 
@@ -76,5 +76,13 @@
 }
 
 .header {
-  color: color(blue-500);
+  color: color(primary-light-04);
+  font-family: 'Video';
+  @include mobile {
+    @include typo('E_Headline3');
+  }
+  @include desktop {
+    @include typo('E_Headline2');
+  }
+  margin-bottom: 6px;
 }
