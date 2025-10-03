@@ -37,14 +37,14 @@
 }
 
 .star {
-  width: 170px;
-  height: 50px;
-
+  height: auto;
   @include mobile {
+    width: 112px;
     margin-bottom: 20px;
   }
 
   @include desktop {
+    width: 106px;
     margin-bottom: 28px;
   }
 }
@@ -53,8 +53,8 @@
 .head {
   z-index: 1;
   position: relative;
-  color: color(black-100);
-  font-family: 'Sun Motter';
+  color: color('18th-gray-900');
+  font-family: 'Video';
 
   @include mobile {
     text-align: center;
@@ -70,7 +70,7 @@
     @include typo('E_Headline2');
 
     & > span {
-      color: color(blue-500);
+      color: color(primary-light-04);
     }
   }
 }
