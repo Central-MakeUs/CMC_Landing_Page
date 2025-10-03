@@ -27,13 +27,11 @@ const ProjectPage = ({
   return (
     <Main className={css.main}>
       <Section>
-        <AuraEffect />
-
         <div className={css.header}>
+          <div className={css.aura} />
           <StaticImage src="./images/symbol18.png" alt="18기 로고" className={css.logo} />
           <h1 className={css.title}>Challenger’s Project</h1>
           <p className={css.desc}>챌린저들의 다양한 프로젝트를 확인해보세요</p>
-          <div />
         </div>
 
         <nav className={css.nav}>

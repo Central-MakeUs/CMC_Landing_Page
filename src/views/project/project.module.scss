@@ -40,10 +40,24 @@
 
 .aura {
   position: absolute;
+  flex-shrink: 0;
 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @include mobile {
+    width: 594px;
+    height: 594px;
+    border-radius: 594px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  @include desktop {
+    width: 466px;
+    height: 466px;
+    border-radius: 466px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   width: 466px;
   height: 466px;
