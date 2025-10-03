@@ -1,8 +1,61 @@
 @use '@/styles/abstracts' as *;
 @use '@/styles/utils' as *;
 
-.main {
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.title {
+  margin-top: 22px;
+  font-family: 'Video';
+  @include desktop {
+    @include typo('E_Headline2');
+  }
+  @include mobile {
+    @include typo('E_Headline3');
+  }
+  color: color('18th-gray-900');
+}
+.desc {
+  margin-top: 4px;
+  font-family: 'Pretendard';
+  @include desktop {
+    @include typo('KR/Subtitle1');
+  }
+  @include mobile {
+    @include typo('KR/Body5');
+  }
 
+  color: color(black-100);
+}
+
+.logo {
+  width: 112px;
+  height: auto;
+}
+
+.aura {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 466px;
+  height: 466px;
+  flex-shrink: 0;
+
+  border-radius: 466px;
+  opacity: 0.2;
+  background: color(primary-light-04);
+  filter: blur(420.20001220703125px);
+}
+
+.main {
   @include mobile {
     padding-bottom: 30px;
   }
@@ -14,7 +67,7 @@
     padding-bottom: 40px;
   }
 
-  .gradient_circle{
+  .gradient_circle {
     position: absolute;
     top: 207px;
     background-color: color(blue-500);
@@ -28,7 +81,7 @@
     }
 
     @include desktop {
-      height:266px;
+      height: 266px;
       width: 266px;
     }
   }
@@ -97,7 +150,6 @@
   }
 }
 
-
 .nav {
   width: max-content;
   max-width: 100vw;
@@ -108,22 +160,19 @@
     overflow-x: scroll;
     border-radius: 30px;
 
-    
-
     @include hide-scrollbar;
 
     @media (min-width: 600px) and (max-width: 1000px) {
       justify-content: center;
     }
-    
+
     @include mobile {
       color: color(gray-300);
-      margin: 24px 0 32px 30px;
+      margin: 24px 0px 32px 16px;
       padding-right: 30px;
       font-weight: 600;
       @include font(13px, 17px);
 
-      
       > li:not(:first-of-type) {
         border-left: 2px solid color(gray-200);
       }
@@ -144,7 +193,7 @@
     button {
       width: max-content;
       border-radius: 30px;
-      
+
       @include mobile {
         padding: 0 11px;
       }
@@ -156,15 +205,14 @@
   }
 
   .active {
-    
     @include mobile {
-      color: color(blue-500);
+      color: color(primary-light-04);
       font-weight: 700;
     }
 
     @include desktop {
       color: white;
-      background-color: color(blue-500);
+      background-color: color(primary-light-04);
       font-weight: 600;
     }
   }
@@ -175,6 +223,9 @@
   row-gap: 16px;
   column-gap: 16px;
   list-style: none;
+  @include mobile {
+    padding: 0px 16px;
+  }
 
   @media (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);

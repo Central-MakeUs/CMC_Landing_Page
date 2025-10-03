@@ -1,5 +1,104 @@
 [
   {
+    "name": "굴비잇기",
+    "year": "16",
+    "description": "굴비의 짠테크! '굴비잇기'로 절약 루틴을 만들어보세요",
+    "rank": 1,
+    "logo": "./logo/16/gulbi.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.project.goolbi&hl=ko",
+      "ios": "https://apps.apple.com/kr/app/%EA%B5%B4%EB%B9%84%EC%9E%87%EA%B8%B0/id6741732715"
+    }
+  },
+  {
+    "name": "파타타",
+    "year": "16",
+    "description": "사진 스팟을 발견하고, 나만의 스팟을 공유하다",
+    "rank": 2,
+    "logo": "./logo/16/patata.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.cmc.patata",
+      "ios": "https://apps.apple.com/kr/app/%ED%8C%8C%ED%83%80%ED%83%80-%EC%82%AC%EC%A7%84-%EC%8A%A4%ED%8C%9F%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83/id6742177268"
+    }
+  },
+  {
+    "name": "PillMe",
+    "year": "16",
+    "description": "AI 기반 맞춤형 건강기능식품, 사용자 맞춤 영양제 추천, 상담을 통해 더 쉽고 정확한 능동적 건강 솔루션을 제공합니다.",
+    "rank": 4,
+    "logo": "./logo/16/pillme.png",
+    "link": {
+      "android": "",
+      "ios": ""
+    }
+  },
+  {
+    "name": "Whidy",
+    "year": "16",
+    "description": "취업과 학습에 필요한 장소에 대한 정보를 제공해 사용자들이 원하는 장소를 쉽고 빠르게 찾을 수 있도록 돕습니다.",
+    "rank": 4,
+    "logo": "./logo/16/whidy.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.whidy.whidyandroid&pcampaignid=web_share",
+      "ios": ""
+    }
+  },
+  {
+    "name": "골메이트",
+    "year": "16",
+    "description": "멘토와 함께하는 목표 달성 플랫폼 골메이트",
+    "rank": 4,
+    "logo": "./logo/16/goalmate.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=cmc.goalmate&hl=ko",
+      "ios": "https://apps.apple.com/kr/app/%EA%B3%A8%EB%A9%94%EC%9D%B4%ED%8A%B8/id6741704150"
+    }
+  },
+  {
+    "name": "Ruty",
+    "year": "16",
+    "description": "1인 가구 맞춤형 생활 관리 플랫폼",
+    "rank": 4,
+    "logo": "./logo/16/ruty.png",
+    "link": {
+      "android": "",
+      "ios": "https://apps.apple.com/kr/app/%EB%A3%A8%ED%8B%B0/id6742365699"
+    }
+  },
+  {
+    "name": "Dice",
+    "year": "16",
+    "description": "소상공인, 자영업자를 위한 팝업공간 대여 및 운영 지원 플랫폼",
+    "rank": 4,
+    "logo": "./logo/16/dice.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.cmc.dice.minipop.expo",
+      "ios": "https://apps.apple.com/kr/app/dice-%ED%8C%9D%EC%97%85-%EC%9A%B4%EC%98%81-%EC%98%AC%EC%9D%B8%EC%9B%90-%EC%86%94%EB%A3%A8%EC%85%98/id6742072988"
+    }
+  },
+  {
+    "name": "Mercury",
+    "year": "16",
+    "description": "세상 쉬운 독서기록",
+    "rank": 4,
+    "logo": "./logo/16/mercury.jpg",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=kr.co.mercuryplanet.www&pcampaignid=web_share",
+      "ios": "https://apps.apple.com/kr/app/%EB%A8%B8%ED%81%90%EB%A6%AC/id6741918517"
+    }
+  },
+  {
+    "name": "Spark",
+    "year": "16",
+    "description": "SNS 및 유튜브 성장 비법 제안 서비스",
+    "rank": 4,
+    "logo": "./logo/16/spark.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.spark.sns.creators&hl=ko",
+      "ios": "https://apps.apple.com/kr/app/spark-%EC%8A%A4%ED%8C%8C%ED%81%AC/id6742328947"
+    }
+  },
+  {
     "name": "B.Link",
     "year": "15",
     "description": "링크 아카이빙 서비스",

@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import type { HeadProps, PageProps } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import { useCallback, useMemo, useState } from 'react'
 
 import { AuraEffect, Section, Seo } from '@/components'
@@ -28,7 +29,12 @@ const ProjectPage = ({
       <Section>
         <AuraEffect />
 
-        <Section.Head title="Challenger’s Project" description="챌린저들의 다양한 프로젝트를 확인해보세요" />
+        <div className={css.header}>
+          <StaticImage src="./images/symbol18.png" alt="18기 로고" className={css.logo} />
+          <h1 className={css.title}>Challenger’s Project</h1>
+          <p className={css.desc}>챌린저들의 다양한 프로젝트를 확인해보세요</p>
+          <div />
+        </div>
 
         <nav className={css.nav}>
           <ul>
