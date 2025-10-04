@@ -17,8 +17,8 @@
 }
 
 .star {
-  width: 170px;
-  height: 50px;
+  width: 112px;
+  height: 64px;
 
   @include mobile {
     margin-bottom: 16px;
@@ -44,7 +44,7 @@
   }
 
   span {
-    color: color(blue-500);
+    color: color(primary-light-04);
   }
 }
 

@@ -83,7 +83,7 @@
         }
 
         .active {
-          color: color(blue-500);
+          color: color(primary-light-04);
         }
 
         .apply_button {
@@ -91,7 +91,7 @@
           @include font(16px, 20px);
           padding: rem(6px) (20px);
           border-radius: 5px;
-          background-color: color(blue-500);
+          background-color: color(primary-light-04);
           color: white;
         }
       }

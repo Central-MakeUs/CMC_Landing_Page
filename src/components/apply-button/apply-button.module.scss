@@ -2,19 +2,11 @@
 @use '@/styles/utils' as *;
 
 .button {
-  background-color: color(black-100);
+  background-color: color('18th-gray-800');
   border-radius: 99px;
   color: white;
   font-weight: 700;
   text-align: center;
-
-  &:hover {
-    background-color: #202632;
-  }
-
-  &:active {
-    background-color: #202632;
-  }
 
   @include mobile {
     padding: 16px 32px;

@@ -58,3 +58,39 @@
   font-weight: normal;
   font-style: normal;
 }
+
+// Video
+@font-face {
+  font-family: 'Video';
+  font-weight: 300;
+  font-style: normal;
+  src: url('/font/Video_Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Video';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/font/Video_Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Video';
+  font-weight: 500;
+  font-style: normal;
+  src: url('/font/Video_Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Video';
+  font-weight: 600;
+  font-style: normal;
+  src: url('/font/Video_Semibold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Video';
+  font-weight: 700;
+  font-style: normal;
+  src: url('/font/Video_Bold.otf') format('opentype');
+}

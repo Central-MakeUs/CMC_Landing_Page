@@ -14,6 +14,17 @@
     margin-left: auto;
   }
 }
+
+.mobile {
+  @include mobile {
+    display: block;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
 .card {
   position: relative;
   transform: rotate(-4deg);
@@ -40,12 +51,12 @@
     @include mobile {
       width: 100%;
       max-width: 330px;
-      height: 240px;
+      height: auto;
     }
 
     @include desktop {
       width: rem(480px);
-      height: rem(350px);
+      height: auto;
     }
   }
 
@@ -65,20 +76,26 @@
 
     .card_h {
       text-align: left;
-      font-family: 'DOSGothic';
+      font-family: 'Pretendard';
 
       & > span {
-        color: color(blue-500);
+        font-family: 'Video';
+        color: color(primary-light-04);
       }
 
       @include mobile {
         margin-bottom: 14px;
-        @include typo('E_Display2');
+        @include typo('E_Display4');
       }
 
       @include desktop {
         margin-bottom: 20px;
-        @include typo('E_Display1');
+        font-family: 'Pretendard';
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 42px; /* 140% */
+        letter-spacing: -0.6px;
       }
     }
 
@@ -101,43 +118,45 @@
 .button {
   position: relative;
   display: flex;
+
   align-items: center;
-  font-weight: 500;
+  font-weight: 600;
+  background-color: color('18th-gray-800');
+  justify-content: space-between;
 
   @include mobile {
-    margin-top: 25px;
+    margin-top: 40px;
     justify-content: center;
+    gap: 16px;
     width: 88%;
     max-width: 380px;
     margin-inline: auto;
-    padding: 18px;
+    padding: 11px 50px;
     border-radius: 12px;
     font-size: rem(16px);
-    line-height: rem(16px);
+    line-height: rem(24px);
   }
 
   @include desktop {
-    margin-top: 40px;
+    margin-top: 48px;
     justify-content: space-between;
     margin-left: 10px;
-    width: 458px;
-    height: 90px;
+    width: 450px;
+    height: 88px;
     padding: 20px 50px;
     border-radius: 20px;
-    font-size: rem(29px);
+    font-size: rem(30px);
   }
 
   .button_icon {
     @include mobile {
-      position: absolute;
-      right: 30px;
-      width: 25px;
-      height: 14px;
+      width: 24px;
+      height: 24px;
     }
 
     @include desktop {
-      width: 37px;
-      height: 21px;
+      width: 48px;
+      height: 48px;
     }
   }
 }

@@ -3,7 +3,7 @@ import { HeadProps } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useState } from 'react'
 
-import { AuraEffect,ScrollRevealContainer, Section, Seo } from '@/components'
+import { ScrollRevealContainer, Section, Seo } from '@/components'
 import { Main } from '@/layouts'
 
 import { Cards, Tab } from './constants'
@@ -30,11 +30,13 @@ const FaqPage = () => {
     <Main className={css.main}>
       <ScrollRevealContainer>
         <Section className={css.section}>
-          <AuraEffect />
+          <div className={css.header}>
+            <div className={css.aura} />
+            <StaticImage src="./images/symbol18.png" alt="18기 로고" className={css.logo} />
+            <h1 className={css.title}>FAQ</h1>
+          </div>
 
-          <Section.Head title="FAQ" />
-
-          <nav>
+          <nav className={css.nav}>
             <ul className={css.main_buttons}>
               {Object.keys(Cards).map((key) => {
                 const card = Cards[key as Tab]

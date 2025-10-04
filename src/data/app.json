@@ -1,5 +1,192 @@
 [
   {
+    "name": "말모",
+    "year": "17",
+    "description": "이해되지 않는 연인의 속마음을 알려주는 AI 상담",
+    "rank": "1",
+    "logo": "./logo/17/malmo.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.malmo.app",
+      "ios": "https://apps.apple.com/kr/app/%EB%A7%90%EB%AA%A8-malmo-ai-%EC%97%B0%EC%95%A0-%EC%83%81%EB%8B%B4-%EB%A7%88%EC%9D%8C-%EC%A7%88%EB%AC%B8/id6749349296"
+    }
+  },
+  {
+    "name": "약쏙",
+    "year": "17",
+    "description": "잔소리하는 약 알람, 약쏙! 약쏙은 혼자가 아니라, 함께 챙기는 복약을 도와요.",
+    "rank": "2",
+    "logo": "./logo/17/yakssok.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.pillsquad.yakssok&hl=ko",
+      "ios": "https://apps.apple.com/kr/app/%EC%95%BD%EC%8F%99-%EC%9E%94%EC%86%8C%EB%A6%AC%ED%95%B4-%EC%A3%BC%EB%8A%94-%EC%95%BD-%EC%95%8C%EB%9E%8C/id6749473223"
+    }
+  },
+  {
+    "name": "치트키",
+    "year": "17",
+    "description": "발빠르게 검증하는, AI 기반 사기 위험 감지 솔루션 치트키",
+    "rank": "3",
+    "logo": "./logo/17/cheatkey.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.cheatkey.app&pcampaignid=web_share",
+      "ios": "https://apps.apple.com/kr/app/%EC%B9%98%ED%8A%B8%ED%82%A4-ai-%EC%82%AC%EA%B8%B0%ED%83%90%EC%A7%80-%ED%94%8C%EB%9E%AB%ED%8F%BC/id6749635626"
+    }
+  },
+  {
+    "name": "눈 떠!",
+    "year": "17",
+    "description": "무조건 목표장소로 가도록 만드는 알람 앱! 운동, 공부, 어떤 목표든 눈 떠와 함께 이뤄보세요.",
+    "rank": "4",
+    "logo": "./logo/17/openeye.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.whiplash.akuma&pcampaignid=web_share",
+      "ios": "https://apps.apple.com/kr/app/%EB%88%88-%EB%96%A0-%EB%AA%A9%ED%91%9C-%EC%9E%A5%EC%86%8C-%EB%8F%84%EC%B0%A9-%EC%9D%B8%EC%A6%9D-%EA%B0%95%EC%A0%9C-%EC%95%8C%EB%9E%8C/id6749834236"
+    }
+  },
+  {
+    "name": "림버",
+    "year": "17",
+    "description": "집중력을 기르는 도파민 앱 차단 '실험 타이머'. 디지털 도파민에서 벗어나, 지금 나의 상황에 집중해 보세요",
+    "rank": "4",
+    "logo": "./logo/17/limber.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.kkh.cmc.limber",
+      "ios": "https://apps.apple.com/kr/app/%EB%A6%BC%EB%B2%84/id6747666779"
+    }
+  },
+  {
+    "name": "Ballog",
+    "year": "17",
+    "description": "야구를 보며 요동치는 감정을 참을 수 없다면? 감정으로 남기는 나만의 야구 관람 기록, 볼로그",
+    "rank": "4",
+    "logo": "./logo/17/ballog.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.ballog.app",
+      "ios": "https://apps.apple.com/kr/app/ballog-볼로그/id6749778947"
+    }
+  },
+  {
+    "name": "런콤비",
+    "year": "17",
+    "description": "올해 운동은 반려견과 함께! 반려견과 함께 운동하는 특별한 경험을 만들어보세요",
+    "rank": "4",
+    "logo": "./logo/17/runcombi.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.combo.runcombi&pcampaignid=web_share",
+      "ios": "https://apps.apple.com/kr/app/%EB%9F%B0%EC%BD%A4%EB%B9%84-%EB%B0%98%EB%A0%A4%EA%B2%AC-%EC%82%B0%EC%B1%85-%EC%9A%B4%EB%8F%99-%EA%B8%B0%EB%A1%9D/id6747975586"
+    }
+  },
+  {
+    "name": "상태창",
+    "year": "17",
+    "description": "자기계발 퀘스트로 레벨업! 이제, 자기계발을 게임처럼 즐기세요.",
+    "rank": "4",
+    "logo": "./logo/17/status.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.status.app.status",
+      "ios": "https://apps.apple.com/kr/app/%EC%83%81%ED%83%9C%EC%B0%BD/id6747613959"
+    }
+  },
+  {
+    "name": "굴비잇기",
+    "year": "16",
+    "description": "굴비의 짠테크! '굴비잇기'로 절약 루틴을 만들어보세요",
+    "rank": "1",
+    "logo": "./logo/16/gulbi.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.project.goolbi&hl=ko",
+      "ios": "https://apps.apple.com/kr/app/%EA%B5%B4%EB%B9%84%EC%9E%87%EA%B8%B0/id6741732715"
+    }
+  },
+  {
+    "name": "파타타",
+    "year": "16",
+    "description": "사진 스팟을 발견하고, 나만의 스팟을 공유하다",
+    "rank": "2",
+    "logo": "./logo/16/patata.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.cmc.patata",
+      "ios": "https://apps.apple.com/kr/app/%ED%8C%8C%ED%83%80%ED%83%80-%EC%82%AC%EC%A7%84-%EC%8A%A4%ED%8C%9F%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83/id6742177268"
+    }
+  },
+  {
+    "name": "PillMe",
+    "year": "16",
+    "description": "AI 기반 맞춤형 건강기능식품, 사용자 맞춤 영양제 추천, 상담을 통해 더 쉽고 정확한 능동적 건강 솔루션을 제공합니다.",
+    "rank": "4",
+    "logo": "./logo/16/pillme.png",
+    "link": {
+      "android": "",
+      "ios": ""
+    }
+  },
+  {
+    "name": "Whidy",
+    "year": "16",
+    "description": "취업과 학습에 필요한 장소에 대한 정보를 제공해 사용자들이 원하는 장소를 쉽고 빠르게 찾을 수 있도록 돕습니다.",
+    "rank": "4",
+    "logo": "./logo/16/whidy.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.whidy.whidyandroid&pcampaignid=web_share",
+      "ios": ""
+    }
+  },
+  {
+    "name": "골메이트",
+    "year": "16",
+    "description": "멘토와 함께하는 목표 달성 플랫폼 골메이트",
+    "rank": "4",
+    "logo": "./logo/16/goalmate.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=cmc.goalmate&hl=ko",
+      "ios": "https://apps.apple.com/kr/app/%EA%B3%A8%EB%A9%94%EC%9D%B4%ED%8A%B8/id6741704150"
+    }
+  },
+  {
+    "name": "Ruty",
+    "year": "16",
+    "description": "1인 가구 맞춤형 생활 관리 플랫폼",
+    "rank": "4",
+    "logo": "./logo/16/ruty.png",
+    "link": {
+      "android": "",
+      "ios": "https://apps.apple.com/kr/app/%EB%A3%A8%ED%8B%B0/id6742365699"
+    }
+  },
+  {
+    "name": "Dice",
+    "year": "16",
+    "description": "소상공인, 자영업자를 위한 팝업공간 대여 및 운영 지원 플랫폼",
+    "rank": "4",
+    "logo": "./logo/16/dice.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.cmc.dice.minipop.expo",
+      "ios": "https://apps.apple.com/kr/app/dice-%ED%8C%9D%EC%97%85-%EC%9A%B4%EC%98%81-%EC%98%AC%EC%9D%B8%EC%9B%90-%EC%86%94%EB%A3%A8%EC%85%98/id6742072988"
+    }
+  },
+  {
+    "name": "Mercury",
+    "year": "16",
+    "description": "세상 쉬운 독서기록",
+    "rank": "4",
+    "logo": "./logo/16/mercury.jpg",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=kr.co.mercuryplanet.www&pcampaignid=web_share",
+      "ios": "https://apps.apple.com/kr/app/%EB%A8%B8%ED%81%90%EB%A6%AC/id6741918517"
+    }
+  },
+  {
+    "name": "Spark",
+    "year": "16",
+    "description": "SNS 및 유튜브 성장 비법 제안 서비스",
+    "rank": "4",
+    "logo": "./logo/16/spark.png",
+    "link": {
+      "android": "https://play.google.com/store/apps/details?id=com.spark.sns.creators&hl=ko",
+      "ios": "https://apps.apple.com/kr/app/spark-%EC%8A%A4%ED%8C%8C%ED%81%AC/id6742328947"
+    }
+  },
+  {
     "name": "B.Link",
     "year": "15",
     "description": "링크 아카이빙 서비스",

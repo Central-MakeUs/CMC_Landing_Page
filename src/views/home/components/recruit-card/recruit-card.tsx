@@ -1,7 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image'
 import { forwardRef, useEffect, useState } from 'react'
 
-import { ApplyButton, Br } from '@/components'
+import { ApplyButton, AuraCircle, Br } from '@/components'
 import { RecruitDate, RecruitMent, RecruitStatusEnum } from '@/constants'
 
 import * as css from './recruit-card.module.scss'
@@ -32,13 +32,15 @@ export const RecruitCard = forwardRef<HTMLDivElement>((props, ref) => {
         <StaticImage src="./images/card.png" alt="card" className={css.card_img} />
         <div className={css.card_text}>
           <h2 className={css.card_h}>
-            <span>{recruitStatus === 'Recruiting' && '🔈'}CMC 17th </span>
+            <span>{recruitStatus === 'Recruiting' && '🔈'}CMC 18th </span>
             {RecruitMent[recruitStatus].title}
           </h2>
           <p className={css.card_p}>{RecruitMent[recruitStatus].description}</p>
         </div>
       </div>
-
+      <div className={css.mobile}>
+        <AuraCircle size="180%" top="15%" left="-40%" opacity={0.2} />
+      </div>
       <ApplyButton className={css.button}>
         {RecruitMent[recruitStatus].buttonText}
         <StaticImage src="./images/button-sign.png" alt="click" className={css.button_icon} />

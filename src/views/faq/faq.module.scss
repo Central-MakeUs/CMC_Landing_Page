@@ -1,13 +1,21 @@
 @use '@/styles/abstracts' as *;
 @use '@/styles/utils' as *;
 
+.nav {
+  @include mobile {
+    width: 100%;
+    padding: 0px 16px;
+  }
+}
+
 .button {
   padding: 11px 22px;
   color: color(gray-300);
 
   @include mobile {
     font-weight: 500;
-    min-width: 155px;
+    width: 100%; // ← 추가: 그리드 셀을 꽉 채움
+    min-width: unset; // ← 수정: min-width 제거
     border-radius: 10px;
     background-color: white;
     text-align: center;
@@ -23,28 +31,90 @@
 
 .button_active {
   color: white;
-  background-color: color(blue-500);
+  background-color: color(primary-light-04);
 }
 
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.title {
+  margin-top: 22px;
+  font-family: 'Video';
+  @include desktop {
+    @include typo('E_Headline2');
+    margin-bottom: 16px;
+  }
+  @include mobile {
+    @include typo('E_Headline3');
+    margin-bottom: 12px;
+  }
+  color: color('18th-gray-900');
+}
+
+.logo {
+  width: 112px;
+  height: auto;
+}
+
+.aura {
+  position: absolute;
+  flex-shrink: 0;
+
+  @include mobile {
+    width: 594px;
+    height: 594px;
+    border-radius: 594px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  @include desktop {
+    width: 466px;
+    height: 466px;
+    border-radius: 466px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  width: 466px;
+  height: 466px;
+  flex-shrink: 0;
+
+  border-radius: 466px;
+  opacity: 0.2;
+  background: color(primary-light-04);
+  filter: blur(420.20001220703125px);
+}
 
 .main {
   .section {
-
     .main_buttons {
       position: relative;
       z-index: 5;
       display: flex;
       border-radius: 30px;
-      
+
       @include mobile {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 12px;
-        width: 330px;
+        width: 100%;
       }
 
       @include desktop {
         background-color: color(gray-100);
+      }
+
+      li {
+        @include mobile {
+          width: 100%;
+        }
       }
     }
 
@@ -54,10 +124,11 @@
       position: relative;
 
       @include mobile {
-        width: 96%;
+        width: 100%;
+        padding: 0px 16px;
         max-width: 500px;
-        margin-top: 47px;
-        gap: 8px;
+        margin-top: 30px;
+        gap: 20px;
       }
 
       @include desktop {
@@ -74,9 +145,9 @@
         flex-direction: column;
 
         @include mobile {
-          gap: 12px;
-          border-radius: 5px;
-          padding: 24px 21px;
+          gap: 20px;
+          border-radius: 20px;
+          padding: 24px 20px;
         }
 
         @include desktop {
@@ -91,7 +162,7 @@
 
         .question {
           font-weight: 700;
-          color: color(blue-500);
+          color: color(primary-light-04);
 
           @include mobile {
             @include font(20px, 30px);
@@ -141,6 +212,7 @@
 
     .sns_button {
       color: color(text-normal);
+      background-color: color('18th-gray-800');
       display: flex;
       justify-content: center;
       align-items: center;
@@ -156,8 +228,6 @@
 
       @include mobile {
         font-weight: 600;
-        background-color:#EDF1FF;
-        color: color(blue-500);
         border-radius: 16px;
         padding: 23px 16px;
         gap: 8px;
@@ -166,58 +236,23 @@
 
       @include desktop {
         font-weight: 600;
-        background-color: color(blue-500);
         border-radius: 16px;
         padding: 16px;
         gap: 12px;
         @include font(24px, 24px);
       }
 
-      .sns_icon {
+      .icon {
         @include mobile {
-          display: none;
-        }
-
-        @include desktop {
-          width: 30px;
-          height: 30px;
-        }
-      }
-      
-      .sns_icon_kakao {
-        @include mobile {
-          display: none;
+          width: 24px;
+          height: 24px;
         }
 
         @include desktop {
           width: 32px;
-          height: 30px;
+          height: 32px;
         }
       }
-
-      .sns_icon_mobile {
-        @include mobile {
-          width: 20px;
-          height: 20px;
-        }
-
-        @include desktop {
-          display: none;
-        }
-      }
-
-      
-      .sns_icon_kakao_mobile {
-        @include mobile {
-          width: 22px;
-          height: 20px;
-        }
-
-        @include desktop {
-          display: none;
-        }
-      }
-
     }
   }
 }
