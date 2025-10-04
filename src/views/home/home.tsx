@@ -1,22 +1,15 @@
-import type { HeadProps } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import { type HeadProps, navigate } from 'gatsby'
 import { useEffect, useRef, useState } from 'react'
 
 import { ScrollRevealContainer, Seo } from '@/components'
 import { Main } from '@/layouts'
 
-import { CounterSection, IntroSection, ScrollIndicator, SupportsSection } from './components'
+import { CounterSection, SupportsSection } from './components'
 import * as css from './home.module.scss'
 
 const HomePage = () => {
   const nextSectionRef = useRef<HTMLDivElement>(null)
   const [videoSrc, setVideoSrc] = useState<string>('')
-
-  const scrollToNextSection = () => {
-    if (nextSectionRef && nextSectionRef.current) {
-      nextSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    }
-  }
 
   useEffect(() => {
     const updateVideoSource = () => {
@@ -48,7 +41,7 @@ const HomePage = () => {
         <video className={css.backgroundVideo} autoPlay muted loop playsInline key={videoSrc}>
           <source src={videoSrc} type={videoSrc.endsWith('.webm') ? 'video/webm' : 'video/mp4'} />
         </video>
-        <button className={css.applyButton} type="button">
+        <button onClick={() => navigate('/apply')} className={css.applyButton} type="button">
           18기 지원하기
         </button>
       </div>
