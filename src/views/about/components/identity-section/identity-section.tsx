@@ -1,5 +1,4 @@
-import { StaticImage } from 'gatsby-plugin-image'
-import { ReactElement, ReactNode } from 'react'
+import { ReactElement } from 'react'
 
 import { Br, Section } from '@/components'
 
