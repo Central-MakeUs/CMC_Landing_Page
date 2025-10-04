@@ -6,7 +6,6 @@ import { Main } from '@/layouts'
 import * as css from './about.module.scss'
 import {
   ActivitySection,
-  AdditionalSection,
   ApplySection,
   ChallengerSection,
   FeatureSection,
