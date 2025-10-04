@@ -4,7 +4,7 @@
 
 .desktop {
   @include desktop {
-    z-index: 0;
+    z-index: -10;
     display: block;
     max-width: 1200px;
   }
@@ -20,7 +20,7 @@
   }
 
   @include mobile {
-    z-index: 0;
+    z-index: -10;
     display: block;
     max-width: 600px;
   }

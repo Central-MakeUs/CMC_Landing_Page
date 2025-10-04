@@ -6,7 +6,6 @@ import { Main } from '@/layouts'
 import * as css from './about.module.scss'
 import {
   ActivitySection,
-  AdditionalSection,
   ApplySection,
   ChallengerSection,
   FeatureSection,
@@ -24,19 +23,25 @@ const AboutPage = ({
       <ScrollRevealContainer>
         <FeatureSection />
       </ScrollRevealContainer>
+
       <ScrollRevealContainer>
         <IdentitySection />
       </ScrollRevealContainer>
+
       <ScrollRevealContainer>
         <ChallengerSection />
       </ScrollRevealContainer>
+
       <ScrollRevealContainer>
         <ActivitySection />
       </ScrollRevealContainer>
+
       {/* <ScrollRevealContainer>
         <AdditionalSection />
       </ScrollRevealContainer> */}
+
       <ProductSection apps={apps} />
+
       <ScrollRevealContainer>
         <ApplySection />
       </ScrollRevealContainer>

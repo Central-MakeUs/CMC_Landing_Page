@@ -1,246 +1,233 @@
 @use '@/styles/abstracts' as *;
 @use '@/styles/utils' as *;
 
-.button {
-  color: color(gray-300);
-  font-weight: 600;
-
-  @include mobile {
-    padding: 0 10px;
-    font-size: rem(13px);
-    line-height: rem(17px);
-  }
-
-  @include desktop {
-    padding: 0 16px;
-    font-size: rem(26px);
-    line-height: rem(32px);
-  }
-}
-
-.button_active {
-  color: color(blue-500);
-}
-
-.card {
-  width: 90%;
-  max-width: 1280px;
-  height: 500px;
-  border-radius: 5px;
+.main {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  // border: 1px solid #efe0ff;
 
-  @include mobile {
-    width: 320px;
-    height: 380px;
-    // margin: 20px;
-    // margin-top: 24px;
-  }
-
-  @include desktop {
-    // margin: 32px;
-  }
-
-  .card_image {
+  .background {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 5px;
-    // filter: blur(2.5px);
+    z-index: -2;
+    @include desktop {
+      background-image: url('/images/background.png');
+    }
 
-    ::after {
-      content: '';
-      background-color: rgba(0, 0, 0, 0.5);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 640px;
-      opacity: 0.4;
-      z-index: 1;
+    @include mobile {
+      background-image: url('/images/background_mobile.png');
     }
   }
+}
 
-  figcaption {
-    z-index: 1;
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include desktop {
+    margin-top: 80px;
+  }
+
+  @include mobile {
+    margin-top: 40px;
+  }
+}
+
+@include desktop {
+  .cardContainer {
+    position: relative;
+    margin-top: 26px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+
+    .fireImage {
+      z-index: -1;
+      position: absolute;
+      opacity: 0.8;
+      background-repeat: no-repeat;
+      // transform: rotate(-15deg);
+      background-size: 127.007% 110.833%;
+
+      bottom: 47px;
+      left: -90px;
+      width: 142px;
+      height: 168px;
+      background-position: -25.635px -8.333px;
+    }
+
+    .labtopImage {
+      z-index: -1;
+      position: absolute;
+      opacity: 0.8;
+      background-repeat: no-repeat;
+      // transform: rotate(13.843deg);
+      background-size: 186.612% 135.689%;
+      background-position: -33.373px -19.73px;
+
+      top: 300px;
+      right: -140px;
+      width: 195px;
+      height: 150px;
+      transform: rotate(10deg);
+    }
+
+    .card {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      column-gap: 30px;
+      border-radius: 20px;
+      border-bottom: 2px dashed color(blue-200);
+
+      @include desktop {
+        padding: 20px;
+        flex-direction: row;
+      }
+
+      @include mobile {
+        padding: 15px;
+        flex-direction: column;
+      }
+
+      .image {
+        width: 400px;
+        height: 216px;
+        border-radius: 10px;
+      }
+
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .chapter {
+          font-family: 'Sun Motter';
+          color: color(blue-300);
+          @include font(14px, 20px);
+        }
+
+        .title {
+          @include typo('KR/Headline3');
+          color: color(blue-500);
+        }
+
+        .description {
+          @include typo('KR/Body4');
+          color: color(gray-400);
+        }
+      }
+    }
+
+    .card:nth-child(odd) {
+      background: linear-gradient(251deg, #fff 51.89%, #cdd9fd 119.14%);
+    }
+
+    .card:nth-child(even) {
+      background: linear-gradient(104deg, #fff 48.19%, #cdd9fd 124.97%);
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding-left: 50px;
+    }
+
+    .card:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+@include mobile {
+  .cardContainer {
+    margin: 26px 16px 0 16px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    height: 100%;
-    position: relative;
-    color: white;
-    padding-top: 90px;
-    @include mobile {
-      background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+
+    .fireImage {
+      z-index: -1;
+      position: absolute;
+      opacity: 0.8;
+      background-repeat: no-repeat;
+      // transform: rotate(-15deg);
+      background-size: 127.007% 110.833%;
+
+      top: 160px;
+      left: 33px;
+      width: 53px;
+      height: 63px;
+      background-position: -25.635px -8.333px;
     }
 
-    .card_name {
-      // position: absolute;
+    .labtopImage {
+      z-index: -1;
+      position: absolute;
+      opacity: 0.8;
+      background-repeat: no-repeat;
+      // transform: rotate(13.843deg);
+      background-size: 186.612% 135.689%;
+      background-position: -33.373px -19.73px;
 
-      font-weight: 700;
-
-      @include mobile {
-        top: 32px;
-        border-radius: 5px;
-        padding: 8px 16px;
-        font-size: rem(22px);
-        line-height: rem(22px);
-      }
-
-      @include desktop {
-        top: 64px;
-        border-radius: 16px;
-        padding: 16px 32px;
-        font-size: rem(32px);
-        line-height: rem(39px);
-      }
+      bottom: -10px;
+      right: 40px;
+      width: 98px;
+      height: 75px;
     }
 
-    .card_description {
-      font-weight: 500;
+    .card {
+      background: linear-gradient(180deg, #fff 22.79%, #cdd9fd 141.98%);
+      height: 309px;
+      margin: 0 16px 0 16px;
 
-      @include mobile {
-        padding: 8px 16px;
-        font-size: rem(14px);
-        line-height: rem(19px);
-      }
-
-      @include desktop {
-        font-size: rem(32px);
-        line-height: rem(39px);
-      }
-    }
-  }
-}
-
-.main {
-  .nav {
-    width: 100vw;
-    @include desktop {
-      display: none;
-    }
-    @include mobile {
-      display: block; /* 모바일에서만 보이게 설정 */
-    }
-    .main_buttons {
       display: flex;
-      justify-content: center;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      padding: 15px;
 
-      @include hide-scrollbar;
+      column-gap: 30px;
+      border-radius: 20px;
+      border-bottom: 1px dashed color(blue-200);
 
-      > li:not(:first-of-type) {
-        border-left: 2px solid color(gray-200);
+      .image {
+        width: 100%;
+        height: 170px;
+        border-radius: 5px;
+      }
+
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 5px;
+
+        .chapter {
+          font-family: 'Sun Motter';
+          color: color(blue-300);
+          @include typo('E_Headline4');
+          font-size: 10px;
+        }
+
+        .title {
+          @include typo('KR/Headline6');
+          color: color(blue-500);
+        }
+
+        .description {
+          @include typo('KR/Caption1_L');
+          color: color(gray-400);
+          letter-spacing: -0.26px;
+          word-break: normal;
+        }
       }
     }
+
+    .card:last-child {
+      border-bottom: 0;
+    }
   }
-}
-
-.cardContainer {
-  @include mobile {
-    display: none;
-  }
-
-  @include desktop {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2개의 열 */
-    grid-template-rows: repeat(2, 1fr); /* 2개의 행 */
-    gap: 20px; /* 이미지 간 간격 */
-    position: relative;
-    margin-top: 30px;
-  }
-}
-
-.card {
-  position: relative;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-top: 20px;
-
-  @include mobile {
-    width: 100%;
-    height: 247px;
-    // padding: 0px 16px;
-  }
-
-  @include desktop {
-    width: 486px;
-    height: 216px;
-    display: none;
-  }
-}
-
-.card1 {
-  position: relative;
-  border-radius: 5px;
-  overflow: hidden;
-
-  @include mobile {
-    width: 100%;
-    height: 247px;
-    padding: 0px 16px;
-  }
-
-  @include desktop {
-    width: 486px;
-    height: 216px;
-    // display: block;
-  }
-  &:hover .overlay {
-    opacity: 1; // 마우스를 올렸을 때 어두운 배경이 나타남
-  }
-
-  &:hover .description {
-    transform: translateY(0); // 마우스를 올렸을 때 설명이 올라옴
-  }
-}
-
-.image {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.3s ease;
-  border-radius: 5px;
-  object-fit: cover; /* 이미지가 컨테이너에 맞게 비율 유지하며 채워짐 */
-}
-
-.overlay {
-  position: absolute;
-  text-align: start;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.h2 {
-  color: white;
-  font-size: 24px;
-  font-weight: 600;
-  text-align: start;
-  padding: 64px 0px 0px 20px;
-}
-
-.description {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  color: white;
-  text-align: start;
-  padding: 20px;
-  font-size: 16px;
-  transform: translateY(100%); /* 밑에서 올라오도록 설정 */
-  transition: transform 0.3s ease; /* 부드러운 애니메이션 */
-}
-
-.card:hover .overlay {
-  opacity: 1; /* 마우스를 올렸을 때 어두운 배경이 나타남 */
-}
-
-.card:hover .description {
-  transform: translateY(0); /* 마우스를 올렸을 때 설명이 올라옴 */
 }

@@ -40,9 +40,37 @@ $colors: (
   'gray-400': #606060,
 
   'black-100': #202632,
-  
+
   'primary-strong': #0633c5,
   'primary-heavy': #042694,
+  // 18기 색상
+  // Gray Scale
+  '18th-gray-50': #deeaf5,
+  '18th-gray-100': #cbd7e2,
+  '18th-gray-200': #b8c3ce,
+  '18th-gray-300': #a5b0bb,
+  '18th-gray-400': #7f8a94,
+  '18th-gray-500': #6b737c,
+  '18th-gray-600': #475059,
+  '18th-gray-700': #343d46,
+  '18th-gray-800': #212932,
+  '18th-gray-900': #0e161f,
+  '18th-gray-black': #040508,
+  // Primary_Light
+  'primary-light-01': #e6f1ff,
+  'primary-light-02': #cce2ff,
+  'primary-light-03': #348cff,
+  // Main 04
+  'primary-light-04': #006fff,
+  'primary-light-05': #004db2,
+
+  // Primary_Dark
+  'primary-dark-01': #ebf6ff,
+  'primary-dark-02': #c1e3fe,
+  // Main 03
+  'primary-dark-03': #35a3ff,
+  'primary-dark-04': #0d7cd9,
+  'primary-dark-05': #085699,
 );
 
 @function color($name) {

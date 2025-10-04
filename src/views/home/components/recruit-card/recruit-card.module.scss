@@ -1,141 +1,162 @@
 @use '@/styles/abstracts' as *;
 @use '@/styles/utils' as *;
 
-
 .container {
-    position: relative;
-    z-index: 1;
-    
-    @include mobile {
-      max-width: 100vw;
-      width: 100%;
-    }
-  
-    @include desktop {
-      margin-left: auto;
-    }
+  position: relative;
+  z-index: 1;
+
+  @include mobile {
+    max-width: 100vw;
+    width: 100%;
+  }
+
+  @include desktop {
+    margin-left: auto;
+  }
 }
+
+.mobile {
+  @include mobile {
+    display: block;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
 .card {
-    position: relative;
-    transform: rotate(-4deg);
-  
+  position: relative;
+  transform: rotate(-4deg);
+
+  @include mobile {
+    left: 4px;
+    width: 100%;
+    max-width: 327px;
+    height: 230px;
+    margin-top: 60px;
+
+    margin-inline: auto;
+  }
+
+  @include desktop {
+    width: rem(480px);
+    height: rem(350px);
+  }
+
+  .card_img {
+    position: absolute;
+    z-index: 0;
+
     @include mobile {
-      left: 4px;
       width: 100%;
-      max-width: 327px;
-      height: 230px;
-      margin-top: 60px;
-      
-      margin-inline: auto;
+      max-width: 330px;
+      height: auto;
     }
-  
+
     @include desktop {
       width: rem(480px);
-      height: rem(350px);
-    }
-  
-    .card_img {
-      position: absolute;
-      z-index: 0;
-  
-      @include mobile {
-        width: 100%;
-        max-width: 330px;
-        height: 235px;
-      }
-  
-      @include desktop {
-        width: rem(480px);
-        height: rem(350px);
-      }
-    }
-  
-    .card_text {
-      position: absolute;
-      z-index: 2;
-  
-      @include mobile {
-        bottom: 10px;
-        left: 17px;
-      }
-  
-      @include desktop {
-        bottom: 30px;
-        left: 30px;
-      }
-  
-      .card_h {
-        text-align: left;
-        font-family: 'Trap', 'Pretendard';
-  
-        @include mobile {
-          margin-bottom: 14px;
-          @include font(20px, 30px);
-        }
-  
-        @include desktop {
-          margin-bottom: 20px;
-          @include font(32px, 48px);
-        }
-      }
-  
-      .card_p {
-        text-align: left;
-        font-weight: 300;
-        color: color(gray-400);
-  
-        @include mobile {
-          @include font(14px, 18px);
-        }
-  
-        @include desktop {
-          @include font(20px, 30px);
-        }
-      }
+      height: auto;
     }
   }
-  
-  .button {
-    position: relative;
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-  
+
+  .card_text {
+    position: absolute;
+    z-index: 2;
+
     @include mobile {
-      margin-top: 25px;
-      justify-content: center; 
-      width: 88%;
-      max-width: 380px;
-      margin-inline: auto;
-      padding: 18px;
-      border-radius: 12px;
-      font-size: rem(16px);
-      line-height: rem(16px);
+      bottom: 10px;
+      left: 17px;
     }
-  
+
     @include desktop {
-      margin-top: 40px;
-      justify-content: space-between;
-      margin-left: 10px;
-      width: 458px;
-      height: 90px;
-      padding: 20px 50px;
-      border-radius: 20px;
-      font-size: rem(29px);
+      bottom: 30px;
+      left: 30px;
     }
-  
-    .button_icon {
-      @include mobile {
-        position: absolute;
-        right: 30px;
-        width: 25px;
-        height: 14px;
+
+    .card_h {
+      text-align: left;
+      font-family: 'Pretendard';
+
+      & > span {
+        font-family: 'Video';
+        color: color(primary-light-04);
       }
-  
+
+      @include mobile {
+        margin-bottom: 14px;
+        @include typo('E_Display4');
+      }
+
       @include desktop {
-        width: 37px;
-        height: 21px;
+        margin-bottom: 20px;
+        font-family: 'Pretendard';
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 42px; /* 140% */
+        letter-spacing: -0.6px;
+      }
+    }
+
+    .card_p {
+      text-align: left;
+      font-weight: 300;
+      color: color(gray-400);
+
+      @include mobile {
+        @include font(14px, 18px);
+      }
+
+      @include desktop {
+        @include font(20px, 30px);
       }
     }
   }
-  
+}
+
+.button {
+  position: relative;
+  display: flex;
+
+  align-items: center;
+  font-weight: 600;
+  background-color: color('18th-gray-800');
+  justify-content: space-between;
+
+  @include mobile {
+    margin-top: 40px;
+    justify-content: center;
+    gap: 16px;
+    width: 88%;
+    max-width: 380px;
+    margin-inline: auto;
+    padding: 11px 50px;
+    border-radius: 12px;
+    font-size: rem(16px);
+    line-height: rem(24px);
+  }
+
+  @include desktop {
+    margin-top: 48px;
+    justify-content: space-between;
+    margin-left: 10px;
+    width: 450px;
+    height: 88px;
+    padding: 20px 50px;
+    border-radius: 20px;
+    font-size: rem(30px);
+  }
+
+  .button_icon {
+    @include mobile {
+      width: 24px;
+      height: 24px;
+    }
+
+    @include desktop {
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

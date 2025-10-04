@@ -9,3 +9,117 @@
     height: 200px;
   }
 }
+
+.videoContainer {
+  position: relative;
+  width: 100vw;
+}
+
+.backgroundImg {
+  width: 100vw;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% auto;
+
+  @include desktop {
+    background-image: url('/img/web_arrow_blank_bg_o.gif');
+    aspect-ratio: 1440 / 1050;
+  }
+
+  @include mobile {
+    background-image: url('/img/mobile_arrow_blank_bg_O.gif');
+    aspect-ratio: 360.5/720.5;
+  }
+}
+
+.backgroundVideo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.applyButton {
+  position: absolute;
+
+  color: #fff;
+  text-align: center;
+  font-family: 'Pretendard';
+
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -1px;
+
+  border-radius: 999px;
+
+  @include desktop {
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 30px;
+
+    padding: 36px 108px;
+
+    border: 2px solid rgba(134, 191, 255, 0.45);
+    box-shadow: -1.129px -1.129px 7.85px 0.565px #34a3ff inset;
+  }
+  @include mobile {
+    bottom: 14px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 16px;
+
+    padding: 20px 56px;
+
+    border: 1.2px solid rgba(134, 191, 255, 0.45);
+
+    box-shadow: -0.718px -0.718px 4.988px 0.359px #34a3ff inset;
+  }
+
+  background:
+    radial-gradient(96.24% 258.95% at 47.96% 296.15%, #1672e7 33.65%, #080d12 100%) padding-box,
+    conic-gradient(from var(--angle), transparent 70%, #34a3ff 80%, #87bfff 90%, #34a3ff 100%, transparent 10%)
+      border-box;
+
+  transition:
+    background 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  animation: neonRotate 3s linear infinite;
+
+  &:hover {
+    background: color(primary-dark-04);
+    @include desktop {
+      box-shadow:
+        -1.129px -1.129px 7.85px 0.565px #34a3ff inset,
+        0 0 12px rgba(52, 163, 255, 1),
+        0 0 20px rgba(52, 163, 255, 0.7),
+        0 0 35px rgba(52, 163, 255, 0.4);
+    }
+    @include mobile {
+      box-shadow:
+        -0.718px -0.718px 4.988px 0.359px #34a3ff inset,
+        0 0 6px rgba(52, 163, 255, 0.8),
+        0 0 10px rgba(52, 163, 255, 0.5),
+        0 0 18px rgba(52, 163, 255, 0.3);
+    }
+  }
+}
+
+@keyframes neonRotate {
+  to {
+    --angle: 360deg;
+  }
+}

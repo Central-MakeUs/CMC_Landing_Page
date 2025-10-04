@@ -1,16 +1,13 @@
 import type { HeadProps } from 'gatsby'
-import { useRef } from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import { AuraEffect, Br, ScrollRevealContainer, Section, Seo } from '@/components'
 import { Main } from '@/layouts'
 
 import * as css from './apply.module.scss'
 import { CountdownTimer } from './components/countdown-timer'
-import { StaticImage } from 'gatsby-plugin-image'
 
 const ApplyPage = () => {
-  const nextSectionRef = useRef<HTMLDivElement>(null)
-
   return (
     <Main>
       <ScrollRevealContainer>
@@ -18,11 +15,9 @@ const ApplyPage = () => {
           <AuraEffect />
 
           <div className={css.head}>
-            <StaticImage src="../../images/star.png" alt="" className={css.star} placeholder="blurred" />
+            <StaticImage src="../../images/symbol17.png" alt="" className={css.star} placeholder="blurred" />
             <h1 className={css.title}>
-              Central <Br mobile />
-              Makeus <Br mobile />
-              Challenge
+              C<div>ENTRAL</div> <Br mobile />M<div>AKEUS</div> <Br mobile />C<div>HALLENGE</div>
             </h1>
           </div>
 

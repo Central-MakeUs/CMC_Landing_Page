@@ -8,7 +8,7 @@
   align-items: center;
 
   @include mobile {
-    padding: 40px 20px;
+    padding: 40px 0;
   }
 
   @include desktop {
@@ -17,15 +17,14 @@
 }
 
 .star {
+  width: 112px;
+  height: 64px;
+
   @include mobile {
-    width: 22px;
-    height: 22px;
     margin-bottom: 16px;
   }
 
   @include desktop {
-    width: 44px;
-    height: 44px;
     margin-bottom: 28px;
   }
 }
@@ -34,18 +33,52 @@
   z-index: 1;
   color: color(black-100);
   text-align: center;
-  font-family: 'Trap', 'Pretendard';
+  font-family: 'Pretendard';
 
   @include mobile {
-    font-size: rem(24px);
-    line-height: rem(30px);
-    margin-bottom: 12px;
+    @include typo('KR/Headline5');
   }
 
   @include desktop {
-    font-size: rem(35px);
-    line-height: rem(45px);
-    margin-bottom: 16px;
+    @include typo('KR/Headline2');
+  }
+
+  span {
+    color: color(primary-light-04);
+  }
+}
+
+.whiteHead {
+  z-index: 1;
+  color: white;
+  text-align: center;
+  font-family: 'Pretendard';
+
+  @include mobile {
+    @include typo('KR/Headline5');
+  }
+
+  @include desktop {
+    @include typo('KR/Headline2');
+  }
+
+  span {
+    color: color(blue-500);
+  }
+}
+
+.sunMotterHead {
+  z-index: 1;
+  color: color(black-100);
+  text-align: center;
+  font-family: 'Sun Motter';
+
+  @include mobile {
+    @include typo('KR/Headline5');
+  }
+
+  @include desktop {
+    @include typo('KR/Headline2');
   }
 
   span {
@@ -55,17 +88,14 @@
 
 .desc {
   z-index: 1;
-  font-weight: 500;
   text-align: center;
   color: color(black-100);
 
   @include mobile {
-    font-size: rem(14px);
-    line-height: rem(19px);
+    @include typo('KR/Body5');
   }
 
   @include desktop {
-    font-size: rem(22px);
-    line-height: rem(32px);
+    @include typo('KR/Body2');
   }
 }

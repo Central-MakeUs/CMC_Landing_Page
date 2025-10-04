@@ -1,6 +1,6 @@
 import * as css from './footer.module.scss'
 import Instagram from './images/instagram.svg'
-import KakaoTalk from './images/kakaotalk.svg'
+// import KakaoTalk from './images/kakaotalk.svg'
 
 export const Footer = () => {
   return (
@@ -11,9 +11,9 @@ export const Footer = () => {
           <span className={css.copyright}>Copyrightⓒ 2023 All rights reserved by MakeUs Challenge</span>
         </div>
         <div className={css.contact}>
-          <a href="http://pf.kakao.com/_xcwDJT" target="_blank" rel="noreferrer">
+          {/* <a href="http://pf.kakao.com/_xcwDJT" target="_blank" rel="noreferrer">
             <KakaoTalk className={css.icon} />
-          </a>
+          </a> */}
           <a href="https://www.instagram.com/cmc__official/" target="_blank" rel="noreferrer">
             <Instagram className={css.icon} />
           </a>

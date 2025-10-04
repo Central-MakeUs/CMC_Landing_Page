@@ -1,10 +1,33 @@
 @use '@/styles/abstracts' as *;
 @use '@/styles/utils' as *;
 
+.question {
+  color: color(blue-500);
+
+  @include mobile {
+    @include typo('KR/Headline5');
+  }
+
+  @include desktop {
+    @include typo('KR/Headline2');
+  }
+}
+
+.answer {
+  color: color(black-100);
+
+  @include mobile {
+    @include typo('KR/Caption1_L');
+  }
+
+  @include desktop {
+    @include typo('KR/Caption1');
+  }
+}
+
 .button {
-  background-color: color(gray-100);
-  color: color(gray-300);
-  border-radius: 330px;
+  background-color: '#FFFFFF';
+  border-radius: 10px;
   flex: 1;
   font-weight: 500;
   text-align: center;
@@ -16,24 +39,36 @@
   @include mobile {
     width: 328px;
     padding: 12px 10px;
-    font-size: rem(17px);
-    line-height: rem(22px);
+    @include typo('KR/Headline6');
+    border: 1px solid color(blue-500);
+    color: color(blue-500);
   }
 
   @include desktop {
     max-width: 308px;
     padding: 10px 20px;
-    font-size: rem(16px);
-    line-height: rem(30px);
+    @include typo('KR/Body5');
+
+    color: color(gray-300);
   }
 }
 
 .button_active {
-  background-color: color(blue-500);
-  color: white;
-
   @include mobile {
-    border-radius: 12px;
+    background-color: color(black-100);
+    border: 1px solid color(black-100);
+    color: white;
+
+    border-radius: 10px;
+  }
+
+  @include desktop {
+    background-color: color(blue-500);
+    border: 1px solid color(blue-500);
+    color: white;
+    @include typo('KR/Headline6');
+
+    border-radius: 330px;
   }
 }
 
@@ -154,21 +189,21 @@
       gap: 16px;
     }
 
-    h4 {
-      font-weight: 600;
-      color: color(blue-500);
-      font-family: 'Trap', 'Pretendard';
+    // h4 {
+    //   font-weight: 600;
+    //   color: color(blue-500);
+    //   font-family: 'Trap', 'Pretendard';
 
-      @include mobile {
-        font-size: rem(20px);
-        line-height: rem(25px);
-      }
+    //   @include mobile {
+    //     font-size: rem(20px);
+    //     line-height: rem(25px);
+    //   }
 
-      @include desktop {
-        font-size: rem(32px);
-        line-height: rem(39px);
-      }
-    }
+    //   @include desktop {
+    //     font-size: rem(32px);
+    //     line-height: rem(39px);
+    //   }
+    // }
 
     .detail_description {
       font-weight: 500;
@@ -192,9 +227,10 @@
     font-weight: 500;
 
     @include mobile {
-      font-size: rem(13px);
-      line-height: rem(17px);
-      margin-top: 14px;
+      @include typo('KR/Caption1');
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
 
     @include desktop {
@@ -206,12 +242,10 @@
 
   .caption {
     color: color(gray-300);
-    font-weight: 500;
+    font-weight: 300;
 
     @include mobile {
-      font-size: rem(11px);
-      line-height: rem(15px);
-      margin-top: 8px;
+      @include typo('KR/Caption2');
     }
 
     @include desktop {

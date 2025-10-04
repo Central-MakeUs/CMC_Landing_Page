@@ -12,188 +12,14 @@
 }
 
 .intro {
-  position: relative;
-  display: flex;
-  justify-content: center;
+  // position: relative;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   z-index: 1;
-  background-color: #111111;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
-  align-items: center;
-
-  .title {
-    position: absolute;
-    color: white;
-    text-align: right;
-    z-index: 2;
-
-    > h1 {
-      font-weight: 300;
-    }
-
-    @include mobile {
-      @include font(42px, 55px);
-      top: 20px;
-    }
-
-    @include desktop {
-      @include font(70px, 100px);
-      left: 5%;
-      top: 10%;
-    }
-
-    .char_m {
-      position: relative;
-
-      @include mobile {
-        width: 100px;
-        height: 50px;
-        right: -15px;
-        top: 7px;
-      }
-
-      @include desktop {
-        right: -25px;
-        top: 14px;
-      }
-    }
-  }
-
-  .background_gradient {
-    position: absolute;
-    z-index: 1;
-    background: linear-gradient(
-      35deg,
-      rgba(17, 17, 17, 0) 55.93%,
-      rgba(12, 54, 140, 0.2) 73.58%,
-      rgba(31, 80, 95, 0.2) 89.4%
-    );
-
-    @include mobile {
-      right: -100px;
-      height: 100vh;
-      width: 200%;
-      max-width: 620px;
-    }
-
-    @include desktop {
-      right: 0;
-      height: 100vh;
-      width: 55vw;
-      max-width: 760px;
-    }
-  }
-
-  .light {
-    & > div {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      z-index: 2;
-      aspect-ratio: 1 / 1;
-      transform: translate(-50%, -50%);
-    }
-
-    .main_video {
-      @include mobile {
-        position: relative;
-        top: 12%;
-      }
-
-      @include desktop {
-      }
-    }
-
-    .light_eight_left {
-      z-index: 1;
-      @include applyTwinkling();
-
-      @include mobile {
-        width: 40%;
-        transform: translate(-120%, -100%);
-      }
-
-      @include desktop {
-        width: 22%;
-        transform: translate(-125%, 10%);
-      }
-    }
-
-    .light_eight_right {
-      z-index: 1;
-      @include applyTwinkling(3s);
-
-      @include mobile {
-        width: 50%;
-        transform: translate(-2%, -9%);
-      }
-
-      @include desktop {
-        width: 20%;
-        transform: translate(30%, -130%);
-      }
-    }
-
-    .light_four_left {
-      z-index: 1;
-      @include applyTwinkling();
-
-      @include mobile {
-        width: 27px;
-        transform: translate(-667%, 840%);
-      }
-
-      @include desktop {
-        width: 4%;
-        transform: translate(-940%, -560%);
-      }
-    }
-
-    .light_four_right {
-      z-index: 1;
-      @include applyTwinkling(5s);
-
-      @include mobile {
-        width: 20px;
-        transform: translate(150%, 700%);
-      }
-
-      @include desktop {
-        width: 4%;
-        transform: translate(900%, 100%);
-      }
-    }
-
-    .light_two_left {
-      z-index: 1;
-      @include applyTwinkling(2s);
-
-      @include mobile {
-        width: 20px;
-        transform: translate(-620%, -1940%) scaleX(-1);
-      }
-
-      @include desktop {
-        width: 2%;
-        transform: translate(-2110%, 360%) scaleX(-1);
-      }
-    }
-
-    .light_two_right {
-      z-index: 1;
-      @include applyTwinkling(4s);
-
-      @include mobile {
-        width: 20px;
-        transform: translate(790%, 970%) scaleX(-1);
-      }
-
-      @include desktop {
-        width: 2%;
-        transform: translate(2010%, -1020%);
-      }
-    }
-  }
 }
 
 .index {
@@ -229,5 +55,49 @@
       width: 10px;
       height: 40px;
     }
+  }
+}
+
+// 데스크탑 배경
+.backgroundImg {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100%;
+  object-fit: none; // 배경 이미지의 사이즈 그대로 사용
+  z-index: -1; // 배경 이미지가 카드 뒤에 위치하도록 설정
+
+  // 데스크탑
+  @include desktop {
+    display: block;
+  }
+
+  // 모바일
+  @include mobile {
+    // display: none; // 데스크탑에서는 모바일 이미지를 숨김
+    height: 0;
+  }
+}
+
+// 모바일 배경
+.backgroundImgMobile {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // width: 100vw;
+  // height: 100vh;
+  object-fit: none; // 배경 이미지의 사이즈 그대로 사용
+  z-index: -1; // 배경 이미지가 카드 뒤에 위치하도록 설정
+
+  // 데스크탑
+  @include desktop {
+    // display: none; // 데스크탑에서는 모바일 이미지를 숨김
+    height: 0;
+  }
+
+  // 모바일
+  @include mobile {
+    display: block;
   }
 }

@@ -15,10 +15,9 @@
   width: 80%;
   display: flex;
 
-
   @include mobile {
-    margin-top: 40px;
-    padding: 40px 20px;
+    margin-top: 20px;
+    padding: 0px 16px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +36,6 @@
   }
 
   .cover {
-    
     @include mobile {
       width: 90vw;
       max-width: 400px;
@@ -45,17 +43,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 13px;
+      margin-bottom: 10px;
       background-color: white;
-      border-radius: 5px;
-      box-shadow: 0px 4px 4px 0px #edf1ff;
+      border-radius: 20px;
+      box-shadow: 0px 4px 4px 0px #edf5ff;
     }
   }
 
   .supports_company {
-
     @include mobile {
-      max-width : 200px;
+      max-width: 200px;
       height: fit-content;
     }
 
@@ -76,4 +73,16 @@
   @include desktop {
     display: none;
   }
+}
+
+.header {
+  color: color(primary-light-04);
+  font-family: 'Video';
+  @include mobile {
+    @include typo('E_Headline3');
+  }
+  @include desktop {
+    @include typo('E_Headline2');
+  }
+  margin-bottom: 6px;
 }

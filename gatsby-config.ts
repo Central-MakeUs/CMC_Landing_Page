@@ -65,6 +65,13 @@ const config: GatsbyConfig = {
         path: './src/data/logo',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'activity-images',
+        path: './src/views/about/components/activity-section/images/',
+      },
+    },
     'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',

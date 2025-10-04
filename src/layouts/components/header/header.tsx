@@ -2,8 +2,6 @@ import clsx from 'clsx'
 import { Link, withPrefix } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
-import { ApplyButton } from '@/components'
-
 import { Modal } from './components'
 import { Links } from './constant'
 import * as css from './header.module.scss'
@@ -36,12 +34,12 @@ export const Header = ({ pathname }: Props) => {
           ))}
         </nav>
         <nav className={css.nav}>
-          <Link className={css.apply_button} to='/apply'>
+          <Link className={css.apply_button} to="/apply">
             지원하기
           </Link>
         </nav>
         <button type="button" onClick={toggleModal} className={css.menu_button}>
-          <Hamburger stroke={isOpen?'#0740F6':'#202632'}/>
+          <Hamburger stroke={isOpen ? '#0740F6' : '#202632'} />
         </button>
         <Modal isOpen={isOpen} pathname={pathname} closeModal={closeModal} />
       </div>
