@@ -68,12 +68,12 @@ const FaqPage = () => {
               <StaticImage
                 src="./images/sns-insta.png"
                 alt="CMC 인스타 스토리 확인하러 가는 버튼"
-                className={css.sns_icon}
+                className={css.icon}
               />
               <StaticImage
                 src="./images/sns-insta-blue.png"
                 alt="CMC 인스타 스토리 확인하러 가는 버튼"
-                className={css.sns_icon_mobile}
+                className={css.icon}
               />
               CMC 인스타 스토리 확인
             </a>
