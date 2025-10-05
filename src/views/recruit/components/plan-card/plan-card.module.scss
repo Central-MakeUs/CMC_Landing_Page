@@ -81,7 +81,7 @@
 
   .card_title {
     font-weight: 700;
-    color: #0740F6;
+    color: color(primary-light-04);
     text-align: center;
     position: relative;
 
@@ -97,16 +97,11 @@
   .card_button {
     align-self: center;
     font-weight: 600;
-    background-color: #0740F6;
+    background-color: color(primary-light-04);
     color: white;
     position: relative;
+    padding: 16px 32px;
     
-    @include mobile {
-      padding: 16px 32px;
-    }
-
-    @include desktop {
-      padding: 16px 32px;
-    }
+  
   }
 }
