@@ -4,7 +4,8 @@
 .modal {
   width: 100%;
   padding: 30px 0 24px;
-  backdrop-filter: blur(50px);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(25px);
 
   @include mobile {
     display: flex;
@@ -24,11 +25,11 @@
   }
 
   .active {
-    color: color(blue-500);
+    color: color(primary-light-04);
   }
 
   .apply_button {
-    background-color: color(blue-500);
+    background-color: color(primary-light-04);
     color: white;
     padding: rem(3px) (24px);
     border-radius: 5px;

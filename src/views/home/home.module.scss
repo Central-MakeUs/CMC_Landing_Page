@@ -57,6 +57,8 @@
   line-height: 100%;
   letter-spacing: -1px;
 
+  white-space: nowrap;
+
   border-radius: 999px;
 
   @include desktop {
