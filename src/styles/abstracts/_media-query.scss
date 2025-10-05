@@ -2,6 +2,8 @@
 
 $break: rem(1000px);
 
+$break-large: rem(1600px);
+
 @mixin mobile {
   @media (max-width: #{$break}) {
     @content;
@@ -10,6 +12,18 @@ $break: rem(1000px);
 
 @mixin desktop {
   @media (min-width: #{$break}) {
+    @content;
+  }
+}
+
+@mixin none-desktop-large{
+    @media (max-width: #{$break-large}) {
+    @content;
+  }
+}
+
+@mixin desktop-large {
+  @media (min-width: #{$break-large}) {
     @content;
   }
 }

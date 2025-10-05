@@ -12,13 +12,8 @@
     z-index: -10;
     width: 100%;
     height: 100%;
-    @include mobile{
-      background-image: url('/images/recruit_background_mobile.png');
-    }
-
-    @include desktop{
-      background-image: url('/images/recruit_background.png');
-    }
+    background-image: url('/images/recruit_background.png');
+  
   }
 
   .contents{
@@ -34,13 +29,13 @@
     }
 
     @include desktop{
-      padding: 0 100px;
-      margin-bottom: 200px;
+      padding: 0 230px;
+      margin-bottom: 215px;
     }
 
     .img{
-      width: 170px;
-      height: 50px;
+      width: 112px;
+      height: auto;
   
       @include mobile{
         margin-top: 30px;
@@ -48,15 +43,13 @@
       }
       @include desktop{
         margin-top: 130px;
-        margin-bottom: 28px;
+        margin-bottom: 22px;
       }
     }
-
-    //JOIN US!
+    
     .title{
       color: #FFF;
-      font-family: 'Sun Motter';
-      font-weight: 400;
+      font-family: 'Video';
 
       @include mobile {
         @include typo('E_Headline3')
@@ -67,7 +60,6 @@
       }
     }
 
-    //17기 일정을 소개합니다
     .subTitle{
       color: #FFF;
       font-weight: 400;
@@ -78,8 +70,8 @@
       }
 
       @include desktop{
-        @include typo('KR/Body2');
-        margin-bottom: 60px;
+        @include typo('KR/Subtitle1');
+        margin-bottom: 80px;
       }
     }
 
@@ -88,49 +80,47 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-image: url('/images/recruit_bg.png');
-      
-      @include mobile{
-        background-size: cover;
-        width: 100%;
-        
-      }
-      @include desktop{
-        background-size: contain;
-        width: 80%;
-        
-      }
-    }
+      background-image: url('/images/recruit_board.png');
 
-    .explanation {
-      text-align: start;
-      color: #606060;
-      @include mobile{
-        @include typo('E_Headline4');
+      background-repeat: no-repeat; 
+      background-size: 100% 100%;   
+    
+      aspect-ratio: 167 / 309;
+
+      
+      @include none-desktop-large{
+        width: 100%;
       }
+
+      @include desktop-large{
+        width: 80%;
+      }
+
     }
 
     .stamp{
       position: relative;
       z-index:10;
       width:40%;
-      transform: translate(0, -10%);
-      opacity: 0.8;
-      mix-blend-mode: color-burn;
+  
     }
 
     .link{
-      font-family: 'Sun Motter';
-      color: var(--Blue-500, #0740F6);
-      font-weight: 400;
+      font-family: 'Video';
+      color: color(primary-light-03);
+
       @include mobile{
-        @include typo('E_Headline4');
+        @include typo('E_Headline5');
+        
+        margin-top: 8px;
         margin-bottom: 20px;
       }
 
       @include desktop{
-        @include typo('E_Headline2');
-        margin-bottom: 60px;
+        @include typo('E_Display3');
+     
+        margin-top: 20px;
+        margin-bottom: 64px;
       }
     }
 }
