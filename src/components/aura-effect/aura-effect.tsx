@@ -6,11 +6,11 @@ export const AuraEffect = () => {
   return (
     <>
       <div className={css.desktop}>
-        <AuraCircle size="60%" top="90px" left="20%" opacity={0.2} />
+        <AuraCircle size="60%" top="90px" left="20%" opacity={0.5} />
       </div>
 
       <div className={css.mobile}>
-        <AuraCircle size="180%" top="0" left="-40%" opacity={0.2} />
+        <AuraCircle size="180%" top="0" left="-40%" opacity={0.5} />
       </div>
     </>
   )
