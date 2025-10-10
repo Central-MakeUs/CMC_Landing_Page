@@ -18,7 +18,7 @@
   }
 
   .timer_title {
-    color: #6A8CFA;
+    color: color('18th-gray-800');
 
     @include mobile {
       @include typo(KR/Headline5);
@@ -31,7 +31,7 @@
 
   .timer_time {
     font-weight: 700;
-    color: #0740F6;
+    color: color('primary-light-04');
 
     @include mobile {
       @include font(40px, 50px);
@@ -47,7 +47,6 @@
   }
 
   .apply_btn {
-    
     @include mobile {
       @include typo(KR/Headline6);
       font-weight: 600;

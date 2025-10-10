@@ -15,7 +15,7 @@ const ApplyPage = () => {
           <AuraEffect />
 
           <div className={css.head}>
-            <StaticImage src="../../images/symbol17.png" alt="" className={css.star} placeholder="blurred" />
+            <StaticImage src="../../images/symbol18.png" alt="" className={css.star} placeholder="blurred" />
             <h1 className={css.title}>
               C<div>ENTRAL</div> <Br mobile />M<div>AKEUS</div> <Br mobile />C<div>HALLENGE</div>
             </h1>
