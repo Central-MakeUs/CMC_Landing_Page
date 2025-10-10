@@ -27,7 +27,7 @@ export const SessionPlans: Record<string, { name: string; date: string }> = {
     date: '25.11.22 ~ 25.11.23',
   },
   Network: {
-    name: '네트워크 데이',
+    name: '네트워킹 데이',
     date: '25.11.29',
   },
   TeamBuilding: {
