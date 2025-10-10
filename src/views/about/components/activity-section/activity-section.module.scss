@@ -6,30 +6,94 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  .background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
+// 배경 이미지
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image: url('/images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.numberBackground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  &.numberBackgroundReverse {
     @include desktop {
-      background-image: url('/images/background.png');
-    }
-
-    @include mobile {
-      background-image: url('/images/background_mobile.png');
+      transform: scaleX(-1);
     }
   }
 }
 
+// 중앙 그래픽
+.centerGraphic {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  height: 100%;
+  width: 100%;
+
+  @include desktop {
+    .centerGraphicDesktop {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .centerGraphicMobile {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    .centerGraphicDesktop {
+      display: none;
+    }
+    .centerGraphicMobile {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.cardWrapper {
+  position: relative;
+  // line 길이 좌우 1px씩 더 길게
+  margin: 10px;
+  z-index: 1;
+  @include mobile {
+    margin: 4px;
+  }
+}
+
 .head {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 28px;
+  z-index: 1;
 
   @include desktop {
-    margin-top: 80px;
+    margin-top: 120px;
   }
 
   @include mobile {
@@ -40,194 +104,272 @@
 @include desktop {
   .cardContainer {
     position: relative;
-    margin-top: 26px;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
+    margin-top: 76px;
+    display: flex;
+    flex-direction: column;
+  }
 
-    .fireImage {
-      z-index: -1;
-      position: absolute;
-      opacity: 0.8;
-      background-repeat: no-repeat;
-      // transform: rotate(-15deg);
-      background-size: 127.007% 110.833%;
+  .card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 4px;
 
-      bottom: 47px;
-      left: -90px;
-      width: 142px;
-      height: 168px;
-      background-position: -25.635px -8.333px;
+    &:last-child {
+      margin-bottom: 0;
     }
 
-    .labtopImage {
-      z-index: -1;
-      position: absolute;
-      opacity: 0.8;
-      background-repeat: no-repeat;
-      // transform: rotate(13.843deg);
-      background-size: 186.612% 135.689%;
-      background-position: -33.373px -19.73px;
-
-      top: 300px;
-      right: -140px;
-      width: 195px;
-      height: 150px;
-      transform: rotate(10deg);
-    }
-
-    .card {
-      width: 100%;
+    .cardInner {
       display: flex;
       flex-direction: row;
-      column-gap: 30px;
-      border-radius: 20px;
-      border-bottom: 2px dashed color(blue-200);
+      gap: 4px;
+    }
+    .cardInnerReverse {
+      flex-direction: row-reverse;
+    }
 
-      @include desktop {
-        padding: 20px;
-        flex-direction: row;
-      }
+    .numberBox {
+      position: relative;
+      width: 100px;
+      height: 204px;
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-shrink: 0;
 
-      @include mobile {
-        padding: 15px;
-        flex-direction: column;
+      .number {
+        @include typo('E_Display1');
+        font-family: 'Video';
+        color: #35a3ff;
+        width: 100%;
+        text-align: end;
       }
+      .numberReverse {
+        text-align: start;
+      }
+    }
+
+    .imageBox {
+      position: relative;
+      width: 332px;
+      height: 204px;
+      flex-shrink: 0;
+      overflow: hidden;
 
       .image {
-        width: 400px;
-        height: 216px;
-        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.7;
+        filter: brightness(0.8);
       }
+    }
+
+    .whiteBox {
+      background: white;
+      width: 436px;
+      height: 204px;
+      padding: 20px 24px 28px;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
 
       .textContainer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
 
-        .chapter {
-          font-family: 'Sun Motter';
-          color: color(blue-300);
-          @include font(14px, 20px);
-        }
+        .titleSection {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
 
-        .title {
-          @include typo('KR/Headline3');
-          color: color(blue-500);
+          .chapter {
+            @include typo('E_Headline4');
+            font-family: 'Video';
+            color: #35a3ff;
+            letter-spacing: -0.14px;
+            margin: 0;
+          }
+
+          .title {
+            font-family: 'Pretendard', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 40px;
+            color: #006fff;
+            letter-spacing: -0.6px;
+            margin: 0;
+          }
         }
 
         .description {
-          @include typo('KR/Body4');
-          color: color(gray-400);
+          font-family: 'Pretendard', sans-serif;
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 25px;
+          color: #606060;
+          letter-spacing: -0.34px;
+          margin: 0;
         }
       }
     }
 
-    .card:nth-child(odd) {
-      background: linear-gradient(251deg, #fff 51.89%, #cdd9fd 119.14%);
-    }
+    .dottedLine {
+      display: flex;
+      width: 100%;
+      gap: 4px;
 
-    .card:nth-child(even) {
-      background: linear-gradient(104deg, #fff 48.19%, #cdd9fd 124.97%);
+      span {
+        width: 10px;
+        height: 3px;
+        background: #475059;
+        border-radius: 1px;
+      }
+    }
+    .dottedLineReverse {
       flex-direction: row-reverse;
-      justify-content: space-between;
-      padding-left: 50px;
     }
+  }
 
-    .card:last-child {
-      border-bottom: 0;
+  // 역방향 카드 (02, 04)
+  .cardReverse {
+    flex-direction: row-reverse;
+    padding-left: 104px;
+
+    .dottedLine {
+      left: auto;
+      right: 0;
     }
   }
 }
 
 @include mobile {
   .cardContainer {
-    margin: 26px 16px 0 16px;
+    position: relative;
+    margin: 40px 16px 0 16px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: calc(100% - 32px);
+    gap: 24px;
+    z-index: 1;
+  }
 
-    .fireImage {
-      z-index: -1;
-      position: absolute;
-      opacity: 0.8;
-      background-repeat: no-repeat;
-      // transform: rotate(-15deg);
-      background-size: 127.007% 110.833%;
+  .card {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 
-      top: 160px;
-      left: 33px;
-      width: 53px;
-      height: 63px;
-      background-position: -25.635px -8.333px;
+    &:last-child {
+      margin-bottom: 0;
     }
 
-    .labtopImage {
-      z-index: -1;
-      position: absolute;
-      opacity: 0.8;
-      background-repeat: no-repeat;
-      // transform: rotate(13.843deg);
-      background-size: 186.612% 135.689%;
-      background-position: -33.373px -19.73px;
-
-      bottom: -10px;
-      right: 40px;
-      width: 98px;
-      height: 75px;
-    }
-
-    .card {
-      background: linear-gradient(180deg, #fff 22.79%, #cdd9fd 141.98%);
-      height: 309px;
-      margin: 0 16px 0 16px;
-
+    .cardInner {
       display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-between;
-      padding: 15px;
+      flex-direction: row;
+      gap: 4px;
+    }
 
-      column-gap: 30px;
-      border-radius: 20px;
-      border-bottom: 1px dashed color(blue-200);
+    .numberBox {
+      position: relative;
+      width: 74px;
+      height: 148px;
+      display: flex;
+      align-items: end;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-shrink: 0;
+
+      .number {
+        @include typo('E_Display1');
+        font-family: 'Video';
+        color: #35a3ff;
+        padding: 4px;
+      }
+    }
+
+    .imageBox {
+      width: 100%;
+      height: 148px;
+      overflow: hidden;
+      border-radius: 8px;
+      order: 2;
 
       .image {
         width: 100%;
-        height: 170px;
-        border-radius: 5px;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.7;
+        filter: brightness(0.8);
       }
+    }
+
+    .whiteBox {
+      background: white;
+      padding: 16px;
+      order: 1;
 
       .textContainer {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        row-gap: 5px;
+        gap: 12px;
 
-        .chapter {
-          font-family: 'Sun Motter';
-          color: color(blue-300);
-          @include typo('E_Headline4');
-          font-size: 10px;
-        }
+        .titleSection {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
 
-        .title {
-          @include typo('KR/Headline6');
-          color: color(blue-500);
+          .chapter {
+            @include typo('E_Headline4');
+            font-family: 'Video';
+            color: #35a3ff;
+            margin: 0;
+          }
+
+          .title {
+            font-family: 'Pretendard', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            color: #006fff;
+            letter-spacing: -0.4px;
+            margin: 0;
+          }
         }
 
         .description {
-          @include typo('KR/Caption1_L');
-          color: color(gray-400);
-          letter-spacing: -0.26px;
-          word-break: normal;
+          font-family: 'Pretendard', sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #606060;
+          letter-spacing: -0.28px;
+          margin: 0;
         }
       }
     }
 
-    .card:last-child {
-      border-bottom: 0;
+    .dottedLine {
+      display: flex;
+      width: 100%;
+      gap: 4px;
+      padding: 4px;
+
+      span {
+        width: 10px;
+        height: 3px;
+        background: #475059;
+        border-radius: 1px;
+      }
     }
   }
 }

@@ -49,7 +49,7 @@ export const ProductSection = ({ apps }: Props) => {
           </div>
         </div>
 
-        <button onClick={() => navigate('/project')} className={css.moreButton}>
+        <button type="button" onClick={() => navigate('/project')} className={css.moreButton}>
           <p>더 많은 프로덕트 보러가기</p>
           <StaticImage className={css.arrow_image} src="./images/icon_arrow.png" alt="화살표" />
         </button>

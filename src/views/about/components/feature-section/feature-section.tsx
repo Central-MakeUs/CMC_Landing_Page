@@ -1,5 +1,3 @@
-import { ReactNode } from 'react'
-
 import { AuraEffect, Br, Section } from '@/components'
 
 import * as css from './feature-section.module.scss'
@@ -39,7 +37,7 @@ export const FeatureSection = () => {
 
       <div className={css.cards}>
         <Card
-          title="16기"
+          title="17기"
           figure={
             <>
               기수가 증명하는
@@ -71,10 +69,10 @@ export const FeatureSection = () => {
         />
 
         <Card
-          title="98%"
+          title="100%"
           figure={
             <>
-              최근 3년간
+              최근 17기
               <Br desktop /> 런칭률
             </>
           }

@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: row;
   // position: absolute;
-  color: color(blue-500);
+  color: color('18th-gray-800');
   @include typo('KR/Headline6');
   display: flex;
   justify-content: center;
@@ -47,7 +47,7 @@
     height: 42px;
     background-color: white;
     border-radius: 10px;
-    border: 1px solid color(blue-500);
+    border: 1px solid color('18th-gray-800');
     column-gap: 16px;
   }
 
