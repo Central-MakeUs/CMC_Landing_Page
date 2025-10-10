@@ -5,8 +5,7 @@
   height: 300px;
 }
 
-
-.gradient_circle{
+.gradient_circle {
   position: absolute;
   top: 207px;
   background-color: color(blue-500);
@@ -20,20 +19,23 @@
   }
 
   @include desktop {
-    height:266px;
+    height: 266px;
     width: 266px;
   }
 }
 
 .star {
-  width: 170px;
-  height: 50px;
-  
+  width: 112px;
+  height: 64px;
+
   @include mobile {
-     margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  @include desktop {
+    margin-bottom: 28px;
   }
 }
-
 
 .head {
   display: flex;
@@ -52,10 +54,9 @@
 
 .title {
   text-align: center;
-  color: #0740F6;
-  font-weight: 500;
-  font-family: 'Sun Motter';
-  
+  color: color('primary-light-04');
+  font-family: 'Video';
+
   @include mobile {
     @include typo(E_Headline3);
     div {
@@ -63,7 +64,7 @@
       color: black;
     }
   }
-  
+
   @include desktop {
     @include typo(E_Headline1);
     div {
@@ -77,42 +78,40 @@
   text-align: center;
   font-weight: 400;
 
+  span {
+    color: color('primary-dark-03');
+  }
 
-  
   @include mobile {
     margin-top: 25px;
     @include typo(KR/Body5);
-    
+
     span {
       font-weight: 600;
       @include typo(KR/Headline6);
-      color: #0633C5;
     }
   }
 
-  
   @include desktop {
     margin-top: 11px;
     @include typo(KR/Subtitle2);
     span {
       font-weight: 600;
       @include typo(KR/Headline4);
-      color: #0633C5;
     }
   }
 }
 
-.card{
+.card {
   background-color: white;
   border-radius: 20px;
   position: relative;
   margin-top: 48px;
 
-  
   @include mobile {
     width: 90%;
   }
-  
+
   @include desktop {
     min-width: 632px;
   }
