@@ -5,7 +5,14 @@
   overflow: hidden;
   border-radius: 5px;
   transform: translateZ(0);
-  box-shadow: 0px 4px 4px 0px #edf1ff;
+
+  @include mobile {
+    filter: drop-shadow(0 4px 4px #edf5ff);
+  }
+
+  @include desktop {
+    filter: drop-shadow(0 4px 4px rgba(230, 241, 255, 0.7));
+  }
 
   figure {
     .image {
@@ -64,16 +71,17 @@
 
       .year {
         display: block;
-        color: color(blue-500);
         font-style: normal;
         font-weight: 700;
 
         @include mobile {
+          color: color(primary-light-03);
           font-size: rem(16px);
           line-height: rem(25px);
         }
 
         @include desktop {
+          color: color(primary-light-04);
           margin-top: 8px;
           font-size: rem(20px);
           line-height: rem(25px);
@@ -146,7 +154,7 @@
             height: rem(16px);
           }
         }
-        
+
         .link_img_and {
           @include mobile {
             margin-right: rem(4px);
