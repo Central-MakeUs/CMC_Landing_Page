@@ -140,7 +140,6 @@
 
       .card {
         background-color: white;
-        box-shadow: 0px 4px 4px 0px #edf1ff;
         display: flex;
         flex-direction: column;
 
@@ -148,12 +147,14 @@
           gap: 20px;
           border-radius: 20px;
           padding: 24px 20px;
+          box-shadow: 0 4px 4px 0 #edf1ff;
         }
 
         @include desktop {
           gap: 24px;
-          border-radius: 5px;
+          border-radius: 20px;
           padding: 38px 71px;
+          box-shadow: 0 4px 4px 0 rgba(230, 241, 255, 0.7);
         }
 
         & * {
