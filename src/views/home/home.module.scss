@@ -106,16 +106,16 @@
     @include desktop {
       box-shadow:
         -1.129px -1.129px 7.85px 0.565px #34a3ff inset,
-        0 0 12px rgba(52, 163, 255, 1),
-        0 0 20px rgba(52, 163, 255, 0.7),
-        0 0 35px rgba(52, 163, 255, 0.4);
+        0 0 6px rgba(52, 163, 255, 1),
+        0 0 10px rgba(52, 163, 255, 0.7),
+        0 0 18px rgba(52, 163, 255, 0.4);
     }
     @include mobile {
       box-shadow:
         -0.718px -0.718px 4.988px 0.359px #34a3ff inset,
-        0 0 6px rgba(52, 163, 255, 0.8),
-        0 0 10px rgba(52, 163, 255, 0.5),
-        0 0 18px rgba(52, 163, 255, 0.3);
+        0 0 3px rgba(52, 163, 255, 0.8),
+        0 0 5px rgba(52, 163, 255, 0.5),
+        0 0 9px rgba(52, 163, 255, 0.3);
     }
   }
 }
