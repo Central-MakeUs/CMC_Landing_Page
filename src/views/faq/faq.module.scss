@@ -82,14 +82,9 @@
     transform: translate(-50%, -50%);
   }
 
-  width: 466px;
-  height: 466px;
-  flex-shrink: 0;
-
-  border-radius: 466px;
-  opacity: 0.2;
+  opacity: 0.1;
   background: color(primary-light-04);
-  filter: blur(420.20001220703125px);
+  filter: blur(840px);
 }
 
 .main {
@@ -142,19 +137,18 @@
         background-color: white;
         display: flex;
         flex-direction: column;
+        box-shadow: 0 4px 4px 0 #edf1ff;
 
         @include mobile {
           gap: 20px;
           border-radius: 20px;
           padding: 24px 20px;
-          box-shadow: 0 4px 4px 0 #edf1ff;
         }
 
         @include desktop {
           gap: 24px;
           border-radius: 20px;
           padding: 38px 71px;
-          box-shadow: 0 4px 4px 0 rgba(230, 241, 255, 0.7);
         }
 
         & * {
@@ -220,11 +214,11 @@
       flex: 1;
 
       &:hover {
-        background-color: color(primary-strong);
+        background-color: color('18th-gray-900');
       }
 
       &:active {
-        background-color: color(primary-strong);
+        background-color: color('18th-gray-900');
       }
 
       @include mobile {

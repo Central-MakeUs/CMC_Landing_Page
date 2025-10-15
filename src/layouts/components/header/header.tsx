@@ -39,7 +39,7 @@ export const Header = ({ pathname }: Props) => {
           </Link>
         </nav>
         <button type="button" onClick={toggleModal} className={css.menu_button}>
-          <Hamburger stroke={isOpen ? '#0740F6' : '#202632'} />
+          <Hamburger stroke={isOpen ? '#006FFF' : '#202632'} />
         </button>
         <Modal isOpen={isOpen} pathname={pathname} closeModal={closeModal} />
       </div>
