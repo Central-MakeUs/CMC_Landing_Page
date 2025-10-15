@@ -59,14 +59,9 @@
     transform: translate(-50%, -50%);
   }
 
-  width: 466px;
-  height: 466px;
-  flex-shrink: 0;
-
-  border-radius: 466px;
-  opacity: 0.2;
+  opacity: 0.1;
   background: color(primary-light-04);
-  filter: blur(420.20001220703125px);
+  filter: blur(840px);
 }
 
 .main {
