@@ -10,7 +10,7 @@ export const AuraEffect = () => {
       </div>
 
       <div className={css.mobile}>
-        <AuraCircle size="180%" top="0" left="-40%" opacity={0.5} />
+        <AuraCircle size="180%" top="60px" left="-40%" opacity={0.5} />
       </div>
     </>
   )
