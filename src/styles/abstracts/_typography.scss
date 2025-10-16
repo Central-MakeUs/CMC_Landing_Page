@@ -192,15 +192,12 @@ $typo-styles: (
     'weight': 700,
     'letter-spacing': -0.02em,
   ),
-  // 18기 영문 타이포
-  // Headline1은 수정 예정
-  'E_Headline1':
-    (
-      'size': 60px,
-      'line-height': 72px,
-      'weight': 400,
-      'letter-spacing': -0.01em,
-    ),
+  'E_Headline1': (
+    'size': 60px,
+    'line-height': 72px,
+    'weight': 700,
+    'letter-spacing': -0.01em,
+  ),
   'E_Headline2': (
     'size': 40px,
     'line-height': 50px,

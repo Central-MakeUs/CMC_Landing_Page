@@ -80,6 +80,9 @@
   z-index: 1;
   @include mobile {
     margin: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
   }
 }
 
@@ -89,7 +92,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 28px;
   z-index: 1;
 
   @include desktop {
@@ -147,6 +149,7 @@
         color: #35a3ff;
         width: 100%;
         text-align: end;
+        padding: 0 4px;
       }
       .numberReverse {
         text-align: start;
@@ -290,7 +293,7 @@
       flex-shrink: 0;
 
       .number {
-        @include typo('E_Display1');
+        @include typo('E_Display3');
         font-family: 'Video';
         color: #35a3ff;
         padding: 4px;
