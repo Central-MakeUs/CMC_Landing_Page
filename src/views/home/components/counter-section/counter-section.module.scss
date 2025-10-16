@@ -85,10 +85,9 @@
     margin-bottom: 54px;
     width: rem(450px);
     @include typo('E_Headline2');
-
-    & > span {
-      color: color(primary-light-04);
-    }
+  }
+  & > span {
+    color: color(primary-light-04);
   }
 }
 
