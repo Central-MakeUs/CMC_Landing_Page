@@ -8,6 +8,7 @@ import * as css from './supports-section.module.scss'
 export const SupportsSection = () => {
   return (
     <Section>
+      <div className={css.aura} />
       <div className={css.space} />
 
       <Section.Head
@@ -15,10 +16,6 @@ export const SupportsSection = () => {
         description="CMC의 공식 후원사 입니다."
         isSunMotterFont
       />
-
-      <div className={css.mobile}>
-        <AuraCircle size="180%" top="15%" left="-40%" opacity={0.2} />
-      </div>
 
       <div className={css.supports}>
         <div className={css.cover}>
