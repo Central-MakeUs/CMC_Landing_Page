@@ -33,7 +33,6 @@
   display: flex;
   flex-direction: row;
   // position: absolute;
-  color: color('18th-gray-800');
   @include typo('KR/Headline6');
   display: flex;
   justify-content: center;
@@ -49,10 +48,11 @@
     border-radius: 10px;
     border: 1px solid color('18th-gray-800');
     column-gap: 16px;
+    color: color('18th-gray-800');
   }
 
   @include desktop {
-    border: 1px solid color(blue-100);
+    color: color('primary-light-04');
     border-radius: 330px;
     bottom: rem(50px);
     right: rem(20px);
@@ -98,4 +98,10 @@
 .arrow_image {
   width: 24px;
   height: 24px;
+  @include mobile {
+    color: color('18th-gray-800');
+  }
+  @include desktop {
+    color: color('primary-light-04');
+  }
 }

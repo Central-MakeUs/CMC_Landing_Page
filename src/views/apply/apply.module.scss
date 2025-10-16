@@ -58,7 +58,7 @@
   font-family: 'Video';
 
   @include mobile {
-    @include typo(E_Headline3);
+    @include typo('E_Headline3');
     div {
       display: inline-block;
       color: black;
@@ -66,9 +66,10 @@
   }
 
   @include desktop {
-    @include typo(E_Headline1);
+    @include typo('E_Headline1');
     div {
       display: inline-block;
+      color: color('18th-gray-900');
     }
     margin-top: 28px;
   }

@@ -2,14 +2,16 @@
 @use '@/styles/utils' as *;
 
 .question {
-  color: color(blue-500);
+  color: color('primary-light-04');
 
   @include mobile {
     @include typo('KR/Headline5');
   }
 
   @include desktop {
+    font-family: 'Trap';
     @include typo('KR/Headline2');
+    font-weight: 700;
   }
 }
 
@@ -63,8 +65,8 @@
   }
 
   @include desktop {
-    background-color: color(blue-500);
-    border: 1px solid color(blue-500);
+    background-color: color('primary-light-04');
+    border: 1px solid color('primary-light-04');
     color: white;
     @include typo('KR/Headline6');
 
@@ -223,7 +225,7 @@
 
 .main {
   .sub_title {
-    color: color(blue-500);
+    color: color('primary-light-04');
     font-weight: 500;
 
     @include mobile {
