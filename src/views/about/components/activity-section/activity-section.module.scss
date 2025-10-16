@@ -79,7 +79,7 @@
   margin: 10px;
   z-index: 1;
   @include mobile {
-    margin: 4px;
+    margin: 5px;
   }
 }
 
@@ -301,7 +301,6 @@
       width: 100%;
       height: 148px;
       overflow: hidden;
-      border-radius: 8px;
       order: 2;
 
       .image {

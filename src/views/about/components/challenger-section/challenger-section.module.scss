@@ -14,7 +14,7 @@
 }
 
 .answer {
-  color: color(black-100);
+  color: color('primary-light-04');
 
   @include mobile {
     @include typo('KR/Caption1_L');
@@ -40,8 +40,8 @@
     width: 328px;
     padding: 12px 10px;
     @include typo('KR/Headline6');
-    border: 1px solid color(blue-500);
-    color: color(blue-500);
+    border: 1px solid color('18th-gray-800');
+    color: color('18th-gray-800');
   }
 
   @include desktop {
@@ -55,8 +55,8 @@
 
 .button_active {
   @include mobile {
-    background-color: color(black-100);
-    border: 1px solid color(black-100);
+    background-color: color('18th-gray-800');
+    border: 1px solid color('18th-gray-800');
     color: white;
 
     border-radius: 10px;
