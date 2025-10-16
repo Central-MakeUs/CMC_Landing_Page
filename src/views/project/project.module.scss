@@ -189,7 +189,8 @@
 
     @include desktop {
       color: color(gray-300);
-      background-color: color(gray-100);
+      background-color: white;
+      border: 1.1px solid color('18th-gray-50');
       justify-content: center;
       margin: 32px 20px 40px;
       font-weight: 400;

@@ -19,6 +19,7 @@
     border-radius: 10px;
     background-color: white;
     text-align: center;
+    border: 1.1px solid color('18th-gray-50');
     @include font(16px, 24px);
   }
 
@@ -94,16 +95,14 @@
       z-index: 5;
       display: flex;
       border-radius: 30px;
+      background-color: white;
+      border: 1.1px solid color('18th-gray-50');
 
       @include mobile {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 12px;
         width: 100%;
-      }
-
-      @include desktop {
-        background-color: color(gray-100);
       }
 
       li {
@@ -137,7 +136,7 @@
         background-color: white;
         display: flex;
         flex-direction: column;
-        box-shadow: 0 4px 4px 0 #edf1ff;
+        box-shadow: 0 4px 4px 0 #e6f1ff;
 
         @include mobile {
           gap: 20px;
