@@ -13,23 +13,41 @@ export const CountdownTimer = () => {
     minutes: 0,
     seconds: 0,
   })
+  const [daysLeft, setDaysLeft] = useState<number | null>(null)
 
   useEffect(() => {
     const { startDate, endDate } = RecruitDate
+    const DAY_MS = 24 * 60 * 60 * 1000
 
     const updateTimer = () => {
       const now = new Date()
       let difference = 0
 
       if (now.getTime() < startDate.getTime()) {
-        difference = startDate.getTime() - now.getTime()
+        const msToStart = startDate.getTime() - now.getTime()
+
+        // D-2 이상 남았을 때: "D-N" 표기
+        if (msToStart >= DAY_MS) {
+          setRecruitStatus(RecruitStatusEnum.BEFORE_RECRUITING)
+          setDaysLeft(Math.ceil(msToStart / DAY_MS))
+          setTimeLeft({ hours: 0, minutes: 0, seconds: 0 })
+          return
+        }
+
+        // D-1 이내: 시:분:초 카운트다운 (start까지)
         setRecruitStatus(RecruitStatusEnum.BEFORE_RECRUITING)
+        setDaysLeft(null)
+        difference = msToStart
       } else if (now.getTime() <= endDate.getTime()) {
+        // 모집 중: 마감(endDate)까지 시:분:초 카운트다운
         difference = endDate.getTime() - now.getTime()
         setRecruitStatus(RecruitStatusEnum.RECRUITING)
+        setDaysLeft(null)
       } else {
+        // 모집 종료
         difference = 0
         setRecruitStatus(RecruitStatusEnum.AFTER_RECRUITING)
+        setDaysLeft(null)
       }
 
       let timeLeft = { hours: 0, minutes: 0, seconds: 0 }
@@ -66,9 +84,13 @@ export const CountdownTimer = () => {
           [css.timer_time_inactive]: recruitStatus === RecruitStatusEnum.AFTER_RECRUITING,
         })}
       >
-        {`${formatTime(timeLeft.hours)} : ${formatTime(timeLeft.minutes)} : ${formatTime(timeLeft.seconds)}`}
+        {daysLeft !== null
+          ? `D-${daysLeft}`
+          : `${formatTime(timeLeft.hours)} : ${formatTime(timeLeft.minutes)} : ${formatTime(timeLeft.seconds)}`}
       </p>
-      <ApplyButton href={RecruitStatus[recruitStatus].link} className={css.apply_btn}>{RecruitStatus[recruitStatus].buttonText}</ApplyButton>
+      <ApplyButton href={RecruitStatus[recruitStatus].link} className={css.apply_btn}>
+        {RecruitStatus[recruitStatus].buttonText}
+      </ApplyButton>
     </div>
   )
 }

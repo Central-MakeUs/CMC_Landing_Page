@@ -23,7 +23,7 @@
 
     .title {
       @include font(32px, 48px);
-      color: color(blue-500);
+      color: color('primary-light-04');
       font-weight: 700;
     }
 
@@ -48,10 +48,14 @@
     align-items: center;
     text-align: center;
 
+    @include mobile {
+      box-shadow: 0 4px 4px 0 #edf5ff;
+    }
+
     .title {
       font-weight: 700;
       @include font(32px, 48px);
-      color: color(blue-500);
+      color: color('primary-light-04');
     }
 
     .figure {
@@ -70,7 +74,7 @@
   position: relative;
   display: flex;
   align-items: start;
-  gap: 16px;
+  gap: 10px;
   margin-top: 26px;
   padding: 0 15px 0 15px;
   width: 100%;

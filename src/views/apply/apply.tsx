@@ -17,7 +17,7 @@ const ApplyPage = () => {
           <div className={css.head}>
             <StaticImage src="../../images/symbol18.png" alt="" className={css.star} placeholder="blurred" />
             <h1 className={css.title}>
-              C<div>ENTRAL</div> <Br mobile />M<div>AKEUS</div> <Br mobile />C<div>HALLENGE</div>
+              C<div>entral</div> <Br mobile />M<div>akeus</div> <Br mobile />C<div>hallenge</div>
             </h1>
           </div>
 
