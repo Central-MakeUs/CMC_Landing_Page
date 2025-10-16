@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  background-color: color(blue-500);
+  background-color: color('primary-light-04');
   border-radius: 99px;
 
   @include mobile {
