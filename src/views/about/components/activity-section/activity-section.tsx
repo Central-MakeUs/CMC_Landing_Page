@@ -107,7 +107,7 @@ export const ActivitySection = () => {
             number="01"
             chapter="Chapter 01"
             title="UMC와 연합 해커톤"
-            image={<StaticImage className={css.image} src="./images/hackathon.jpg" alt="UMC와 연합 해커톤" />}
+            image={<StaticImage className={css.image} src="./images/hackathon.JPG" alt="UMC와 연합 해커톤" />}
             description={
               <>
                 CMC 정기세션 이전 진행되는 세션으로 단시간 내 <Br desktop />
@@ -133,7 +133,7 @@ export const ActivitySection = () => {
             number="03"
             chapter="Chapter 03"
             title="네트워킹 데이"
-            image={<StaticImage className={css.image} src="./images/networking_day.jpg" alt="네트워킹 데이" />}
+            image={<StaticImage className={css.image} src="./images/networking_day.JPG" alt="네트워킹 데이" />}
             description={
               <>
                 팀 매칭 전, 챌린저들끼리 자유롭게 교류하며 서로를 알아갈 <Br desktop />
