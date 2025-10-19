@@ -107,7 +107,7 @@ export const ActivitySection = () => {
             number="01"
             chapter="Chapter 01"
             title="UMC와 연합 해커톤"
-            image={<StaticImage className={css.image} src="./images/IMG_5170.png" alt="UMC와 연합 해커톤" />}
+            image={<StaticImage className={css.image} src="./images/hackathon.jpg" alt="UMC와 연합 해커톤" />}
             description={
               <>
                 CMC 정기세션 이전 진행되는 세션으로 단시간 내 <Br desktop />
@@ -119,7 +119,7 @@ export const ActivitySection = () => {
             number="02"
             chapter="Chapter 02"
             title="모각작"
-            image={<StaticImage className={css.image} src="./images/img8.jpeg" alt="모각작" />}
+            image={<StaticImage className={css.image} src="./images/UT.png" alt="모각작" />}
             description={
               <>
                 모든 파트가 함께 모여 현재까지의 프로젝트 진척도를 <Br desktop />
@@ -133,7 +133,7 @@ export const ActivitySection = () => {
             number="03"
             chapter="Chapter 03"
             title="네트워킹 데이"
-            image={<StaticImage className={css.image} src="./images/img6.jpeg" alt="네트워킹 데이" />}
+            image={<StaticImage className={css.image} src="./images/networking_day.jpg" alt="네트워킹 데이" />}
             description={
               <>
                 팀 매칭 전, 챌린저들끼리 자유롭게 교류하며 서로를 알아갈 <Br desktop />
@@ -146,7 +146,7 @@ export const ActivitySection = () => {
             number="04"
             chapter="Chapter 04"
             title="런칭데이"
-            image={<StaticImage className={css.image} src="./images/img3.png" alt="런칭데이" />}
+            image={<StaticImage className={css.image} src="./images/launching_day.jpeg" alt="런칭데이" />}
             description={
               <>
                 데모데이 개최 이전에 CMC 전체 챌린저들을 대상으로 <Br desktop />
@@ -160,7 +160,7 @@ export const ActivitySection = () => {
             number="05"
             chapter="Chapter 05"
             title="데모데이"
-            image={<StaticImage className={css.image} src="./images/img5.jpeg" alt="데모데이" />}
+            image={<StaticImage className={css.image} src="./images/demo_day.jpeg" alt="데모데이" />}
             description={
               <>
                 VC와 일반 참가자들을 대상으로 부스를 운영하며 지금까지 <Br desktop />
