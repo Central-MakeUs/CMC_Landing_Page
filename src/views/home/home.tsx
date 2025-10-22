@@ -5,6 +5,7 @@ import { ScrollRevealContainer, Seo } from '@/components'
 import { Main } from '@/layouts'
 
 import { CounterSection, SupportsSection } from './components'
+import { Loading } from './components/loading'
 import * as css from './home.module.scss'
 
 const HomePage = () => {
@@ -29,9 +30,7 @@ const HomePage = () => {
         : '/img/web_18th_main.mp4'
 
       if (newSrc !== videoSrc) {
-        setTimeout(() => {
-          setVideoSrc(newSrc)
-        }, 1000)
+        setVideoSrc(newSrc)
         setIsVideoLoaded(false)
       }
     }
@@ -70,6 +69,11 @@ const HomePage = () => {
       {/* <ScrollIndicator onClick={scrollToNextSection} /> */}
       {/* <div className={css.backgroundImg} /> */}
       <div className={css.videoContainer}>
+        {!isVideoLoaded && (
+          <div className={css.loadingContainer}>
+            <Loading />
+          </div>
+        )}
         <video
           className={css.backgroundVideo}
           autoPlay
@@ -79,7 +83,7 @@ const HomePage = () => {
           onCanPlay={() => setIsVideoLoaded(true)}
           style={{
             opacity: isVideoLoaded ? 1 : 0,
-            transition: 'opacity 1s ease-in-out',
+            transition: 'opacity 0.5s ease-in-out',
           }}
           key={videoSrc}
         >
@@ -91,7 +95,7 @@ const HomePage = () => {
           type="button"
           style={{
             opacity: isVideoLoaded ? 1 : 0,
-            transition: 'opacity 1s ease-in-out',
+            transition: 'opacity 0.5s ease-in-out',
           }}
         >
           18기 지원하기
