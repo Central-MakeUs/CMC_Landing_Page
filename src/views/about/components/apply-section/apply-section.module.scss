@@ -26,4 +26,11 @@
   text-align: center;
   @include typo('KR/Body4');
   margin-top: 20px;
+
+  @include mobile {
+    white-space: pre-line;
+  }
+  @include desktop {
+    white-space: normal;
+  }
 }
