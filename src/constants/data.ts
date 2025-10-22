@@ -26,6 +26,11 @@ export type RecruitMentType = {
   buttonText: string
 }
 
+export type AboutRecruitButtonType = {
+  description: string
+  buttonText: string
+}
+
 // apply button
 export const RecruitStatus: Record<RecruitStatusEnum, RecruitStatusType> = {
   BeforeRecruiting: {
@@ -61,5 +66,21 @@ export const RecruitMent: Record<RecruitStatusEnum, RecruitMentType> = {
     title: '다음 여정에\n참여해주세요!',
     description: '18기 모집이 끝났어요.\nCMC의 다음여정에 함께해요!\n19기 모집알림을 보내드릴게요.',
     buttonText: '19기 모집알림 신청하기',
+  },
+}
+
+// 소개 안내 버튼
+export const AboutRecruitButton: Record<RecruitStatusEnum, AboutRecruitButtonType> = {
+  BeforeRecruiting: {
+    description: `현재 지원 기간이 아닙니다. 다음 기수 모집이\n시작될 때까지 조금만 기다려 주세요.`,
+    buttonText: 'CMC 18기 지원 알림받기',
+  },
+  Recruiting: {
+    description: 'CMC 18기 모집 중 입니다. CMC에 합류하고\n싶은 분들은 지원을 서둘러주세요!',
+    buttonText: 'CMC 18기 지원하기',
+  },
+  AfterRecruiting: {
+    description: '현재 지원 기간이 아닙니다. 다음 기수 모집이\n시작될 때까지 조금만 기다려 주세요.',
+    buttonText: 'CMC 19기 지원 알림받기',
   },
 }
