@@ -44,7 +44,20 @@
   initial-value: 0deg;
   inherits: false;
 }
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  @include mobile {
+    aspect-ratio: 1080 / 1800;
+  }
 
+  @include desktop {
+    aspect-ratio: 3000 / 2202;
+  }
+}
 .applyButton {
   position: absolute;
 
