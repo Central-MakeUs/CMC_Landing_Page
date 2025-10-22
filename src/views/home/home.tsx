@@ -9,7 +9,9 @@ import * as css from './home.module.scss'
 
 const HomePage = () => {
   const nextSectionRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const [videoSrc, setVideoSrc] = useState<string>('')
+  const [isVideoLoaded, setIsVideoLoaded] = useState<boolean>(false)
 
   useEffect(() => {
     const updateVideoSource = () => {
@@ -18,10 +20,19 @@ const HomePage = () => {
       const video = document.createElement('video')
       const canPlayWebM = video.canPlayType('video/webm') !== ''
 
-      if (isMobile) {
-        setVideoSrc(canPlayWebM ? '/img/mobile_18th_main.webm' : '/img/mobile_18th_main.mp4')
-      } else {
-        setVideoSrc(canPlayWebM ? '/img/web_18th_main.webm' : '/img/web_18th_main.mp4')
+      const newSrc = isMobile
+        ? canPlayWebM
+          ? '/img/mobile_18th_main.webm'
+          : '/img/mobile_18th_main.mp4'
+        : canPlayWebM
+        ? '/img/web_18th_main.webm'
+        : '/img/web_18th_main.mp4'
+
+      if (newSrc !== videoSrc) {
+        setTimeout(() => {
+          setVideoSrc(newSrc)
+        }, 1000)
+        setIsVideoLoaded(false)
       }
     }
 
@@ -30,7 +41,28 @@ const HomePage = () => {
     window.addEventListener('resize', updateVideoSource)
 
     return () => window.removeEventListener('resize', updateVideoSource)
-  }, [])
+  }, [videoSrc])
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video || !videoSrc) return undefined
+
+    const handleVideoLoad = () => {
+      setIsVideoLoaded(true)
+    }
+
+    if (video.readyState >= 3) {
+      setIsVideoLoaded(true)
+    }
+
+    video.addEventListener('canplay', handleVideoLoad)
+    video.addEventListener('loadeddata', handleVideoLoad)
+
+    return () => {
+      video.removeEventListener('canplay', handleVideoLoad)
+      video.removeEventListener('loadeddata', handleVideoLoad)
+    }
+  }, [videoSrc])
 
   return (
     <Main>
@@ -38,10 +70,30 @@ const HomePage = () => {
       {/* <ScrollIndicator onClick={scrollToNextSection} /> */}
       {/* <div className={css.backgroundImg} /> */}
       <div className={css.videoContainer}>
-        <video className={css.backgroundVideo} autoPlay muted loop playsInline key={videoSrc}>
+        <video
+          className={css.backgroundVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          onCanPlay={() => setIsVideoLoaded(true)}
+          style={{
+            opacity: isVideoLoaded ? 1 : 0,
+            transition: 'opacity 1s ease-in-out',
+          }}
+          key={videoSrc}
+        >
           <source src={videoSrc} type={videoSrc.endsWith('.webm') ? 'video/webm' : 'video/mp4'} />
         </video>
-        <button onClick={() => navigate('/apply')} className={css.applyButton} type="button">
+        <button
+          onClick={() => navigate('/apply')}
+          className={css.applyButton}
+          type="button"
+          style={{
+            opacity: isVideoLoaded ? 1 : 0,
+            transition: 'opacity 1s ease-in-out',
+          }}
+        >
           18기 지원하기
         </button>
       </div>
