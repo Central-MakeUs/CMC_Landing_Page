@@ -5,7 +5,7 @@ export type RecruitDateType = {
 
 export const RecruitDate: RecruitDateType = {
   startDate: new Date('2025-10-20T00:00:00'),
-  endDate: new Date('2025-10-29T22:59:59'),
+  endDate: new Date('2025-11-02T22:59:59'),
 }
 
 export enum RecruitStatusEnum {
