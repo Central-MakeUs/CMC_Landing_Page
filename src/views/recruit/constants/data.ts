@@ -50,4 +50,8 @@ export const SessionPlans: Record<string, { name: string; date: string }> = {
     name: '데모데이',
     date: '26.03.07',
   },
+  Final: {
+    name: '종무식',
+    date: '26.03.14',
+  },
 }
