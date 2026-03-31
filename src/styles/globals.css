@@ -38,7 +38,7 @@
   --secondary-04: #4c53c6;
 
   /* Semantic */
-  --background: var(--white);
+  --background: var(--black);
   --foreground: var(--gray-1);
 }
 
@@ -84,19 +84,23 @@
   --color-secondary-02: var(--secondary-02);
   --color-secondary-03: var(--secondary-03);
   --color-secondary-04: var(--secondary-04);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-yapari: var(--font-yapari-trial);
+
+  --spacing-header: 52px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--black);
-    --foreground: var(--white);
-  }
-}
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    system-ui, sans-serif;
+}
+
+.font-yapari {
+  font-family: var(--font-yapari-trial), 'Pretendard', -apple-system, BlinkMacSystemFont,
+    'Apple SD Gothic Neo', system-ui, sans-serif;
 }
