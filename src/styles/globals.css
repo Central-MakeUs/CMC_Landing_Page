@@ -104,3 +104,14 @@ body {
   font-family: var(--font-yapari-trial), 'Pretendard', -apple-system, BlinkMacSystemFont,
     'Apple SD Gothic Neo', system-ui, sans-serif;
 }
+
+.font-line-seed {
+  font-family: "line-seed", 'Pretendard', -apple-system, BlinkMacSystemFont,
+    'Apple SD Gothic Neo', system-ui, sans-serif;
+}
+
+
+@font-face {
+  font-family: "line-seed";
+  src: url("/font/LINESeedKR-Bd.woff");
+}
