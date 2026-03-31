@@ -1,7 +1,0 @@
-export * from './activity-section'
-export * from './additional-section'
-export * from './apply-section'
-export * from './challenger-section'
-export * from './feature-section'
-export * from './identity-section'
-export * from './product-section'
