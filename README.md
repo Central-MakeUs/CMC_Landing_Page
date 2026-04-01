@@ -1,104 +1,40 @@
-# CMC 홈페이지
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## Project setup
+## Getting Started
 
-```bash
-// 저장소 복제
-$ git clone https://github.com/Central-MakeUs/CMC_Landing_Page.git
-
-// clone한 폴더로 이동
-$ cd CMC_Landing_Page
-
-// yarn 환경구성
-$ yarn install
-```
-
-## VSCODE 기준 추가 세팅
-
-기존에 사용하던 node_modules를 사용하지 않고, pnp + zero-install을 사용합니다. 이때 소스코드는 node_modules를 직접 사용할 수 없기 때문에 extension이랑 sdk, typescript 버전을 세팅해야합니다.
-
-- vscode 기준입니다
-
-1. ZipFS 확장자를 VSCode에 검색해서 설치
-2. 다음 명령어 실행
-
-```
-yarn dlx @yarnpkg/sdks vscode
-```
-
-3. vscode를 다시 실행시킨 후, 컨트롤 + shift + p 를 눌러 'Select TypeScript Version' 클릭
-4. Use Workspace Version 클릭
-
-하면 react의 type을 자동으로 불러오고, 의존성들을 잘 찾게 할 수 있습니다.
-
-## 버전
-
-버전 기준은 다음과 같습니다.
-
-```
-메이저_버전.기수.패치
-```
-
-## Project 데이터 추가방법
-
-현재 프로젝트 구조에서 `src` 폴더안의 `data`안에 **`app.json` 파일과 `logo` 폴더**가 존재합니다.
+First, run the development server:
 
 ```bash
-├── src
-    └── data
-          ├── logo
-          └── app.json
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-각 파일에 대해 설명하면 다음과 같습니다.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- `logo`: 기수별 로고 이미지가 저장되어있는 폴더입니다.
-- `app.json`: 홈페이지에 표시될 프로젝트 데이터가 저장되어있는 파일입니다.
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-### logo
+[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-예를들어 13기 프로젝트들의 로고 이미지를 저장하고 싶다면 `logo` 폴더안에 `13기` 폴더를 생성하고, 그 안에 로고 이미지들을 저장하면 됩니다.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
 
-### app.json
+This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-현재 데이터들은 기수 기준 내림차순으로 들어가 있습니다.따라서 13기 프로젝트 데이터 -> 12기 프로젝트 데이터 -> ... 순으로 들어갑니다.
+## Learn More
 
-데이터를 넣을때에는 아래와 같은 형식으로 넣어주시면 됩니다.
+To learn more about Next.js, take a look at the following resources:
 
-```json
-[
-  {
-    "name": "Qfeed",
-    "year": "13",
-    "description": "친구에 자신의 마음을 표현하고 싶지만, 주변 친구들과의 관계가 망가질까 주저하지 마세요.",
-    "link": {
-      "ios": "", // 링크가 없으면 빈칸
-      "android": "https://play.google.com/store/apps/details?id=com.qfeed&pcampaignid=web_share"
-    },
-    "logo": "./logo/13/qfeed.png"
-  },
-  ...
-]
-```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
 
-따라서 14기면 아래와 같은 형식으로 프로젝트 데이터가 들어갑니다.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-```json
-[
-  {
-    "name": "프로젝트 이름",
-    "year": "14",
-    "description": "프로젝트 설명",
-    "link": {
-      "ios": "{링크 없으면 빈칸으로 두세요}",
-      "android": "링크주소"
-    },
-    "logo": "./logo/14/{파일이름}.png"
-  },
-  ...
-]
-```
+## Deploy on Vercel
 
-> ‼️ logo 경로를 잘 맞춰주셔야 합니다! ‼️
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-로고 경로가 맞지 않으면 오류가 발생할 수 있습니다.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.

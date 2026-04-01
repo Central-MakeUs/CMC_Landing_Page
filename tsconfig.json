@@ -1,36 +1,29 @@
 {
   "compilerOptions": {
-    /* Language and Environment */
-    "target": "esnext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
-    "lib": [
-      "dom",
-      "esnext"
-    ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
-    /* Babel 있는데 굳이 react-jsx? */
-    "jsx": "preserve",
-
-    /* Modules */
-    "module": "esnext" /* Specify what module code is generated. */,
-    // "rootDir": "./",                                  /* Specify the root folder within your source files. */
-    "moduleResolution": "node",
-    "baseUrl": "./src" /* Specify the base directory to resolve non-relative module names. */,
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
     "paths": {
-      "@/styles": ["styles"],
-      "@/layouts": ["layouts"],
-      "@/components": ["components"],
-      "@/constants": ["constants"],
-      "@/images": ["images"],
-      "@/utils": ["utils"],
-      "@/types": ["types"],
-      "@/views": ["views"]
-    } /* Specify a set of entries that re-map imports to additional lookup locations. */,
-    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */,
-    // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
-
-    /* Type Checking */
-    "strict": true /* Enable all strict type-checking options. */,
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
-    "isolatedModules": true
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["./src/**/*", "./gatsby-node.ts", "./gatsby-config.ts", "./gatsby-browser.tsx", "./plugins/**/*"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+  "exclude": ["node_modules"]
 }

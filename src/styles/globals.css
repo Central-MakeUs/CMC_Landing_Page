@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+:root {
+  /* Palette (from Figma: Colors / node-id=3201:641) */
+  --white: #ffffff;
+  --black: #0d0f14;
+
+  --gray-50: #f2f3f6;
+  --gray-100: #d7d8e2;
+  --gray-200: #c4c6d3;
+  --gray-300: #a9abbf;
+  --gray-400: #989bb3;
+  --gray-500: #7e82a0;
+  --gray-600: #737692;
+  --gray-700: #595c72;
+  --gray-800: #454858;
+  --gray-900: #353743;
+
+  --gray-1: #222222;
+  --gray-8: #1c1c1e;
+  --gray-trans-04: #b0b3bc;
+
+  --primary-light-01: #c1caff;
+  --primary-light-02: #a3b1ff;
+  --primary-light-03: #6b81ff;
+  --primary-light-04: #3755ff; /* Main */
+  --primary-light-05: #273cb5;
+
+  --primary-dark-01: #c7d0ff;
+  --primary-dark-02: #7a90ff;
+  --primary-dark-03: #4a65ff; /* Main */
+  --primary-dark-04: #3150e0;
+  --primary-dark-05: #2b42c7;
+
+  --secondary-01: #a1a3ec;
+  --secondary-02: #8889e5;
+  --secondary-03: #5e63d4;
+  --secondary-04: #4c53c6;
+
+  /* Semantic */
+  --background: var(--black);
+  --foreground: var(--gray-1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-white: var(--white);
+  --color-black: var(--black);
+
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+
+  --color-gray-1: var(--gray-1);
+  --color-gray-8: var(--gray-8);
+  --color-gray-trans-04: var(--gray-trans-04);
+
+  --color-primary: var(--primary-light-04);
+  --color-primary-light: var(--primary-light-04);
+  --color-primary-dark: var(--primary-dark-03);
+
+  --color-primary-light-01: var(--primary-light-01);
+  --color-primary-light-02: var(--primary-light-02);
+  --color-primary-light-03: var(--primary-light-03);
+  --color-primary-light-04: var(--primary-light-04);
+  --color-primary-light-05: var(--primary-light-05);
+
+  --color-primary-dark-01: var(--primary-dark-01);
+  --color-primary-dark-02: var(--primary-dark-02);
+  --color-primary-dark-03: var(--primary-dark-03);
+  --color-primary-dark-04: var(--primary-dark-04);
+  --color-primary-dark-05: var(--primary-dark-05);
+
+  --color-secondary-01: var(--secondary-01);
+  --color-secondary-02: var(--secondary-02);
+  --color-secondary-03: var(--secondary-03);
+  --color-secondary-04: var(--secondary-04);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-yapari: var(--font-yapari-trial);
+
+  --spacing-header: 52px;
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    system-ui, sans-serif;
+}
+
+.font-yapari {
+  font-family: var(--font-yapari-trial), 'Pretendard', -apple-system, BlinkMacSystemFont,
+    'Apple SD Gothic Neo', system-ui, sans-serif;
+}
+
+.font-line-seed {
+  font-family: "line-seed", 'Pretendard', -apple-system, BlinkMacSystemFont,
+    'Apple SD Gothic Neo', system-ui, sans-serif;
+}
+
+
+@font-face {
+  font-family: "line-seed";
+  src: url("/font/LINESeedKR-Bd.woff");
+}
