@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Header } from '@/components/common'
 import { motion } from 'motion/react'
 import {
+  HomeActivitySection,
   HomeEntrySection,
   HomeInfoSection,
   HomeInitialSection,
@@ -42,6 +43,7 @@ export default function Home() {
           <HomeScrollSection scrollContainerRef={entryScrollRef} />
           <HomeStatSection />
           <HomeInfoSection />
+          <HomeActivitySection />
         </motion.div>
       </div>
     </>
