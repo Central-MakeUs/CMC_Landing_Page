@@ -1,2 +1,5 @@
 export { default as HomeInitialSection } from './HomeInitialSection'
 export { default as HomeEntrySection } from './HomeEntrySection'
+export { default as HomeScrollSection } from './HomeScrollSection'
+export { default as HomeStatSection } from './HomeStatSection'
+export { default as HomeInfoSection } from './HomeInfoSection'
