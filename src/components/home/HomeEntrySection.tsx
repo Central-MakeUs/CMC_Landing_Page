@@ -1,6 +1,5 @@
-import { motion, useAnimation } from "motion/react"
-import Image from "next/image"
-import { ApplyButton } from "../common"
+import { motion, useAnimation } from 'motion/react'
+import Image from 'next/image'
 
 export default function HomeEntrySection({
   text1Controls,
@@ -21,17 +20,43 @@ export default function HomeEntrySection({
         height={900}
         className="w-full h-auto block"
       />
-      <div className="absolute top-header left-[-20px] flex flex-col gap-8">
-        <motion.div className="ml-[100px]" initial={{ x: '-60px', opacity: 0 }} animate={text1Controls}>
+      <div className="absolute top-header left-0 flex flex-col gap-[1vw]">
+        <motion.div className="ml-[8vw]" initial={{ x: '-60px', opacity: 0 }} animate={text1Controls}>
           <Image src="/images/home-text-1.svg" className="w-[50vw] h-auto" alt="text 1" width={600} height={80} />
         </motion.div>
-        <motion.div className="flex items-center gap-4" initial={{ x: '-60px', opacity: 0 }} animate={text2Controls}>
-          <Image src="/images/home-arrow.svg" className="w-[10vw] h-auto" alt="arrow" width={194} height={60} />
-          <Image src="/images/home-text-2.svg" className="w-[48vw] h-auto" alt="text 2" width={695} height={80} />
+        <motion.div className="flex items-center gap-4" initial={{ x: '-60vw', opacity: 0 }} animate={text2Controls}>
+          <Image
+            src="/images/home-text-2.svg"
+            className="w-[54vw] h-auto mt-[1.5vw]"
+            alt="text 2"
+            width={695}
+            height={80}
+          />
         </motion.div>
-        <motion.div className="flex items-center mt-10" initial={{ x: '-60px', opacity: 0 }} animate={text3Controls}>
-          <Image src="/images/home-line.svg" className="w-[14vw] h-auto" alt="arrow" width={271} height={10} />
-          <ApplyButton onClick={() => {}} />
+        <motion.div
+          className="flex items-center mt-[2.5vw]"
+          initial={{ x: '-60px', opacity: 0 }}
+          animate={text3Controls}
+        >
+          <div className="relative w-[45vw] cursor-pointer group">
+            <Image
+              src="/images/home-text-3.svg"
+              className="w-full h-auto group-hover:opacity-0 group-active:opacity-0"
+              alt="text 3"
+              width={695}
+              height={80}
+            />
+            <Image
+              src="/images/home-text-3-pressed.svg"
+              className="w-full h-auto absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100"
+              alt="text 3 pressed"
+              width={695}
+              height={80}
+              onClick={() => {
+                alert('test')
+              }}
+            />
+          </div>
         </motion.div>
       </div>
     </div>

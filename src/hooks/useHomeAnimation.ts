@@ -20,7 +20,7 @@ export function useHomeAnimation() {
       if (entryScrollRef.current) entryScrollRef.current.scrollTop = 0
       await entryControls.start({ opacity: 1, y: '0%', transition: { duration: 0.8, ease: 'easeInOut' } })
       await text1Controls.start({ x: '0px', opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } })
-      await text2Controls.start({ x: '0px', opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } })
+      await text2Controls.start({ x: '0px', opacity: 1, transition: { duration: 1.2, ease: 'easeOut' } })
       await text3Controls.start({ x: '0px', opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } })
     }
 
