@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   /* Palette (from Figma: Colors / node-id=3201:641) */
@@ -92,26 +92,41 @@
   --spacing-header: 52px;
 }
 
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
-    system-ui, sans-serif;
+  font-family:
+    'Pretendard',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Apple SD Gothic Neo',
+    system-ui,
+    sans-serif;
 }
 
 .font-yapari {
-  font-family: var(--font-yapari-trial), 'Pretendard', -apple-system, BlinkMacSystemFont,
-    'Apple SD Gothic Neo', system-ui, sans-serif;
+  font-family:
+    var(--font-yapari-trial),
+    'Pretendard',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Apple SD Gothic Neo',
+    system-ui,
+    sans-serif;
 }
 
 .font-line-seed {
-  font-family: "line-seed", 'Pretendard', -apple-system, BlinkMacSystemFont,
-    'Apple SD Gothic Neo', system-ui, sans-serif;
+  font-family:
+    'line-seed',
+    'Pretendard',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Apple SD Gothic Neo',
+    system-ui,
+    sans-serif;
 }
 
-
 @font-face {
-  font-family: "line-seed";
-  src: url("/font/LINESeedKR-Bd.woff");
+  font-family: 'line-seed';
+  src: url('/font/LINESeedKR-Bd.woff');
 }
