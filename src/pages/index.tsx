@@ -2,8 +2,15 @@ import Head from 'next/head'
 
 import { Header } from '@/components/common'
 import { motion } from 'motion/react'
-import { HomeEntrySection, HomeInitialSection } from '@/components/home'
-import { useHomeAnimation } from '@/hooks/useHomeAnimation'
+import {
+  HomeActivitySection,
+  HomeEntrySection,
+  HomeInfoSection,
+  HomeInitialSection,
+  HomeScrollSection,
+  HomeStatSection,
+} from '@/components/home'
+import { useHomeAnimation } from '@/hooks/home/useHomeAnimation'
 
 export default function Home() {
   const { entered, initialControls, entryControls, text1Controls, text2Controls, text3Controls, entryScrollRef } =
@@ -33,6 +40,10 @@ export default function Home() {
           animate={entryControls}
         >
           <HomeEntrySection text1Controls={text1Controls} text2Controls={text2Controls} text3Controls={text3Controls} />
+          <HomeScrollSection scrollContainerRef={entryScrollRef} />
+          <HomeStatSection />
+          <HomeInfoSection />
+          <HomeActivitySection />
         </motion.div>
       </div>
     </>
