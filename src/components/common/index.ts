@@ -1,2 +1,6 @@
+export { default as Button1 } from './Button1'
+export { default as Button2 } from './Button2'
+export { default as Button3 } from './Button3'
+export { default as ArrowIcon } from './icons/ArrowIcon'
+export { default as Footer } from './Footer'
 export { default as Header } from './Header'
-export { default as ApplyButton } from './ApplyButton'
