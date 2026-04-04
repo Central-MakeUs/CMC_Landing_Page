@@ -27,7 +27,7 @@ function FaqAccordionToggle({
       aria-controls={panelId}
       onClick={onClick}
       className={cn(
-        'relative flex shrink-0 flex-col items-center justify-center rounded-[60px] px-[11px] py-[14px]',
+        'relative flex shrink-0 cursor-pointer flex-col items-center justify-center rounded-[60px] px-[11px] py-[14px]',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light-01/60',
         open
           ? cn('bg-primary-light-01 text-black', toggleOpenShadowClass)

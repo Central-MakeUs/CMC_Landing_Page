@@ -38,7 +38,7 @@ export default function Tabs<T extends string>({ items, active, onChange, classN
             tabIndex={isSelected ? 0 : -1}
             onClick={() => onChange(id)}
             className={cn(
-              'relative z-0 flex shrink-0 items-center justify-center whitespace-nowrap rounded-[60px] px-[20px] py-[10px]',
+              'relative z-0 flex shrink-0 cursor-pointer items-center justify-center whitespace-nowrap rounded-[60px] px-[20px] py-[10px]',
               'text-[24px] font-normal leading-[34px] tracking-[-0.48px]',
               'transition-colors duration-200 ease-out motion-reduce:transition-none',
               !isSelected &&
