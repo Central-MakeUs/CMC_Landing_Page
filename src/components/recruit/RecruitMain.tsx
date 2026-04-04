@@ -13,11 +13,11 @@ export default function RecruitMain() {
       )}
     >
       <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col px-[calc(var(--rw)*200)]">
-        <div className="z-20 pt-[calc(var(--rw)*240)] text-center">
+        <div className="z-20 pt-[240px] text-center">
           <RecruitTitle />
         </div>
 
-        <div className="z-10 flex justify-center pt-[calc(var(--rw)*132)] pb-[calc(var(--rw)*160)]">
+        <div className="z-10 flex justify-center pt-[132px] pb-[160px]">
           <RecruitScheduleCard />
         </div>
       </div>

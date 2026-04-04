@@ -12,7 +12,7 @@ export default function RecruitTitle({ className }: RecruitTitleProps) {
     <h1
       className={cn(
         'font-yapari font-semibold whitespace-nowrap bg-clip-text text-transparent',
-        'text-[calc(var(--rw,1px)*48)] leading-[calc(var(--rw,1px)*72)] tracking-[-0.01em]',
+        'text-[clamp(0px,calc(var(--rw,1px)*48),48px)] leading-[calc(var(--rw,1px)*72)] tracking-[-0.01em]',
         className,
       )}
       style={{ backgroundImage: TITLE_GRADIENT }}
