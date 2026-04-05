@@ -7,6 +7,7 @@ import {
   HomeEntrySection,
   HomeInfoSection,
   HomeInitialSection,
+  HomeProductSection,
   HomeScrollSection,
   HomeStatSection,
 } from '@/components/home'
@@ -44,6 +45,7 @@ export default function Home() {
           <HomeStatSection />
           <HomeInfoSection />
           <HomeActivitySection />
+          <HomeProductSection />
         </motion.div>
       </div>
     </>
