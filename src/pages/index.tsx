@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 
 import { Header } from '@/components/common'
 import { motion } from 'motion/react'
@@ -11,6 +12,8 @@ import {
   HomeScrollSection,
   HomeStatSection,
 } from '@/components/home'
+
+const HomeRecruitSection = dynamic(() => import('@/components/home/HomeRecruitSection'), { ssr: false })
 import { useHomeAnimation } from '@/hooks/home/useHomeAnimation'
 
 export default function Home() {
@@ -46,6 +49,7 @@ export default function Home() {
           <HomeInfoSection />
           <HomeActivitySection />
           <HomeProductSection />
+          <HomeRecruitSection scrollContainerRef={entryScrollRef} />
         </motion.div>
       </div>
     </>
