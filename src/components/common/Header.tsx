@@ -28,7 +28,7 @@ export default function Header({ activeNav }: HeaderProps) {
             <Link href="/recruit" className={navLinkClass(activeNav === 'recruit')}>
               모집안내
             </Link>
-            <Link href="/#faq" className={navLinkClass(activeNav === 'faq')}>
+            <Link href="/faq" className={navLinkClass(activeNav === 'faq')}>
               FAQ
             </Link>
           </div>
