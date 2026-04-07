@@ -16,7 +16,7 @@ export default function Header({ activeNav }: HeaderProps) {
   return (
     <header className="fixed top-0 left-0 z-50 w-full">
       <nav className="backdrop-blur-[20px] bg-white/12">
-        <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-[9px] md:px-[200px]">
+        <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between px-6 py-[9px] md:px-[200px]">
           <Link href="/" aria-label="CMC 홈" className="shrink-0">
             <Image src="/logo.svg" width={30} height={30} alt="CMC" className="h-[30px] w-[30px]" />
           </Link>
