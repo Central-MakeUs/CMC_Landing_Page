@@ -46,7 +46,7 @@ export default function Home() {
           <HomeEntrySection text1Controls={text1Controls} text2Controls={text2Controls} text3Controls={text3Controls} />
           <HomeScrollSection scrollContainerRef={entryScrollRef} />
           <HomeStatSection />
-          <HomeInfoSection />
+          <HomeInfoSection scrollContainerRef={entryScrollRef} />
           <HomeActivitySection />
           <HomeProductSection />
           <HomeRecruitSection scrollContainerRef={entryScrollRef} />
