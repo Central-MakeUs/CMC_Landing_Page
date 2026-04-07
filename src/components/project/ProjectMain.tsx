@@ -23,7 +23,7 @@ export default function ProjectMain() {
   }, [activeTab])
 
   return (
-    <main className="relative w-full overflow-x-hidden">
+    <main className="relative w-full overflow-hidden">
       <div
         className={cn(
           'pointer-events-none absolute inset-x-0 top-0 w-full',

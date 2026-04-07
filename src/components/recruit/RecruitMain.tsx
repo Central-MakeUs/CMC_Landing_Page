@@ -7,7 +7,7 @@ export default function RecruitMain() {
   return (
     <main
       className={cn(
-        'relative w-full overflow-x-hidden',
+        'relative w-full overflow-hidden',
         'bg-cover bg-top bg-no-repeat',
         '[--rw:calc(100vw/1440)]',
         "[background-image:image-set(url('/images/recruit-bg.webp')_type('image/webp'),url('/images/recruit-bg.png')_type('image/png'))]",
