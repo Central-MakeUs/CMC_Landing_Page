@@ -2,10 +2,10 @@ import { useRef } from 'react'
 import { useScroll, useTransform } from 'motion/react'
 
 const STAR_SIZE = 100
-const BP1 = 200
-const BP2 = 400
-const BP3 = 600
-const BP4 = 800
+const BP1 = 150
+const BP2 = 300
+const BP3 = 450
+const BP4 = 600
 
 export function useHomeScrollAnimation(scrollContainerRef: React.RefObject<HTMLDivElement | null>) {
   const sectionRef = useRef<HTMLElement>(null)
@@ -46,4 +46,3 @@ export function useHomeScrollAnimation(scrollContainerRef: React.RefObject<HTMLD
     text2Opacity,
   }
 }
-
