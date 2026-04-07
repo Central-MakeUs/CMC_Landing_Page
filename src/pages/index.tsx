@@ -14,11 +14,17 @@ import {
 } from '@/components/home'
 
 const HomeRecruitSection = dynamic(() => import('@/components/home/HomeRecruitSection'), { ssr: false })
+import { useRef } from 'react'
+import type Lenis from 'lenis'
 import { useHomeAnimation } from '@/hooks/home/useHomeAnimation'
+import { useLenis } from '@/hooks/useLenis'
 
 export default function Home() {
+  const lenisRef = useRef<Lenis | null>(null)
   const { entered, initialControls, entryControls, text1Controls, text2Controls, text3Controls, entryScrollRef } =
-    useHomeAnimation()
+    useHomeAnimation(lenisRef)
+
+  useLenis(entryScrollRef, lenisRef)
 
   return (
     <>
