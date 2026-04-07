@@ -5,23 +5,29 @@ import { cn } from '@/utils/cn'
 
 import { STORE_APP_ICON, STORE_PLAY_ICON } from '@/constants/project'
 
+const MEDAL_MAP: Record<string, string> = {
+  '1': '/images/project/medal-gold.png',
+  '2': '/images/project/medal-silver.png',
+  '3': '/images/project/medal-bronze.png',
+}
+
 export type ProjectCardProps = {
-  title: string
-  cohortLabel: string
+  name: string
+  year: string
+  rank?: string
   description: string
-  coverSrc: string
-  topWhite?: boolean
+  logo: string
   playStoreUrl?: string
   appStoreUrl?: string
   className?: string
 }
 
 export default function ProjectCard({
-  title,
-  cohortLabel,
+  name,
+  year,
+  rank,
   description,
-  coverSrc,
-  topWhite,
+  logo,
   playStoreUrl,
   appStoreUrl,
   className,
@@ -34,17 +40,14 @@ export default function ProjectCard({
       )}
     >
       <div
-        className={cn(
-          'relative h-[clamp(0px,calc(var(--rw,1px)*240),240px)] w-full shrink-0 overflow-hidden',
-          topWhite ? 'bg-white' : 'bg-black',
-        )}
+        className={cn('relative h-[clamp(0px,calc(var(--rw,1px)*240),240px)] w-full shrink-0 overflow-hidden bg-black')}
       >
         <Image
-          src={coverSrc}
+          src={logo}
           alt=""
           fill
-          className="object-cover object-top"
-          sizes="(min-width: 1024px) 333px, (min-width: 768px) 50vw, 100vw"
+          className="object-cover object-center"
+          sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw"
         />
       </div>
       <div
@@ -61,32 +64,37 @@ export default function ProjectCard({
           )}
         />
         <div className="relative z-10 flex min-h-0 flex-1 flex-col gap-[clamp(0px,calc(var(--rw,1px)*16),16px)]">
-          <div className="flex min-h-0 flex-col gap-[clamp(0px,calc(var(--rw,1px)*8),8px)] not-italic">
-            <p
-              className={cn(
-                'w-full font-semibold tracking-[-0.02em] text-white',
-                'text-[clamp(0px,calc(var(--rw,1px)*24),24px)] leading-[clamp(0px,calc(var(--rw,1px)*34),34px)]',
-              )}
-            >
-              {title}
-            </p>
-            <p
-              className={cn(
-                'w-full font-semibold tracking-[-0.02em] text-primary-light-02',
-                'text-[clamp(0px,calc(var(--rw,1px)*16),16px)] leading-[clamp(0px,calc(var(--rw,1px)*24),24px)]',
-              )}
-            >
-              {cohortLabel}
-            </p>
-            <p
-              className={cn(
-                'line-clamp-2 h-[clamp(0px,calc(var(--rw,1px)*48),48px)] overflow-hidden text-gray-50 tracking-[-0.02em]',
-                'text-[clamp(0px,calc(var(--rw,1px)*14),14px)] leading-[clamp(0px,calc(var(--rw,1px)*24),24px)]',
-              )}
-            >
-              {description}
-            </p>
+          <div className="flex min-h-0 items-start justify-between gap-2 not-italic">
+            <div className="flex min-h-0 flex-col gap-[clamp(0px,calc(var(--rw,1px)*8),8px)]">
+              <p
+                className={cn(
+                  'font-semibold tracking-[-0.02em] text-white',
+                  'text-[clamp(0px,calc(var(--rw,1px)*24),24px)] leading-[clamp(0px,calc(var(--rw,1px)*34),34px)]',
+                )}
+              >
+                {name}
+              </p>
+              <p
+                className={cn(
+                  'font-semibold tracking-[-0.02em] text-primary-light-02',
+                  'text-[clamp(0px,calc(var(--rw,1px)*16),16px)] leading-[clamp(0px,calc(var(--rw,1px)*24),24px)]',
+                )}
+              >
+                {year}기
+              </p>
+            </div>
+            {rank && MEDAL_MAP[rank] && (
+              <Image src={MEDAL_MAP[rank]} alt={`${rank}등 메달`} width={56} height={56} className="shrink-0" />
+            )}
           </div>
+          <p
+            className={cn(
+              'line-clamp-2 h-[clamp(0px,calc(var(--rw,1px)*48),48px)] overflow-hidden text-gray-50 tracking-[-0.02em]',
+              'text-[clamp(0px,calc(var(--rw,1px)*14),14px)] leading-[clamp(0px,calc(var(--rw,1px)*24),24px)]',
+            )}
+          >
+            {description}
+          </p>
           <div className="mt-auto flex shrink-0 items-center gap-[clamp(0px,calc(var(--rw,1px)*8),8px)]">
             {playStoreUrl && <StoreChip href={playStoreUrl} iconSrc={STORE_PLAY_ICON} label="Play Store" />}
             {playStoreUrl && appStoreUrl && (
