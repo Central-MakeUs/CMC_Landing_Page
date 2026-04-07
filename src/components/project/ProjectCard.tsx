@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { cn } from '@/utils/cn'
 
-import { STORE_APP_ICON, STORE_PLAY_ICON } from './projectData'
+import { STORE_APP_ICON, STORE_PLAY_ICON } from '@/constants/project'
 
 export type ProjectCardProps = {
   title: string

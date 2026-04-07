@@ -8,12 +8,9 @@ import { motion } from 'motion/react'
 
 import ProjectCard from './ProjectCard'
 import ProjectTitle from './ProjectTitle'
-import {
-  PROJECT_TAB_ITEMS,
-  PROJECTS,
-  type ProjectTabId,
-  projectCoverSrc,
-} from './projectData'
+import { PROJECTS, projectCoverSrc, PROJECT_TAB_ITEMS } from '@/constants/project'
+
+export type ProjectTabId = (typeof PROJECT_TAB_ITEMS)[number]['id']
 
 export default function ProjectMain() {
   const [activeTab, setActiveTab] = useState<ProjectTabId>('all')

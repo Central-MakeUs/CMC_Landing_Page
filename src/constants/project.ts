@@ -1,3 +1,13 @@
+export const PROJECT_TAB_ITEMS = [
+  { id: 'all', label: '전체' },
+  { id: '18', label: '18기' },
+  { id: '17', label: '17기' },
+  { id: '16', label: '16기' },
+  { id: '15', label: '15기' },
+  { id: '14', label: '14기' },
+  { id: '13', label: '13기' },
+] as const
+
 export type ProjectCohort = '18' | '17' | '16' | '15' | '14' | '13'
 
 export interface ProjectEntry {
@@ -10,18 +20,6 @@ export interface ProjectEntry {
   playStoreUrl?: string
   appStoreUrl?: string
 }
-
-export const PROJECT_TAB_ITEMS = [
-  { id: 'all', label: '전체' },
-  { id: '18', label: '18기' },
-  { id: '17', label: '17기' },
-  { id: '16', label: '16기' },
-  { id: '15', label: '15기' },
-  { id: '14', label: '14기' },
-  { id: '13', label: '13기' },
-] as const
-
-export type ProjectTabId = (typeof PROJECT_TAB_ITEMS)[number]['id']
 
 const COVER_PATH: Record<'a' | 'b', string> = {
   a: '/images/project/cover-a.png',
@@ -40,8 +38,7 @@ export const PROJECTS: ProjectEntry[] = [
     id: 'semo',
     title: '세모',
     cohort: '18',
-    description:
-      '나만의 오답노트, 세모 설명 나만의 오답노트, 세모 설명나만의 오답노트, 세모 설명나만의 오답노트',
+    description: '나만의 오답노트, 세모 설명 나만의 오답노트, 세모 설명나만의 오답노트, 세모 설명나만의 오답노트',
     cover: 'a',
     playStoreUrl: 'https://play.google.com/store',
     appStoreUrl: 'https://apps.apple.com',
@@ -59,8 +56,7 @@ export const PROJECTS: ProjectEntry[] = [
     id: 'agit',
     title: '아지트',
     cohort: '18',
-    description:
-      '러닝 크루를 위한 러닝 베네핏 서비스, 아지트 설명 러닝 크루를 위한 러닝 베네핏 서비스, 아지트 설명',
+    description: '러닝 크루를 위한 러닝 베네핏 서비스, 아지트 설명 러닝 크루를 위한 러닝 베네핏 서비스, 아지트 설명',
     cover: 'a',
     topWhite: true,
     appStoreUrl: 'https://apps.apple.com',
@@ -69,8 +65,7 @@ export const PROJECTS: ProjectEntry[] = [
     id: 'withus',
     title: 'WITHUS',
     cohort: '18',
-    description:
-      '커플들의 사진 아카이빙 서비스, 위더스 두줄설명 커플들의 사진 아카이빙 서비스, 위더스 두줄설명',
+    description: '커플들의 사진 아카이빙 서비스, 위더스 두줄설명 커플들의 사진 아카이빙 서비스, 위더스 두줄설명',
     cover: 'b',
   },
   {
