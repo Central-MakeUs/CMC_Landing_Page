@@ -1,20 +1,14 @@
-import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Button1, CountdownCard } from '@/components/common'
 import { RECRUIT_GENERATION, RECRUIT_TARGET_DATE } from '@/constants/recruit'
-import { calcTimeLeft, type TimeLeft } from '@/utils/time'
 import { RECRUIT_SECTION_DATA } from '@/constants/home/recruitSection'
+import { useCountdown } from '@/hooks/useCountdown'
 
 const IS_RECRUIT_ENDED = Date.now() >= RECRUIT_TARGET_DATE.getTime()
 
 export default function ApplyMain() {
   const { buttonHref, countdown } = RECRUIT_SECTION_DATA
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calcTimeLeft)
-
-  useEffect(() => {
-    const id = setInterval(() => setTimeLeft(calcTimeLeft()), 1000)
-    return () => clearInterval(id)
-  }, [])
+  const timeLeft = useCountdown()
 
   return (
     <main>

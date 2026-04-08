@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Button1, CountdownCard } from '@/components/common'
 
-import { calcTimeLeft } from '@/utils/time'
 import { RECRUIT_SECTION_DATA } from '@/constants/home/recruitSection'
 import { useHomeRecruitAnimation } from '@/hooks/home/useHomeRecruitAnimation'
+import { useCountdown } from '@/hooks/useCountdown'
 
 
 function SheenButton({ href }: { href: string }) {
@@ -38,12 +38,7 @@ export default function HomeRecruitSection({
   scrollContainerRef: React.RefObject<HTMLDivElement | null>
 }) {
   const { title, buttonHref, countdown } = RECRUIT_SECTION_DATA
-  const [timeLeft, setTimeLeft] = useState(calcTimeLeft)
-
-  useEffect(() => {
-    const id = setInterval(() => setTimeLeft(calcTimeLeft()), 1000)
-    return () => clearInterval(id)
-  }, [])
+  const timeLeft = useCountdown()
 
   const { sectionRef, asteriskX, titleClipPath, symbolX, symbolOpacity, buttonOpacity, countdownOpacity, countdownY } =
     useHomeRecruitAnimation(scrollContainerRef)
