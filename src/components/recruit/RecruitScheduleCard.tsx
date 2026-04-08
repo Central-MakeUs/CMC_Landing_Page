@@ -41,7 +41,7 @@ export default function RecruitScheduleCard({ className }: RecruitScheduleCardPr
             <ScheduleRow key={row.label} label={row.label} value={row.value} />
           ))}
         </div>
-        <Link href="/#apply">
+        <Link href="/apply">
           <Button2
             color="blue"
             className="gap-[clamp(0px,calc(var(--rw,1px)*20),20px)] px-[clamp(0px,calc(var(--rw,1px)*32),32px)] py-[clamp(0px,calc(var(--rw,1px)*16),16px)] text-[clamp(0px,calc(var(--rw,1px)*24),24px)]"
