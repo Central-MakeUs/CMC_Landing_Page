@@ -27,6 +27,7 @@ export default function CountdownCard({ label, value, variant = 'dark' }: Countd
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 32, opacity: 0 }}
                 transition={{ duration: 0.25, ease: 'easeOut' }}
+                suppressHydrationWarning
               >
                 {display}
               </motion.p>
@@ -51,6 +52,7 @@ export default function CountdownCard({ label, value, variant = 'dark' }: Countd
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 32, opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
+            suppressHydrationWarning
           >
             {display}
           </motion.p>

@@ -2,26 +2,14 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Button1, CountdownCard } from '@/components/common'
 import { RECRUIT_GENERATION, RECRUIT_TARGET_DATE } from '@/constants/recruit'
+import { calcTimeLeft, type TimeLeft } from '@/utils/time'
 import { RECRUIT_SECTION_DATA } from '@/constants/home/recruitSection'
-
-type TimeLeft = { days: number; hours: number; minutes: number; seconds: number }
 
 const IS_RECRUIT_ENDED = Date.now() >= RECRUIT_TARGET_DATE.getTime()
 
-function calcTimeLeft(): TimeLeft {
-  const diff = RECRUIT_TARGET_DATE.getTime() - Date.now()
-  if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 }
-  return {
-    days: Math.floor(diff / 86_400_000),
-    hours: Math.floor((diff / 3_600_000) % 24),
-    minutes: Math.floor((diff / 60_000) % 60),
-    seconds: Math.floor((diff / 1_000) % 60),
-  }
-}
-
 export default function ApplyMain() {
   const { buttonHref, countdown } = RECRUIT_SECTION_DATA
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calcTimeLeft)
 
   useEffect(() => {
     const id = setInterval(() => setTimeLeft(calcTimeLeft()), 1000)

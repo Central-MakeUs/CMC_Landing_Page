@@ -4,6 +4,7 @@ export const RECRUIT_GENERATION = 19
 /** 모집 마감 카운트다운 타겟 날짜 (KST) */
 export const RECRUIT_TARGET_DATE = new Date('2026-05-01T00:00:00+09:00')
 
+
 export const JOURNEY_ROWS: { label: string; value: string }[] = [
   { label: '접수 기간', value: '2026.04.18 ~ 2026.04.24' },
   { label: '서류 전형', value: '2026.04.27' },

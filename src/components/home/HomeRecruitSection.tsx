@@ -2,22 +2,9 @@ import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Button1, CountdownCard } from '@/components/common'
 
-import { RECRUIT_TARGET_DATE } from '@/constants/recruit'
+import { calcTimeLeft } from '@/utils/time'
 import { RECRUIT_SECTION_DATA } from '@/constants/home/recruitSection'
 import { useHomeRecruitAnimation } from '@/hooks/home/useHomeRecruitAnimation'
-
-type TimeLeft = { days: number; hours: number; minutes: number; seconds: number }
-
-function calcTimeLeft(): TimeLeft {
-  const diff = RECRUIT_TARGET_DATE.getTime() - Date.now()
-  if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 }
-  return {
-    days: Math.floor(diff / 86_400_000),
-    hours: Math.floor((diff / 3_600_000) % 24),
-    minutes: Math.floor((diff / 60_000) % 60),
-    seconds: Math.floor((diff / 1_000) % 60),
-  }
-}
 
 
 function SheenButton({ href }: { href: string }) {
@@ -51,7 +38,7 @@ export default function HomeRecruitSection({
   scrollContainerRef: React.RefObject<HTMLDivElement | null>
 }) {
   const { title, buttonHref, countdown } = RECRUIT_SECTION_DATA
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+  const [timeLeft, setTimeLeft] = useState(calcTimeLeft)
 
   useEffect(() => {
     const id = setInterval(() => setTimeLeft(calcTimeLeft()), 1000)
