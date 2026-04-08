@@ -13,10 +13,11 @@ type TabsProps<T extends string> = {
   active: T
   onChange: (id: T) => void
   className?: string
+  tabClassName?: string
   'aria-label'?: string
 }
 
-export default function Tabs<T extends string>({ items, active, onChange, className, 'aria-label': ariaLabel }: TabsProps<T>) {
+export default function Tabs<T extends string>({ items, active, onChange, className, tabClassName, 'aria-label': ariaLabel }: TabsProps<T>) {
   return (
     <div
       className={cn(
@@ -43,6 +44,7 @@ export default function Tabs<T extends string>({ items, active, onChange, classN
               'transition-colors duration-200 ease-out motion-reduce:transition-none',
               !isSelected &&
                 'hover:bg-white/6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light-01/50',
+              tabClassName,
             )}
           >
             <span
