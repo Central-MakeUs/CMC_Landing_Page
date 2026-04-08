@@ -42,7 +42,7 @@ export default function Header({ activeNav, variant = 'dark' }: HeaderProps) {
           </Link>
 
           <div className="hidden items-center gap-[54px] md:flex">
-            <Link href="/#project" className={navLinkClass(activeNav === 'project', variant)}>
+            <Link href="/project" className={navLinkClass(activeNav === 'project', variant)}>
               프로젝트
             </Link>
             <Link href="/recruit" className={navLinkClass(activeNav === 'recruit', variant)}>
@@ -54,7 +54,7 @@ export default function Header({ activeNav, variant = 'dark' }: HeaderProps) {
           </div>
 
           <Link
-            href="/#apply"
+            href="/apply"
             className={`hidden shrink-0 rounded-[5px] px-[15px] py-[5px] text-center text-[16px] font-semibold leading-[24px] tracking-[-0.32px] md:block ${
               variant === 'light'
                 ? 'bg-black/10 text-black hover:bg-black/20'
@@ -89,7 +89,7 @@ export default function Header({ activeNav, variant = 'dark' }: HeaderProps) {
           >
             <div className="flex flex-col items-center gap-6 py-10">
               <div className="flex flex-col items-center gap-5">
-                <Link href="/#project" className={mobileNavLinkClass(activeNav === 'project')}>
+                <Link href="/project" className={mobileNavLinkClass(activeNav === 'project')}>
                   프로젝트
                 </Link>
                 <Link href="/recruit" className={mobileNavLinkClass(activeNav === 'recruit')}>
@@ -100,7 +100,7 @@ export default function Header({ activeNav, variant = 'dark' }: HeaderProps) {
                 </Link>
               </div>
               <Link
-                href="/#apply"
+                href="/apply"
                 className="w-full max-w-[85px] rounded-[5px] bg-primary-light-04 px-[15px] py-[5px] text-center text-[16px] font-semibold leading-[24px] tracking-[-0.32px] text-white hover:opacity-90"
               >
                 지원하기

@@ -1,50 +1,11 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { Button1 } from '@/components/common'
-import { RECRUIT_SECTION_DATA, RECRUIT_TARGET_DATE } from '@/constants/home/recruitSection'
+import { Button1, CountdownCard } from '@/components/common'
+
+import { RECRUIT_SECTION_DATA } from '@/constants/home/recruitSection'
 import { useHomeRecruitAnimation } from '@/hooks/home/useHomeRecruitAnimation'
+import { useCountdown } from '@/hooks/useCountdown'
 
-type TimeLeft = { days: number; hours: number; minutes: number; seconds: number }
-
-function calcTimeLeft(): TimeLeft {
-  const diff = RECRUIT_TARGET_DATE.getTime() - Date.now()
-  if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 }
-  return {
-    days: Math.floor(diff / 86_400_000),
-    hours: Math.floor((diff / 3_600_000) % 24),
-    minutes: Math.floor((diff / 60_000) % 60),
-    seconds: Math.floor((diff / 1_000) % 60),
-  }
-}
-
-function pad(n: number) {
-  return String(n).padStart(2, '0')
-}
-
-function CountdownCard({ label, value }: { label: string; value: number }) {
-  const display = pad(value)
-  return (
-    <div className="relative flex flex-1 flex-col items-center gap-3 overflow-hidden rounded-[32px] px-8 pb-7 pt-9 text-center">
-      <div aria-hidden="true" className="absolute inset-0 rounded-[32px] bg-black" />
-      <div className="absolute inset-0 rounded-[32px] shadow-[inset_4px_8px_20px_0px_rgba(255,255,255,0.3)]" />
-      <p className="relative text-[20px] font-medium leading-normal tracking-[-0.4px] text-white/60">{label}</p>
-      <div className="relative h-[90px] w-full overflow-hidden">
-        <AnimatePresence mode="popLayout">
-          <motion.p
-            key={display}
-            className="absolute inset-x-0 text-center text-[60px] font-bold leading-normal tracking-[-1.2px] text-primary-light-02"
-            initial={{ y: -32, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 32, opacity: 0 }}
-            transition={{ duration: 0.25, ease: 'easeOut' }}
-          >
-            {display}
-          </motion.p>
-        </AnimatePresence>
-      </div>
-    </div>
-  )
-}
 
 function SheenButton({ href }: { href: string }) {
   const [hovered, setHovered] = useState(false)
@@ -77,12 +38,7 @@ export default function HomeRecruitSection({
   scrollContainerRef: React.RefObject<HTMLDivElement | null>
 }) {
   const { title, buttonHref, countdown } = RECRUIT_SECTION_DATA
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 })
-
-  useEffect(() => {
-    const id = setInterval(() => setTimeLeft(calcTimeLeft()), 1000)
-    return () => clearInterval(id)
-  }, [])
+  const timeLeft = useCountdown()
 
   const { sectionRef, asteriskX, titleClipPath, symbolX, symbolOpacity, buttonOpacity, countdownOpacity, countdownY } =
     useHomeRecruitAnimation(scrollContainerRef)

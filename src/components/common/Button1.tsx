@@ -52,7 +52,7 @@ export default function Button1({
   state = 'default',
   size = 'web',
   className,
-  children = 'CMC 19기 지원하기',
+  children,
   onClick,
   disabled = false,
   type = 'button',
