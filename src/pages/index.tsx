@@ -35,7 +35,7 @@ export default function Home() {
       </Head>
 
       <div className="relative h-screen overflow-hidden">
-        <Header />
+        <Header variant="light" />
 
         {!entered && (
           <motion.div className="absolute inset-0 z-0" initial={{ opacity: 1, y: '0%' }} animate={initialControls}>
