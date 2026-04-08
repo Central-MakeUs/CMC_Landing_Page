@@ -22,13 +22,13 @@ export default function Header({ activeNav }: HeaderProps) {
           </Link>
 
           <div className="flex items-center gap-10 md:gap-[54px]">
-            <Link href="/#project" className={navLinkClass(activeNav === 'project')}>
+            <Link href="/project" className={navLinkClass(activeNav === 'project')}>
               프로젝트
             </Link>
             <Link href="/recruit" className={navLinkClass(activeNav === 'recruit')}>
               모집안내
             </Link>
-            <Link href="/#faq" className={navLinkClass(activeNav === 'faq')}>
+            <Link href="/faq" className={navLinkClass(activeNav === 'faq')}>
               FAQ
             </Link>
           </div>

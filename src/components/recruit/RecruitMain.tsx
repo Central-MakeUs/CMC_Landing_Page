@@ -1,25 +1,36 @@
 import RecruitScheduleCard from './RecruitScheduleCard'
 import RecruitTitle from './RecruitTitle'
 import { cn } from '@/utils/cn'
+import { motion } from 'motion/react'
 
 export default function RecruitMain() {
   return (
     <main
       className={cn(
-        'relative w-full overflow-x-hidden',
+        'relative w-full overflow-hidden',
         'bg-cover bg-top bg-no-repeat',
         '[--rw:calc(100vw/1440)]',
         "[background-image:image-set(url('/images/recruit-bg.webp')_type('image/webp'),url('/images/recruit-bg.png')_type('image/png'))]",
       )}
     >
       <div className="relative z-10 mx-auto flex max-w-[1920px] flex-col px-[calc(var(--rw)*200)]">
-        <div className="z-20 pt-[calc(var(--rw)*240)] text-center">
+        <motion.div
+          className="z-20 pt-[calc(var(--rw)*240)] text-center"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+        >
           <RecruitTitle />
-        </div>
+        </motion.div>
 
-        <div className="z-10 flex justify-center pt-[calc(var(--rw)*132)] pb-[calc(var(--rw)*160)]">
+        <motion.div
+          className="z-10 flex justify-center pt-[132px] pb-[160px]"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
+        >
           <RecruitScheduleCard />
-        </div>
+        </motion.div>
       </div>
     </main>
   )
