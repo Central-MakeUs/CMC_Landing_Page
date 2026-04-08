@@ -1,0 +1,42 @@
+<svg width="1440" height="632" viewBox="0 0 1440 632" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_iiiii_3245_648)">
+<rect width="1475" height="1448" rx="722.5" transform="matrix(-1 0 0 1 1458 0)" fill="#0D0F14"/>
+</g>
+<defs>
+<filter id="filter0_iiiii_3245_648" x="-17" y="0" width="1475" height="1670" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="222"/>
+<feGaussianBlur stdDeviation="111.05"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.00392157 0 0 0 0 0.12549 0 0 0 0 0.458824 0 0 0 0.7 0"/>
+<feBlend mode="lighten" in2="shape" result="effect1_innerShadow_3245_648"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="66"/>
+<feGaussianBlur stdDeviation="50"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0196078 0 0 0 0 0.415686 0 0 0 0 0.803922 0 0 0 0.6 0"/>
+<feBlend mode="screen" in2="effect1_innerShadow_3245_648" result="effect2_innerShadow_3245_648"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="40"/>
+<feGaussianBlur stdDeviation="37.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.36366 0 0 0 0 0.32549 0 0 0 0 0.898039 0 0 0 0.8 0"/>
+<feBlend mode="normal" in2="effect2_innerShadow_3245_648" result="effect3_innerShadow_3245_648"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="32" operator="erode" in="SourceAlpha" result="effect4_innerShadow_3245_648"/>
+<feOffset dy="6"/>
+<feGaussianBlur stdDeviation="32.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.792157 0 0 0 0 0.768627 0 0 0 0 0.858824 0 0 0 0.8 0"/>
+<feBlend mode="screen" in2="effect3_innerShadow_3245_648" result="effect4_innerShadow_3245_648"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="92"/>
+<feGaussianBlur stdDeviation="17"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.0588235 0 0 0 0 0.0784314 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect4_innerShadow_3245_648" result="effect5_innerShadow_3245_648"/>
+</filter>
+</defs>
+</svg>

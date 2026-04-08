@@ -1,0 +1,925 @@
+export const PROJECT_TAB_ITEMS = [
+  { id: 'all', label: '전체' },
+  { id: '18', label: '18기' },
+  { id: '17', label: '17기' },
+  { id: '16', label: '16기' },
+  { id: '15', label: '15기' },
+  { id: '14', label: '14기' },
+  { id: '13', label: '13기' },
+] as const
+
+export interface ProjectEntry {
+  name: string
+  year: string
+  description: string
+  link: {
+    ios: string
+    android: string
+  }
+  logo: string
+  rank: string
+}
+
+export const STORE_PLAY_ICON = '/images/project/store-play.png'
+export const STORE_APP_ICON = '/images/project/store-app.png'
+
+export const PROJECTS: ProjectEntry[] = [
+  {
+    name: '세모',
+    year: '18',
+    description: '나만의 수학 오답노트, 세모로 복잡한 오답정리를 더 쉽게 시작해보세요',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/%EC%84%B8%EB%AA%A8-semo/id6759047269',
+      android: 'https://play.google.com/store/apps/details?id=cloud.deltasemo.semo&hl=ko',
+    },
+    logo: '/images/project/18/세모.jpg',
+    rank: '1',
+  },
+  {
+    name: '포데이',
+    year: '18',
+    description:
+      'AI 취미 추천부터 66일 스티커 기록, 함께할 사람 연결까지 취미를 꾸준히 이어갈 수 있도록 돕는 취미 생활 파트너',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/%ED%8F%AC%EB%8D%B0%EC%9D%B4-%EC%B7%A8%EB%AF%B8%EC%83%9D%ED%99%9C-66%EC%9D%BC/id6758664284',
+      android: 'https://play.google.com/store/apps/details?id=com.dayn.forday&pcampaignid=web_share',
+    },
+    logo: '/images/project/18/포데이.jpg',
+    rank: '2',
+  },
+  {
+    name: '아지트',
+    year: '18',
+    description: '우리 크루 전용 프라이빗 공간, 전용 제휴 혜택까지 담은 러닝 클럽 관리 플랫폼',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/azit-%EC%95%84%EC%A7%80%ED%8A%B8/id6758881115',
+      android: 'https://play.google.com/store/apps/details?id=com.azitcrew.app',
+    },
+    logo: '/images/project/18/아지트.jpeg',
+    rank: '3',
+  },
+  {
+    name: 'OMT',
+    year: '18',
+    description: 'OMT는 작심삼일을 전제로 설계한 AI 챗봇형 헬스케어 코치 서비스입니다.',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/omt/id6759002653',
+      android: 'https://play.google.com/store/apps/details?id=com.omteam.omt&hl=ko',
+    },
+    logo: '/images/project/18/OMT.jpg',
+    rank: '4',
+  },
+  {
+    name: '코치코치',
+    year: '18',
+    description: '카페의 복잡한 원가 계산을 해결하고, 수익 진단을 기반으로 전략 가이드를 제공하는 수익 분석 AI',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/%EC%BD%94%EC%B9%98%EC%BD%94%EC%B9%98/id6759194771',
+      android: 'https://play.google.com/store/apps/details?id=com.team.chord&pcampaignid=web_share',
+    },
+    logo: '/images/project/18/코치코치.jpg',
+    rank: '4',
+  },
+  {
+    name: '모닛',
+    year: '18',
+    description: '나의 감정과 지출 사이, 가장 나다운 소비의 균형',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/모닛/id6759133655',
+      android: 'https://play.google.com/store/apps/details?id=com.monit.app&pcampaignid=web_share',
+    },
+    logo: '/images/project/18/MONIT.png',
+    rank: '4',
+  },
+  {
+    name: '아카이뷰',
+    year: '18',
+    description: '흩어진 장소 정보를 한 곳에 모아 아카이브 해보세요.',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/%EC%95%84%EC%B9%B4%EC%9D%B4%EB%B7%B0/id6757837238',
+      android: 'https://play.google.com/store/apps/details?id=com.archiview.app&pcampaignid=web_share',
+    },
+    logo: '/images/project/18/아카이뷰.jpg',
+    rank: '4',
+  },
+  {
+    name: '위더스',
+    year: '18',
+    description:
+      '풋풋한 연애를 시작한 커플부터 장기 연애 커플까지. 연인과 스쳐가는 일상을, 더 특별한 순간으로 기록해보세요.',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/%EC%9C%84%EB%8D%94%EC%8A%A4/id6758986808',
+      android: 'https://play.google.com/store/apps/details?id=com.yeogijeogi.android.withus&hl=ko',
+    },
+    logo: '/images/project/18/위더스.jpg',
+    rank: '4',
+  },
+  {
+    name: '말모',
+    year: '17',
+    description: '이해되지 않는 연인의 속마음을 알려주는 AI 상담',
+    rank: '1',
+    logo: '/images/project/17/malmo.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=com.malmo.app',
+      ios: 'https://apps.apple.com/kr/app/%EB%A7%90%EB%AA%A8-malmo-ai-%EC%97%B0%EC%95%A0-%EC%83%81%EB%8B%B4-%EB%A7%88%EC%9D%8C-%EC%A7%88%EB%AC%B8/id6749349296',
+    },
+  },
+  {
+    name: '약쏙',
+    year: '17',
+    description: '잔소리하는 약 알람, 약쏙! 약쏙은 혼자가 아니라, 함께 챙기는 복약을 도와요.',
+    rank: '2',
+    logo: '/images/project/17/yakssok.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=com.pillsquad.yakssok&hl=ko',
+      ios: 'https://apps.apple.com/kr/app/%EC%95%BD%EC%8F%99-%EC%9E%94%EC%86%8C%EB%A6%AC%ED%95%B4-%EC%A3%BC%EB%8A%94-%EC%95%BD-%EC%95%8C%EB%9E%8C/id6749473223',
+    },
+  },
+  {
+    name: '치트키',
+    year: '17',
+    description: '발빠르게 검증하는, AI 기반 사기 위험 감지 솔루션 치트키',
+    rank: '3',
+    logo: '/images/project/17/cheatkey.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=com.cheatkey.app&pcampaignid=web_share',
+      ios: 'https://apps.apple.com/kr/app/%EC%B9%98%ED%8A%B8%ED%82%A4-ai-%EC%82%AC%EA%B8%B0%ED%83%90%EC%A7%80-%ED%94%8C%EB%9E%AB%ED%8F%BC/id6749635626',
+    },
+  },
+  {
+    name: '눈 떠!',
+    year: '17',
+    description: '무조건 목표장소로 가도록 만드는 알람 앱! 운동, 공부, 어떤 목표든 눈 떠와 함께 이뤄보세요.',
+    rank: '4',
+    logo: '/images/project/17/openeye.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=com.whiplash.akuma&pcampaignid=web_share',
+      ios: 'https://apps.apple.com/kr/app/%EB%88%88-%EB%96%A0-%EB%AA%A9%ED%91%9C-%EC%9E%A5%EC%86%8C-%EB%8F%84%EC%B0%A9-%EC%9D%B8%EC%A6%9D-%EA%B0%95%EC%A0%9C-%EC%95%8C%EB%9E%8C/id6749834236',
+    },
+  },
+  {
+    name: '림버',
+    year: '17',
+    description:
+      "집중력을 기르는 도파민 앱 차단 '실험 타이머'. 디지털 도파민에서 벗어나, 지금 나의 상황에 집중해 보세요",
+    rank: '4',
+    logo: '/images/project/17/limber.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=com.kkh.cmc.limber',
+      ios: 'https://apps.apple.com/kr/app/%EB%A6%BC%EB%B2%84/id6747666779',
+    },
+  },
+  {
+    name: 'Ballog',
+    year: '17',
+    description: '야구를 보며 요동치는 감정을 참을 수 없다면? 감정으로 남기는 나만의 야구 관람 기록, 볼로그',
+    rank: '4',
+    logo: '/images/project/17/ballog.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=com.ballog.app',
+      ios: 'https://apps.apple.com/kr/app/ballog-볼로그/id6749778947',
+    },
+  },
+  {
+    name: '런콤비',
+    year: '17',
+    description: '올해 운동은 반려견과 함께! 반려견과 함께 운동하는 특별한 경험을 만들어보세요',
+    rank: '4',
+    logo: '/images/project/17/runcombi.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=com.combo.runcombi&pcampaignid=web_share',
+      ios: 'https://apps.apple.com/kr/app/%EB%9F%B0%EC%BD%A4%EB%B9%84-%EB%B0%98%EB%A0%A4%EA%B2%AC-%EC%82%B0%EC%B1%85-%EC%9A%B4%EB%8F%99-%EA%B8%B0%EB%A1%9D/id6747975586',
+    },
+  },
+  {
+    name: '상태창',
+    year: '17',
+    description: '자기계발 퀘스트로 레벨업! 이제, 자기계발을 게임처럼 즐기세요.',
+    rank: '4',
+    logo: '/images/project/17/status.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=com.status.app.status',
+      ios: 'https://apps.apple.com/kr/app/%EC%83%81%ED%83%9C%EC%B0%BD/id6747613959',
+    },
+  },
+  {
+    name: '굴비잇기',
+    year: '16',
+    description: "굴비의 짠테크! '굴비잇기'로 절약 루틴을 만들어보세요",
+    rank: '1',
+    logo: '/images/project/16/gulbi.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=com.project.goolbi&hl=ko',
+      ios: 'https://apps.apple.com/kr/app/%EA%B5%B4%EB%B9%84%EC%9E%87%EA%B8%B0/id6741732715',
+    },
+  },
+  {
+    name: '파타타',
+    year: '16',
+    description: '사진 스팟을 발견하고, 나만의 스팟을 공유하다',
+    rank: '2',
+    logo: '/images/project/16/patata.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=com.cmc.patata',
+      ios: 'https://apps.apple.com/kr/app/%ED%8C%8C%ED%83%80%ED%83%80-%EC%82%AC%EC%A7%84-%EC%8A%A4%ED%8C%9F%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83/id6742177268',
+    },
+  },
+  {
+    name: 'PillMe',
+    year: '16',
+    description:
+      'AI 기반 맞춤형 건강기능식품, 사용자 맞춤 영양제 추천, 상담을 통해 더 쉽고 정확한 능동적 건강 솔루션을 제공합니다.',
+    rank: '4',
+    logo: '/images/project/16/pillme.png',
+    link: {
+      android: '',
+      ios: '',
+    },
+  },
+  {
+    name: 'Whidy',
+    year: '16',
+    description:
+      '취업과 학습에 필요한 장소에 대한 정보를 제공해 사용자들이 원하는 장소를 쉽고 빠르게 찾을 수 있도록 돕습니다.',
+    rank: '4',
+    logo: '/images/project/16/whidy.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=com.whidy.whidyandroid&pcampaignid=web_share',
+      ios: '',
+    },
+  },
+  {
+    name: '골메이트',
+    year: '16',
+    description: '멘토와 함께하는 목표 달성 플랫폼 골메이트',
+    rank: '4',
+    logo: '/images/project/16/goalmate.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=cmc.goalmate&hl=ko',
+      ios: 'https://apps.apple.com/kr/app/%EA%B3%A8%EB%A9%94%EC%9D%B4%ED%8A%B8/id6741704150',
+    },
+  },
+  {
+    name: 'Ruty',
+    year: '16',
+    description: '1인 가구 맞춤형 생활 관리 플랫폼',
+    rank: '4',
+    logo: '/images/project/16/ruty.png',
+    link: {
+      android: '',
+      ios: 'https://apps.apple.com/kr/app/%EB%A3%A8%ED%8B%B0/id6742365699',
+    },
+  },
+  {
+    name: 'Dice',
+    year: '16',
+    description: '소상공인, 자영업자를 위한 팝업공간 대여 및 운영 지원 플랫폼',
+    rank: '4',
+    logo: '/images/project/16/dice.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=com.cmc.dice.minipop.expo',
+      ios: 'https://apps.apple.com/kr/app/dice-%ED%8C%9D%EC%97%85-%EC%9A%B4%EC%98%81-%EC%98%AC%EC%9D%B8%EC%9B%90-%EC%86%94%EB%A3%A8%EC%85%98/id6742072988',
+    },
+  },
+  {
+    name: 'Mercury',
+    year: '16',
+    description: '세상 쉬운 독서기록',
+    rank: '4',
+    logo: '/images/project/16/mercury.jpg',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=kr.co.mercuryplanet.www&pcampaignid=web_share',
+      ios: 'https://apps.apple.com/kr/app/%EB%A8%B8%ED%81%90%EB%A6%AC/id6741918517',
+    },
+  },
+  {
+    name: 'Spark',
+    year: '16',
+    description: 'SNS 및 유튜브 성장 비법 제안 서비스',
+    rank: '4',
+    logo: '/images/project/16/spark.png',
+    link: {
+      android: 'https://play.google.com/store/apps/details?id=com.spark.sns.creators&hl=ko',
+      ios: 'https://apps.apple.com/kr/app/spark-%EC%8A%A4%ED%8C%8C%ED%81%AC/id6742328947',
+    },
+  },
+  {
+    name: 'B.Link',
+    year: '15',
+    description: '링크 아카이빙 서비스',
+    link: {
+      ios: 'https://apps.apple.com/us/app/b-link/id6630368733',
+      android: 'https://play.google.com/store/apps/details?id=com.blinkapplication&hl=ko',
+    },
+    logo: '/images/project/15/b_link.jpg',
+    rank: '1',
+  },
+  {
+    name: '퓨리즘',
+    year: '15',
+    description: '감성 사진을 위한 필터 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/%ED%93%A8%EB%A6%AC%EC%A6%98/id6523427087',
+      android: 'https://play.google.com/store/apps/details?id=com.cmc.purithm&pcampaignid=web_share',
+    },
+    logo: '/images/project/15/purithm.png',
+    rank: '2',
+  },
+  {
+    name: 'suppin',
+    year: '15',
+    description: 'SNS 이벤트 관리/당첨자 선별 효율화를 지원하는 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/suppin-%EC%8D%A8%ED%95%80/id6648765679',
+      android: ' https://play.google.com/store/apps/details?id=com.suppin.app',
+    },
+    logo: '/images/project/15/supin.png',
+    rank: '3',
+  },
+  {
+    name: '프리뷰인슈',
+    year: '15',
+    description: '인생 보험 설계, 프리뷰인슈에서 내 보험을 그려보세요',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/%ED%94%84%EB%A6%AC%EB%B7%B0%EC%9D%B8%EC%8A%88/id6587559820',
+      android: 'https://play.google.com/store/apps/details?id=com.previewinsure.android',
+    },
+    logo: '/images/project/15/presue.png',
+    rank: '4',
+  },
+  {
+    name: 'SNAPFIT',
+    year: '15',
+    description: '분위기 맞춤형 스냅사진 매칭 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/snapfit/id6642695481',
+      android: 'https://play.google.com/store/apps/details?id=memory.fabricators.snapfit&pli=1',
+    },
+    logo: '/images/project/15/snapfit.png',
+    rank: '4',
+  },
+  {
+    name: 'PLUV',
+    year: '15',
+    description: '플레이리스트 통합 관리 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/pluv/id6645736556',
+      android: 'https://play.google.com/store/apps/details?id=com.cmc15th.pluv&hl=ko',
+    },
+    logo: '/images/project/15/pluv.jpg',
+    rank: '4',
+  },
+  {
+    name: 'BinVoyage',
+    year: '15',
+    description: '더 이상 쓰레기통을 찾아 헤매지 마세요. BinVoyage와 함께해요!',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/binvoyage/id6624302211?',
+      android: 'https://play.google.com/store/apps/details?id=com.binvoyage',
+    },
+    logo: '/images/project/15/bin_voyage.png',
+    rank: '4',
+  },
+  {
+    name: '노피스-Noffice',
+    year: '15',
+    description: '공지사항 관리 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/noffice-노피스/id6529546973?l=en-GB',
+      android: 'https://play.google.com/store/apps/details?id=com.easyhz.noffice.release&pcampaignid=web_share',
+    },
+    logo: '/images/project/15/noffice.png',
+    rank: '4',
+  },
+  {
+    name: 'Blue Club',
+    year: '14',
+    description: '특수고용직 노동자의 파트너, 블루클럽',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/블루클럽-blueclub/id6477823755',
+      android: 'https://play.google.com/store/apps/details?id=org.blueclub&pcampaignid=web_share',
+    },
+    logo: '/images/project/14/blue-club.png',
+    rank: '1',
+  },
+  {
+    name: '패키',
+    year: '14',
+    description: '마음으로 채우는 특별한 선물박스 커스텀 앱, 패키(Packy) 입니다.',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/패키/id6477327987',
+      android: 'https://play.google.com/store/apps/details?id=com.packy',
+    },
+    logo: '/images/project/14/packy.png',
+    rank: '2',
+  },
+  {
+    name: '팝콘메이트',
+    year: '14',
+    description: '영화ㆍ영상 전공생들의 영화덕질 플랫폼',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/popcorn-mate/id6476854398',
+      android: 'https://play.google.com/store/apps/details?id=com.popcornmate',
+    },
+    logo: '/images/project/14/popcorn-mate.png',
+    rank: '3',
+  },
+  {
+    name: '데이캐럿',
+    year: '14',
+    description: 'DayCarat은 취준생을 위한 ‘경험 기록 서비스’입니다.',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/데이캐럿/id6476876242',
+      android: 'https://play.google.com/store/apps/details?id=com.makeus.daycarat',
+    },
+    logo: '/images/project/14/day-carat.png',
+    rank: '4',
+  },
+  {
+    name: '피어나',
+    year: '14',
+    description: '소프트 스킬 기반 프로젝트 동료 탐색 & 제안 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/피어나-나와-꼭-맞는-동료가-피어나는-곳/id6477722172',
+      android: 'https://play.google.com/store/apps/details?id=com.peerna',
+    },
+    logo: '/images/project/14/peerna.png',
+    rank: '4',
+  },
+  {
+    name: '그냥,그렇다고',
+    year: '14',
+    description: '현재 나의 기분을 감정 이모지와 함께 간단히 말하고, 공감 버튼만으로 소통하는 서비스.',
+    link: {
+      ios: '',
+      android: 'https://play.google.com/store/apps/details?id=com.sowhat.justsayitt',
+    },
+    logo: '/images/project/14/just-like-that.png',
+    rank: '4',
+  },
+  {
+    name: '달달쇼핑',
+    year: '14',
+    description: '결제액의 일부를 환급 받을 수 있는 쇼핑몰 앱',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/달달쇼핑/id6477835653',
+      android: 'https://play.google.com/store/apps/details?id=com.daldalShopping',
+    },
+    logo: '/images/project/14/daldal-shoping.png',
+    rank: '4',
+  },
+  {
+    name: 'Easybud',
+    year: '14',
+    description:
+      ' 복식부기 원리를 가계부에 도입해, 사용자들의 재정 상황을 투명하고 정확하게 이해할 수 있도록 돕는 플랫폼',
+    link: {
+      ios: '',
+      android: 'https://play.google.com/store/apps/details?id=com.easybud',
+    },
+    logo: '/images/project/14/easy-bud.png',
+    rank: '4',
+  },
+  {
+    name: '커튼콜',
+    year: '13',
+    description: '연극과 뮤지컬의 매력에 빠지다.',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/%EC%BB%A4%ED%8A%BC%EC%BD%9C/id6450673014',
+      android: 'https://play.google.com/store/apps/details?id=com.cmc.curtaincall&pli=1',
+    },
+    logo: '/images/project/13/curtaincall.png',
+    rank: '1',
+  },
+  {
+    name: 'Fithub',
+    year: '13',
+    description: '‘특별한’ 운동 정보 탐색 및 공유 플랫폼 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/fithub/id6450687753',
+      android: 'https://play.google.com/store/apps/details?id=com.proteam.fithub&pcampaignid=web_share',
+    },
+    logo: '/images/project/13/fithub.png',
+    rank: '2',
+  },
+  {
+    name: '올아카이브',
+    year: '13',
+    description: '링크부터 스크린샷까지 손쉽게 관리하고 큐레이션하는 아카이빙 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/올카이브-all-chive/id6462470996',
+      android: 'https://play.google.com/store/apps/details?id=com.allchivemobile',
+    },
+    logo: '/images/project/13/allchive.png',
+    rank: '3',
+  },
+  {
+    name: '오프너',
+    year: '13',
+    description: '오프라인 이벤트의 새로운 시대를 열 오픈오프',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/오픈오프/id6451419698',
+      android: 'https://play.google.com/store/apps/details?id=com.opener.openoff&pcampaignid=web_share',
+    },
+    logo: '/images/project/13/openoff.png',
+    rank: '4',
+  },
+  {
+    name: 'Qfeed',
+    year: '13',
+    description: '친구에 자신의 마음을 표현하고 싶지만, 주변 친구들과의 관계가 망가질까 주저하지 마세요.',
+    link: {
+      ios: '',
+      android: 'https://play.google.com/store/apps/details?id=com.qfeed&pcampaignid=web_share',
+    },
+    logo: '/images/project/13/qfeed.png',
+    rank: '4',
+  },
+  {
+    name: '지금',
+    year: '13',
+    description: '금융 루틴을 만들고, 함께 도전하며, 금융 습관을 만드는 챌린지 앱 지금입니다!',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/지금-지금-실천하는-금융-챌린지/id6461050868',
+      android: 'https://play.google.com/store/apps/details?id=com.cider.cider',
+    },
+    logo: '/images/project/13/now.png',
+    rank: '4',
+  },
+  {
+    name: 'Zenefit',
+    year: '13',
+    description:
+      'Zenefit은 청년층을 타겟으로 개인마다 신청 가능한 모든 복지 정책의 예상 수혜금액을 계산해주는 혜택 관리 플랫폼',
+    link: {
+      ios: '',
+      android: '',
+    },
+    logo: '/images/project/13/zenefit.png',
+    rank: '4',
+  },
+  {
+    name: 'PLAYTE',
+    year: '13',
+    description: '나만의 레시피를 업로드하고, 나누고, 즐기는 레시피 커뮤니티 서비스!',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/playte-플레이트/id6463757225',
+      android: 'https://play.google.com/store/apps/details?id=com.cmc.recipe&hl=ko',
+    },
+    logo: '/images/project/13/playte.png',
+    rank: '4',
+  },
+  {
+    name: 'Runway',
+    year: '12',
+    description: '내 손안에 간편한 패션 쇼핑지도',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/런웨이-runway-내-손-안의-간편한-패션-쇼핑-지도/id1671808515',
+      android: 'https://play.google.com/store/apps/details?id=com.cmc12th.runway&hl=ko',
+    },
+    logo: '/images/project/12/runway.png',
+    rank: '1',
+  },
+  {
+    name: '프롬유',
+    year: '12',
+    description: '일상을 공유하고, 다른 커플의 이야기를 들을 수 있는 따뜻한 앱',
+    link: {
+      ios: '',
+      android: 'https://play.google.com/store/apps/details?id=com.fromu.fromu&pcampaignid=web_share',
+    },
+    logo: '/images/project/12/fromu.png',
+    rank: '2',
+  },
+  {
+    name: '필드메이트',
+    year: '12',
+    description: '고객별 기술 업무관리 어플',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/fieldmate/id6446427396',
+      android: '',
+    },
+    logo: '/images/project/12/fieldmate.png',
+    rank: '3',
+  },
+  {
+    name: 'Workus',
+    year: '12',
+    description: '나에게 딱 맞는 워크 스페이스 추천 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/workus/id6446238129',
+      android: '',
+    },
+    logo: '/images/project/12/workus.png',
+    rank: '4',
+  },
+  {
+    name: 'eatery',
+    year: '12',
+    description: 'Find eat, Mark eat, Write eat! eatery',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/eatery-잇터리/id6446631695',
+      android: 'https://play.google.com/store/apps/details?id=com.bobplace.eatery&pcampaignid=web_share',
+    },
+    logo: '/images/project/12/eatery.png',
+    rank: '4',
+  },
+  {
+    name: 'SOLE',
+    year: '12',
+    description: '코스 기록 및 큐레이션 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/sole-쏠-코스-기록-공유/id6446045060',
+      android: 'https://play.google.com/store/apps/details?id=cmc.sole.android&pcampaignid=web_share',
+    },
+    logo: '/images/project/12/sole.png',
+    rank: '4',
+  },
+  {
+    name: '일편마다',
+    year: '12',
+    description: '부모와 자녀의 속마음 소통앱 - 일편마다',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/부모와-자녀-간의-깊은-대화-일편마다/id6446275837',
+      android: '',
+    },
+    logo: '/images/project/12/ilpyun.png',
+    rank: '4',
+  },
+  {
+    name: 'SAY',
+    year: '12',
+    description: '재미있고, 부담 없이, 함께하는! 컨셉 과몰입 루틴 서비스',
+    link: {
+      ios: '',
+      android: '',
+    },
+    logo: '/images/project/12/say.png',
+    rank: '4',
+  },
+  {
+    name: 'HEET',
+    year: '12',
+    description: '힙하게 만나는 나의 일상',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/heet/id6446604089',
+      android: '',
+    },
+    logo: '/images/project/12/heet.png',
+    rank: '4',
+  },
+  {
+    name: 'STITCH',
+    year: '12',
+    description: '쉽고 간편한 플로깅을 위한 조깅 앱',
+    link: {
+      ios: '',
+      android: '',
+    },
+    logo: '/images/project/12/stitch.png',
+    rank: '4',
+  },
+  {
+    name: '지팡스',
+    year: '12',
+    description: '지팡스',
+    link: {
+      ios: '',
+      android: '',
+    },
+    logo: '/images/project/12/jipangs.png',
+    rank: '4',
+  },
+  {
+    name: '롬롬교환소',
+    year: '11',
+    description: '씀씀이를 줄이는 교환의 경제, 물물교환 서비스',
+    link: {
+      ios: '',
+      android: '',
+    },
+    logo: '/images/project/11/romrom.png',
+    rank: '4',
+  },
+  {
+    name: '가치가자',
+    year: '11',
+    description: '한눈에 쉽게 확인하는 항공 교통약자 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/가치가자/id6444365638',
+      android: '',
+    },
+    logo: '/images/project/11/together.png',
+    rank: '4',
+  },
+  {
+    name: 'Sparky',
+    year: '11',
+    description: '탭 세번으로 끝나는 스크랩',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/sparky-탭-세-번으로-끝나는-스크랩/id6444295657',
+      android: '',
+    },
+    logo: '/images/project/11/sparky.png',
+    rank: '4',
+  },
+  {
+    name: 'MELLY',
+    year: '11',
+    description: '소중한 사람과 함께쓰는 장소기반 기록장',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/멜리-melly-장소-기반-추억-기록장/id6444202109',
+      android: '',
+    },
+    logo: '/images/project/11/melly.png',
+    rank: '4',
+  },
+  {
+    name: 'planter',
+    year: '11',
+    description: '반려식물 케어 매칭 플랫폼',
+    link: {
+      ios: '',
+      android: '',
+    },
+    logo: '/images/project/11/planter.png',
+    rank: '4',
+  },
+  {
+    name: 'OEUVRE',
+    year: '11',
+    description: '사진이 작품이 되는 공간, OEUVRE',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/oeuvre/id6443660575',
+      android: 'https://play.google.com/store/apps/details?id=com.curator.oeuvre&pcampaignid=web_share',
+    },
+    logo: '/images/project/11/oeuvre.jpg',
+    rank: '4',
+  },
+  {
+    name: 'Chalkak',
+    year: '11',
+    description: 'Chalkak과 함께 필카를 더욱 쉽게 즐겨보세요.',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/chalkak/id6444452971',
+      android: 'https://play.google.com/store/apps/details?id=com.chalkak&pcampaignid=web_share',
+    },
+    logo: '/images/project/11/chalkak.png',
+    rank: '4',
+  },
+  {
+    name: '마이타민',
+    year: '11',
+    description: '매일 섭취하는 마음 비타민, 마이타민!',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/mitamin/id6444240698',
+      android: 'https://play.google.com/store/apps/details?id=kr.ac.kpu.ce2017154024.mytamin&pcampaignid=web_share',
+    },
+    logo: '/images/project/11/mytamin.png',
+    rank: '4',
+  },
+  {
+    name: '오늘의 조약돌',
+    year: '11',
+    description: '미래의 나를 위해 오늘 내가 해야하는 일을 정리해보세요',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/오늘의조약돌-pebbles-목표를-위한-오늘-관리/id6444320103',
+      android: 'https://play.google.com/store/apps/details?id=com.todaypebble.pebbles&pcampaignid=web_share',
+    },
+    logo: '/images/project/11/rock.png',
+    rank: '4',
+  },
+  {
+    name: '내친소',
+    year: '11',
+    description: '실제 친구가 직접 추천한 친구들을 소개받아봐!',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/내친소-신뢰기반-친구-소개-소개팅-친구만들기/id1669032147',
+      android: 'https://play.google.com/store/apps/details?id=com.retrieverSalon.naechinso&pcampaignid=web_share',
+    },
+    logo: '/images/project/11/naechinso.png',
+    rank: '4',
+  },
+  {
+    name: '스럽',
+    year: '10',
+    description: '셀럽의 핫한 아이템 정보를 물어보고 공유하는 커뮤니티, 스럽',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/스럽/id1635250785',
+      android: '',
+    },
+    logo: '/images/project/10/sluv.png',
+    rank: '4',
+  },
+  {
+    name: '밥플레이스',
+    year: '10',
+    description: '밥 미션을 수행하고, 포인트를 적립하라!',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/밥플레이스/id1634665858',
+      android: 'https://play.google.com/store/apps/details?id=com.bob_frontend&pli=1',
+    },
+    logo: '/images/project/10/bob-place.png',
+    rank: '4',
+  },
+  {
+    name: '한입',
+    year: '10',
+    description: '덕질을 하는 사용자들이 보다 편하게 굿즈를 나눔 혹은 판매할 수 있는 교류 플랫폼',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/한입-hannip/id1635377027?l=en',
+      android: 'https://play.google.com/store/apps/details?id=com.hannib&hl=ko&gl=KR',
+    },
+    logo: '/images/project/10/hannib.png',
+    rank: '4',
+  },
+  {
+    name: 'ATRACKER',
+    year: '10',
+    description: '취준 관리 앱',
+    link: {
+      ios: '',
+      android: '',
+    },
+    logo: '/images/project/10/atracker.png',
+    rank: '4',
+  },
+  {
+    name: '원케이크',
+    year: '10',
+    description: '원하는 지역의 케이크 가게들을 모아보고\n커스텀 케이크를 간편하게 주문할 수 있도록 돕는 서비스!',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/onecake/id1635032032',
+      android: 'https://play.google.com/store/apps/details?id=com.onecake_frontend',
+    },
+    logo: '/images/project/10/onecake.png',
+    rank: '4',
+  },
+  {
+    name: '마침표',
+    year: '10',
+    description: '성장하고 변화하는 진짜 나를 알아보며 행복해지기 위한 마음관리 어플',
+    link: {
+      ios: '',
+      android: '',
+    },
+    logo: '/images/project/10/machimpyo.png',
+    rank: '4',
+  },
+  {
+    name: '와플',
+    year: '10',
+    description: '일정 공유 장소 아카이빙 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/와플-일정-공유-장소-아카이빙-서비스/id1635155102',
+      android: 'https://play.google.com/store/apps/details?id=com.wapple.android',
+    },
+    logo: '/images/project/10/waffle.png',
+    rank: '4',
+  },
+  {
+    name: 'BidiT',
+    year: '10',
+    description: '국내에는 없었던 새로운 중고거래 플랫폼',
+    link: {
+      ios: '',
+      android: 'https://play.google.com/store/apps/details?id=com.alexk.bidit',
+    },
+    logo: '/images/project/10/bidit.png',
+    rank: '4',
+  },
+  {
+    name: '작심친구',
+    year: '10',
+    description: '함께 이기는 윈윈 챌린지',
+    link: {
+      ios: '',
+      android: '',
+    },
+    logo: '/images/project/10/friend.png',
+    rank: '4',
+  },
+  {
+    name: 'FINPO',
+    year: '10',
+    description: '나만의 청년정책 알림 서비스',
+    link: {
+      ios: '',
+      android: '',
+    },
+    logo: '/images/project/10/finpo.png',
+    rank: '4',
+  },
+  {
+    name: 'finder',
+    year: '10',
+    description: 'MBTI 기반 Q&A 네트워킹 서비스 / 질문자와 답변자의 니즈를 모두 만족시키는 MBTI 과몰입러 필수 APP',
+    link: {
+      ios: '',
+      android: '',
+    },
+    logo: '/images/project/10/finder.png',
+    rank: '4',
+  },
+]

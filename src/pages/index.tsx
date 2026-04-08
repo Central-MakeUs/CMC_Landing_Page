@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 
 import { Header } from '@/components/common'
 import { motion } from 'motion/react'
@@ -7,14 +8,23 @@ import {
   HomeEntrySection,
   HomeInfoSection,
   HomeInitialSection,
+  HomeProductSection,
   HomeScrollSection,
   HomeStatSection,
 } from '@/components/home'
+
+const HomeRecruitSection = dynamic(() => import('@/components/home/HomeRecruitSection'), { ssr: false })
+import { useRef } from 'react'
+import type Lenis from 'lenis'
 import { useHomeAnimation } from '@/hooks/home/useHomeAnimation'
+import { useLenis } from '@/hooks/useLenis'
 
 export default function Home() {
+  const lenisRef = useRef<Lenis | null>(null)
   const { entered, initialControls, entryControls, text1Controls, text2Controls, text3Controls, entryScrollRef } =
-    useHomeAnimation()
+    useHomeAnimation(lenisRef)
+
+  useLenis(entryScrollRef, lenisRef)
 
   return (
     <>
@@ -42,8 +52,10 @@ export default function Home() {
           <HomeEntrySection text1Controls={text1Controls} text2Controls={text2Controls} text3Controls={text3Controls} />
           <HomeScrollSection scrollContainerRef={entryScrollRef} />
           <HomeStatSection />
-          <HomeInfoSection />
+          <HomeInfoSection scrollContainerRef={entryScrollRef} />
           <HomeActivitySection />
+          <HomeProductSection />
+          <HomeRecruitSection scrollContainerRef={entryScrollRef} />
         </motion.div>
       </div>
     </>

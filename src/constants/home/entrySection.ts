@@ -1,7 +1,27 @@
 export const ENTRY_SECTION_DATA = {
   mainImage: {
     alt: 'home main',
-    image: '/images/home-main.svg',
+    image: '/images/home-entry-bottom.svg',
+  },
+  asideImage: {
+    alt: 'home aside',
+    image: '/images/home-entry-aside.svg',
+  },
+  symbol_plan: {
+    alt: 'symbol plan',
+    image: '/images/home-entry-plan.svg',
+  },
+  symbol_server: {
+    alt: 'symbol server',
+    image: '/images/home-entry-server.svg',
+  },
+  symbol_design: {
+    alt: 'symbol design',
+    image: '/images/home-entry-design.svg',
+  },
+  symbol_client: {
+    alt: 'symbol client',
+    image: '/images/home-entry-client.svg',
   },
   text1: {
     alt: 'text 1',

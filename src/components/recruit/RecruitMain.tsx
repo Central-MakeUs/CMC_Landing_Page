@@ -7,15 +7,15 @@ export default function RecruitMain() {
   return (
     <main
       className={cn(
-        'relative w-full overflow-x-hidden',
+        'relative w-full overflow-hidden',
         'bg-cover bg-top bg-no-repeat',
         '[--rw:calc(100vw/1440)]',
         "[background-image:image-set(url('/images/recruit-bg.webp')_type('image/webp'),url('/images/recruit-bg.png')_type('image/png'))]",
       )}
     >
-      <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col px-[calc(var(--rw)*200)]">
+      <div className="relative z-10 mx-auto flex max-w-[1920px] flex-col px-[calc(var(--rw)*200)]">
         <motion.div
-          className="z-20 pt-[240px] text-center"
+          className="z-20 pt-[calc(var(--rw)*240)] text-center"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}

@@ -13,7 +13,7 @@ export default function HomeInfoTabButton({ tab, setTab, isActive }: HomeInfoTab
   return (
     <button
       className={cn(
-        'flex rounded-[24px] min-w-[250px] cursor-pointer items-center px-10 py-5 gap-4 text-start text-[28px]',
+        'flex rounded-[24px] min-w-[250px] cursor-pointer items-center px-8 py-4 gap-4 text-start text-[28px]',
         isActive
           ? 'bg-black text-white font-semibold shadow-[inset_0_-16px_23.6px_0_rgba(181,175,200,0.8),inset_0_-48px_32.1px_0_rgba(55,85,255,0.5)]'
           : 'text-gray-500',
