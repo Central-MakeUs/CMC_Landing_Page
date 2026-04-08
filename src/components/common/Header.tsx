@@ -42,7 +42,7 @@ export default function Header({ activeNav, variant = 'dark' }: HeaderProps) {
           </Link>
 
           <div className="hidden items-center gap-[54px] md:flex">
-            <Link href="/#project" className={navLinkClass(activeNav === 'project', variant)}>
+            <Link href="/project" className={navLinkClass(activeNav === 'project', variant)}>
               프로젝트
             </Link>
             <Link href="/recruit" className={navLinkClass(activeNav === 'recruit', variant)}>
@@ -89,7 +89,7 @@ export default function Header({ activeNav, variant = 'dark' }: HeaderProps) {
           >
             <div className="flex flex-col items-center gap-6 py-10">
               <div className="flex flex-col items-center gap-5">
-                <Link href="/#project" className={mobileNavLinkClass(activeNav === 'project')}>
+                <Link href="/project" className={mobileNavLinkClass(activeNav === 'project')}>
                   프로젝트
                 </Link>
                 <Link href="/recruit" className={mobileNavLinkClass(activeNav === 'recruit')}>

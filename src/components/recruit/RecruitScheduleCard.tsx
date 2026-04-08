@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { JOURNEY_ROWS, SESSION_ROWS } from '@/constants/recruit/scheduleSection'
+import { JOURNEY_ROWS, SESSION_ROWS } from '@/constants/recruit'
 import { cn } from '@/utils/cn'
 import Button2 from '@/components/common/Button2'
 

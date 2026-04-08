@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Button1, CountdownCard } from '@/components/common'
-import { RECRUIT_SECTION_DATA, RECRUIT_TARGET_DATE } from '@/constants/home/recruitSection'
+import { RECRUIT_TARGET_DATE } from '@/constants/recruit'
+import { RECRUIT_SECTION_DATA } from '@/constants/home/recruitSection'
 
 type TimeLeft = { days: number; hours: number; minutes: number; seconds: number }
 
