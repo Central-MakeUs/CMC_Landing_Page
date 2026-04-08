@@ -5,7 +5,7 @@ import { INSTAGRAM_URL, KAKAO_CHANNEL_URL } from '@/constants/links'
 export default function Footer() {
   return (
     <footer className="w-full bg-black">
-      <div className="mx-auto flex max-w-[1440px] flex-col gap-4 px-6 py-12 md:min-h-[191px] md:flex-row md:items-center md:justify-between md:px-[200px] md:pb-[57px] md:pt-[58px] md:flex-wrap">
+      <div className="mx-auto flex max-w-[1920px] flex-col gap-4 px-6 py-12 md:min-h-[191px] md:flex-row md:items-center md:justify-between md:px-[200px] md:pb-[57px] md:pt-[58px] md:flex-wrap">
         <div className="flex flex-col gap-[10px]">
           <Image src="/logo-dark.svg" width={30} height={30} alt="" className="h-[30px] w-[30px]" />
           <div className="text-[13px] font-light leading-[18px] tracking-[-0.26px] text-gray-700">

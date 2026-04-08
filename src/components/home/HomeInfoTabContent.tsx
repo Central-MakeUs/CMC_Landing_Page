@@ -23,7 +23,7 @@ export function HomeInfoTabContent({ tab }: { tab: HomeInfoTab }) {
 
   if (isStringArray(title) && isStringArray(description) && isStringArray(content)) {
     return (
-      <div className="flex flex-1 min-w-0 gap-6">
+      <div className="flex flex-1 min-w-0 gap-6 h-full">
         {title.map((t, index) => (
           <HomeInfoTabContentPanel
             key={index}
@@ -67,7 +67,7 @@ function HomeInfoTabContentPanel({
   return (
     <div
       className={cn(
-        'w-full p-10 box-border rounded-[24px] overflow-hidden bg-black min-h-[280px] relative bg-gradient-to-tl from-black from-0% via-black via-76% to-primary-light-03/10 to-100%',
+        'w-full p-10 h-full box-border rounded-[24px] overflow-hidden bg-black min-h-[280px] relative bg-gradient-to-tl from-black from-0% via-black via-76% to-primary-light-03/10 to-100%',
         className,
       )}
     >

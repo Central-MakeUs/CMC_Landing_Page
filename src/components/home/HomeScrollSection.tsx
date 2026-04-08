@@ -49,21 +49,21 @@ export default function HomeScrollSection({
         >
           {title}
         </motion.p>
-        <motion.div className="absolute top-[30vh] left-[calc(50%)]" style={{ opacity: gp1Opacity }}>
+        <motion.div className="absolute top-1/2 left-[calc(50%)] -translate-y-1/2" style={{ opacity: gp1Opacity }}>
           <Image loading="eager" src={text1.image} alt={text1.alt} width={520} height={520} />
         </motion.div>
         <motion.p
-          className="absolute top-[30vh] right-[calc(50%+40px)] text-white text-right whitespace-nowrap font-pretendard text-[40px] font-medium leading-[50px] tracking-[-0.8px]"
+          className="absolute top-1/2 right-[calc(50%+40px)] -translate-y-1/2 text-white text-right whitespace-nowrap font-pretendard text-[40px] font-medium leading-[50px] tracking-[-0.8px]"
           style={{ opacity: text1Opacity }}
         >
           {text1.text}
         </motion.p>
-        <motion.div className="absolute top-[30vh] right-[calc(50%)]" style={{ opacity: gp2Opacity }}>
+        <motion.div className="absolute top-1/2 right-[calc(50%)] -translate-y-1/2" style={{ opacity: gp2Opacity }}>
           <Image loading="eager" src={text2.image} alt={text2.alt} width={520} height={520} />
         </motion.div>
 
         <motion.p
-          className="absolute top-[30vh] left-[calc(50%+40px)] text-white text-right whitespace-nowrap font-pretendard text-[40px] font-medium leading-[50px] tracking-[-0.8px]"
+          className="absolute top-1/2 left-[calc(50%+40px)] -translate-y-1/2 text-white text-right whitespace-nowrap font-pretendard text-[40px] font-medium leading-[50px] tracking-[-0.8px]"
           style={{ opacity: text2Opacity }}
         >
           {text2.text}
