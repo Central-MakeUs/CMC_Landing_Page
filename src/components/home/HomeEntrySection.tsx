@@ -15,7 +15,7 @@ export default function HomeEntrySection({
     ENTRY_SECTION_DATA
 
   return (
-    <div className="w-full top-0 relative h-[calc(100dvh-var(--spacing-header))] overflow-hidden mt-header max-w-[1920px] mx-auto">
+    <div className="w-full top-0 relative h-[80vw] md:h-[calc(100dvh-var(--spacing-header))] overflow-hidden mt-header-mobile md:mt-header max-w-[1920px] mx-auto">
       <Image
         loading="eager"
         src={mainImage.image}
@@ -30,7 +30,7 @@ export default function HomeEntrySection({
         alt={asideImage.alt}
         width={400}
         height={900}
-        className="w-auto h-40vw block top-0 right-0 absolute z-1"
+        className="w-auto h-[80vw] md:h-40vw block top-0 right-0 absolute z-1"
       />
       <Image
         loading="eager"

@@ -41,9 +41,9 @@ function StatCard({ stat }: { stat: StatItem }) {
     <motion.div
       ref={ref}
       variants={cardVariants}
-      className="rounded-4xl bg-gray-900 shadow-[inset_4px_8px_16px_0_rgba(255,255,255,0.45)] p-8 flex flex-col gap-4 min-w-[246px] w-1/4"
+      className="rounded-4xl bg-gray-900 shadow-[inset_4px_8px_16px_0_rgba(255,255,255,0.45)] p-8 flex flex-col gap-4 w-full"
     >
-      <p className="text-white text-xl">
+      <p className="text-white text-base md:text-xl">
         {stat.title.split('\n').map((line, index) => (
           <span key={index}>
             {line}
@@ -51,7 +51,7 @@ function StatCard({ stat }: { stat: StatItem }) {
           </span>
         ))}
       </p>
-      <p className="text-end text-primary-light-02 font-bold text-[40px] leading-[64px] tracking-[-0.8px]">
+      <p className="text-end text-primary-light-02 font-bold text-[24px] md:text-[40px] leading-[36px] md:leading-[64px] tracking-[-0.48px] md:tracking-[-0.8px]">
         {prefix}
         {count}
         {suffix}
@@ -64,7 +64,7 @@ export default function HomeStatSection() {
   return (
     <section className="py-50 w-full bg-linear-to-b via-black from-black to-gray-900 flex flex-col items-center">
       <motion.h1
-        className="text-white text-center text-[48px] font-semibold leading-[64px] tracking-[-1.6px] mb-16"
+        className="text-white text-center md:text-[48px] text-[24px] font-semibold md:leading-[64px] leading-[36px] tracking-[-0.48px] md:tracking-[-1.6px] mb-16"
         variants={headingVariants}
         initial="hidden"
         whileInView="visible"
@@ -75,7 +75,7 @@ export default function HomeStatSection() {
         CMC로 여러분을 초대합니다.
       </motion.h1>
       <motion.div
-        className="flex gap-4"
+        className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-[1040px] px-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

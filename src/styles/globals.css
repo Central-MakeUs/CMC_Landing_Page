@@ -90,6 +90,7 @@
   --font-yapari: var(--font-yapari-trial);
 
   --spacing-header: 52px;
+  --spacing-header-mobile: 48px;
 }
 
 body {
