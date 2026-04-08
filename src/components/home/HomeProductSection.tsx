@@ -19,17 +19,16 @@ function getCircularOffset(index: number, activeIndex: number, total: number): n
 interface ProductCardProps {
   card: ProductCardData
   offset: number
-  isInView: boolean
   onClick: () => void
 }
 
-function ProductCard({ card, offset, isInView, onClick }: ProductCardProps) {
+function ProductCard({ card, offset, onClick }: ProductCardProps) {
   const absOffset = Math.abs(offset)
   const isCenter = offset === 0
   const isVisible = absOffset <= MAX_VISIBLE_OFFSET
 
   return (
-    <motion.div
+    <div
       className="absolute top-0 flex flex-col gap-6 overflow-hidden rounded-[40px] border border-white/80 p-8"
       style={{
         left: '50%',
@@ -39,18 +38,9 @@ function ProductCard({ card, offset, isInView, onClick }: ProductCardProps) {
         background: 'linear-gradient(to bottom, #0d0f14 3.846%, rgba(49, 80, 224, 0.3) 48.077%, #0d0f14 100%)',
         boxShadow: 'inset 0px 4px 8px 0px rgba(255, 255, 255, 0.25)',
         cursor: isCenter ? 'default' : 'pointer',
-      }}
-      initial={false}
-      animate={{
-        x: offset * CARD_STEP,
-        y: absOffset * CARD_Y_STEP,
-        opacity: isVisible && isInView ? 1 : 0,
-        filter: absOffset > 0 ? 'blur(4px)' : 'blur(0px)',
-      }}
-      transition={{
-        duration: 0.5,
-        ease: 'easeInOut',
-        opacity: { duration: 0.4, delay: isInView ? absOffset * 0.15 : 0 },
+        transform: `translateX(${offset * CARD_STEP}px) translateY(${absOffset * CARD_Y_STEP}px)`,
+        opacity: isVisible ? 1 - absOffset * 0.3 : 0,
+        transition: `transform 0.5s ease-in-out, opacity 0.4s ease-in-out ${absOffset * 0.05}s`,
       }}
       onClick={() => !isCenter && onClick()}
     >
@@ -62,7 +52,7 @@ function ProductCard({ card, offset, isInView, onClick }: ProductCardProps) {
         <p className="text-[28px] font-bold leading-[1.2] text-white">{card.title}</p>
         <p className="line-clamp-2 text-[18px] leading-[1.4] text-white/70">{card.description}</p>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -91,7 +81,8 @@ export default function HomeProductSection() {
       <motion.div
         className="relative z-10 flex flex-col items-center pt-[160px]"
         initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7, ease: 'easeOut' }}
       >
         <h2 className="whitespace-nowrap text-center text-[48px] font-semibold leading-normal tracking-[-0.96px] text-white">
@@ -101,7 +92,8 @@ export default function HomeProductSection() {
         <motion.div
           className="mt-4 flex flex-col items-center"
           initial={{ opacity: 0, scaleY: 0 }}
-          animate={{ opacity: 1, scaleY: 1 }}
+          whileInView={{ opacity: 1, scaleY: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4, ease: 'easeOut' }}
           style={{ transformOrigin: 'top' }}
         >
@@ -118,7 +110,6 @@ export default function HomeProductSection() {
               key={index}
               card={card}
               offset={offset}
-              isInView={true}
               onClick={() => setActiveIndex(index)}
             />
           )
@@ -128,7 +119,8 @@ export default function HomeProductSection() {
       <motion.div
         className="relative z-10 mt-10 flex justify-center pb-[80px]"
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.9 }}
       >
         <a

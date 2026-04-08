@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { AnimatePresence, motion } from 'motion/react'
 
 import { INFO_TAB_LABELS, type HomeInfoTab } from '@/constants/home/infoSection'
 import { useHomeInfoAnimation } from '@/hooks/home/useHomeInfoAnimation'
@@ -36,18 +35,12 @@ export default function HomeInfoSection({
             </div>
 
             <div className="flex-1 min-w-0">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeTab}
-                  className="flex w-full h-full"
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -16 }}
-                  transition={{ duration: 0.25, ease: 'easeOut' }}
-                >
-                  <HomeInfoTabContent tab={activeTab} />
-                </motion.div>
-              </AnimatePresence>
+              <div
+                key={activeTab}
+                className="flex w-full h-full animate-[tab-fade-in_0.25s_ease-out_both]"
+              >
+                <HomeInfoTabContent tab={activeTab} />
+              </div>
             </div>
           </div>
         </div>
