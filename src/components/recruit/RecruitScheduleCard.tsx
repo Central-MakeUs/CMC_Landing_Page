@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { JOURNEY_ROWS, SESSION_ROWS } from '@/constants/recruit'
+import { JOURNEY_ROWS, RECRUIT_GENERATION, SESSION_ROWS } from '@/constants/recruit'
 import { cn } from '@/utils/cn'
 import Button2 from '@/components/common/Button2'
 
@@ -46,7 +46,7 @@ export default function RecruitScheduleCard({ className }: RecruitScheduleCardPr
             color="blue"
             className="gap-[clamp(0px,calc(var(--rw,1px)*20),20px)] px-[clamp(0px,calc(var(--rw,1px)*32),32px)] py-[clamp(0px,calc(var(--rw,1px)*16),16px)] text-[clamp(0px,calc(var(--rw,1px)*24),24px)]"
           >
-            CMC 19기 지원하러 가기
+            CMC {RECRUIT_GENERATION}기 지원하러 가기
           </Button2>
         </Link>
       </div>

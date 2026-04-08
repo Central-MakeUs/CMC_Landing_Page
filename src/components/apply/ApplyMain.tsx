@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { Button1, CountdownCard } from '@/components/common'
-import { RECRUIT_TARGET_DATE } from '@/constants/recruit'
+import { RECRUIT_GENERATION, RECRUIT_TARGET_DATE } from '@/constants/recruit'
 import { RECRUIT_SECTION_DATA } from '@/constants/home/recruitSection'
 
 type TimeLeft = { days: number; hours: number; minutes: number; seconds: number }
+
+const IS_RECRUIT_ENDED = Date.now() >= RECRUIT_TARGET_DATE.getTime()
 
 function calcTimeLeft(): TimeLeft {
   const diff = RECRUIT_TARGET_DATE.getTime() - Date.now()
@@ -64,7 +66,7 @@ export default function ApplyMain() {
           aria-label="모집 마감까지 남은 시간"
         >
           <div className="font-line-seed rounded-[12px_0px_23px_0px] border border-gray-300 bg-gray-900 px-6 py-2 text-[20px] font-bold leading-[1.324em] tracking-[-0.4px] text-white">
-            19기 모집 마감까지
+            {RECRUIT_GENERATION}기 모집 마감까지
           </div>
 
           <div className="flex w-full gap-[18px]">
@@ -77,7 +79,9 @@ export default function ApplyMain() {
           <Button1
             onClick={() => window.open(buttonHref, '_blank')}
             className="shadow-[0px_12px_51px_0px_rgba(255,255,255,0.42)] bg-[linear-gradient(152deg,var(--primary-light-03)_0%,var(--primary-light-05)_100%)] text-white"
-          />
+          >
+            {IS_RECRUIT_ENDED ? '다음 기수 알림받기' : `CMC ${RECRUIT_GENERATION}기 지원하기`}
+          </Button1>
         </div>
       </section>
     </main>

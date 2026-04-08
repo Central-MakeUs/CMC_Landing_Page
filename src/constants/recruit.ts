@@ -1,3 +1,6 @@
+/** 현재 모집 기수 */
+export const RECRUIT_GENERATION = 19
+
 /** 모집 마감 카운트다운 타겟 날짜 (KST) */
 export const RECRUIT_TARGET_DATE = new Date('2026-05-01T00:00:00+09:00')
 
