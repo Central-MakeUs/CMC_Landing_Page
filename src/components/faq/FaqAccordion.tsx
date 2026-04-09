@@ -27,7 +27,7 @@ function FaqAccordionToggle({
       aria-controls={panelId}
       onClick={onClick}
       className={cn(
-        'relative flex shrink-0 cursor-pointer flex-col items-center justify-center rounded-[60px] px-[11px] py-[14px]',
+        'relative flex shrink-0 cursor-pointer flex-col items-center justify-center rounded-[60px] px-[7px] py-[10px] md:px-[11px] md:py-[14px]',
         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light-01/60',
         open
           ? cn('bg-primary-light-01 text-black', toggleOpenShadowClass)
@@ -70,7 +70,7 @@ export default function FaqAccordion({ category, className }: FaqAccordionProps)
           >
             <div className="min-w-0 flex-1">
               <p
-                className={cn('text-[24px] font-semibold leading-[34px] tracking-[-0.48px] text-white', open && 'mb-4')}
+                className={cn('text-[16px] font-semibold leading-[24px] tracking-[-0.32px] text-white md:text-[24px] md:leading-[34px] md:tracking-[-0.48px]', open && 'mb-4')}
               >
                 {entry.question}
               </p>
@@ -84,7 +84,7 @@ export default function FaqAccordion({ category, className }: FaqAccordionProps)
                 )}
               >
                 <div className="overflow-hidden" aria-hidden={!open}>
-                  <p className="text-[18px] font-normal leading-[26px] tracking-[-0.36px] text-gray-200">
+                  <p className="text-[16px] font-normal leading-[24px] tracking-[-0.32px] text-gray-200 md:text-[18px] md:leading-[26px] md:tracking-[-0.36px]">
                     {entry.answer}
                   </p>
                 </div>

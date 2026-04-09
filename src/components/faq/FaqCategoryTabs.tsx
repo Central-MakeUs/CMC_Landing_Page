@@ -15,7 +15,7 @@ export default function FaqCategoryTabs({ active, onChange, className }: FaqCate
       active={active}
       onChange={onChange}
       className={className}
-      aria-label="FAQ 카테고리"
+aria-label="FAQ 카테고리"
     />
   )
 }

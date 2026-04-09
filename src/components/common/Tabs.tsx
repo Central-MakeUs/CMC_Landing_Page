@@ -17,13 +17,17 @@ type TabsProps<T extends string> = {
   'aria-label'?: string
 }
 
-export default function Tabs<T extends string>({ items, active, onChange, className, tabClassName, 'aria-label': ariaLabel }: TabsProps<T>) {
+export default function Tabs<T extends string>({
+  items,
+  active,
+  onChange,
+  className,
+  tabClassName,
+  'aria-label': ariaLabel,
+}: TabsProps<T>) {
   return (
     <div
-      className={cn(
-        'flex flex-wrap items-center gap-[10px] rounded-[60px] bg-white/4',
-        className,
-      )}
+      className={cn('flex flex-wrap items-center gap-[10px] rounded-[60px] bg-white/4', className)}
       role="tablist"
       aria-label={ariaLabel}
     >
@@ -39,8 +43,8 @@ export default function Tabs<T extends string>({ items, active, onChange, classN
             tabIndex={isSelected ? 0 : -1}
             onClick={() => onChange(id)}
             className={cn(
-              'relative z-0 flex shrink-0 cursor-pointer items-center justify-center whitespace-nowrap rounded-[60px] px-[20px] py-[10px]',
-              'text-[24px] font-normal leading-[34px] tracking-[-0.48px]',
+              'relative z-0 flex shrink-0 cursor-pointer items-center justify-center whitespace-nowrap rounded-[60px] px-[14px] py-2 md:px-5 md:py-[10px]',
+              'text-[14px] font-normal leading-[1.4] tracking-[-0.28px] md:text-[24px] md:leading-[34px] md:tracking-[-0.48px]',
               'transition-colors duration-200 ease-out motion-reduce:transition-none',
               !isSelected &&
                 'hover:bg-white/6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light-01/50',
