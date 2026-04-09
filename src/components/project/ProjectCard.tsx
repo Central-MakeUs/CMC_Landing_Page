@@ -35,12 +35,14 @@ export default function ProjectCard({
   return (
     <article
       className={cn(
-        'flex min-h-0 w-full min-w-0 flex-col overflow-hidden rounded-[clamp(0px,calc(var(--rw,1px)*24),24px)] border border-white',
+        'flex min-h-0 w-full max-w-[400px] min-w-0 flex-col overflow-hidden rounded-[clamp(0px,calc(var(--rw,1px)*24),24px)] border border-white md:max-w-none mx-auto md:mx-0',
         className,
       )}
     >
       <div
-        className={cn('relative h-[clamp(0px,calc(var(--rw,1px)*240),240px)] w-full shrink-0 overflow-hidden bg-black')}
+        className={cn(
+          'relative aspect-320/230 w-full shrink-0 overflow-hidden bg-black',
+        )}
       >
         <Image
           src={logo}
@@ -52,7 +54,7 @@ export default function ProjectCard({
       </div>
       <div
         className={cn(
-          'relative flex h-[clamp(0px,calc(var(--rw,1px)*198),198px)] shrink-0 flex-col gap-[clamp(0px,calc(var(--rw,1px)*16),16px)] overflow-hidden px-[clamp(0px,calc(var(--rw,1px)*16),16px)] pt-[clamp(0px,calc(var(--rw,1px)*16),16px)] pb-[clamp(0px,calc(var(--rw,1px)*24),24px)]',
+          'relative flex aspect-320/190 shrink-0 flex-col gap-[clamp(0px,calc(var(--rw,1px)*16),16px)] overflow-hidden px-[clamp(0px,calc(var(--rw,1px)*16),16px)] pt-[clamp(0px,calc(var(--rw,1px)*16),16px)] pb-[clamp(0px,calc(var(--rw,1px)*24),24px)]',
           'shadow-[inset_0px_4px_8px_0px_rgba(255,255,255,0.25)]',
         )}
       >
@@ -84,7 +86,9 @@ export default function ProjectCard({
               </p>
             </div>
             {rank && MEDAL_MAP[rank] && (
-              <Image src={MEDAL_MAP[rank]} alt={`${rank}등 메달`} width={56} height={56} className="shrink-0" />
+              <span className="relative size-[clamp(0px,calc(var(--rw,1px)*56),56px)] shrink-0 block">
+                <Image src={MEDAL_MAP[rank]} alt={`${rank}등 메달`} fill sizes="56px" className="object-contain" />
+              </span>
             )}
           </div>
           <p
