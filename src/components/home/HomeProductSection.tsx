@@ -7,7 +7,7 @@ import 'swiper/css'
 
 import { motion } from 'motion/react'
 import { ArrowIcon } from '@/components/common'
-import { PRODUCT_SECTION_DATA, type ProductCardData } from '@/constants/home/productSection'
+import { PROJECTS, type ProjectEntry } from '@/constants/project'
 
 const CARD_WIDTH = 448
 const CARD_STEP = 224 // center-to-center distance = CARD_WIDTH / 2
@@ -47,7 +47,7 @@ function disableTransitions(swiper: SwiperType) {
 }
 
 interface ProductCardProps {
-  card: ProductCardData
+  card: ProjectEntry
   isActive: boolean
   onActivate: () => void
 }
@@ -64,10 +64,10 @@ function ProductCard({ card, isActive, onActivate }: ProductCardProps) {
       onClick={() => !isActive && onActivate()}
     >
       <div className="relative h-[384px] w-full overflow-hidden rounded-[30px] bg-gray-800">
-        {card.image && <Image src={card.image} alt={card.title} fill className="object-cover" />}
+        {card.logo && <Image src={card.logo} alt={card.name} fill className="object-cover" />}
       </div>
       <div className="flex flex-col gap-4">
-        <p className="text-[28px] font-bold leading-[1.2] text-white">{card.title}</p>
+        <p className="text-[28px] font-bold leading-[1.2] text-white">{card.name}</p>
         <p className="line-clamp-2 text-[18px] leading-[1.4] text-white/70">{card.description}</p>
       </div>
     </div>
@@ -75,7 +75,10 @@ function ProductCard({ card, isActive, onActivate }: ProductCardProps) {
 }
 
 export default function HomeProductSection() {
-  const { title, buttonText, buttonHref, cards } = PRODUCT_SECTION_DATA
+  const title = 'CMC와 함께한\n프로젝트를 만나보세요'
+  const buttonText = '프로젝트 전체보기'
+  const buttonHref = '/project'
+  const cards = PROJECTS
   const swiperRef = useRef<SwiperType | null>(null)
 
   return (
