@@ -72,7 +72,6 @@ export default function ProjectMain() {
               onChange={handleTabChange}
               aria-label="기수 필터"
               className="mx-auto w-fit justify-center flex-nowrap gap-1 bg-white/12 md:flex-wrap md:gap-[10px] md:bg-white/4"
-              tabClassName="px-[14px] py-2 text-[14px] leading-[1.4] tracking-[-0.28px] md:px-[20px] md:py-[10px] md:text-[24px] md:leading-[34px] md:tracking-[-0.48px]"
             />
           </div>
 

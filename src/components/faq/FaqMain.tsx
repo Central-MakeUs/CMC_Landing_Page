@@ -15,14 +15,15 @@ export default function FaqMain() {
     <main
       className={cn(
         'relative w-full overflow-x-hidden',
-        'min-h-[calc(100vw*1109/1440)]',
-        'bg-cover bg-top bg-no-repeat',
-        "[background-image:image-set(url('/images/faq-bg.webp')_type('image/webp'),url('/images/faq-bg.png')_type('image/png'))]",
+        'min-h-[921px] bg-cover bg-top bg-no-repeat',
+        "[background-image:image-set(url('/images/faq-bg-mobile.webp')_type('image/webp'),url('/images/faq-bg-mobile.png')_type('image/png'))]",
+        'md:min-h-[calc(100vw*1109/1440)]',
+        "md:bg-[image-set(url('/images/faq-bg.webp')_type('image/webp'),url('/images/faq-bg.png')_type('image/png'))]",
       )}
     >
-      <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col items-center px-6 pb-24 md:px-[200px]">
+      <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col items-center px-5 pb-24 md:px-6 xl:px-[200px]">
         <motion.div
-          className="flex w-full max-w-[1040px] flex-col items-center pt-[200px] md:pt-[240px]"
+          className="flex w-full max-w-[1040px] flex-col items-center pt-[192px] md:pt-[240px]"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
@@ -31,12 +32,12 @@ export default function FaqMain() {
         </motion.div>
 
         <motion.div
-          className="mt-[60px] flex w-full max-w-[1040px] flex-col gap-[60px]"
+          className="mt-6 flex w-full max-w-[1040px] flex-col gap-6 md:mt-[60px] md:gap-[60px]"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
         >
-          <FaqCategoryTabs active={category} onChange={setCategory} className="w-fit self-center" />
+          <FaqCategoryTabs active={category} onChange={setCategory} className="w-fit self-start md:self-center" />
           <FaqAccordion key={category} category={category} className="w-full" />
         </motion.div>
       </div>
