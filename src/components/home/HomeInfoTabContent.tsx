@@ -23,7 +23,7 @@ export function HomeInfoTabContent({ tab }: { tab: HomeInfoTab }) {
 
   if (isStringArray(title) && isStringArray(description) && isStringArray(content)) {
     return (
-      <div className="flex flex-1 min-w-0 gap-6 h-full">
+      <div className="flex flex-col md:flex-row flex-1 min-w-0 gap-4 md:gap-6 h-full">
         {title.map((t, index) => (
           <HomeInfoTabContentPanel
             key={index}
@@ -67,7 +67,7 @@ function HomeInfoTabContentPanel({
   return (
     <div
       className={cn(
-        'w-full p-10 h-full box-border rounded-[24px] overflow-hidden bg-black min-h-[280px] relative bg-gradient-to-tl from-black from-0% via-black via-76% to-primary-light-03/10 to-100%',
+        'w-full p-10 h-full box-border rounded-[24px] overflow-hidden bg-black md:min-h-[280px] min-h-[80vw] relative bg-gradient-to-tl from-black from-0% via-black via-76% to-primary-light-03/10 to-100%',
         className,
       )}
     >
@@ -90,7 +90,7 @@ function HomeInfoTabContentPanel({
         width={cardImageSize}
         height={cardImageSize}
       />
-      <p className="absolute bottom-10 right-10 left-10 z-10 text-white text-[20px] leading-[28px] tracking-[-0.4px]">
+      <p className="absolute bottom-10 right-10 left-10 z-10 text-white text-base md:text-[20px] leading-[24px] md:leading-[28px] tracking-[-0.4px] md:tracking-[-0.4px]">
         {content}
       </p>
     </div>

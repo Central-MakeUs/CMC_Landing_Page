@@ -90,6 +90,7 @@
   --font-yapari: var(--font-yapari-trial);
 
   --spacing-header: 52px;
+  --spacing-header-mobile: 48px;
 }
 
 body {
@@ -129,4 +130,15 @@ body {
 @font-face {
   font-family: 'line-seed';
   src: url('/font/LINESeedKR-Bd.woff');
+}
+
+@keyframes tab-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

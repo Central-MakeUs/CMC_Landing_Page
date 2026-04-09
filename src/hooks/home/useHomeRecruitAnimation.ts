@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useMotionTemplate, useScroll, useTransform } from 'motion/react'
 
 const ASTERISK_WIDTH = 308
+const MOBILE_ASTERISK_WIDTH = 80
 const SYMBOL_INITIAL_X = -700
 
 export function useHomeRecruitAnimation(scrollContainerRef: React.RefObject<HTMLDivElement | null>) {
@@ -22,6 +23,11 @@ export function useHomeRecruitAnimation(scrollContainerRef: React.RefObject<HTML
   })
 
   const asteriskX = useTransform(scrollYProgress, [0, 0.5], [0, vpWidth - ASTERISK_WIDTH])
+  const mobileAsteriskX = useTransform(
+    scrollYProgress,
+    [0, 0.5],
+    [-MOBILE_ASTERISK_WIDTH, vpWidth - MOBILE_ASTERISK_WIDTH],
+  )
 
   const titleClipRight = useTransform(scrollYProgress, [0, 0.5], [100, 0])
   const titleClipPath = useMotionTemplate`inset(0 ${titleClipRight}% 0 0)`
@@ -37,6 +43,7 @@ export function useHomeRecruitAnimation(scrollContainerRef: React.RefObject<HTML
   return {
     sectionRef,
     asteriskX,
+    mobileAsteriskX,
     titleClipPath,
     symbolX,
     symbolOpacity,

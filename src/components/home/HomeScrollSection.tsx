@@ -44,26 +44,32 @@ export default function HomeScrollSection({
           />
         </motion.div>
         <motion.p
-          className="absolute top-0 left-1/2 text-[48px] font-bold leading-[64px] tracking-[-1.6px] -translate-x-1/2 text-white whitespace-nowrap"
+          className="absolute top-0 left-1/2 md:text-[48px] text-[24px] font-bold leading-[64px] tracking-[-0.48px] md:tracking-[-1.6px] -translate-x-1/2 text-white whitespace-nowrap"
           style={{ y: weCMCY, opacity: weCMCOpacity }}
         >
           {title}
         </motion.p>
-        <motion.div className="absolute top-1/2 left-[calc(50%)] -translate-y-1/2" style={{ opacity: gp1Opacity }}>
+        <motion.div
+          className="absolute top-1/2 left-[calc(50%)] -translate-y-1/2 md:p-0 pr-5"
+          style={{ opacity: gp1Opacity }}
+        >
           <Image loading="eager" src={text1.image} alt={text1.alt} width={520} height={520} />
         </motion.div>
         <motion.p
-          className="absolute top-1/2 right-[calc(50%+40px)] -translate-y-1/2 text-white text-right whitespace-nowrap font-pretendard text-[40px] font-medium leading-[50px] tracking-[-0.8px]"
+          className="absolute top-1/2 right-[calc(50%+40px)] -translate-y-1/2 text-white text-right whitespace-nowrap font-pretendard md:text-[40px] text-[16px] font-medium leading-[24px] md:leading-[50px] tracking-[-0.32px] md:tracking-[-1.6px]"
           style={{ opacity: text1Opacity }}
         >
           {text1.text}
         </motion.p>
-        <motion.div className="absolute top-1/2 right-[calc(50%)] -translate-y-1/2" style={{ opacity: gp2Opacity }}>
+        <motion.div
+          className="absolute top-1/2 right-[calc(50%)] -translate-y-1/2 md:p-0 pl-5"
+          style={{ opacity: gp2Opacity }}
+        >
           <Image loading="eager" src={text2.image} alt={text2.alt} width={520} height={520} />
         </motion.div>
 
         <motion.p
-          className="absolute top-1/2 left-[calc(50%+40px)] -translate-y-1/2 text-white text-right whitespace-nowrap font-pretendard text-[40px] font-medium leading-[50px] tracking-[-0.8px]"
+          className="absolute top-1/2 left-[calc(50%+40px)] -translate-y-1/2 text-white text-left whitespace-nowrap font-pretendard md:text-[40px] text-[16px] font-medium leading-[24px] md:leading-[50px] tracking-[-0.32px] md:tracking-[-1.6px]"
           style={{ opacity: text2Opacity }}
         >
           {text2.text}
