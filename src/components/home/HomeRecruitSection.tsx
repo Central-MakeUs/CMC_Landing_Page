@@ -6,15 +6,23 @@ import { RECRUIT_SECTION_DATA } from '@/constants/home/recruitSection'
 import { useHomeRecruitAnimation } from '@/hooks/home/useHomeRecruitAnimation'
 import { useCountdown } from '@/hooks/useCountdown'
 
-function SheenButton({ href, size }: { href: string; size: 'web' | 'mob' }) {
+function SheenButton({
+  href,
+  iconClassName,
+  textClassName,
+}: {
+  href: string
+  iconClassName: string
+  textClassName: string
+}) {
   const [hovered, setHovered] = useState(false)
   return (
     <div
-      className="relative inline-flex overflow-hidden rounded-[100px] md:text-[28px] text-[16px] md:leading-[40px] leading-[24px] md:tracking-[-0.8px] tracking-[-0.48px]"
+      className="relative inline-flex overflow-hidden rounded-[100px]"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <Button1 size={size} onClick={() => window.open(href, '_blank')}>
+      <Button1 onClick={() => window.open(href, '_blank')} iconClassName={iconClassName} textClassName={textClassName}>
         CMC 19기 신청하기
       </Button1>
       <AnimatePresence>
@@ -84,7 +92,7 @@ export default function HomeRecruitSection({
               style={{ x: symbolX, opacity: symbolOpacity }}
             />
             <motion.div style={{ opacity: buttonOpacity }}>
-              <SheenButton href={buttonHref} size="mob" />
+              <SheenButton href={buttonHref} iconClassName="size-8" textClassName="text-[18px] tracking-[-0.48px]" />
             </motion.div>
           </div>
 
@@ -168,7 +176,7 @@ export default function HomeRecruitSection({
           />
 
           <motion.div className="absolute" style={{ left: '306px', top: '13px', opacity: buttonOpacity }}>
-            <SheenButton href={buttonHref} size="web" />
+            <SheenButton href={buttonHref} iconClassName="size-[66px]" textClassName="text-[28px] tracking-[-0.8px]" />
           </motion.div>
 
           <motion.div
