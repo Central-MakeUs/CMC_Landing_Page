@@ -12,9 +12,11 @@ export function useHomeAnimation(lenisRef?: React.RefObject<Lenis | null>) {
   const handledRef = useRef(false)
   const entryScrollRef = useRef<HTMLDivElement>(null)
 
+  const touchStartYRef = useRef(0)
+
   useEffect(() => {
-    const handleWheel = async (e: WheelEvent) => {
-      if (e.deltaY <= 0 || handledRef.current) return
+    const runEntryAnimation = async () => {
+      if (handledRef.current) return
       handledRef.current = true
       await initialControls.start({ opacity: 0, y: '-8%', transition: { duration: 0.8, ease: 'easeInOut' } })
       setEntered(true)
@@ -29,8 +31,29 @@ export function useHomeAnimation(lenisRef?: React.RefObject<Lenis | null>) {
       await text3Controls.start({ x: '0px', opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } })
     }
 
+    const handleWheel = (e: WheelEvent) => {
+      if (e.deltaY <= 0) return
+      runEntryAnimation()
+    }
+
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartYRef.current = e.touches[0].clientY
+    }
+
+    const handleTouchMove = (e: TouchEvent) => {
+      const deltaY = touchStartYRef.current - e.touches[0].clientY
+      if (deltaY <= 0) return
+      runEntryAnimation()
+    }
+
     window.addEventListener('wheel', handleWheel)
-    return () => window.removeEventListener('wheel', handleWheel)
+    window.addEventListener('touchstart', handleTouchStart)
+    window.addEventListener('touchmove', handleTouchMove)
+    return () => {
+      window.removeEventListener('wheel', handleWheel)
+      window.removeEventListener('touchstart', handleTouchStart)
+      window.removeEventListener('touchmove', handleTouchMove)
+    }
   }, [initialControls, entryControls, text1Controls, text2Controls, text3Controls, lenisRef])
 
   return {
