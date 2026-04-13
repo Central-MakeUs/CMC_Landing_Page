@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { INSTAGRAM_URL, KAKAO_CHANNEL_URL } from '@/constants/links'
+import { INSTAGRAM_URL } from '@/constants/links'
 
 export default function Footer() {
   return (
@@ -14,16 +14,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex shrink-0 items-center gap-5 md:gap-[26px]">
-          <a
-            href={KAKAO_CHANNEL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="카카오톡 채널"
-            className="flex shrink-0 items-center justify-center"
-          >
-            <Image src="/images/footer-kakao.svg" width={44} height={44} alt="" className="md:w-11 md:h-11 w-6 h-6" />
-          </a>
+        <div className="flex shrink-0 items-center">
           <a
             href={INSTAGRAM_URL}
             target="_blank"
