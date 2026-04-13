@@ -1,4 +1,8 @@
 export const ENTRY_SECTION_DATA = {
+  mobileImage: {
+    alt: 'home mobile',
+    image: '/images/home-entry-bottom-mob.svg',
+  },
   mainImage: {
     alt: 'home main',
     image: '/images/home-entry-bottom.svg',

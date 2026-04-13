@@ -49,7 +49,7 @@ export default function Home() {
           initial={{ opacity: 0, y: '8%' }}
           animate={entryControls}
         >
-          <HomeEntrySection text1Controls={text1Controls} text2Controls={text2Controls} text3Controls={text3Controls} />
+          <HomeEntrySection entered={entered} text1Controls={text1Controls} text2Controls={text2Controls} text3Controls={text3Controls} />
           <HomeScrollSection scrollContainerRef={entryScrollRef} />
           <HomeStatSection />
           <HomeInfoSection scrollContainerRef={entryScrollRef} />

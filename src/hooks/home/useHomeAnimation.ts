@@ -19,12 +19,9 @@ export function useHomeAnimation(lenisRef?: React.RefObject<Lenis | null>) {
       if (handledRef.current) return
       handledRef.current = true
       await initialControls.start({ opacity: 0, y: '-8%', transition: { duration: 0.8, ease: 'easeInOut' } })
+      if (entryScrollRef.current) entryScrollRef.current.scrollTop = 0
+      if (lenisRef?.current) lenisRef.current.scrollTo(0, { immediate: true })
       setEntered(true)
-      if (lenisRef?.current) {
-        lenisRef.current.scrollTo(0, { immediate: true })
-      } else if (entryScrollRef.current) {
-        entryScrollRef.current.scrollTop = 0
-      }
       await entryControls.start({ opacity: 1, y: '0%', transition: { duration: 0.8, ease: 'easeInOut' } })
       await text1Controls.start({ x: '0px', opacity: 1, transition: { duration: 0.6, ease: 'easeOut' } })
       await text2Controls.start({ x: '0px', opacity: 1, transition: { duration: 1.2, ease: 'easeOut' } })

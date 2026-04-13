@@ -2,20 +2,23 @@ import { ENTRY_SECTION_DATA } from '@/constants/home/entrySection'
 import { motion, useAnimation } from 'motion/react'
 import Image from 'next/image'
 
-export default function HomeEntrySection({
-  text1Controls,
-  text2Controls,
-  text3Controls,
-}: {
+import { useIsMobile } from '@/hooks/useIsMobile'
+
+type TextControls = {
+  entered: boolean
   text1Controls: ReturnType<typeof useAnimation>
   text2Controls: ReturnType<typeof useAnimation>
   text3Controls: ReturnType<typeof useAnimation>
-}) {
+}
+
+// ─── 데스크탑 ─────────────────────────────────────────────────────────────────
+
+function DesktopEntrySection({ entered, text1Controls, text2Controls, text3Controls }: TextControls) {
   const { mainImage, asideImage, symbol_plan, symbol_server, symbol_design, symbol_client, text1, text2, text3 } =
     ENTRY_SECTION_DATA
 
   return (
-    <div className="w-full top-0 relative h-[80vw] md:h-[calc(100dvh-var(--spacing-header))] overflow-hidden mt-header-mobile md:mt-header max-w-[1920px] mx-auto">
+    <div className="w-full top-0 relative h-[calc(100dvh-var(--spacing-header))] overflow-hidden mt-header max-w-[1920px] mx-auto">
       <Image
         loading="eager"
         src={mainImage.image}
@@ -65,10 +68,14 @@ export default function HomeEntrySection({
         className="w-[20vw] block bottom-[0.8vw] right-[16vw] absolute z-2"
       />
       <div className="absolute top-header left-0 flex flex-col gap-[clamp(0px, 1vw, 52px)] z-3">
-        <motion.div className="ml-[8vw]" initial={{ x: '-60px', opacity: 0 }} animate={text1Controls}>
+        <motion.div className="ml-[8vw]" initial={entered ? false : { x: '-60px', opacity: 0 }} animate={text1Controls}>
           <Image src={text1.image} className="w-[48vw] max-w-[621px] h-auto" alt={text1.alt} width={600} height={80} />
         </motion.div>
-        <motion.div className="flex items-center gap-4" initial={{ x: '-60vw', opacity: 0 }} animate={text2Controls}>
+        <motion.div
+          className="flex items-center gap-4"
+          initial={entered ? false : { x: '-60vw', opacity: 0 }}
+          animate={text2Controls}
+        >
           <Image
             src={text2.image}
             className="w-[52vw] max-w-[906px] h-auto mt-[1.5vw] shadow-xl"
@@ -79,7 +86,7 @@ export default function HomeEntrySection({
         </motion.div>
         <motion.div
           className="flex items-center mt-[2.5vw]"
-          initial={{ x: '-60px', opacity: 0 }}
+          initial={entered ? false : { x: '-60px', opacity: 0 }}
           animate={text3Controls}
         >
           <div className="relative w-[43vw] max-w-[644px] cursor-pointer group">
@@ -104,5 +111,100 @@ export default function HomeEntrySection({
         </motion.div>
       </div>
     </div>
+  )
+}
+
+// ─── 모바일 ──────────────────────────────────────────────────────────────────
+
+function MobileEntrySection({ entered, text1Controls, text2Controls, text3Controls }: TextControls) {
+  const { mobileImage, text1, text2, text3 } = ENTRY_SECTION_DATA
+  // TODO: 모바일 뷰 구현
+  return (
+    <div className="w-full relative h-[calc(100dvh-var(--spacing-header-mobile))] overflow-hidden mt-header-mobile bg-black">
+      <div className="absolute top-header left-0 flex flex-col gap-[clamp(0px, 1vw, 52px)] z-3">
+        <motion.div className="ml-[8vw]" initial={entered ? false : { x: '-60px', opacity: 0 }} animate={text1Controls}>
+          <Image src={text1.image} className="w-[68vw] max-w-[621px] h-auto" alt={text1.alt} width={600} height={80} />
+        </motion.div>
+        <motion.div
+          className="flex items-center gap-4"
+          initial={entered ? false : { x: '-60vw', opacity: 0 }}
+          animate={text2Controls}
+        >
+          <Image
+            src={text2.image}
+            className="w-[84vw] max-w-[906px] h-auto mt-[3vw] shadow-xl"
+            alt={text2.alt}
+            width={695}
+            height={80}
+          />
+        </motion.div>
+        <motion.div
+          className="flex items-center mt-[4.5vw]"
+          initial={entered ? false : { x: '-60px', opacity: 0 }}
+          animate={text3Controls}
+        >
+          <div className="relative w-[73vw] max-w-[644px] cursor-pointer group">
+            <Image
+              src={text3.image}
+              className="w-full h-auto group-hover:opacity-0 group-active:opacity-0"
+              alt={text3.alt}
+              width={695}
+              height={80}
+            />
+            <Image
+              src={text3.pressedImage}
+              className="w-full h-auto absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100"
+              alt={text3.alt}
+              width={695}
+              height={80}
+              onClick={() => {
+                alert('test')
+              }}
+            />
+          </div>
+        </motion.div>
+      </div>
+      <Image
+        loading="eager"
+        src={mobileImage.image}
+        alt={mobileImage.alt}
+        width={1440}
+        height={900}
+        className="w-full h-auto block bottom-0 absolute z-2"
+      />
+    </div>
+  )
+}
+
+// ─── HomeEntrySection ─────────────────────────────────────────────────────────
+
+export default function HomeEntrySection({ entered, text1Controls, text2Controls, text3Controls }: TextControls) {
+  const isMobile = useIsMobile()
+
+  // hydration 전: 배경색만 표시하여 잘못된 환경의 자산이 로드되지 않도록 대기
+  if (isMobile === null) {
+    return (
+      <div className="w-full bg-black mt-header-mobile md:mt-header h-[calc(100dvh-var(--spacing-header-mobile))] md:h-[calc(100dvh-var(--spacing-header))]" />
+    )
+  }
+
+  if (isMobile) {
+    return (
+      <MobileEntrySection
+        entered={entered}
+        text1Controls={text1Controls}
+        text2Controls={text2Controls}
+        text3Controls={text3Controls}
+      />
+    )
+  }
+
+  return (
+    <DesktopEntrySection
+      entered={entered}
+      text1Controls={text1Controls}
+      text2Controls={text2Controls}
+      text3Controls={text3Controls}
+    />
   )
 }
