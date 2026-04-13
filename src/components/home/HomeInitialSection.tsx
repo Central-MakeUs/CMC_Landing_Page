@@ -12,8 +12,10 @@ export default function HomeInitialSection() {
         className="absolute top-0 right-0"
       />
 
-      <p className="absolute top-42 text-white font-yapari text-[32px] text-center w-full">
-        Are you ready to launch with CMC?
+      <p className="absolute top-42 text-white font-yapari text-[22px] xl:text-[32px] text-center w-full">
+        Are you ready <br className="block xl:hidden" />
+        to launch <br className="block xl:hidden" />
+        with CMC?
       </p>
       <div className="flex items-end absolute bottom-0 left-0 h-[60vh] w-full">
         <Image
