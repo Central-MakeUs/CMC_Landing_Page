@@ -15,12 +15,13 @@ export default function HomeInfoSection({
   const { sectionRef, activeTab, scrollToTab } = useHomeInfoAnimation(scrollContainerRef)
 
   return (
-    <section ref={sectionRef} className="h-[400vh] w-full bg-black py-header md:px-0 px-5 ">
-      <div className="sticky top-0 w-full flex items-center py-40" style={{ height: '100dvh' }}>
+    <section ref={sectionRef} className="md:h-[400vh] w-full bg-black py-header md:px-0 px-5 ">
+      <div className="md:sticky md:top-0 md:h-[100dvh] w-full flex items-center md:py-40 py-10">
         <div className="max-w-[1040px] w-full mx-auto">
           <Image src="/images/home-info-badge.svg" alt="home info badge" width={216} height={44} />
           <h1 className="text-white text-start md:text-[40px] text-[24px] font-bold md:leading-[60px] leading-[36px] tracking-[-0.48px] md:tracking-[-0.8px] mt-4">
-            각 분야의 전문가 5명이 하나의 팀을 이뤄 <br />
+            각 분야의 전문가 5명이
+            <br className="block md:hidden" /> 하나의 팀을 이뤄 <br />
             3개월 동안 프로덕트를 제작해요.
           </h1>
           <h1 className="text-gray-200 text-start md:text-[24px] text-[16px] md:leading-[34px] leading-[24px] md:tracking-[-0.48px] tracking-[-0.32px] mt-2">
