@@ -14,8 +14,18 @@ export interface ScrollVisibility {
   text1: boolean
   gp2: boolean
   text2: boolean
-  cards: boolean
 }
+
+// ─── 등장 타이밍 (500vh 구간 기준) ───────────────────────────────────────────
+//
+//  0.00 ── star 등장
+//  0.10 ── [weCMC 페이드인]
+//  0.38 ── [weCMC 페이드아웃 시작] → 0.38에서 CSS transition 500ms 동안 완전히 사라짐
+//  0.48 ── gap 끝 (약 50vh 여유)
+//  0.48 ── [gp1 + text1 동시 페이드인]
+//  0.68 ── [gp1 + text1 페이드아웃 시작]
+//  0.78 ── gap 끝 (약 50vh 여유)
+//  0.78 ── [gp2 + text2 동시 페이드인, 이후 계속 표시]
 
 export function useHomeScrollAnimation(scrollContainerRef: React.RefObject<HTMLDivElement | null>) {
   const sectionRef = useRef<HTMLElement>(null)
@@ -26,7 +36,6 @@ export function useHomeScrollAnimation(scrollContainerRef: React.RefObject<HTMLD
     text1: false,
     gp2: false,
     text2: false,
-    cards: false,
   })
 
   const { scrollYProgress } = useScroll({
@@ -43,17 +52,19 @@ export function useHomeScrollAnimation(scrollContainerRef: React.RefObject<HTMLD
     return Math.min(h + STAR_SIZE / 2 + 24, window.innerHeight * 0.75)
   })
 
-  // opacity는 boolean threshold로 대체 → CSS transition이 담당
+  // opacity는 boolean threshold로 대체 → CSS transition(duration-500)이 담당
   useEffect(() => {
     return scrollYProgress.on('change', (p) => {
       setVisibility({
         star: p > 0.037,
-        weCMC: p > 0.1 && p < 0.5,
-        gp1: p > 0.45 && p < 0.75,
-        text1: p > 0.5 && p < 0.75,
-        gp2: p > 0.7,
-        text2: p > 0.75,
-        cards: p > 0.85,
+        // weCMC: 0.10 ~ 0.38 (이후 gap 0.10 → gp1 시작 0.48)
+        weCMC: p > 0.1 && p < 0.38,
+        // gp1 + text1: 동시 등장·소멸 / 0.48 ~ 0.68 (이후 gap 0.10 → gp2 시작 0.78)
+        gp1: p > 0.48 && p < 0.68,
+        text1: p > 0.48 && p < 0.68,
+        // gp2 + text2: 동시 등장, 이후 계속 표시
+        gp2: p > 0.78,
+        text2: p > 0.78,
       })
     })
   }, [scrollYProgress])
