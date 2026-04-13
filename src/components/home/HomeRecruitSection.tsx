@@ -5,6 +5,7 @@ import { Button1, CountdownCard } from '@/components/common'
 import { RECRUIT_SECTION_DATA } from '@/constants/home/recruitSection'
 import { useHomeRecruitAnimation } from '@/hooks/home/useHomeRecruitAnimation'
 import { useCountdown } from '@/hooks/useCountdown'
+import { RECRUIT_GENERATION } from '@/constants/recruit'
 
 function SheenButton({
   href,
@@ -23,7 +24,7 @@ function SheenButton({
       onMouseLeave={() => setHovered(false)}
     >
       <Button1 onClick={() => window.open(href, '_blank')} iconClassName={iconClassName} textClassName={textClassName}>
-        CMC 19기 신청하기
+        CMC {RECRUIT_GENERATION}기 신청하기
       </Button1>
       <AnimatePresence>
         {hovered && (
