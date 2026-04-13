@@ -4,7 +4,6 @@ import { useMemo, useState } from 'react'
 
 import Tabs from '@/components/common/Tabs'
 import { cn } from '@/utils/cn'
-import { motion } from 'motion/react'
 
 import ProjectCard from './ProjectCard'
 import ProjectTitle from './ProjectTitle'
@@ -50,21 +49,11 @@ export default function ProjectMain() {
         )}
       />
       <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col items-center px-5 pb-17 md:pb-32 xl:px-[200px] [--rw:calc((100vw-40px)/320)] md:[--rw:calc(100vw/1440)]">
-        <motion.div
-          className="flex w-full max-w-[1040px] flex-col items-center pt-[200px] md:pt-[240px]"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
-        >
+        <div className="flex w-full max-w-[1040px] flex-col items-center pt-[200px] md:pt-[240px] [animation:fade-in-up_0.7s_ease-out_both]">
           <ProjectTitle className="text-[24px] md:text-[clamp(32px,calc(var(--rw,1px)*48),48px)]" />
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="mt-6 flex w-full max-w-[1040px] flex-col items-center gap-[26px] md:gap-14"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 }}
-        >
+        <div className="mt-6 flex w-full max-w-[1040px] flex-col items-center gap-[26px] md:gap-14 [animation:fade-in-up_0.7s_ease-out_0.15s_both]">
           <div className="w-full overflow-x-auto md:overflow-x-visible [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
             <Tabs
               items={PROJECT_TAB_ITEMS}
@@ -99,7 +88,7 @@ export default function ProjectMain() {
               더보기
             </button>
           )}
-        </motion.div>
+        </div>
       </div>
     </main>
   )

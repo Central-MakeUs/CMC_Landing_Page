@@ -2,7 +2,6 @@ import { useState } from 'react'
 
 import type { FaqCategoryId } from '@/constants/faq'
 import { cn } from '@/utils/cn'
-import { motion } from 'motion/react'
 
 import FaqAccordion from './FaqAccordion'
 import FaqCategoryTabs from './FaqCategoryTabs'
@@ -22,24 +21,14 @@ export default function FaqMain() {
       )}
     >
       <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col items-center px-5 pb-24 md:px-6 xl:px-[200px]">
-        <motion.div
-          className="flex w-full max-w-[1040px] flex-col items-center pt-[192px] md:pt-[240px]"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
-        >
+        <div className="flex w-full max-w-[1040px] flex-col items-center pt-[192px] md:pt-[240px] [animation:fade-in-up_0.7s_ease-out_both]">
           <FaqTitle />
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="mt-6 flex w-full max-w-[1040px] flex-col gap-6 md:mt-[60px] md:gap-[60px]"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
-        >
+        <div className="mt-6 flex w-full max-w-[1040px] flex-col gap-6 md:mt-[60px] md:gap-[60px] [animation:fade-in-up_0.7s_ease-out_0.4s_both]">
           <FaqCategoryTabs active={category} onChange={setCategory} className="w-fit self-center" />
           <FaqAccordion key={category} category={category} className="w-full" />
-        </motion.div>
+        </div>
       </div>
     </main>
   )

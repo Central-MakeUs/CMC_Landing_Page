@@ -1,7 +1,6 @@
 import RecruitScheduleCard from './RecruitScheduleCard'
 import RecruitTitle from './RecruitTitle'
 import { cn } from '@/utils/cn'
-import { motion } from 'motion/react'
 
 export default function RecruitMain() {
   return (
@@ -23,23 +22,13 @@ export default function RecruitMain() {
         )}
       />
       <div className="relative z-10 mx-auto flex max-w-[1920px] flex-col md:px-[calc(var(--rw)*200)]">
-        <motion.div
-          className="z-20 pt-[157px] text-center md:pt-[calc(var(--rw)*240)]"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
-        >
+        <div className="z-20 pt-[157px] text-center md:pt-[calc(var(--rw)*240)] [animation:fade-in-up_0.7s_ease-out_both]">
           <RecruitTitle />
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="z-10 flex justify-center px-5 pt-5 pb-[80px] md:px-0 md:pt-[132px] md:pb-[160px]"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
-        >
+        <div className="z-10 flex justify-center px-5 pt-5 pb-[80px] md:px-0 md:pt-[132px] md:pb-[160px] [animation:fade-in-up_0.7s_ease-out_0.4s_both]">
           <RecruitScheduleCard />
-        </motion.div>
+        </div>
       </div>
     </main>
   )
