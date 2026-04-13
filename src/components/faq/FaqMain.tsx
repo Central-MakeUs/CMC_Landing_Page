@@ -37,7 +37,7 @@ export default function FaqMain() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
         >
-          <FaqCategoryTabs active={category} onChange={setCategory} className="w-fit self-start md:self-center" />
+          <FaqCategoryTabs active={category} onChange={setCategory} className="w-fit self-center" />
           <FaqAccordion key={category} category={category} className="w-full" />
         </motion.div>
       </div>
