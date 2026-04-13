@@ -29,7 +29,7 @@ export default function Header({ activeNav, variant = 'dark' }: HeaderProps) {
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full">
-      <nav className="backdrop-blur-[20px] bg-white/12">
+      <nav className="md:backdrop-blur-[10px] backdrop-blur-[25px] bg-white/12">
         <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between px-5 py-3 md:px-6 md:py-[9px] xl:px-[200px]">
           <Link href="/" aria-label="CMC 홈" className="shrink-0" onClick={closeMenu}>
             <Image
