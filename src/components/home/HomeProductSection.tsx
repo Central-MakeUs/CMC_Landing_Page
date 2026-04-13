@@ -136,14 +136,18 @@ export default function HomeProductSection() {
   }
 
   return (
-    <section className="relative w-full overflow-hidden bg-black pb-20">
-      <Image
-        className="pointer-events-none absolute -bottom-1/3 md:-bottom-1/11 left-1/2 h-[900px] w-[calc(100vw*1.5)] md:w-[1475px] -translate-x-1/2"
-        src="/images/home-product-bg.svg"
-        alt="home product section orb"
-        width={1475}
-        height={900}
-      />
+    <section className="relative w-full overflow-hidden bg-black">
+      <div className="pointer-events-none absolute -bottom-30 md:-bottom-1/11 left-1/2 h-[900px] w-[calc(100vw*1.5)] md:w-[1475px] -translate-x-1/2">
+        <Image
+          className="h-full w-full"
+          src="/images/home-product-bg.svg"
+          alt="home product section orb"
+          width={1475}
+          height={900}
+        />
+        <div className="absolute inset-y-0 left-0 w-1/4 bg-[linear-gradient(to_right,#0d0f14_0%,transparent_100%)]" />
+        <div className="absolute inset-y-0 right-0 w-1/4 bg-[linear-gradient(to_left,#0d0f14_0%,transparent_100%)]" />
+      </div>
 
       {/* 타이틀 */}
       <div
@@ -170,7 +174,7 @@ export default function HomeProductSection() {
       {/* 캐러셀 */}
       <div
         ref={carouselRef}
-        className="relative z-10 mt-10 h-[640px] w-full max-w-6xl mx-auto overflow-hidden"
+        className="relative z-10 mt-10 h-[600px] xl:h-[640px] w-full max-w-6xl mx-auto overflow-hidden"
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
@@ -207,7 +211,7 @@ export default function HomeProductSection() {
       {/* 하단 버튼 */}
       <div
         ref={buttonRef}
-        className={`relative z-10 mt-40 flex justify-center md:pb-[80px] pb-[40px] ${buttonInView ? '[animation:fade-in-up_0.6s_ease-out_0.9s_both]' : 'opacity-0'}`}
+        className={`relative z-10 mt-10 flex justify-center md:pb-[80px] pb-[40px] ${buttonInView ? '[animation:fade-in-up_0.6s_ease-out_0.9s_both]' : 'opacity-0'}`}
       >
         <a
           href="/project"
