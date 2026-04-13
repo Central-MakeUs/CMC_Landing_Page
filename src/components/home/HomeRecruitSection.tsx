@@ -56,10 +56,8 @@ export default function HomeRecruitSection({
     mobileAsteriskX,
     titleClipPath,
     symbolX,
-    symbolOpacity,
-    buttonOpacity,
-    countdownOpacity,
     countdownY,
+    visibility,
   } = useHomeRecruitAnimation(scrollContainerRef)
 
   return (
@@ -76,28 +74,21 @@ export default function HomeRecruitSection({
             className="pointer-events-none absolute left-[-56px] bottom-0 w-[320px] h-[320px]"
           />
 
-          {/* Asterisk - x 애니메이션 유지 (글씨 나타나는 효과와 연동) */}
-          {/* <motion.img
-            src="/images/home-recruit-asterisk.svg"
-            alt=""
-            aria-hidden="true"
-            className="pointer-events-none absolute top-80 left-0 w-[80px] h-[80px]"
-            style={{ x: mobileAsteriskX }}
-          /> */}
-
           <div className="flex items-center gap-4 w-full mb-10">
+            {/* x 보간 - motion 유지 / opacity - CSS transition */}
             <motion.img
               src="/images/home-recruit-symbol.svg"
               alt="CMC symbol"
-              className="h-[6vw] w-[14vw]"
-              style={{ x: symbolX, opacity: symbolOpacity }}
+              className={`h-[6vw] w-[14vw] transition-opacity duration-300 ${visibility.symbol ? 'opacity-100' : 'opacity-0'}`}
+              style={{ x: symbolX }}
             />
-            <motion.div style={{ opacity: buttonOpacity }}>
+            {/* opacity only - motion 제거, CSS transition */}
+            <div className={`transition-opacity duration-300 ${visibility.button ? 'opacity-100' : 'opacity-0'}`}>
               <SheenButton href={buttonHref} iconClassName="size-8" textClassName="text-[18px] tracking-[-0.48px]" />
-            </motion.div>
+            </div>
           </div>
 
-          {/* Title */}
+          {/* Title - clipPath 보간 - motion 유지 */}
           <motion.h1
             className="font-yapari text-white text-center leading-none tracking-[-2px] w-full"
             style={{
@@ -108,12 +99,10 @@ export default function HomeRecruitSection({
             {title}
           </motion.h1>
 
-          {/* Symbol + Button */}
-
-          {/* Countdown - grid-cols-2 */}
+          {/* y 보간 - motion 유지 / opacity - CSS transition */}
           <motion.div
-            className="grid grid-cols-2 gap-3 w-full"
-            style={{ opacity: countdownOpacity, y: countdownY }}
+            className={`grid grid-cols-2 gap-3 w-full transition-opacity duration-300 ${visibility.countdown ? 'opacity-100' : 'opacity-0'}`}
+            style={{ y: countdownY }}
             aria-live="polite"
             aria-label="모집 마감까지 남은 시간"
           >
@@ -135,6 +124,7 @@ export default function HomeRecruitSection({
             style={{ left: '-56px', top: '262px', width: '513px', height: '513px' }}
           />
 
+          {/* x 보간 - motion 유지 */}
           <motion.img
             src="/images/home-recruit-asterisk.svg"
             alt=""
@@ -150,6 +140,7 @@ export default function HomeRecruitSection({
             }}
           />
 
+          {/* clipPath 보간 - motion 유지 */}
           <motion.h1
             className="font-yapari absolute whitespace-nowrap text-white leading-none tracking-[-4px]"
             style={{
@@ -162,31 +153,35 @@ export default function HomeRecruitSection({
             {title}
           </motion.h1>
 
+          {/* x 보간 - motion 유지 / opacity - CSS transition */}
           <motion.img
             src="/images/home-recruit-symbol.svg"
             alt="CMC symbol"
-            className="absolute"
+            className={`absolute transition-opacity duration-300 ${visibility.symbol ? 'opacity-100' : 'opacity-0'}`}
             style={{
               left: '-23px',
               top: '0px',
               width: '281px',
               height: '115px',
               x: symbolX,
-              opacity: symbolOpacity,
             }}
           />
 
-          <motion.div className="absolute" style={{ left: '306px', top: '13px', opacity: buttonOpacity }}>
+          {/* opacity only - motion 제거, CSS transition */}
+          <div
+            className={`absolute transition-opacity duration-300 ${visibility.button ? 'opacity-100' : 'opacity-0'}`}
+            style={{ left: '306px', top: '13px' }}
+          >
             <SheenButton href={buttonHref} iconClassName="size-[66px]" textClassName="text-[28px] tracking-[-0.8px]" />
-          </motion.div>
+          </div>
 
+          {/* y 보간 - motion 유지 / opacity - CSS transition */}
           <motion.div
-            className="absolute"
+            className={`absolute transition-opacity duration-300 ${visibility.countdown ? 'opacity-100' : 'opacity-0'}`}
             style={{
               top: '390px',
               left: 'calc(50% - 519px)',
               width: '1038px',
-              opacity: countdownOpacity,
               y: countdownY,
             }}
             aria-live="polite"

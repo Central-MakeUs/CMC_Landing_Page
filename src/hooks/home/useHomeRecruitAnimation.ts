@@ -5,9 +5,20 @@ const ASTERISK_WIDTH = 308
 const MOBILE_ASTERISK_WIDTH = 80
 const SYMBOL_INITIAL_X = -700
 
+export interface RecruitVisibility {
+  symbol: boolean
+  button: boolean
+  countdown: boolean
+}
+
 export function useHomeRecruitAnimation(scrollContainerRef: React.RefObject<HTMLDivElement | null>) {
   const sectionRef = useRef<HTMLElement>(null)
   const [vpWidth, setVpWidth] = useState(1440)
+  const [visibility, setVisibility] = useState<RecruitVisibility>({
+    symbol: false,
+    button: false,
+    countdown: false,
+  })
 
   useEffect(() => {
     const update = () => setVpWidth(window.innerWidth)
@@ -22,6 +33,7 @@ export function useHomeRecruitAnimation(scrollContainerRef: React.RefObject<HTML
     offset: ['start start', 'end end'],
   })
 
+  // 연속 보간이 필요한 값은 MotionValue 유지
   const asteriskX = useTransform(scrollYProgress, [0, 0.5], [0, vpWidth - ASTERISK_WIDTH])
   const mobileAsteriskX = useTransform(
     scrollYProgress,
@@ -33,12 +45,18 @@ export function useHomeRecruitAnimation(scrollContainerRef: React.RefObject<HTML
   const titleClipPath = useMotionTemplate`inset(0 ${titleClipRight}% 0 0)`
 
   const symbolX = useTransform(scrollYProgress, [0.5, 0.82], [SYMBOL_INITIAL_X, 0])
-  const symbolOpacity = useTransform(scrollYProgress, [0.82, 1.0], [0, 1])
-
-  const buttonOpacity = useTransform(scrollYProgress, [0.95, 1.0], [0, 1])
-
-  const countdownOpacity = useTransform(scrollYProgress, [0.95, 1.0], [0, 1])
   const countdownY = useTransform(scrollYProgress, [0.95, 1.0], [24, 0])
+
+  // opacity는 boolean threshold로 대체 → CSS transition이 담당
+  useEffect(() => {
+    return scrollYProgress.on('change', (p) => {
+      setVisibility({
+        symbol: p >= 0.82,
+        button: p >= 0.95,
+        countdown: p >= 0.95,
+      })
+    })
+  }, [scrollYProgress])
 
   return {
     sectionRef,
@@ -46,9 +64,7 @@ export function useHomeRecruitAnimation(scrollContainerRef: React.RefObject<HTML
     mobileAsteriskX,
     titleClipPath,
     symbolX,
-    symbolOpacity,
-    buttonOpacity,
-    countdownOpacity,
     countdownY,
+    visibility,
   }
 }
