@@ -13,7 +13,7 @@ export default function HomeScrollSection({
   scrollContainerRef: React.RefObject<HTMLDivElement | null>
 }) {
   const { sectionRef, lineHeight, starY, weCMCY, visibility } = useHomeScrollAnimation(scrollContainerRef)
-  const { star, title, text1, text2, cards } = SCROLL_SECTION_DATA
+  const { star, title, text1, text2 } = SCROLL_SECTION_DATA
 
   return (
     <section ref={sectionRef} className="h-[500vh]">
@@ -24,7 +24,7 @@ export default function HomeScrollSection({
         />
 
         <motion.div
-          className={`absolute top-0 left-1/2 -translate-x-1/2 transition-opacity duration-300 ${visibility.star ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute top-0 left-1/2 -translate-x-1/2 z-999 transition-opacity duration-300 ${visibility.star ? 'opacity-100' : 'opacity-0'}`}
           style={{ y: starY }}
         >
           <Image
