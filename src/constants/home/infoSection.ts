@@ -1,5 +1,5 @@
 export const INFO_TAB_LABELS = {
-  Plan: 'Plan',
+  PM: 'PM',
   Design: 'Design',
   Client: 'Client',
   Server: 'Server',
@@ -16,8 +16,8 @@ export const INFO_TAB_INFO: Record<
     content: string | string[]
   }
 > = {
-  Plan: {
-    title: 'Plan',
+  PM: {
+    title: 'PM',
     description: '기획 & PM',
     image: '/images/home-info-plan.svg',
     content:

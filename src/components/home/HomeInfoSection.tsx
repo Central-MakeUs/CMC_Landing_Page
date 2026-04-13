@@ -24,8 +24,8 @@ export default function HomeInfoSection({
             3개월 동안 프로덕트를 제작해요.
           </h1>
           <h1 className="text-gray-200 text-start md:text-[24px] text-[16px] md:leading-[34px] leading-[24px] md:tracking-[-0.48px] tracking-[-0.32px] mt-2">
-            PM & Planner (1명) / Designer (1명) /<br className="md:hidden block" /> Native - iOS, Android, Flutter (2명)
-            / Server (1명)
+            PM (1명) / Designer (1명) /<br className="md:hidden block" /> Native - iOS, Android, Flutter (2명) / Server
+            (1명)
           </h1>
           <div className="flex flex-col md:flex-row gap-4 md:gap-10 w-full mt-10">
             <div className="flex flex-row overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden gap-2 md:flex-col md:gap-3 md:shrink-0">
