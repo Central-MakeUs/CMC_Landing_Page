@@ -15,7 +15,10 @@ export default function HomeInfoSection({
   const { sectionRef, activeTab, scrollToTab } = useHomeInfoAnimation(scrollContainerRef)
 
   return (
-    <section ref={sectionRef} className="md:h-[400vh] w-full bg-black py-header md:px-0 px-5 ">
+    <section
+      ref={sectionRef}
+      className="md:h-[400vh] w-full bg-linear-to-br from-black via-black to-gray-900 py-header md:px-0 px-5  "
+    >
       <div className="md:sticky md:top-0 md:h-[100dvh] w-full flex items-center md:py-40 py-10">
         <div className="max-w-[1040px] w-full mx-auto">
           <Image src="/images/home-info-badge.svg" alt="home info badge" width={216} height={44} />
