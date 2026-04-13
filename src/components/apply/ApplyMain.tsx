@@ -1,16 +1,20 @@
 import Image from 'next/image'
 import { Button1, CountdownCard } from '@/components/common'
-import { RECRUIT_GENERATION, RECRUIT_TARGET_DATE } from '@/constants/recruit'
-import { RECRUIT_SECTION_DATA } from '@/constants/home/recruitSection'
+import { RECRUIT_GENERATION } from '@/constants/recruit'
+import { APPLY_DEADLINE } from '@/constants/apply'
+import { APPLY_DATA } from '@/constants/apply'
 import { useCountdown } from '@/hooks/useCountdown'
 import { cn } from '@/utils/cn'
 
-const IS_RECRUIT_ENDED = Date.now() >= RECRUIT_TARGET_DATE.getTime()
+const IS_RECRUIT_ENDED = Date.now() >= APPLY_DEADLINE.getTime()
 
 export default function ApplyMain() {
-  const { buttonHref, countdown } = RECRUIT_SECTION_DATA
+  const { getButtonHref, countdown } = APPLY_DATA
+  const buttonHref = getButtonHref(IS_RECRUIT_ENDED)
   const timeLeft = useCountdown()
-  const buttonLabel = IS_RECRUIT_ENDED ? '다음 기수 알림받기' : `CMC ${RECRUIT_GENERATION}기 지원하기`
+  const buttonLabel = IS_RECRUIT_ENDED
+    ? `${RECRUIT_GENERATION + 1}기 사전 예약하기`
+    : `CMC ${RECRUIT_GENERATION}기 지원하기`
   const buttonClassName =
     'shadow-[0px_12px_51px_0px_rgba(255,255,255,0.42)] bg-[linear-gradient(152deg,var(--primary-light-03)_0%,var(--primary-light-05)_100%)] text-white'
 
@@ -38,7 +42,8 @@ export default function ApplyMain() {
             <span className="md:hidden">
               CMC는
               <br />
-              <span className="font-semibold text-primary-light-04">실력있는</span>{" '기획자, 디자이너, 개발자'들이"}
+              <span className="font-semibold text-primary-light-04">실력있는</span>
+              {" '기획자, 디자이너, 개발자'들이"}
               <br />
               <span className="font-semibold text-primary-light-04">3개월</span> 동안 함께{' '}
               <span className="font-semibold text-primary-light-04">수익 창출</span>을 위한
@@ -47,7 +52,9 @@ export default function ApplyMain() {
               <span className="font-semibold text-primary-light-04">IT 커뮤니티</span> 입니다.
             </span>
             <span className="hidden md:inline">
-              CMC는 <span className="font-semibold text-primary-light-04">실력있는</span>{" '기획자, 디자이너, 개발자'들이 "}<span className="font-semibold text-primary-light-04">3개월</span> 동안 함께{' '}
+              CMC는 <span className="font-semibold text-primary-light-04">실력있는</span>
+              {" '기획자, 디자이너, 개발자'들이 "}
+              <span className="font-semibold text-primary-light-04">3개월</span> 동안 함께{' '}
               <span className="font-semibold text-primary-light-04">수익 창출</span>을 위한{' '}
               <span className="font-semibold text-primary-light-04">MVP 프로덕트</span>를 제작하는{' '}
               <span className="font-semibold text-primary-light-04">IT 커뮤니티</span> 입니다.
@@ -61,7 +68,9 @@ export default function ApplyMain() {
           aria-label="모집 마감까지 남은 시간"
         >
           <div className="font-line-seed rounded-[12px_0px_23px_0px] border border-gray-300 bg-gray-900 px-6 py-2 text-[14px] font-bold leading-[1.324em] tracking-[-0.28px] text-white md:text-[20px] md:tracking-[-0.4px]">
-            {RECRUIT_GENERATION}기 모집 마감까지
+            {IS_RECRUIT_ENDED
+              ? `${RECRUIT_GENERATION}기 모집이 마감되었어요`
+              : `${RECRUIT_GENERATION}기 모집 마감까지`}
           </div>
 
           <div className="grid w-full grid-cols-2 gap-x-[18px] gap-y-[16px] md:flex md:gap-[18px]">

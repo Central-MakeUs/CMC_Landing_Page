@@ -13,7 +13,7 @@ import {
   HomeStatSection,
 } from '@/components/home'
 
-const HomeRecruitSection = dynamic(() => import('@/components/home/HomeRecruitSection'), { ssr: false })
+const HomeApplySection = dynamic(() => import('@/components/home/HomeApplySection'), { ssr: false })
 import { useRef } from 'react'
 import type Lenis from 'lenis'
 import { useHomeAnimation } from '@/hooks/home/useHomeAnimation'
@@ -55,7 +55,7 @@ export default function Home() {
           <HomeInfoSection scrollContainerRef={entryScrollRef} />
           <HomeActivitySection />
           <HomeProductSection />
-          <HomeRecruitSection scrollContainerRef={entryScrollRef} />
+          <HomeApplySection scrollContainerRef={entryScrollRef} />
         </motion.div>
       </div>
     </>

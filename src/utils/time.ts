@@ -1,9 +1,9 @@
-import { RECRUIT_TARGET_DATE } from '@/constants/recruit'
+import { APPLY_DEADLINE } from '@/constants/apply'
 
 export type TimeLeft = { days: number; hours: number; minutes: number; seconds: number }
 
 export function calcTimeLeft(): TimeLeft {
-  const diff = RECRUIT_TARGET_DATE.getTime() - Date.now()
+  const diff = APPLY_DEADLINE.getTime() - Date.now()
   if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 }
   return {
     days: Math.floor(diff / 86_400_000),

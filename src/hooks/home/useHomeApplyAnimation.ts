@@ -5,16 +5,16 @@ const ASTERISK_WIDTH = 308
 const MOBILE_ASTERISK_WIDTH = 80
 const SYMBOL_INITIAL_X = -700
 
-export interface RecruitVisibility {
+export interface ApplyVisibility {
   symbol: boolean
   button: boolean
   countdown: boolean
 }
 
-export function useHomeRecruitAnimation(scrollContainerRef: React.RefObject<HTMLDivElement | null>) {
+export function useHomeApplyAnimation(scrollContainerRef: React.RefObject<HTMLDivElement | null>) {
   const sectionRef = useRef<HTMLElement>(null)
   const [vpWidth, setVpWidth] = useState(1440)
-  const [visibility, setVisibility] = useState<RecruitVisibility>({
+  const [visibility, setVisibility] = useState<ApplyVisibility>({
     symbol: false,
     button: false,
     countdown: false,

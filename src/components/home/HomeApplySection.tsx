@@ -2,10 +2,13 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Button1, CountdownCard } from '@/components/common'
 
-import { RECRUIT_SECTION_DATA } from '@/constants/home/recruitSection'
-import { useHomeRecruitAnimation } from '@/hooks/home/useHomeRecruitAnimation'
+import { APPLY_DATA } from '@/constants/apply'
+import { useHomeApplyAnimation } from '@/hooks/home/useHomeApplyAnimation'
 import { useCountdown } from '@/hooks/useCountdown'
 import { RECRUIT_GENERATION } from '@/constants/recruit'
+import { APPLY_DEADLINE } from '@/constants/apply'
+
+const IS_RECRUIT_ENDED = Date.now() >= APPLY_DEADLINE.getTime()
 
 function SheenButton({
   href,
@@ -24,7 +27,7 @@ function SheenButton({
       onMouseLeave={() => setHovered(false)}
     >
       <Button1 onClick={() => window.open(href, '_blank')} iconClassName={iconClassName} textClassName={textClassName}>
-        CMC {RECRUIT_GENERATION}기 신청하기
+        {IS_RECRUIT_ENDED ? `${RECRUIT_GENERATION + 1}기 사전 예약하기` : `CMC ${RECRUIT_GENERATION}기 지원하기`}
       </Button1>
       <AnimatePresence>
         {hovered && (
@@ -42,23 +45,17 @@ function SheenButton({
   )
 }
 
-export default function HomeRecruitSection({
+export default function HomeApplySection({
   scrollContainerRef,
 }: {
   scrollContainerRef: React.RefObject<HTMLDivElement | null>
 }) {
-  const { title, buttonHref, countdown } = RECRUIT_SECTION_DATA
+  const { title, getButtonHref, countdown } = APPLY_DATA
+  const buttonHref = getButtonHref(IS_RECRUIT_ENDED)
   const timeLeft = useCountdown()
 
-  const {
-    sectionRef,
-    asteriskX,
-    mobileAsteriskX,
-    titleClipPath,
-    symbolX,
-    countdownY,
-    visibility,
-  } = useHomeRecruitAnimation(scrollContainerRef)
+  const { sectionRef, asteriskX, mobileAsteriskX, titleClipPath, symbolX, countdownY, visibility } =
+    useHomeApplyAnimation(scrollContainerRef)
 
   return (
     <section ref={sectionRef} className="h-[300vh]" aria-label="CMC 모집 섹션">
