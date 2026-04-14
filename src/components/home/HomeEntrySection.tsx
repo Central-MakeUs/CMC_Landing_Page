@@ -1,4 +1,5 @@
 import { ENTRY_SECTION_DATA } from '@/constants/home/entrySection'
+import { APPLY_DATA, APPLY_DEADLINE } from '@/constants/apply'
 import { motion, useAnimation } from 'motion/react'
 import Image from 'next/image'
 
@@ -89,7 +90,12 @@ function DesktopEntrySection({ entered, text1Controls, text2Controls, text3Contr
           initial={entered ? false : { x: '-60px', opacity: 0 }}
           animate={text3Controls}
         >
-          <div className="relative w-[43vw] max-w-[644px] cursor-pointer group">
+          <a
+            href={APPLY_DATA.getButtonHref(new Date() >= APPLY_DEADLINE)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative w-[43vw] max-w-[644px] cursor-pointer group block"
+          >
             <Image
               src={text3.image}
               className="w-full h-auto group-hover:opacity-0 group-active:opacity-0"
@@ -103,11 +109,8 @@ function DesktopEntrySection({ entered, text1Controls, text2Controls, text3Contr
               alt={text3.alt}
               width={695}
               height={80}
-              onClick={() => {
-                alert('test')
-              }}
             />
-          </div>
+          </a>
         </motion.div>
       </div>
     </div>
@@ -144,7 +147,12 @@ function MobileEntrySection({ entered, text1Controls, text2Controls, text3Contro
           initial={entered ? false : { x: '-60px', opacity: 0 }}
           animate={text3Controls}
         >
-          <div className="relative w-[73vw] max-w-[644px] cursor-pointer group">
+          <a
+            href={APPLY_DATA.getButtonHref(new Date() >= APPLY_DEADLINE)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative w-[73vw] max-w-[644px] cursor-pointer group block"
+          >
             <Image
               src={text3.image}
               className="w-full h-auto group-hover:opacity-0 group-active:opacity-0"
@@ -158,11 +166,8 @@ function MobileEntrySection({ entered, text1Controls, text2Controls, text3Contro
               alt={text3.alt}
               width={695}
               height={80}
-              onClick={() => {
-                alert('test')
-              }}
             />
-          </div>
+          </a>
         </motion.div>
       </div>
       <Image
