@@ -54,7 +54,7 @@ export default function ApplyMain() {
             <span className="hidden md:inline">
               CMC는 <span className="font-semibold text-primary-light-04">실력있는</span>
               {" '기획자, 디자이너, 개발자'들이 "}
-              <span className="font-semibold text-primary-light-04">3개월</span> 동안 함께{' '}
+              <span className="font-semibold text-primary-light-04">3개월</span> 동안 함께 <br />
               <span className="font-semibold text-primary-light-04">수익 창출</span>을 위한{' '}
               <span className="font-semibold text-primary-light-04">MVP 프로덕트</span>를 제작하는{' '}
               <span className="font-semibold text-primary-light-04">IT 커뮤니티</span> 입니다.
@@ -68,9 +68,7 @@ export default function ApplyMain() {
           aria-label="모집 마감까지 남은 시간"
         >
           <div className="font-line-seed rounded-[12px_0px_23px_0px] border border-gray-300 bg-gray-900 px-6 py-2 text-[14px] font-bold leading-[1.324em] tracking-[-0.28px] text-white md:text-[20px] md:tracking-[-0.4px]">
-            {IS_RECRUIT_ENDED
-              ? `${RECRUIT_GENERATION}기 모집이 마감되었어요`
-              : `${RECRUIT_GENERATION}기 모집 마감까지`}
+            {IS_RECRUIT_ENDED ? `${RECRUIT_GENERATION}기 모집이 마감되었어요` : `${RECRUIT_GENERATION}기 모집 마감까지`}
           </div>
 
           <div className="grid w-full grid-cols-2 gap-x-[18px] gap-y-[16px] md:flex md:gap-[18px]">
