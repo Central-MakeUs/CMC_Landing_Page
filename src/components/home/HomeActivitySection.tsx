@@ -60,7 +60,7 @@ export default function HomeActivitySection() {
                   />
                 </div>
 
-                <div className="absolute top-8 left-8 right-8 flex flex-col gap-3">
+                <div className="absolute top-8 left-8 right-8 flex flex-col gap-3 z-10">
                   <p className="font-yapari md:text-[24px] text-[22px] w-fit text-white pb-3 border-b-[2px] border-white">
                     0{idx + 1}
                   </p>
@@ -73,6 +73,12 @@ export default function HomeActivitySection() {
                     'absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent transition-opacity duration-300',
                     'opacity-100',
                     isActive ? 'md:opacity-100' : 'md:opacity-0',
+                  )}
+                />
+                <div
+                  className={cn(
+                    'absolute inset-0 bg-gradient-to-b from-black/70 via-black/10 to-transparent transition-opacity duration-300',
+                    'opacity-100',
                   )}
                 />
 
