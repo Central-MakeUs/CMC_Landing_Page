@@ -72,7 +72,7 @@ export default function Header({ activeNav, variant = 'dark' }: HeaderProps) {
             onClick={() => setIsMenuOpen((prev) => !prev)}
             className="flex h-6 w-6 shrink-0 items-center justify-center md:hidden"
           >
-            <HamburgerIcon color={variant === 'light' ? 'white' : 'var(--black)'} />
+            <HamburgerIcon color={variant === 'light' ? 'var(--black)' : 'white'} />
           </button>
         </div>
       </nav>

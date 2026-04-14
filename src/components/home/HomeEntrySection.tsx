@@ -117,10 +117,11 @@ function DesktopEntrySection({ entered, text1Controls, text2Controls, text3Contr
 // ─── 모바일 ──────────────────────────────────────────────────────────────────
 
 function MobileEntrySection({ entered, text1Controls, text2Controls, text3Controls }: TextControls) {
-  const { mobileImage, text1, text2, text3 } = ENTRY_SECTION_DATA
+  const { mobileImage, text1, text2, text3, symbol_plan, symbol_design, symbol_server, symbol_client } =
+    ENTRY_SECTION_DATA
   // TODO: 모바일 뷰 구현
   return (
-    <div className="w-full relative h-[calc(100dvh-var(--spacing-header-mobile))] overflow-hidden mt-header-mobile bg-black">
+    <div className="w-full relative h-[calc(100dvh-var(--spacing-header-mobile))] overflow-hidden mt-header-mobile bg-linear-to-tr from-black via-black to-primary-light-03/30">
       <div className="absolute top-header left-0 flex flex-col gap-[clamp(0px, 1vw, 52px)] z-3">
         <motion.div className="ml-[8vw]" initial={entered ? false : { x: '-60px', opacity: 0 }} animate={text1Controls}>
           <Image src={text1.image} className="w-[68vw] max-w-[621px] h-auto" alt={text1.alt} width={600} height={80} />
@@ -164,6 +165,38 @@ function MobileEntrySection({ entered, text1Controls, text2Controls, text3Contro
           </div>
         </motion.div>
       </div>
+      <Image
+        loading="eager"
+        src={symbol_plan.image}
+        alt={symbol_plan.alt}
+        width={80}
+        height={80}
+        className="size-[20vw] block bottom-[34vw] right-[54vw] absolute z-10"
+      />
+      <Image
+        loading="eager"
+        src={symbol_design.image}
+        alt={symbol_design.alt}
+        width={80}
+        height={80}
+        className="size-[28vw] block bottom-[29vw] right-[10vw] absolute z-10"
+      />
+      <Image
+        loading="eager"
+        src={symbol_server.image}
+        alt={symbol_server.alt}
+        width={80}
+        height={80}
+        className="size-[28vw] block bottom-[5vw] right-[26vw] absolute z-10"
+      />
+      <Image
+        loading="eager"
+        src={symbol_client.image}
+        alt={symbol_client.alt}
+        width={80}
+        height={80}
+        className="w-[42vw] block bottom-[58vw] right-[23vw] absolute z-10"
+      />
       <Image
         loading="eager"
         src={mobileImage.image}
