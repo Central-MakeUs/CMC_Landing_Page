@@ -5,6 +5,11 @@ export default function Document() {
     <Html lang="ko">
       <Head>
         <link rel="icon" href="/favicon.png" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+        />
         <meta name="description" content="우리만의 룰을 세워 세상을 바꾸는 조직, CMC" />
         <meta name="image" content="/meta/image-og.png"></meta>
         <meta name="og:title" content="CMC"></meta>
