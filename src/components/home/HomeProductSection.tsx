@@ -32,7 +32,7 @@ interface ProductCardProps {
 function ProductCard({ card, isActive }: ProductCardProps) {
   return (
     <div
-      className="flex flex-col gap-6 w-full max-w-[448px] overflow-hidden rounded-[40px] border border-white/80 p-8 h-[548px]"
+      className="flex flex-col gap-6 w-full max-w-[448px] overflow-hidden rounded-[40px] border border-white/80 p-8 h-[110vw] md:h-137"
       style={{
         background: 'linear-gradient(to bottom, #0d0f14 3.846%, rgba(49, 80, 224, 0.3) 48.077%, #0d0f14 100%)',
         boxShadow: 'inset 0px 4px 8px 0px rgba(255, 255, 255, 0.25)',
