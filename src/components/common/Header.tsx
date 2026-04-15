@@ -79,34 +79,37 @@ export default function Header({ activeNav, variant = 'dark' }: HeaderProps) {
 
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
-            id="mobile-nav"
-            initial={{ height: 0, overflow: 'hidden' }}
-            animate={{ height: 'auto', overflow: 'hidden' }}
-            exit={{ height: 0, overflow: 'hidden' }}
-            transition={{ duration: 0.2, ease: 'easeOut' }}
-            className="w-full backdrop-blur-[50px] bg-white/20 md:hidden"
-          >
-            <div className="flex flex-col items-center gap-6 py-10">
-              <div className="flex flex-col items-center gap-5">
-                <Link href="/project" className={mobileNavLinkClass(activeNav === 'project')}>
-                  프로젝트
-                </Link>
-                <Link href="/recruit" className={mobileNavLinkClass(activeNav === 'recruit')}>
-                  모집안내
-                </Link>
-                <Link href="/faq" className={mobileNavLinkClass(activeNav === 'faq')}>
-                  FAQ
+          <>
+            <div className="fixed inset-0 top-12 z-[-1] md:hidden" onClick={closeMenu} aria-hidden="true" />
+            <motion.div
+              id="mobile-nav"
+              initial={{ height: 0, overflow: 'hidden' }}
+              animate={{ height: 'auto', overflow: 'hidden' }}
+              exit={{ height: 0, overflow: 'hidden' }}
+              transition={{ duration: 0.2, ease: 'easeOut' }}
+              className="w-full backdrop-blur-[50px] bg-white/20 md:hidden"
+            >
+              <div className="flex flex-col items-center gap-6 py-10">
+                <div className="flex flex-col items-center gap-5">
+                  <Link href="/project" className={mobileNavLinkClass(activeNav === 'project')}>
+                    프로젝트
+                  </Link>
+                  <Link href="/recruit" className={mobileNavLinkClass(activeNav === 'recruit')}>
+                    모집안내
+                  </Link>
+                  <Link href="/faq" className={mobileNavLinkClass(activeNav === 'faq')}>
+                    FAQ
+                  </Link>
+                </div>
+                <Link
+                  href="/apply"
+                  className="w-full max-w-[85px] rounded-[5px] bg-primary-light-04 px-[15px] py-[5px] text-center text-[16px] font-semibold leading-[24px] tracking-[-0.32px] text-white hover:opacity-90"
+                >
+                  지원하기
                 </Link>
               </div>
-              <Link
-                href="/apply"
-                className="w-full max-w-[85px] rounded-[5px] bg-primary-light-04 px-[15px] py-[5px] text-center text-[16px] font-semibold leading-[24px] tracking-[-0.32px] text-white hover:opacity-90"
-              >
-                지원하기
-              </Link>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </header>
