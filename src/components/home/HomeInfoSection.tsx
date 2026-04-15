@@ -1,11 +1,17 @@
 import Image from 'next/image'
+import ReactDOM from 'react-dom'
 
-import { INFO_TAB_LABELS, type HomeInfoTab } from '@/constants/home/infoSection'
+import { INFO_TAB_INFO, INFO_TAB_LABELS, type HomeInfoTab } from '@/constants/home/infoSection'
 import { useHomeInfoAnimation } from '@/hooks/home/useHomeInfoAnimation'
 import HomeInfoTabButton from './HomeInfoTabButton'
 import { HomeInfoTabContent } from './HomeInfoTabContent'
 
 const TAB_KEYS = Object.keys(INFO_TAB_LABELS) as HomeInfoTab[]
+
+const PRELOAD_IMAGES = [
+  ...TAB_KEYS.map((key) => INFO_TAB_INFO[key].image),
+  '/images/home-info-card.svg',
+]
 
 export default function HomeInfoSection({
   scrollContainerRef,
@@ -13,6 +19,8 @@ export default function HomeInfoSection({
   scrollContainerRef: React.RefObject<HTMLDivElement | null>
 }) {
   const { sectionRef, activeTab, scrollToTab } = useHomeInfoAnimation(scrollContainerRef)
+
+  PRELOAD_IMAGES.forEach((src) => ReactDOM.preload(src, { as: 'image' }))
 
   return (
     <section
