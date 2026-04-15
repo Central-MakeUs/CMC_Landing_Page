@@ -7,9 +7,9 @@ export const SCROLL_SECTION_DATA = {
   text1: {
     text: (
       <>
-        짧은 시간 내에
-        <br />
-        시장성을 검증해서 출시하고,
+        짧은 시간 내에 <br className="hidden md:block" />
+        시장성을
+        <br className="block md:hidden" /> 검증해서 출시하고,
       </>
     ),
     alt: 'graphic 1',

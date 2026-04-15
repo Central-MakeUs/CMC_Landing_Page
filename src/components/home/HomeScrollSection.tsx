@@ -54,7 +54,7 @@ export default function HomeScrollSection({
         </div>
 
         <p
-          className={`absolute top-2/5 right-[calc(50%+20px)] xl:right-[calc(50%+40px)] w-fit -translate-y-1/2 text-white text-right whitespace-nowrap font-pretendard md:text-[40px] text-[16px] font-medium leading-[24px] md:leading-[50px] tracking-[-0.32px] md:tracking-[-1.6px] transition-opacity duration-500 ${visibility.text1 ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute top-2/5 pl-5 md:pl-0 right-[calc(50%+20px)] xl:right-[calc(50%+40px)] w-fit -translate-y-1/2 text-white text-right whitespace-nowrap font-pretendard md:text-[40px] text-[16px] font-medium leading-[24px] md:leading-[50px] tracking-[-0.32px] md:tracking-[-1.6px] transition-opacity duration-500 ${visibility.text1 ? 'opacity-100' : 'opacity-0'}`}
         >
           {text1.text}
         </p>
