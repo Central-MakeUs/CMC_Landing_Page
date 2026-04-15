@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { ArrowIcon } from '@/components/common'
 import { PROJECTS, type ProjectEntry } from '@/constants/project'
 import { useInViewOnce } from '@/hooks/useInViewOnce'
+import Link from 'next/link'
 
 // ─── 상수 ────────────────────────────────────────────────────────────────────
 const BASE_CARD_WIDTH = 448
@@ -213,13 +214,13 @@ export default function HomeProductSection() {
         ref={buttonRef}
         className={`relative z-10 mt-10 flex justify-center md:pb-[80px] pb-[40px] ${buttonInView ? '[animation:fade-in-up_0.6s_ease-out_0.9s_both]' : 'opacity-0'}`}
       >
-        <a
+        <Link
           href="/project"
           className="inline-flex items-center gap-5 rounded-full bg-gray-900 px-8 py-[11px] text-[16px] font-semibold leading-6 tracking-[-0.32px] text-white"
         >
           프로젝트 전체보기
           <ArrowIcon size={24} color="white" />
-        </a>
+        </Link>
       </div>
     </section>
   )
