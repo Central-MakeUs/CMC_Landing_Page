@@ -209,6 +209,22 @@ export default function HomeProductSection() {
         })}
       </div>
 
+      {/* 모바일 페이지네이션 인디케이터 */}
+      {(() => {
+        const activeIndex = ((position % total) + total) % total
+        const dotIndex = activeIndex % 4
+        return (
+          <div className="relative z-10 flex md:hidden justify-center gap-2 mt-6">
+            {Array.from({ length: 4 }, (_, k) => (
+              <div
+                key={k}
+                className={`rounded-full transition-all duration-300 ${k === dotIndex ? 'w-2.5 h-2.5 bg-white' : 'w-2 h-2 bg-white/30'}`}
+              />
+            ))}
+          </div>
+        )
+      })()}
+
       {/* 하단 버튼 */}
       <div
         ref={buttonRef}
