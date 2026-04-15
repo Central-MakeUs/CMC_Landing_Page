@@ -21,7 +21,7 @@ function StatCard({ stat, index }: { stat: StatItem; index: number }) {
   return (
     <div
       ref={ref}
-      className={`rounded-4xl bg-gray-900 shadow-[inset_4px_8px_16px_0_rgba(255,255,255,0.45)] p-8 flex flex-col gap-4 w-full ${inView ? '[animation:fade-in-up_0.6s_ease-out_both]' : 'opacity-0'}`}
+      className={`rounded-4xl bg-gray-900 shadow-[inset_4px_8px_16px_0_rgba(255,255,255,0.45)] p-8 flex flex-col justify-between gap-4 w-full ${inView ? '[animation:fade-in-up_0.6s_ease-out_both]' : 'opacity-0'}`}
       style={inView ? { animationDelay: `${index * 0.12}s` } : undefined}
     >
       <p className="text-white text-base md:text-xl">
