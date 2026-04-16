@@ -8,34 +8,18 @@ import { cn } from '@/utils/cn'
 const toggleOpenShadowClass =
   'shadow-[0_12px_40px_0_rgba(202,196,219,0.3)_inset,0_14px_20px_0_rgba(93,83,229,0.6)_inset,0_66px_100px_0_rgba(5,106,205,0.1)_inset,0_202px_130px_0_rgba(1,32,117,0.2)_inset]'
 
-function FaqAccordionToggle({
-  open,
-  id,
-  panelId,
-  onClick,
-}: {
-  open: boolean
-  id: string
-  panelId: string
-  onClick: () => void
-}) {
+function FaqAccordionToggle({ open }: { open: boolean }) {
   return (
-    <button
-      type="button"
-      id={id}
-      aria-expanded={open}
-      aria-controls={panelId}
-      onClick={onClick}
+    <div
       className={cn(
-        'relative flex shrink-0 cursor-pointer flex-col items-center justify-center rounded-[60px] px-[7px] py-[10px] md:px-[11px] md:py-[14px]',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light-01/60',
+        'pointer-events-none relative flex shrink-0 flex-col items-center justify-center rounded-[60px] px-[7px] py-[10px] md:px-[11px] md:py-[14px]',
         open
           ? cn('bg-primary-light-01 text-black', toggleOpenShadowClass)
-          : 'border border-solid border-primary-light-01 text-primary-light-01 hover:bg-primary-light-01/40',
+          : 'border border-solid border-primary-light-01 text-primary-light-01',
       )}
     >
       <ChevronIcon className={cn('shrink-0 transition-transform duration-200', open && 'rotate-180')} />
-    </button>
+    </div>
   )
 }
 
@@ -64,13 +48,21 @@ export default function FaqAccordion({ category, className }: FaqAccordionProps)
         const panelId = `${baseId}-${entry.id}-panel`
         const triggerId = `${baseId}-${entry.id}-trigger`
         return (
-          <div
+          <button
             key={entry.id}
-            className="flex w-full flex-wrap items-start justify-between gap-4 border-b border-primary-light-01/40 px-4 py-8 sm:flex-nowrap"
+            type="button"
+            id={triggerId}
+            aria-expanded={open}
+            aria-controls={panelId}
+            onClick={() => setOpenId((prev) => (prev === entry.id ? null : entry.id))}
+            className="flex w-full cursor-pointer flex-wrap items-start justify-between gap-4 border-b border-primary-light-01/40 px-4 py-8 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light-01/60 sm:flex-nowrap"
           >
             <div className="min-w-0 flex-1">
               <p
-                className={cn('text-[16px] font-semibold leading-[24px] tracking-[-0.32px] text-white md:text-[24px] md:leading-[34px] md:tracking-[-0.48px]', open && 'mb-4')}
+                className={cn(
+                  'text-[16px] font-semibold leading-[24px] tracking-[-0.32px] text-white md:text-[24px] md:leading-[34px] md:tracking-[-0.48px]',
+                  open && 'mb-4',
+                )}
               >
                 {entry.question}
               </p>
@@ -90,13 +82,8 @@ export default function FaqAccordion({ category, className }: FaqAccordionProps)
                 </div>
               </div>
             </div>
-            <FaqAccordionToggle
-              open={open}
-              id={triggerId}
-              panelId={panelId}
-              onClick={() => setOpenId((prev) => (prev === entry.id ? null : entry.id))}
-            />
-          </div>
+            <FaqAccordionToggle open={open} />
+          </button>
         )
       })}
     </div>
