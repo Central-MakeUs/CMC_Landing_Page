@@ -21,6 +21,27 @@ export default function Document() {
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:image:type" content="image/png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                name: 'CMC',
+                url: 'https://cmc.makeus.in',
+              },
+              {
+                '@context': 'https://schema.org',
+                '@type': 'Organization',
+                name: 'CMC',
+                url: 'https://cmc.makeus.in',
+                logo: 'https://cmc.makeus.in/favicon-48x48.png',
+                description: '우리만의 룰을 세워 세상을 바꾸는 조직, CMC',
+              },
+            ]),
+          }}
+        />
         <title>CMC</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
       </Head>
