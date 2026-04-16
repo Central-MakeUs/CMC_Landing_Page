@@ -4,7 +4,9 @@ export default function Document() {
   return (
     <Html lang="ko">
       <Head>
-        <link rel="icon" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link
           rel="stylesheet"
@@ -12,13 +14,13 @@ export default function Document() {
         />
         <meta name="description" content="우리만의 룰을 세워 세상을 바꾸는 조직, CMC" />
         <meta name="image" content="/meta/image-og.png"></meta>
-        <meta name="og:title" content="CMC"></meta>
-        <meta name="og:description" content="우리만의 룰을 세워 세상을 바꾸는 조직, CMC"></meta>
-        <meta name="og:image" content="/meta/image-og.png"></meta>
-        <meta name="og:url" content="https://cmc.makeus.in"></meta>
-        <meta name="og:type" content="website"></meta>
-        <meta name="og:locale" content="ko_KR"></meta>
-        <meta name="og:image:type" content="image/png"></meta>
+        <meta property="og:title" content="CMC" />
+        <meta property="og:description" content="우리만의 룰을 세워 세상을 바꾸는 조직, CMC" />
+        <meta property="og:image" content="/meta/image-og.png" />
+        <meta property="og:url" content="https://cmc.makeus.in" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="ko_KR" />
+        <meta property="og:image:type" content="image/png" />
         <title>CMC</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
       </Head>
