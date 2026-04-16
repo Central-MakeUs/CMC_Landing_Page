@@ -5,7 +5,7 @@ export const JOURNEY_ROWS: { label: string; value: string }[] = [
   { label: '접수 기간', value: '2026.04.18 ~ 2026.04.24' },
   { label: '서류 전형', value: '2026.04.27' },
   { label: 'CMC 핏 인터뷰', value: '2026.05.02 ~ 2026.05.03' },
-  { label: 'CMC 합류 안내', value: '2026.05.05' },
+  { label: 'CMC 최종 합류', value: '2026.05.09' },
 ]
 
 export const SESSION_ROWS: { label: string; value: string }[] = [
