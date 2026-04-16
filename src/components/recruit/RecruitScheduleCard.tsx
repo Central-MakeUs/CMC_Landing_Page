@@ -10,7 +10,7 @@ function ScheduleRow({ label, value }: { label: string; value: string }) {
       <span className="shrink-0 font-semibold tracking-[-0.02em] text-gray-600 text-[clamp(0px,calc(var(--rw,1px)*30),30px)] leading-[clamp(0px,calc(var(--rw,1px)*40),40px)] max-md:text-[13px] max-md:leading-[18px]">
         {label}
       </span>
-      <span className="shrink-0 text-right font-semibold tracking-[-0.02em] text-gray-900 whitespace-nowrap text-[clamp(0px,calc(var(--rw,1px)*30),30px)] leading-[clamp(0px,calc(var(--rw,1px)*40),40px)] max-md:text-[13px] max-md:leading-[18px]">
+      <span className="shrink-0 text-right font-semibold tracking-[-0.02em] text-gray-900 whitespace-nowrap text-[clamp(0px,calc(var(--rw,1px)*30),30px)] leading-[clamp(0px,calc(var(--rw,1px)*40),40px)] max-md:text-[13px] max-md:leading-[18px] [font-variant-numeric:tabular-nums]">
         {value}
       </span>
     </div>
