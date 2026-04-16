@@ -1,18 +1,15 @@
 import Image from 'next/image'
 import { Button1, CountdownCard } from '@/components/common'
 import { RECRUIT_GENERATION } from '@/constants/recruit'
-import { APPLY_DEADLINE } from '@/constants/apply'
 import { APPLY_DATA } from '@/constants/apply'
 import { useCountdown } from '@/hooks/useCountdown'
 import { cn } from '@/utils/cn'
 
-const IS_RECRUIT_ENDED = Date.now() >= APPLY_DEADLINE.getTime()
-
 export default function ApplyMain() {
   const { getButtonHref, countdown } = APPLY_DATA
-  const buttonHref = getButtonHref(IS_RECRUIT_ENDED)
-  const timeLeft = useCountdown()
-  const buttonLabel = IS_RECRUIT_ENDED
+  const { isEnded, ...timeLeft } = useCountdown()
+  const buttonHref = getButtonHref(isEnded)
+  const buttonLabel = isEnded
     ? `${RECRUIT_GENERATION + 1}기 사전 예약하기`
     : `CMC ${RECRUIT_GENERATION}기 지원하기`
   const buttonClassName =
@@ -68,7 +65,7 @@ export default function ApplyMain() {
           aria-label="모집 마감까지 남은 시간"
         >
           <div className="font-line-seed rounded-[12px_0px_23px_0px] border border-gray-300 bg-gray-900 px-6 py-2 text-[14px] font-bold leading-[1.324em] tracking-[-0.28px] text-white md:text-[20px] md:tracking-[-0.4px]">
-            {IS_RECRUIT_ENDED ? `${RECRUIT_GENERATION}기 모집이 마감되었어요` : `${RECRUIT_GENERATION}기 모집 마감까지`}
+            {isEnded ? `${RECRUIT_GENERATION}기 모집이 마감되었어요` : `${RECRUIT_GENERATION}기 모집 마감까지`}
           </div>
 
           <div className="grid w-full grid-cols-2 gap-x-[18px] gap-y-[16px] md:flex md:gap-[18px]">

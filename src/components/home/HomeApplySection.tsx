@@ -6,16 +6,16 @@ import { APPLY_DATA } from '@/constants/apply'
 import { useHomeApplyAnimation } from '@/hooks/home/useHomeApplyAnimation'
 import { useCountdown } from '@/hooks/useCountdown'
 import { RECRUIT_GENERATION } from '@/constants/recruit'
-import { APPLY_DEADLINE } from '@/constants/apply'
 
-const IS_RECRUIT_ENDED = Date.now() >= APPLY_DEADLINE.getTime()
 
 function SheenButton({
   href,
+  isEnded,
   iconClassName,
   textClassName,
 }: {
   href: string
+  isEnded: boolean
   iconClassName: string
   textClassName: string
 }) {
@@ -27,7 +27,7 @@ function SheenButton({
       onMouseLeave={() => setHovered(false)}
     >
       <Button1 onClick={() => window.open(href, '_blank')} iconClassName={iconClassName} textClassName={textClassName}>
-        {IS_RECRUIT_ENDED ? `${RECRUIT_GENERATION + 1}기 사전 예약하기` : `CMC ${RECRUIT_GENERATION}기 지원하기`}
+        {isEnded ? `${RECRUIT_GENERATION + 1}기 사전 예약하기` : `CMC ${RECRUIT_GENERATION}기 지원하기`}
       </Button1>
       <AnimatePresence>
         {hovered && (
@@ -51,8 +51,8 @@ export default function HomeApplySection({
   scrollContainerRef: React.RefObject<HTMLDivElement | null>
 }) {
   const { title, getButtonHref, countdown } = APPLY_DATA
-  const buttonHref = getButtonHref(IS_RECRUIT_ENDED)
-  const timeLeft = useCountdown()
+  const { isEnded, ...timeLeft } = useCountdown()
+  const buttonHref = getButtonHref(isEnded)
 
   const { sectionRef, asteriskX, mobileAsteriskX, titleClipPath, symbolX, countdownY, visibility } =
     useHomeApplyAnimation(scrollContainerRef)
@@ -81,7 +81,7 @@ export default function HomeApplySection({
             />
             {/* opacity only - motion 제거, CSS transition */}
             <div className={`transition-opacity duration-300 ${visibility.button ? 'opacity-100' : 'opacity-0'}`}>
-              <SheenButton href={buttonHref} iconClassName="size-8" textClassName="text-[18px] tracking-[-0.48px]" />
+              <SheenButton href={buttonHref} isEnded={isEnded} iconClassName="size-8" textClassName="text-[18px] tracking-[-0.48px]" />
             </div>
           </div>
 
@@ -169,7 +169,7 @@ export default function HomeApplySection({
             className={`absolute transition-opacity duration-300 ${visibility.button ? 'opacity-100' : 'opacity-0'}`}
             style={{ left: '306px', top: '13px' }}
           >
-            <SheenButton href={buttonHref} iconClassName="size-[66px]" textClassName="text-[28px] tracking-[-0.8px]" />
+            <SheenButton href={buttonHref} isEnded={isEnded} iconClassName="size-[66px]" textClassName="text-[28px] tracking-[-0.8px]" />
           </div>
 
           {/* y 보간 - motion 유지 / opacity - CSS transition */}
