@@ -6,7 +6,9 @@ export const isApplyEnded = () => Date.now() >= APPLY_DEADLINE.getTime()
 export const APPLY_DATA = {
   title: 'Join to CMC',
   getButtonHref: (isEnded: boolean) =>
-    isEnded ? 'https://forms.gle/2sqqazVFLNV7MYan7' : 'https://forms.gle/6uMPJyquobwUkTcu5',
+    isEnded
+      ? 'https://docs.google.com/forms/d/e/1FAIpQLScFd4ILrh_tHyg7N5bkc-A4uLxI9CRseSs9ziEWWSmRy48WXw/viewform?usp=header'
+      : 'https://forms.gle/6uMPJyquobwUkTcu5',
   countdown: {
     days: 'DAYS',
     hours: 'HOURS',
