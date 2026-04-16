@@ -55,34 +55,33 @@ export default function FaqAccordion({ category, className }: FaqAccordionProps)
             aria-expanded={open}
             aria-controls={panelId}
             onClick={() => setOpenId((prev) => (prev === entry.id ? null : entry.id))}
-            className="flex w-full cursor-pointer flex-wrap items-start justify-between gap-4 border-b border-primary-light-01/40 px-4 py-8 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light-01/60 sm:flex-nowrap"
+            className="flex w-full cursor-pointer flex-col border-b border-primary-light-01/40 px-4 py-8 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light-01/60"
           >
-            <div className="min-w-0 flex-1">
+            <div className="flex w-full items-start justify-between gap-2">
               <p
                 className={cn(
-                  'text-[16px] font-semibold leading-[24px] tracking-[-0.32px] text-white md:text-[24px] md:leading-[34px] md:tracking-[-0.48px]',
-                  open && 'mb-4',
+                  'min-w-0 flex-1 text-[16px] font-semibold leading-[24px] tracking-[-0.32px] text-white md:text-[24px] md:leading-[34px] md:tracking-[-0.48px]',
                 )}
               >
                 {entry.question}
               </p>
-              <div
-                id={panelId}
-                role="region"
-                aria-labelledby={triggerId}
-                className={cn(
-                  'grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none',
-                  open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]',
-                )}
-              >
-                <div className="overflow-hidden" aria-hidden={!open}>
-                  <p className="text-[16px] font-normal leading-[24px] tracking-[-0.32px] text-gray-200 md:text-[18px] md:leading-[26px] md:tracking-[-0.36px]">
-                    {entry.answer}
-                  </p>
-                </div>
+              <FaqAccordionToggle open={open} />
+            </div>
+            <div
+              id={panelId}
+              role="region"
+              aria-labelledby={triggerId}
+              className={cn(
+                'grid w-full transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none',
+                open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]',
+              )}
+            >
+              <div className="overflow-hidden" aria-hidden={!open}>
+                <p className="break-keep pt-4 text-[16px] font-normal leading-[24px] tracking-[-0.32px] text-gray-200 md:text-[18px] md:leading-[26px] md:tracking-[-0.36px]">
+                  {entry.answer}
+                </p>
               </div>
             </div>
-            <FaqAccordionToggle open={open} />
           </button>
         )
       })}
