@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { JOURNEY_ROWS, RECRUIT_GENERATION, SESSION_ROWS } from '@/constants/recruit'
+import { isApplyEnded } from '@/constants/apply'
 import { cn } from '@/utils/cn'
 import Button2 from '@/components/common/Button2'
 
@@ -49,7 +50,7 @@ export default function RecruitScheduleCard({ className }: RecruitScheduleCardPr
             color="blue"
             className="gap-5 px-[clamp(0px,calc(var(--rw,1px)*32),32px)] py-[clamp(0px,calc(var(--rw,1px)*16),16px)] text-[clamp(0px,calc(var(--rw,1px)*24),24px)] max-md:gap-[20px] max-md:px-[32px] max-md:py-[16px] max-md:text-[16px] max-md:h-[46px]"
           >
-            CMC {RECRUIT_GENERATION}기 지원하러 가기
+            {isApplyEnded() ? `${RECRUIT_GENERATION + 1}기 사전 예약하기` : `CMC ${RECRUIT_GENERATION}기 지원하러 가기`}
           </Button2>
         </Link>
       </div>
