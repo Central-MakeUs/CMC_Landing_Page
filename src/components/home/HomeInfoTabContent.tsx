@@ -79,7 +79,7 @@ function HomeInfoTabContentPanel({
         <br />
         <span className="text-[24px] leading-[34px] tracking-[-0.48px]">{description}</span>
       </p>
-      {badge && <Image src={badge} alt="" className="relative z-10 mt-2" width={133} height={32} />}
+      {badge && <Image src={badge} alt="" className="relative z-10 mt-5 md:mt-2" width={133} height={32} />}
       <Image
         src={imageSrc}
         alt={title}
@@ -94,6 +94,7 @@ function HomeInfoTabContentPanel({
         width={cardImageSize}
         height={cardImageSize}
       />
+      <div className="absolute inset-0 z-[2] bg-black/30" />
       <p className="absolute bottom-10 right-10 left-10 z-10 text-white text-base md:text-[20px] leading-[24px] md:leading-[28px] tracking-[-0.4px] md:tracking-[-0.4px]">
         {content}
       </p>
