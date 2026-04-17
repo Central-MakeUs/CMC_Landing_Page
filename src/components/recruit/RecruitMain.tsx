@@ -5,7 +5,7 @@ import RecruitTitle from './RecruitTitle'
 
 export default function RecruitMain() {
   return (
-    <main className="relative w-full overflow-hidden [--rw:calc(100vw/1440)]">
+    <main className="relative w-full overflow-hidden bg-[linear-gradient(163deg,var(--primary-light-01)_-0.51%,var(--primary-light-03)_95.14%)] [--rw:calc(100vw/1440)]">
       {/* Desktop background */}
       <div className="pointer-events-none absolute inset-0 hidden md:block">
         <Image

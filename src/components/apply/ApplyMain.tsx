@@ -17,7 +17,7 @@ export default function ApplyMain() {
   return (
     <main>
       <section
-        className="relative flex min-h-dvh flex-col items-center overflow-hidden px-5 pb-20 pt-[153px] md:pt-[140px]"
+        className="relative flex min-h-dvh flex-col items-center overflow-hidden bg-[linear-gradient(163deg,var(--primary-light-01)_-0.51%,var(--primary-light-03)_95.14%)] px-5 pb-20 pt-[153px] md:pt-[140px]"
         aria-label="CMC 지원하기"
       >
         {/* Desktop background */}
