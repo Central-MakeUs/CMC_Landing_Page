@@ -12,6 +12,7 @@ interface HomeInfoTabContentPanelProps {
   cardImageSize?: number
   topImageClassName?: string
   content: string
+  badge?: string
 }
 
 function isStringArray(value: string | string[]): value is string[] {
@@ -35,6 +36,7 @@ export function HomeInfoTabContent({ tab }: { tab: HomeInfoTab }) {
             cardImageSize={240}
             topImageClassName="top-20"
             content={content[index]}
+            badge={index === 0 ? '/images/home-info-client-badge.svg' : undefined}
           />
         ))}
       </div>
@@ -63,11 +65,12 @@ function HomeInfoTabContentPanel({
   cardImageSize = 400,
   topImageClassName = 'bottom-0',
   content,
+  badge,
 }: HomeInfoTabContentPanelProps) {
   return (
     <div
       className={cn(
-        'w-full p-10 h-full box-border rounded-[24px] overflow-hidden bg-black md:min-h-[280px] min-h-[80vw] relative bg-gradient-to-tl from-black from-0% via-black via-76% to-primary-light-03/10 to-100%',
+        'w-full p-10 h-full box-border rounded-3xl overflow-hidden md:min-h-70 min-h-[80vw] relative bg-linear-to-tl from-black from-0% via-black via-75% to-primary-light-03/30 to-100%',
         className,
       )}
     >
@@ -76,6 +79,7 @@ function HomeInfoTabContentPanel({
         <br />
         <span className="text-[24px] leading-[34px] tracking-[-0.48px]">{description}</span>
       </p>
+      {badge && <Image src={badge} alt="" className="relative z-10 mt-2" width={133} height={32} />}
       <Image
         src={imageSrc}
         alt={title}

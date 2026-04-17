@@ -8,10 +8,7 @@ import { HomeInfoTabContent } from './HomeInfoTabContent'
 
 const TAB_KEYS = Object.keys(INFO_TAB_LABELS) as HomeInfoTab[]
 
-const PRELOAD_IMAGES = [
-  ...TAB_KEYS.map((key) => INFO_TAB_INFO[key].image),
-  '/images/home-info-card.svg',
-]
+const PRELOAD_IMAGES = [...TAB_KEYS.map((key) => INFO_TAB_INFO[key].image), '/images/home-info-card.svg']
 
 export default function HomeInfoSection({
   scrollContainerRef,
