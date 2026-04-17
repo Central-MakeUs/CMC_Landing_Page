@@ -49,7 +49,7 @@ export default function ProjectCard({
             src={logo}
             alt=""
             fill
-            className="object-cover object-center"
+            className="object-cover object-top"
             sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw"
           />
         </div>
