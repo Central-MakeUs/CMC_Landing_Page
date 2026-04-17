@@ -23,7 +23,7 @@ export const FAQ_BY_CATEGORY: Record<FaqCategoryId, readonly FaqItem[]> = {
     },
     {
       id: 'doc-duplicate',
-      question: '직군 간 중복지원이 가능한가요?',
+      question: '직군 간 중복 지원이 가능한가요?',
       answer: '중복 지원은 불가능하며 한 가지의 직군 지원만 허용하고 있습니다.',
     },
     {
