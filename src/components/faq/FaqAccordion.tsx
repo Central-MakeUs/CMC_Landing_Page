@@ -12,10 +12,10 @@ function FaqAccordionToggle({ open }: { open: boolean }) {
   return (
     <div
       className={cn(
-        'pointer-events-none relative flex shrink-0 flex-col items-center justify-center rounded-[60px] px-[7px] py-[10px] md:px-[11px] md:py-[14px]',
+        'pointer-events-none relative flex shrink-0 flex-col items-center justify-center rounded-[60px] px-[7px] py-[10px] md:px-[11px] md:py-[14px] transition-colors duration-200',
         open
           ? cn('bg-primary-light-01 text-black', toggleOpenShadowClass)
-          : 'border border-solid border-primary-light-01 text-primary-light-01',
+          : 'border border-solid border-primary-light-01 text-primary-light-01 group-hover:bg-primary-light-01/40 group-active:bg-primary-light-01/40',
       )}
     >
       <ChevronIcon className={cn('shrink-0 transition-transform duration-200', open && 'rotate-180')} />
@@ -55,7 +55,7 @@ export default function FaqAccordion({ category, className }: FaqAccordionProps)
             aria-expanded={open}
             aria-controls={panelId}
             onClick={() => setOpenId((prev) => (prev === entry.id ? null : entry.id))}
-            className="flex w-full cursor-pointer flex-col border-b border-primary-light-01/40 px-4 py-8 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light-01/60"
+            className="group flex w-full cursor-pointer flex-col border-b border-primary-light-01/40 px-4 py-8 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light-01/60"
           >
             <div className="flex w-full items-start justify-between gap-2">
               <p
