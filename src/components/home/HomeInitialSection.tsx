@@ -3,14 +3,7 @@ import Image from 'next/image'
 export default function HomeInitialSection() {
   return (
     <>
-      <Image
-        loading="eager"
-        src="/images/home-vignette.svg"
-        alt="home vignette"
-        width={478}
-        height={478}
-        className="absolute top-0 right-0"
-      />
+      <div className="absolute -top-40 -right-44 size-[478px] rounded-full bg-[radial-gradient(circle,rgba(55,85,255,0.4)_0%,transparent_70%)] blur-[60px] pointer-events-none" />
 
       <p className="absolute top-42 text-white font-yapari text-[22px] xl:text-[32px] text-center w-full">
         Are you ready <br className="block xl:hidden" />
