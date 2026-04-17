@@ -50,7 +50,7 @@ export const PROJECTS: ProjectEntry[] = [
   {
     name: '아지트',
     year: '18',
-    description: '우리 크루 전용 프라이빗 공간, 전용 제휴 혜택까지 담은 러닝 클럽 관리 플랫폼',
+    description: '우리 크루 전용 프라이빗 공간, 전용 제휴 혜택까지 담은 러닝 크루 관리 플랫폼',
     link: {
       ios: 'https://apps.apple.com/kr/app/azit-%EC%95%84%EC%A7%80%ED%8A%B8/id6758881115',
       android: 'https://play.google.com/store/apps/details?id=com.azitcrew.app',
