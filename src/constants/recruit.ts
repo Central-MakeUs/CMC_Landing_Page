@@ -1,5 +1,5 @@
 /** 현재 모집 기수 */
-export const RECRUIT_GENERATION = 18
+export const RECRUIT_GENERATION = 19
 
 export const JOURNEY_ROWS: { label: string; value: string }[] = [
   { label: '접수 기간', value: '2026.04.18 ~ 2026.04.24' },
