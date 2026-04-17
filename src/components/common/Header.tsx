@@ -55,7 +55,7 @@ export default function Header({ activeNav, variant = 'dark' }: HeaderProps) {
 
           <Link
             href="/apply"
-            className={`hidden shrink-0 rounded-[5px] px-[15px] py-[5px] text-center text-[16px] font-semibold leading-[24px] tracking-[-0.32px] md:block ${
+            className={`hidden shrink-0 text-nowrap rounded-[5px] px-[15px] py-[5px] text-center text-[16px] font-semibold leading-[24px] tracking-[-0.32px] md:block ${
               variant === 'light'
                 ? 'bg-black/10 text-black hover:bg-black/20'
                 : 'bg-white/20 text-white hover:bg-white/26'
@@ -103,7 +103,7 @@ export default function Header({ activeNav, variant = 'dark' }: HeaderProps) {
                 </div>
                 <Link
                   href="/apply"
-                  className="w-full max-w-[85px] rounded-[5px] bg-primary-light-04 px-[15px] py-[5px] text-center text-[16px] font-semibold leading-[24px] tracking-[-0.32px] text-white hover:opacity-90"
+                  className="w-full max-w-[85px] text-nowrap rounded-[5px] bg-primary-light-04 px-[15px] py-[5px] text-center text-[16px] font-semibold leading-[24px] tracking-[-0.32px] text-white hover:opacity-90"
                 >
                   지원하기
                 </Link>
