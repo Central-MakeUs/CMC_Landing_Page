@@ -35,7 +35,9 @@ function ProductCard({ card, isActive }: ProductCardProps) {
       className="flex flex-col gap-6 w-full max-w-[448px] overflow-hidden rounded-[40px] border border-white/80 p-8 h-[110vw] md:h-137"
       style={{
         background: 'linear-gradient(to bottom, #0d0f14 3.846%, rgba(49, 80, 224, 0.3) 48.077%, #0d0f14 100%)',
-        boxShadow: 'inset 0px 4px 8px 0px rgba(255, 255, 255, 0.25)',
+        boxShadow: isActive
+          ? 'inset 0px 4px 8px 0px rgba(255, 255, 255, 0.25)'
+          : '0 599px 24.7px 0 rgba(0, 0, 0, 0.60) inset, 0 4px 8px 0 rgba(255, 255, 255, 0.25) inset',
         cursor: isActive ? 'default' : 'pointer',
       }}
     >
@@ -138,7 +140,7 @@ export default function HomeProductSection() {
 
   return (
     <section className="relative w-full overflow-hidden bg-black">
-      <div className="pointer-events-none absolute -bottom-30 md:-bottom-1/11 left-1/2 h-[900px] w-[calc(100vw*1.5)] md:w-[1475px] -translate-x-1/2">
+      <div className="pointer-events-none absolute -bottom-30 md:-bottom-1/11 left-1/2 h-[900px] w-[150vw] -translate-x-1/2">
         <Image
           className="h-full w-full"
           src="/images/home-product-bg.svg"
@@ -175,7 +177,7 @@ export default function HomeProductSection() {
       {/* 캐러셀 */}
       <div
         ref={carouselRef}
-        className="relative z-10 mt-10 h-[600px] xl:h-[640px] w-full max-w-6xl mx-auto overflow-hidden"
+        className="relative z-10 mt-10 h-[600px] xl:h-[640px] w-full max-w-6xl mx-auto overflow-visible"
         onTouchStart={onTouchStart}
         onTouchEnd={onTouchEnd}
       >
@@ -196,8 +198,9 @@ export default function HomeProductSection() {
                 // GPU 합성 레이어에서 처리 (transform + opacity)
                 transform: `translateX(${offset * cardStep}px) translateY(${absOffset * CARD_Y_STEP}px)`,
                 opacity: isVisible ? Math.max(0, 1 - absOffset * 0.3) : 0,
+                filter: isActive ? 'none' : 'blur(4px)',
                 zIndex: Math.max(0, 10 - Math.round(absOffset)),
-                transition: `transform ${TRANSITION_MS}ms ease-in-out, opacity ${TRANSITION_MS}ms ease-in-out`,
+                transition: `transform ${TRANSITION_MS}ms ease-in-out, opacity ${TRANSITION_MS}ms ease-in-out, filter ${TRANSITION_MS}ms ease-in-out`,
                 willChange: 'transform, opacity',
                 pointerEvents: isVisible ? 'auto' : 'none',
               }}
