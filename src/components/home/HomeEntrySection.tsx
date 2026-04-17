@@ -1,9 +1,10 @@
 import { ENTRY_SECTION_DATA } from '@/constants/home/entrySection'
-import { APPLY_DATA, APPLY_DEADLINE } from '@/constants/apply'
+import { APPLY_DATA, isApplyEnded } from '@/constants/apply'
 import { motion, useAnimation } from 'motion/react'
 import Image from 'next/image'
 
 import { useIsMobile } from '@/hooks/useIsMobile'
+import { cn } from '@/utils/cn'
 
 type TextControls = {
   entered: boolean
@@ -91,13 +92,16 @@ function DesktopEntrySection({ entered, text1Controls, text2Controls, text3Contr
           animate={text3Controls}
         >
           <a
-            href={APPLY_DATA.getButtonHref(new Date() >= APPLY_DEADLINE)}
+            href={APPLY_DATA.getButtonHref(isApplyEnded())}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative w-[43vw] max-w-[644px] cursor-pointer group block"
+            className={cn(
+              'relative cursor-pointer group block ',
+              !isApplyEnded() ? 'w-[54vw]' : 'w-[43vw] max-w-[644px]',
+            )}
           >
             <Image
-              src={text3.image}
+              src={!isApplyEnded() ? text3.deactivatedImage : text3.image}
               className="w-full h-auto group-hover:opacity-0 group-active:opacity-0"
               alt={text3.alt}
               width={695}
@@ -148,20 +152,23 @@ function MobileEntrySection({ entered, text1Controls, text2Controls, text3Contro
           animate={text3Controls}
         >
           <a
-            href={APPLY_DATA.getButtonHref(new Date() >= APPLY_DEADLINE)}
+            href={APPLY_DATA.getButtonHref(isApplyEnded())}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative w-[73vw] max-w-[644px] cursor-pointer group block"
+            className={cn(
+              'relative cursor-pointer group block z-14',
+              !isApplyEnded() ? 'w-[82vw] ' : 'w-[73vw] max-w-161',
+            )}
           >
             <Image
-              src={text3.image}
+              src={!isApplyEnded() ? text3.deactivatedImage : text3.image}
               className="w-full h-auto group-hover:opacity-0 group-active:opacity-0"
               alt={text3.alt}
               width={695}
               height={80}
             />
             <Image
-              src={text3.pressedImage}
+              src={!isApplyEnded() ? text3.pressedDeactivatedImage : text3.pressedImage}
               className="w-full h-auto absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100"
               alt={text3.alt}
               width={695}

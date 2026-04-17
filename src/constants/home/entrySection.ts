@@ -39,5 +39,7 @@ export const ENTRY_SECTION_DATA = {
     alt: 'text 3',
     image: '/images/home-text-3.svg',
     pressedImage: '/images/home-text-3-pressed.svg',
+    deactivatedImage: '/images/home-text-3-deactivated.svg',
+    pressedDeactivatedImage: '/images/home-text-3-deactivated-pressed.svg',
   },
 }
