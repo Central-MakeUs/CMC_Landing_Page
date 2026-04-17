@@ -101,14 +101,14 @@ function DesktopEntrySection({ entered, text1Controls, text2Controls, text3Contr
             )}
           >
             <Image
-              src={!isApplyEnded() ? text3.deactivatedImage : text3.image}
+              src={isApplyEnded() ? text3.deactivatedImage : text3.image}
               className="w-full h-auto group-hover:opacity-0 group-active:opacity-0"
               alt={text3.alt}
               width={695}
               height={80}
             />
             <Image
-              src={text3.pressedImage}
+              src={isApplyEnded() ? text3.pressedDeactivatedImage : text3.pressedImage}
               className="w-full h-auto absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100"
               alt={text3.alt}
               width={695}
@@ -161,14 +161,14 @@ function MobileEntrySection({ entered, text1Controls, text2Controls, text3Contro
             )}
           >
             <Image
-              src={!isApplyEnded() ? text3.deactivatedImage : text3.image}
+              src={isApplyEnded() ? text3.deactivatedImage : text3.image}
               className="w-full h-auto group-hover:opacity-0 group-active:opacity-0"
               alt={text3.alt}
               width={695}
               height={80}
             />
             <Image
-              src={!isApplyEnded() ? text3.pressedDeactivatedImage : text3.pressedImage}
+              src={isApplyEnded() ? text3.pressedDeactivatedImage : text3.pressedImage}
               className="w-full h-auto absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100"
               alt={text3.alt}
               width={695}
