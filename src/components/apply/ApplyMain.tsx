@@ -3,7 +3,6 @@ import { Button1, CountdownCard } from '@/components/common'
 import { RECRUIT_GENERATION } from '@/constants/recruit'
 import { APPLY_DATA } from '@/constants/apply'
 import { useCountdown } from '@/hooks/useCountdown'
-import { cn } from '@/utils/cn'
 
 export default function ApplyMain() {
   const { getButtonHref, countdown } = APPLY_DATA
@@ -18,15 +17,31 @@ export default function ApplyMain() {
   return (
     <main>
       <section
-        className={cn(
-          'relative flex min-h-dvh flex-col items-center overflow-hidden px-5 pb-20',
-          'pt-[153px] md:pt-[140px]',
-          'bg-cover bg-center bg-no-repeat',
-          "[background-image:image-set(url('/images/apply-bg-mobile.webp')_type('image/webp'),url('/images/apply-bg-mobile.png')_type('image/png'))]",
-          "md:bg-[image-set(url('/images/apply-bg.webp')_type('image/webp'),url('/images/apply-bg.png')_type('image/png'))]",
-        )}
+        className="relative flex min-h-dvh flex-col items-center overflow-hidden px-5 pb-20 pt-[153px] md:pt-[140px]"
         aria-label="CMC 지원하기"
       >
+        {/* Desktop background */}
+        <div className="pointer-events-none absolute inset-0 hidden md:block">
+          <Image
+            src="/images/apply-bg.webp"
+            alt=""
+            fill
+            priority
+            unoptimized
+            className="object-cover object-center"
+          />
+        </div>
+        {/* Mobile background */}
+        <div className="pointer-events-none absolute inset-0 block md:hidden">
+          <Image
+            src="/images/apply-bg-mobile.webp"
+            alt=""
+            fill
+            priority
+            unoptimized
+            className="object-cover object-center"
+          />
+        </div>
         <div className="relative z-10 flex w-full max-w-[320px] flex-col items-center gap-[30px] md:max-w-[594px]">
           <Image
             src="/images/apply-cmc-logo-text.svg"

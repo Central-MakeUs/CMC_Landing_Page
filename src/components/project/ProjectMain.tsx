@@ -1,9 +1,9 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import Image from 'next/image'
 
 import Tabs from '@/components/common/Tabs'
-import { cn } from '@/utils/cn'
 
 import ProjectCard from './ProjectCard'
 import ProjectTitle from './ProjectTitle'
@@ -29,25 +29,28 @@ export default function ProjectMain() {
 
   return (
     <main className="relative w-full overflow-hidden">
-      <div
-        className={cn(
-          'pointer-events-none absolute inset-x-0 top-0 w-full',
-          'hidden md:block',
-          'aspect-1440/1109',
-          'bg-cover bg-top bg-no-repeat',
-          "[background-image:image-set(url('/images/project-bg.webp')_type('image/webp'),url('/images/project-bg.png')_type('image/png'))]",
-        )}
-      />
+      {/* Desktop background */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 hidden w-full aspect-1440/1109 md:block">
+        <Image
+          src="/images/project-bg.webp"
+          alt=""
+          fill
+          priority
+          unoptimized
+          className="object-cover object-top"
+        />
+      </div>
       {/* Mobile background */}
-      <div
-        className={cn(
-          'pointer-events-none absolute inset-x-0 top-0 w-full',
-          'block md:hidden',
-          'aspect-720/2668',
-          'bg-cover bg-top bg-no-repeat',
-          "bg-[image-set(url('/images/project-bg-mobile.webp')_type('image/webp'),url('/images/project-bg-mobile.png')_type('image/png'))]",
-        )}
-      />
+      <div className="pointer-events-none absolute inset-x-0 top-0 block w-full aspect-720/2668 md:hidden">
+        <Image
+          src="/images/project-bg-mobile.webp"
+          alt=""
+          fill
+          priority
+          unoptimized
+          className="object-cover object-top"
+        />
+      </div>
       <div className="relative z-10 mx-auto flex max-w-[1440px] flex-col items-center px-5 pb-17 md:pb-32 xl:px-[200px] [--rw:calc((100vw-40px)/320)] md:[--rw:calc(100vw/1440)]">
         <div className="flex w-full max-w-[1040px] flex-col items-center pt-[200px] md:pt-[240px] [animation:fade-in-up_0.7s_ease-out_both]">
           <ProjectTitle className="text-[24px] md:text-[clamp(32px,calc(var(--rw,1px)*48),48px)]" />
