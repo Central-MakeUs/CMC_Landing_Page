@@ -76,7 +76,7 @@ export default function HomeApplySection({
             <motion.img
               src="/images/home-recruit-symbol.svg"
               alt="CMC symbol"
-              className={`h-[6vw] w-[14vw] transition-opacity duration-300 ${visibility.symbol ? 'opacity-100' : 'opacity-0'}`}
+              className={`h-[6vw] w-[14vw] transition-opacity duration-300 mix-blend-difference ${visibility.symbol ? 'opacity-100' : 'opacity-0'}`}
               style={{ x: symbolX }}
             />
             {/* opacity only - motion 제거, CSS transition */}
@@ -126,7 +126,7 @@ export default function HomeApplySection({
             src="/images/home-recruit-asterisk.svg"
             alt=""
             aria-hidden="true"
-            className="pointer-events-none absolute"
+            className="pointer-events-none absolute mix-blend-difference"
             style={{
               top: '73px',
               left: 0,
@@ -134,6 +134,20 @@ export default function HomeApplySection({
               height: '308px',
               x: asteriskX,
               zIndex: 10,
+            }}
+          />
+
+          {/* x 보간 - motion 유지 / opacity - CSS transition */}
+          <motion.img
+            src="/images/home-recruit-symbol.svg"
+            alt="CMC symbol"
+            className={`absolute transition-opacity duration-300 ${visibility.symbol ? 'opacity-100' : 'opacity-0'}`}
+            style={{
+              left: '-23px',
+              top: '0px',
+              width: '281px',
+              height: '115px',
+              x: symbolX,
             }}
           />
 
@@ -149,20 +163,6 @@ export default function HomeApplySection({
           >
             {title}
           </motion.h1>
-
-          {/* x 보간 - motion 유지 / opacity - CSS transition */}
-          <motion.img
-            src="/images/home-recruit-symbol.svg"
-            alt="CMC symbol"
-            className={`absolute transition-opacity duration-300 ${visibility.symbol ? 'opacity-100' : 'opacity-0'}`}
-            style={{
-              left: '-23px',
-              top: '0px',
-              width: '281px',
-              height: '115px',
-              x: symbolX,
-            }}
-          />
 
           {/* opacity only - motion 제거, CSS transition */}
           <div
