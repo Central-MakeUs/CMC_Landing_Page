@@ -74,12 +74,14 @@ function HomeInfoTabContentPanel({
         className,
       )}
     >
-      <p className="relative z-10 text-white">
-        <span className="font-yapari text-[48px]">{title}</span>
-        <br />
-        <span className="text-[24px] leading-[34px] tracking-[-0.48px]">{description}</span>
-      </p>
-      {badge && <Image src={badge} alt="" className="relative z-10 mt-5 md:mt-2" width={133} height={32} />}
+      <div className="relative z-10">
+        <p className="text-white">
+          <span className="font-yapari text-[48px]">{title}</span>
+          <br />
+          <span className="text-[24px] leading-[34px] tracking-[-0.48px]">{description}</span>
+        </p>
+        {badge && <Image src={badge} alt="" className="mt-5 md:mt-2" width={133} height={32} />}
+      </div>
       <Image
         src={imageSrc}
         alt={title}
