@@ -8,9 +8,7 @@ export default function ApplyMain() {
   const { getButtonHref, countdown } = APPLY_DATA
   const { isEnded, ...timeLeft } = useCountdown()
   const buttonHref = getButtonHref(isEnded)
-  const buttonLabel = isEnded
-    ? `${RECRUIT_GENERATION + 1}기 사전 예약하기`
-    : `CMC ${RECRUIT_GENERATION}기 지원하기`
+  const buttonLabel = isEnded ? `${RECRUIT_GENERATION + 1}기 사전 예약하기` : `CMC ${RECRUIT_GENERATION}기 지원하기`
   const buttonClassName =
     'shadow-[0px_12px_51px_0px_rgba(255,255,255,0.42)] bg-[linear-gradient(152deg,var(--primary-light-03)_0%,var(--primary-light-05)_100%)] text-white'
 
@@ -22,14 +20,7 @@ export default function ApplyMain() {
       >
         {/* Desktop background */}
         <div className="pointer-events-none absolute inset-0 hidden md:block">
-          <Image
-            src="/images/apply-bg.webp"
-            alt=""
-            fill
-            priority
-            unoptimized
-            className="object-cover object-center"
-          />
+          <Image src="/images/apply-bg.webp" alt="" fill priority unoptimized className="object-cover object-center" />
         </div>
         {/* Mobile background */}
         <div className="pointer-events-none absolute inset-0 block md:hidden">
@@ -80,7 +71,7 @@ export default function ApplyMain() {
           aria-label="모집 마감까지 남은 시간"
         >
           <div className="font-line-seed rounded-[12px_0px_23px_0px] border border-gray-300 bg-gray-900 px-6 py-2 text-[14px] font-bold leading-[1.324em] tracking-[-0.28px] text-white md:text-[20px] md:tracking-[-0.4px]">
-            {isEnded ? `${RECRUIT_GENERATION}기 모집이 마감되었어요` : `${RECRUIT_GENERATION}기 모집 마감까지`}
+            {isEnded ? `${RECRUIT_GENERATION}기 모집이 마감되었어요` : `${RECRUIT_GENERATION}기 추가 모집 마감까지`}
           </div>
 
           <div className="grid w-full grid-cols-2 gap-x-[18px] gap-y-[16px] md:flex md:gap-[18px]">

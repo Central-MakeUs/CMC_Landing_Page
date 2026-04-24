@@ -1,5 +1,5 @@
 /** 모집 마감 날짜 (KST) */
-export const APPLY_DEADLINE = new Date('2026-04-25T00:00:00+09:00')
+export const APPLY_DEADLINE = new Date('2026-04-27T00:00:00+09:00')
 
 export const isApplyEnded = () => Date.now() >= APPLY_DEADLINE.getTime()
 
