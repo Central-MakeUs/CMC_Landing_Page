@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+/*
+ * 디자인 토큰
+ * 20기 리브랜딩 Figma가 확정되면 이 값을 교체한다. (현재는 19기 팔레트 일부를 임시로 사용)
+ */
+:root {
+  --white: #ffffff;
+  --black: #0d0f14;
+  --primary: #3755ff;
+
+  --background: var(--white);
+  --foreground: var(--black);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --font-sans:
+    'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  word-break: keep-all;
+}
