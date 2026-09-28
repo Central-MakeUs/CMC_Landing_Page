@@ -11,7 +11,6 @@ export const ROUTES = {
   home: '/',
   project: '/project',
   recruit: '/recruit',
-  faq: '/faq',
   apply: '/apply',
 } as const
 

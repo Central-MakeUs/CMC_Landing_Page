@@ -35,23 +35,23 @@ pnpm format:check
 
 ## 폴더 구조
 
-| 경로                      | 용도                                                                         |
-| ------------------------- | ---------------------------------------------------------------------------- |
-| `src/app`                 | 라우트, layout, `sitemap.ts`, `robots.ts`, `opengraph-image`, `not-found`    |
-| `src/components/common`   | 여러 페이지에서 쓰는 UI (Button, Tab, Header, Footer 등)                     |
-| `src/components/{domain}` | 한 페이지에서만 쓰는 컴포넌트 (`home`, `project`, `recruit`, `faq`, `apply`) |
-| `src/constants`           | 카피, 링크, 데이터                                                           |
-| `src/hooks`               | 클라이언트 훅                                                                |
-| `src/lib`                 | `site.ts`(도메인, 경로 등 사이트 상수), `metadata.ts`(페이지 metadata 헬퍼)  |
-| `src/utils`               | `cn()` 등 유틸                                                               |
-| `src/assets/images`       | 정적 import 이미지                                                           |
-| `public/videos`           | Hero 영상과 poster                                                           |
+| 경로                      | 용도                                                                        |
+| ------------------------- | --------------------------------------------------------------------------- |
+| `src/app`                 | 라우트, layout, `sitemap.ts`, `robots.ts`, `opengraph-image`, `not-found`   |
+| `src/components/common`   | 여러 페이지에서 쓰는 UI (Button, Tab, Header, Footer 등)                    |
+| `src/components/{domain}` | 한 페이지에서만 쓰는 컴포넌트 (`home`, `project`, `recruit`, `apply`)       |
+| `src/constants`           | 카피, 링크, 데이터                                                          |
+| `src/hooks`               | 클라이언트 훅                                                               |
+| `src/lib`                 | `site.ts`(도메인, 경로 등 사이트 상수), `metadata.ts`(페이지 metadata 헬퍼) |
+| `src/utils`               | `cn()` 등 유틸                                                              |
+| `src/assets/images`       | 정적 import 이미지                                                          |
+| `public/videos`           | Hero 영상과 poster                                                          |
 
 컴포넌트 위치를 정할 때는 이유를 함께 밝힌다. 두 페이지 이상에서 쓰이면 `common`으로 올린다.
 
 ## URI 계약
 
-경로는 기존 웹과 같게 유지한다: `/`, `/project`, `/recruit`, `/faq`, `/apply`.
+경로는 기존 웹과 같게 유지한다: `/`, `/project`, `/recruit`, `/apply`. (`/faq`는 20기 리브랜딩에서 제거했다)
 경로 추가·변경은 `src/lib/site.ts`의 `ROUTES`에서만 한다. sitemap도 이 값을 쓴다. 내부 링크도 `ROUTES`를 쓴다.
 
 ## 서버 / 클라이언트 컴포넌트
