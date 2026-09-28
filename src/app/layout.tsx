@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from 'next'
 
+import { Header } from '@/components/common/Header'
+import { SmoothScroll } from '@/components/common/SmoothScroll'
 import { INSTAGRAM_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
 
+import 'lenis/dist/lenis.css'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -64,7 +67,10 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
         />
-        {children}
+        <SmoothScroll>
+          <Header />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   )
