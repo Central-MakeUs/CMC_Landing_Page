@@ -13,6 +13,7 @@ export const ROUTES = {
   home: '/',
   project: '/project',
   recruit: '/recruit',
+  // 페이지 없이 지원서 또는 모집 안내로 이동
   apply: '/apply',
 } as const
 
