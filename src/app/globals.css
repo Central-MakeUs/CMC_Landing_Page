@@ -16,6 +16,7 @@
   --black: #0d0f14;
   --primary: #3755ff;
   --gray-950: #0e0e0e;
+  --gray-925: #181b1f;
   --gray-900: #191f28;
   --gray-800: #202020;
   --gray-775: #222222;
@@ -48,6 +49,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-gray-950: var(--gray-950);
+  --color-gray-925: var(--gray-925);
   --color-gray-900: var(--gray-900);
   --color-gray-775: var(--gray-775);
   --color-gray-760: var(--gray-760);
