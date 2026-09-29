@@ -1,6 +1,7 @@
 import { AboutSection } from '@/components/home/AboutSection'
 import { HeroSection } from '@/components/home/HeroSection'
 import { JourneySection } from '@/components/home/JourneySection'
+import { ProjectsSection } from '@/components/home/ProjectsSection'
 import { RolesSection } from '@/components/home/RolesSection'
 import { StatsSection } from '@/components/home/StatsSection'
 
@@ -13,6 +14,7 @@ export default function HomePage() {
       <StatsSection />
       <RolesSection />
       <JourneySection />
+      <ProjectsSection />
     </main>
   )
 }
