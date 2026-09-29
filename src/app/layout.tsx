@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 
+import { Footer } from '@/components/common/Footer'
 import { Header } from '@/components/common/Header'
 import { SmoothScroll } from '@/components/common/SmoothScroll'
 import { INSTAGRAM_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
@@ -78,6 +79,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         <SmoothScroll>
           <Header />
           {children}
+          <Footer />
         </SmoothScroll>
       </body>
     </html>
