@@ -16,7 +16,11 @@
   --black: #0d0f14;
   --primary: #3755ff;
   --gray-900: #191f28;
+  --gray-800: #202020;
+  --gray-700: #4d535b;
   --gray-500: #6f7a8d;
+  --gray-300: #c4c4c6;
+  --navy-975: #000b22;
   --navy-950: #040c23;
   --navy-900: #0d1f42;
   --blue-50: #eef5fd;
@@ -34,11 +38,14 @@
   --color-primary: var(--primary);
   --color-gray-900: var(--gray-900);
   --color-gray-500: var(--gray-500);
+  --color-gray-300: var(--gray-300);
+  --color-navy-975: var(--navy-975);
   --color-navy-950: var(--navy-950);
   --color-navy-900: var(--navy-900);
   --color-blue-50: var(--blue-50);
   --color-blue-200: var(--blue-200);
   --color-blue-400: var(--blue-400);
+  --font-numeric: var(--font-poppins), var(--font-sans);
   --font-sans:
     'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo',
     'Noto Sans KR', 'Malgun Gothic', sans-serif;

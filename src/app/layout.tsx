@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { Poppins } from 'next/font/google'
 
 import { Header } from '@/components/common/Header'
 import { SmoothScroll } from '@/components/common/SmoothScroll'
@@ -6,6 +7,13 @@ import { INSTAGRAM_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site
 
 import 'lenis/dist/lenis.css'
 import './globals.css'
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '800'],
+  variable: '--font-poppins',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -61,7 +69,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
           precedence="default"
         />
       </head>
-      <body className="antialiased">
+      <body className={`${poppins.variable} antialiased`}>
         {/* JSON-LD 문자열이 HTML로 해석되지 않도록 '<'를 이스케이프한다. */}
         <script
           type="application/ld+json"
