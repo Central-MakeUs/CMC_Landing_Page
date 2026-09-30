@@ -22,7 +22,7 @@ export default function JourneyItem({ id, title, description, active, onSelect }
           onClick={onSelect}
           className={cn(
             'flex cursor-pointer items-center gap-1.5 text-left font-display text-lg leading-7.5 font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 xl:text-2xl xl:leading-[33.6px]',
-            active ? 'text-gray-775' : 'text-gray-750',
+            active ? 'text-gray-775' : 'text-gray-500',
           )}
         >
           {title}
