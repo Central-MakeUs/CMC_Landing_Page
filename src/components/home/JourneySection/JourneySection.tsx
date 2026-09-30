@@ -1,4 +1,4 @@
-import { SectionEyebrow } from '@/components/common/SectionEyebrow'
+import { SectionHeading } from '@/components/common/SectionHeading'
 import { JOURNEYS } from '@/constants/journeys'
 
 import JourneyTabs from './JourneyTabs'
@@ -12,16 +12,18 @@ export default function JourneySection() {
       className="bg-white px-5 py-25 xl:py-30"
     >
       <div className="mx-auto flex w-full max-w-300 flex-col items-start">
-        <SectionEyebrow>Why CMC</SectionEyebrow>
-
-        <h2
+        <SectionHeading
           id="journey-title"
-          className="pt-2 text-xl leading-8 font-bold text-gray-950 lg:text-[32px] lg:leading-13.5"
-        >
-          만들고, 검증하고, 출시하는
-          <br />
-          CMC의 여정
-        </h2>
+          eyebrow="Why CMC"
+          titleClassName="tracking-normal text-gray-950 lg:leading-13.5"
+          title={
+            <>
+              만들고, 검증하고, 출시하는
+              <br />
+              CMC의 여정
+            </>
+          }
+        />
 
         <JourneyTabs journeys={JOURNEYS} />
       </div>

@@ -1,7 +1,7 @@
 import roleClient from '@/assets/images/role-client.webp'
 import roleDesigner from '@/assets/images/role-designer.webp'
 import rolePm from '@/assets/images/role-pm.webp'
-import { SectionEyebrow } from '@/components/common/SectionEyebrow'
+import { SectionHeading } from '@/components/common/SectionHeading'
 
 import RoleCard from './RoleCard'
 
@@ -28,22 +28,18 @@ export default function RolesSection() {
       className="bg-white px-5 py-25 lg:py-50"
     >
       <div className="mx-auto flex w-full max-w-237.5 flex-col items-center gap-8">
-        <header className="flex flex-col items-center gap-4 text-center">
-          <SectionEyebrow>What CMC do</SectionEyebrow>
-
-          <div className="flex flex-col items-center gap-1.5 lg:gap-2.5">
-            <h2
-              id="roles-title"
-              className="text-xl leading-7 font-bold tracking-[0.5px] text-navy-950 lg:text-[32px] lg:leading-[50.4px]"
-            >
-              서로 다른 직군이 하나의 팀이 되어
-              <br className="lg:hidden" /> 3개월동안 프로덕트를 제작해요
-            </h2>
-            <p className="text-sm leading-[33.6px] font-medium text-gray-400 lg:text-2xl">
-              자세한 내용은 모집 안내를 확인해주세요
-            </p>
-          </div>
-        </header>
+        <div className="flex flex-col items-center gap-1.5 text-center lg:gap-2.5">
+          <SectionHeading
+            id="roles-title"
+            eyebrow="What CMC do"
+            align="center"
+            titleClassName="leading-7"
+            title={'서로 다른 직군이 하나의 팀이 되어\n3개월동안 프로덕트를 제작해요'}
+          />
+          <p className="text-sm leading-[33.6px] font-medium text-gray-400 lg:text-2xl">
+            자세한 내용은 모집 안내를 확인해주세요
+          </p>
+        </div>
 
         <div className="flex w-full flex-wrap justify-center gap-x-8 gap-y-6 py-8 lg:gap-y-8">
           {ROLES.map((role) => (

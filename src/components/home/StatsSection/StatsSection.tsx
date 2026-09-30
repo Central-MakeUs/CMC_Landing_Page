@@ -1,3 +1,4 @@
+import { SectionHeading } from '@/components/common/SectionHeading'
 import { STATS } from '@/constants/stats'
 import { cn } from '@/utils/cn'
 
@@ -16,13 +17,12 @@ export default function StatsSection() {
       className="bg-navy-975 px-5 py-25 text-white lg:py-50"
     >
       <div className="mx-auto flex w-full max-w-300 flex-col items-center gap-8">
-        <h2
+        <SectionHeading
           id="stats-title"
-          className="text-center text-xl leading-8 font-bold tracking-[0.5px] lg:text-[32px] lg:leading-[50.4px]"
-        >
-          수많은 아이디어를 출시하며 만들어온
-          <br className="lg:hidden" /> CMC의 기록
-        </h2>
+          align="center"
+          titleClassName="text-white"
+          title={'수많은 아이디어를 출시하며 만들어온\nCMC의 기록'}
+        />
 
         <div className="flex w-full flex-col gap-10 lg:gap-15">
           <dl className="grid md:grid-cols-2 lg:grid-cols-4">

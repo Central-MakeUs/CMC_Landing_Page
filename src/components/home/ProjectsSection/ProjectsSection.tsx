@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import { DoubleChevronRightIcon } from '@/components/common/DoubleChevronRightIcon'
-import { SectionEyebrow } from '@/components/common/SectionEyebrow'
+import { SectionHeading } from '@/components/common/SectionHeading'
 import { ROUTES } from '@/lib/site'
 
 import ProjectCarousel from './ProjectCarousel'
@@ -14,16 +14,12 @@ export default function ProjectsSection() {
       aria-labelledby="projects-title"
       className="flex flex-col items-center gap-10 bg-gray-50 px-5 py-25 xl:gap-16 xl:px-0 xl:py-40"
     >
-      <header className="flex flex-col items-center gap-4 text-center">
-        <SectionEyebrow>CMC Projects</SectionEyebrow>
-        <h2
-          id="projects-title"
-          className="text-xl leading-8 font-bold tracking-[0.5px] text-navy-950 lg:text-[32px] lg:leading-[50.4px]"
-        >
-          CMC에서 함께한
-          <br className="lg:hidden" /> 프로젝트를 만나보세요
-        </h2>
-      </header>
+      <SectionHeading
+        id="projects-title"
+        eyebrow="CMC Projects"
+        align="center"
+        title={'CMC에서 함께한\n프로젝트를 만나보세요'}
+      />
 
       <ProjectCarousel />
 
