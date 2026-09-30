@@ -18,10 +18,10 @@ export default function ProjectsSection() {
         <SectionEyebrow>CMC Projects</SectionEyebrow>
         <h2
           id="projects-title"
-          className="text-xl leading-8 font-bold tracking-[0.5px] text-navy-950 xl:text-[32px] xl:leading-[50.4px]"
+          className="text-xl leading-8 font-bold tracking-[0.5px] text-navy-950 lg:text-[32px] lg:leading-[50.4px]"
         >
           CMC에서 함께한
-          <br className="xl:hidden" /> 프로젝트를 만나보세요
+          <br className="lg:hidden" /> 프로젝트를 만나보세요
         </h2>
       </header>
 
