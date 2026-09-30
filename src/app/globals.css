@@ -1,13 +1,45 @@
 @import 'tailwindcss';
 
 /*
+ * 헤더가 밝은 배경 위에 있을 때만 적용되는 variant. 예: `header-light:text-navy-900`
+ * HeaderShell이 스크롤 위치에 따라 <header data-header-theme="light|dark">를 바꾼다.
+ */
+@custom-variant header-light (&:where(header[data-header-theme='light'] *));
+
+/*
  * 디자인 토큰
  * 20기 리브랜딩 Figma가 확정되면 이 값을 교체한다. (현재는 19기 팔레트 일부를 임시로 사용)
+ * 색 토큰은 쓰이는 곳이 아니라 색 자체로 이름 짓는다(gray-900, blue-50). 숫자가 클수록 어둡다.
  */
 :root {
   --white: #ffffff;
   --black: #0d0f14;
   --primary: #3755ff;
+  --gray-900: #191f28;
+  --gray-800: #202020;
+  --gray-775: #222222;
+  --gray-760: #272d38;
+  --gray-750: #3b4453;
+  --gray-700: #4d535b;
+  --gray-600: #575758;
+  --gray-550: #595c72;
+  --gray-500: #6f7a8d;
+  --gray-400: #757e89;
+  --gray-300: #c4c4c6;
+  --gray-200: #ccd2dd;
+  --gray-100: #e8e8e8;
+  --gray-50: #f2f5fa;
+  --navy-975: #000b22;
+  --navy-950: #040c23;
+  --navy-900: #0d1f42;
+  --navy-850: #0f1f41;
+  --navy-800: #082053;
+  --blue-50: #eef5fd;
+  --blue-100: #dceafd;
+  --blue-200: #c1dbff;
+  --blue-350: #a6d3fb;
+  --blue-400: #62a6f4;
+  --blue-600: #1f62d0;
 
   --background: var(--white);
   --foreground: var(--black);
@@ -17,6 +49,29 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+  --color-gray-900: var(--gray-900);
+  --color-gray-775: var(--gray-775);
+  --color-gray-760: var(--gray-760);
+  --color-gray-750: var(--gray-750);
+  --color-gray-600: var(--gray-600);
+  --color-gray-550: var(--gray-550);
+  --color-gray-500: var(--gray-500);
+  --color-gray-400: var(--gray-400);
+  --color-gray-300: var(--gray-300);
+  --color-gray-200: var(--gray-200);
+  --color-gray-100: var(--gray-100);
+  --color-gray-50: var(--gray-50);
+  --color-navy-975: var(--navy-975);
+  --color-navy-950: var(--navy-950);
+  --color-navy-900: var(--navy-900);
+  --color-navy-850: var(--navy-850);
+  --color-blue-50: var(--blue-50);
+  --color-blue-200: var(--blue-200);
+  --color-blue-350: var(--blue-350);
+  --color-blue-400: var(--blue-400);
+  --color-blue-600: var(--blue-600);
+  --font-display: var(--font-poppins), var(--font-sans);
+  --font-numeric: var(--font-poppins), var(--font-sans);
   --font-sans:
     'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo',
     'Noto Sans KR', 'Malgun Gothic', sans-serif;
@@ -27,4 +82,44 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   word-break: keep-all;
+}
+
+/*
+ * 모바일 메뉴에서 Lenis를 멈추면 기본 스타일이 스크롤바까지 숨겨 화면이 좌우로 움직인다.
+ * 스크롤바는 유지하고 wheel·touch 입력만 Lenis에서 막는다.
+ * `html`을 포함해 Lenis 기본 선택자보다 우선 적용한다.
+ */
+html.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: visible;
+}
+
+@keyframes hero-overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes hero-copy-in {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-cta-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }

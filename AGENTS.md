@@ -35,23 +35,23 @@ pnpm format:check
 
 ## 폴더 구조
 
-| 경로                      | 용도                                                                         |
-| ------------------------- | ---------------------------------------------------------------------------- |
-| `src/app`                 | 라우트, layout, `sitemap.ts`, `robots.ts`, `opengraph-image`, `not-found`    |
-| `src/components/common`   | 여러 페이지에서 쓰는 UI (Button, Tab, Header, Footer 등)                     |
-| `src/components/{domain}` | 한 페이지에서만 쓰는 컴포넌트 (`home`, `project`, `recruit`, `faq`, `apply`) |
-| `src/constants`           | 카피, 링크, 데이터                                                           |
-| `src/hooks`               | 클라이언트 훅                                                                |
-| `src/lib`                 | `site.ts`(도메인, 경로 등 사이트 상수), `metadata.ts`(페이지 metadata 헬퍼)  |
-| `src/utils`               | `cn()` 등 유틸                                                               |
-| `src/assets/images`       | 정적 import 이미지                                                           |
-| `public/videos`           | Hero 영상과 poster                                                           |
+| 경로                      | 용도                                                                        |
+| ------------------------- | --------------------------------------------------------------------------- |
+| `src/app`                 | 라우트, layout, `sitemap.ts`, `robots.ts`, `opengraph-image`, `not-found`   |
+| `src/components/common`   | 여러 페이지에서 쓰는 UI (Button, Tab, Header, Footer 등)                    |
+| `src/components/{domain}` | 한 페이지에서만 쓰는 컴포넌트 (`home`, `project`, `recruit`, `apply`)       |
+| `src/constants`           | 카피, 링크, 데이터                                                          |
+| `src/hooks`               | 클라이언트 훅                                                               |
+| `src/lib`                 | `site.ts`(도메인, 경로 등 사이트 상수), `metadata.ts`(페이지 metadata 헬퍼) |
+| `src/utils`               | `cn()` 등 유틸                                                              |
+| `src/assets/images`       | 정적 import 이미지                                                          |
+| `public/videos`           | Hero 영상과 poster                                                          |
 
 컴포넌트 위치를 정할 때는 이유를 함께 밝힌다. 두 페이지 이상에서 쓰이면 `common`으로 올린다.
 
 ## URI 계약
 
-경로는 기존 웹과 같게 유지한다: `/`, `/project`, `/recruit`, `/faq`, `/apply`.
+경로는 기존 웹과 같게 유지한다: `/`, `/project`, `/recruit`, `/apply`. (`/faq`는 20기 리브랜딩에서 제거했다)
 경로 추가·변경은 `src/lib/site.ts`의 `ROUTES`에서만 한다. sitemap도 이 값을 쓴다. 내부 링크도 `ROUTES`를 쓴다.
 
 ## 서버 / 클라이언트 컴포넌트
@@ -85,6 +85,19 @@ pnpm format:check
 - 클래스 합치기는 `cn()`(`src/utils/cn.ts`), variant는 cva를 쓴다.
 - 한 파일에서 두 번 이상 쓰는 클래스 문자열은 `const`로 뺀다.
 - 색과 폰트는 `src/app/globals.css`의 토큰을 쓴다. 토큰에 없는 값을 새 토큰처럼 추가하지 않는다. 필요하면 먼저 확인을 받는다.
+- 색 토큰은 쓰이는 곳이 아니라 **색 자체로** 이름 짓는다(`gray-900`, `blue-50`, `navy-900`). 숫자가 클수록 어둡다. `header-foreground`, `stats-muted`처럼 위치를 이름에 넣지 않는다. 같은 색이 여러 곳에서 쓰여도 토큰은 하나다.
+- 기수(`20기`)처럼 해마다 바뀌는 문구는 `src/constants/recruit.ts`의 상수를 쓴다.
+
+## 반응형 / breakpoint
+
+- 모바일 우선으로 작성한다. 기본 스타일은 360px 모바일 시안, 데스크톱 스타일은 1440px 웹 시안을 기준으로 한다.
+- Tailwind 기본 breakpoint를 사용한다: `md` 768px, `lg` 1024px, `xl` 1280px. 정확히 1200px 콘텐츠와 좌우 120px 여백이 함께 필요한 레이아웃만 `min-[1440px]`을 사용한다.
+- `md`는 Header/Hero 전환이나 카드 밀도 조정, `lg`는 유동 너비 2~4열 grid, `xl`은 고정 너비 carousel·partner·countdown처럼 넓은 레이아웃에 사용한다.
+- 구조, 카드 크기, control, pagination처럼 한 덩어리로 보이는 요소는 같은 breakpoint에서 전환한다. 타이포만 먼저 바꾼다면 중간 구간에서도 레이아웃이 자연스러운지 확인한다.
+- breakpoint를 정하기 전에 `고정 자식 너비 합 + gap 합 + 섹션 좌우 padding`이 해당 화면 너비 이하인지 계산한다. 넘으면 breakpoint를 늦추거나 자식 너비를 유동값으로 바꾼다.
+- 모바일과 웹 시안만 있을 때 태블릿 전용 구조를 새로 만들지 않는다. 필요한 너비가 확보될 때까지 모바일 구조를 유지하고, 추정한 전환은 작업 설명에 남긴다.
+- 화면 너비와 입력 방식을 같은 조건으로 보지 않는다. hover UI는 넓은 breakpoint와 `(hover: hover)`를 함께 만족할 때만 사용하고, 그 외에는 설명을 계속 노출한다.
+- 반응형 변경 후 360, 768, 1024, 1280, 1440px에서 가로 스크롤과 잘림을 확인한다.
 
 ## 디자인 소스
 
@@ -94,16 +107,29 @@ pnpm format:check
 
 ## 네이밍 · export
 
-- 컴포넌트는 PascalCase, 파일명은 컴포넌트 이름과 같다.
-- 컴포넌트는 default export, 폴더의 `index.ts`에서 named export로 다시 내보낸다.
+| 대상              | 규칙                          | 예                                        |
+| ----------------- | ----------------------------- | ----------------------------------------- |
+| 컴포넌트          | PascalCase, 컴포넌트명과 같게 | `HeroSection.tsx`, `RoleCard.tsx`         |
+| 훅                | camelCase, `use`로 시작       | `usePrefersReducedMotion.ts`              |
+| 유틸 · lib · 상수 | camelCase (한 단어면 소문자)  | `cn.ts`, `site.ts`, `projects.ts`         |
+| 이미지 · 영상     | kebab-case                    | `role-client.webp`, `landing-poster.webp` |
+| Next.js 특수 파일 | 프레임워크 규칙 그대로        | `page.tsx`, `not-found.tsx`, `robots.ts`  |
+
+- 컴포넌트는 `폴더/컴포넌트.tsx + index.ts`로 둔다. 같은 섹션에서만 쓰는 하위 컴포넌트는 그 폴더 안에 함께 둔다(`RolesSection/RoleCard.tsx`).
+- 컴포넌트는 default export, 폴더의 `index.ts`에서 named export로 다시 내보낸다. 외부에서는 `index.ts`를 통해 import한다.
 
 ```ts
-// Button.tsx
+// Button/Button.tsx
 export default function Button() {}
 
-// index.ts
+// Button/index.ts
 export { default as Button } from './Button'
+
+// 사용하는 곳
+import { Button } from '@/components/common/Button'
 ```
+
+- **파일 이름의 대소문자만 바꿀 때는 반드시 `git mv`를 쓴다.** Windows·macOS는 대소문자를 구분하지 않아 git이 변경을 놓치고, Vercel(Linux) 빌드에서만 import가 깨진다.
 
 ## 함정 목록
 
