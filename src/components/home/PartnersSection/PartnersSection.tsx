@@ -26,7 +26,7 @@ export default function PartnersSection() {
           id="partners-title"
           eyebrow="CMC Partners"
           className="gap-3 lg:gap-4"
-          titleClassName="tracking-[-0.02em] text-gray-925 lg:leading-[51.2px]"
+          titleClassName="tracking-[-0.02em]"
           title="CMC의 여정에 함께하는 파트너"
         />
 

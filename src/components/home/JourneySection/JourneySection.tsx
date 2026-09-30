@@ -15,7 +15,7 @@ export default function JourneySection() {
         <SectionHeading
           id="journey-title"
           eyebrow="Why CMC"
-          titleClassName="tracking-normal text-gray-950 lg:leading-13.5"
+          titleClassName="lg:leading-13.5"
           title={
             <>
               만들고, 검증하고, 출시하는
