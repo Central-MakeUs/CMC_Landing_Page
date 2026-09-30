@@ -26,7 +26,7 @@ const INITIAL_SLIDE = PROJECTS.length + 1
 type EmblaApi = NonNullable<UseEmblaCarouselType[1]>
 
 const controlClassName =
-  'absolute top-1/2 hidden size-9 -translate-y-1/2 items-center justify-center rounded-md bg-black/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 xl:flex'
+  'absolute top-1/2 hidden size-9 -translate-y-1/2 items-center justify-center rounded-md bg-black/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 xl:flex cursor-pointer'
 
 function updateScale(emblaApi: EmblaApi) {
   const engine = emblaApi.internalEngine()
