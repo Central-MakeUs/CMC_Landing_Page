@@ -1,6 +1,8 @@
 import roleClient from '@/assets/images/role-client.webp'
 import roleDesigner from '@/assets/images/role-designer.webp'
+import roleFullStack from '@/assets/images/role-full-stack.webp'
 import rolePm from '@/assets/images/role-pm.webp'
+import roleServer from '@/assets/images/role-server.webp'
 import { SectionHeading } from '@/components/common/SectionHeading'
 
 import RoleCard from './RoleCard'
@@ -14,9 +16,8 @@ const ROLES = [
     hoverDescription: '앱의 화면과 기능을 구현하고 배포해요',
     image: roleClient,
   },
-  // TODO: Server와 Full-Stack 일러스트가 확정되면 image를 추가
-  { title: 'Server', hoverDescription: '서버·DB·API를 설계하고 구현해요' },
-  { title: 'Full-Stack', hoverDescription: '프론트와 백엔드를 넘나들며 제품 전반을 구현해요' },
+  { title: 'Server', hoverDescription: '서버·DB·API를 설계하고 구현해요', image: roleServer },
+  { title: 'Full-Stack', hoverDescription: '프론트와 백엔드를 넘나들며 제품 전반을 구현해요', image: roleFullStack },
 ]
 
 export default function RolesSection() {
