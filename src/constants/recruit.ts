@@ -25,7 +25,10 @@ export type RecruitRoleId = 'pm' | 'designer' | 'client' | 'server' | 'full-stac
 export interface RecruitTrack {
   name: string
   description: string
-  frameworks: readonly string[]
+  /** '#' 없이 보여주는 칩 */
+  frameworks?: readonly string[]
+  /** '#'을 붙여 보여주는 칩 */
+  keywords?: readonly string[]
 }
 
 export interface RecruitRole {
@@ -74,7 +77,7 @@ export const RECRUIT_ROLES: readonly RecruitRole[] = [
       {
         name: 'Web',
         description: '두 명의 개발자가 함께 크로스플랫폼 서비스를 구현합니다.',
-        frameworks: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'React Native'],
+        keywords: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'React Native'],
       },
     ],
   },
