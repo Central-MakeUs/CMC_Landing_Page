@@ -37,6 +37,7 @@
   --blue-50: #eef5fd;
   --blue-100: #dceafd;
   --blue-200: #c1dbff;
+  --blue-350: #a6d3fb;
   --blue-400: #62a6f4;
   --blue-600: #1f62d0;
 
@@ -66,6 +67,7 @@
   --color-navy-850: var(--navy-850);
   --color-blue-50: var(--blue-50);
   --color-blue-200: var(--blue-200);
+  --color-blue-350: var(--blue-350);
   --color-blue-400: var(--blue-400);
   --color-blue-600: var(--blue-600);
   --font-display: var(--font-poppins), var(--font-sans);
