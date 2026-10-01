@@ -1,5 +1,6 @@
 import { ChallengerSection } from '@/components/recruit/ChallengerSection'
 import { RecruitIntroSection } from '@/components/recruit/RecruitIntroSection'
+import { RecruitmentProcessSection } from '@/components/recruit/RecruitmentProcessSection'
 import { RecruitRolesSection } from '@/components/recruit/RecruitRolesSection'
 import { APPLICATION_STEP, GENERATION } from '@/constants/recruit'
 import { createPageMetadata } from '@/lib/metadata'
@@ -17,6 +18,7 @@ export default function RecruitPage() {
       <RecruitIntroSection />
       <ChallengerSection />
       <RecruitRolesSection />
+      <RecruitmentProcessSection />
     </main>
   )
 }
