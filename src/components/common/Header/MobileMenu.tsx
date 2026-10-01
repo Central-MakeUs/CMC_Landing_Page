@@ -10,7 +10,7 @@ import mobileMenuIcon from '@/assets/images/mobile-menu.svg'
 import { APPLY_LABEL } from '@/constants/recruit'
 import { ROUTES } from '@/lib/site'
 
-import { isActivePath, MOBILE_NAVIGATION } from './navigation'
+import { isActivePath, NAVIGATION } from './navigation'
 
 /*
  * 모바일 메뉴
@@ -76,13 +76,13 @@ export default function MobileMenu() {
       >
         <nav aria-label="모바일 메뉴">
           <ul className="flex flex-col items-center gap-5 text-base leading-6 font-semibold tracking-[-0.02em]">
-            {MOBILE_NAVIGATION.map(({ href, hash, label }) => {
-              const isActive = !hash && isActivePath(pathname, href)
+            {NAVIGATION.map(({ href, label }) => {
+              const isActive = isActivePath(pathname, href)
 
               return (
-                <li key={label}>
+                <li key={href}>
                   <Link
-                    href={hash ? `${href}#${hash}` : href}
+                    href={href}
                     onClick={closeMenu}
                     aria-current={isActive ? 'page' : undefined}
                     className={isActive ? 'text-white' : 'text-blue-200'}
