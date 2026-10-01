@@ -10,7 +10,7 @@ import { ROUTES } from '@/lib/site'
  * 최상단 섹션이 어두운 페이지 목록
  * - 나머지 페이지는 밝은 배경에서 시작한다
  */
-const DARK_TOP_ROUTES: readonly string[] = [ROUTES.home, ROUTES.recruit]
+const DARK_TOP_ROUTES: readonly string[] = [ROUTES.home, ROUTES.recruit, ROUTES.project]
 
 type HeaderShellProps = Readonly<{
   children: ReactNode
