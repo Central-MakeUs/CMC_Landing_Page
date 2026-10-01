@@ -1,4 +1,5 @@
 import { ChallengerSection } from '@/components/recruit/ChallengerSection'
+import { RecruitFaqSection } from '@/components/recruit/RecruitFaqSection'
 import { RecruitIntroSection } from '@/components/recruit/RecruitIntroSection'
 import { RecruitmentProcessSection } from '@/components/recruit/RecruitmentProcessSection'
 import { RecruitRolesSection } from '@/components/recruit/RecruitRolesSection'
@@ -21,6 +22,7 @@ export default function RecruitPage() {
       <RecruitRolesSection />
       <RecruitmentProcessSection />
       <SessionScheduleSection />
+      <RecruitFaqSection />
     </main>
   )
 }
