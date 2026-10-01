@@ -21,16 +21,26 @@ interface SectionHeadingProps {
   title: ReactNode
   eyebrow?: string
   align?: 'start' | 'center'
+  /** 제목 태그. 페이지 제목(h1)으로 쓸 때만 변경*/
+  as?: 'h1' | 'h2'
   /** 묶음(라벨 + 제목)에 더할 클래스 */
   className?: string
   titleClassName?: string
 }
 
-export default function SectionHeading({ id, title, eyebrow, align, className, titleClassName }: SectionHeadingProps) {
+export default function SectionHeading({
+  id,
+  title,
+  eyebrow,
+  align,
+  as: Heading = 'h2',
+  className,
+  titleClassName,
+}: SectionHeadingProps) {
   return (
     <div className={cn(headingVariants({ align }), className)}>
       {eyebrow ? <SectionEyebrow>{eyebrow}</SectionEyebrow> : null}
-      <h2
+      <Heading
         id={id}
         className={cn(
           'text-xl leading-8 font-bold tracking-[0.5px] whitespace-pre-line text-navy-950 lg:text-[32px] lg:leading-[50.4px] lg:whitespace-normal',
@@ -38,7 +48,7 @@ export default function SectionHeading({ id, title, eyebrow, align, className, t
         )}
       >
         {title}
-      </h2>
+      </Heading>
     </div>
   )
 }
