@@ -2,6 +2,7 @@ import { ChallengerSection } from '@/components/recruit/ChallengerSection'
 import { RecruitIntroSection } from '@/components/recruit/RecruitIntroSection'
 import { RecruitmentProcessSection } from '@/components/recruit/RecruitmentProcessSection'
 import { RecruitRolesSection } from '@/components/recruit/RecruitRolesSection'
+import { SessionScheduleSection } from '@/components/recruit/SessionScheduleSection'
 import { APPLICATION_STEP, GENERATION } from '@/constants/recruit'
 import { createPageMetadata } from '@/lib/metadata'
 import { ROUTES } from '@/lib/site'
@@ -19,6 +20,7 @@ export default function RecruitPage() {
       <ChallengerSection />
       <RecruitRolesSection />
       <RecruitmentProcessSection />
+      <SessionScheduleSection />
     </main>
   )
 }
