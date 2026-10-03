@@ -8,6 +8,8 @@ import { cn } from '@/utils/cn'
 import ProjectGalleryCard from './ProjectGalleryCard'
 
 const PAGE_SIZE = 4
+// 첫 화면에 보이는 카드 수(웹 3열 × 2행). lazy 이미지는 CSS와 레이아웃 계산을 기다렸다가 받기 시작해서 늦게 뜬다.
+const EAGER_COUNT = 6
 
 const focusClassName = 'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-900'
 
@@ -61,8 +63,9 @@ export default function ProjectGallery() {
                 description={project.description}
                 generation={project.generation}
                 image={project.logo}
+                link={project.link}
                 fetchPriority={index === 0 ? 'high' : 'auto'}
-                loading={index < PAGE_SIZE ? 'eager' : 'lazy'}
+                loading={index < EAGER_COUNT ? 'eager' : 'lazy'}
               />
             </li>
           ))}
