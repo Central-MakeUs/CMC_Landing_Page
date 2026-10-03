@@ -12,7 +12,7 @@ import { PROJECTS } from '@/constants/projects'
 import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion'
 import { cn } from '@/utils/cn'
 
-import { ProjectCard } from '@/components/common/ProjectCard'
+import ProjectCard from './ProjectCard'
 
 // TODO: 시안에 카드 세 개밖에 없어서 임의로 슬라이드를 복제했습니다(무한루프를 돌게 하기 위해). 추후에 제거할 예정입니다.
 const MIN_SLIDE_COUNT = 6

@@ -2,9 +2,10 @@
 
 import { useState } from 'react'
 
-import { ProjectCard } from '@/components/common/ProjectCard'
 import { PROJECT_GALLERY, PROJECT_TAB_ITEMS } from '@/constants/projectGallery'
 import { cn } from '@/utils/cn'
+
+import ProjectGalleryCard from './ProjectGalleryCard'
 
 const PAGE_SIZE = 4
 
@@ -55,11 +56,11 @@ export default function ProjectGallery() {
         <ul id="project-list" className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-[30px]">
           {projects.map((project, index) => (
             <li key={project.id} className={cn(index >= visibleCount && 'hidden lg:block')}>
-              <ProjectCard
-                {...project}
+              <ProjectGalleryCard
+                title={project.title}
+                description={project.description}
+                generation={project.generation}
                 image={project.logo}
-                generation={Number(project.year)}
-                variant="gallery"
                 fetchPriority={index === 0 ? 'high' : 'auto'}
                 loading={index < PAGE_SIZE ? 'eager' : 'lazy'}
               />
