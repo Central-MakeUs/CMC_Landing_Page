@@ -71,7 +71,7 @@ export const RECRUIT_ROLES: readonly RecruitRole[] = [
     tracks: [
       {
         name: 'Native (iOS · Android · Flutter)',
-        description: '한 명의 개발자가 앱 구현부터 배포까지 담당합니다.',
+        description: '두 명(iOS, Android 혹은 Flutter 2인)의 개발자가 앱 구현부터 배포까지 담당합니다.',
         frameworks: ['Flutter: Dart, Flutter', 'Android: Kotlin, Jetpack Compose, XML', 'iOS: Swift, SwiftUI, UIKit'],
       },
       {
@@ -111,7 +111,7 @@ export interface RecruitmentStep {
 export const APPLICATION_STEP = {
   title: '서류접수',
   start: '2026-10-12',
-  end: '2026-10-13',
+  end: '2026-10-23',
   note: '자정 전까지 제출',
 } as const satisfies RecruitmentStep
 
@@ -133,22 +133,23 @@ export const APPLY_DEADLINE = toKstEndOfDay(APPLICATION_STEP.end)
 export interface Session {
   week: number
   title: string
-  date: IsoDate
+  start: IsoDate
+  end?: IsoDate
 }
 
 export const SESSION_SCHEDULE: readonly Session[] = [
-  { week: 0, title: 'OT', date: '2026-11-14' },
-  { week: 1, title: '해커톤', date: '2026-11-21' },
-  { week: 2, title: '네트워킹 데이', date: '2026-11-28' },
-  { week: 3, title: '파트별 세션', date: '2026-12-05' },
-  { week: 4, title: '기획안 발표 및 질의 세션', date: '2026-12-12' },
-  { week: 5, title: '기획안 최종 발표 및 팀매칭', date: '2026-12-19' },
-  { week: 6, title: '디자인 GUI 세션', date: '2027-01-09' },
-  { week: 7, title: '1차 모각작: UT', date: '2027-01-16' },
-  { week: 8, title: '2차 모각작', date: '2027-02-13' },
-  { week: 9, title: '런칭데이', date: '2027-02-27' },
-  { week: 10, title: '데모데이', date: '2027-03-06' },
-  { week: 11, title: '종무식', date: '2027-03-13' },
+  { week: 0, title: 'OT', start: '2026-11-14' },
+  { week: 1, title: '해커톤', start: '2026-11-21', end: '2026-11-22' },
+  { week: 2, title: '네트워킹 데이', start: '2026-11-28' },
+  { week: 3, title: '파트별 세션', start: '2026-12-05' },
+  { week: 4, title: '기획안 발표 및 질의 세션', start: '2026-12-12' },
+  { week: 5, title: '기획안 최종 발표 및 팀매칭', start: '2026-12-19' },
+  { week: 6, title: '디자인 GUI 세션', start: '2027-01-09' },
+  { week: 7, title: '1차 모각작: UT', start: '2027-01-16' },
+  { week: 8, title: '2차 모각작', start: '2027-02-13' },
+  { week: 9, title: '런칭데이', start: '2027-02-27' },
+  { week: 10, title: '데모데이', start: '2027-03-06' },
+  { week: 11, title: '종무식', start: '2027-03-13' },
 ]
 
 export interface FaqItem {
@@ -212,6 +213,6 @@ export const RECRUIT_FAQ: readonly FaqItem[] = [
     id: 'fee',
     question: '회비는 어떻게 되나요?',
     answer:
-      '동아리 회비는 8만원입니다. 정기 세션 장소 대관과 데모데이 준비, 네트워킹 지원 비용 등의 동아리 운영으로 사용 됩니다. 별도 요청하신 분들에게 사용 내역을 투명하게 공개하고 있습니다.',
+      '동아리 회비는 10만원입니다. 정기 세션 장소 대관과 데모데이 준비, 네트워킹 지원 비용 등의 동아리 운영으로 사용 됩니다. 별도 요청하신 분들에게 사용 내역을 투명하게 공개하고 있습니다.',
   },
 ]

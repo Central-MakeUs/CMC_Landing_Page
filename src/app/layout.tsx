@@ -70,7 +70,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
           precedence="default"
         />
       </head>
-      <body className={`${poppins.variable} antialiased`}>
+      <body className={`${poppins.variable} flex min-h-dvh flex-col antialiased`}>
         {/* JSON-LD 문자열이 HTML로 해석되지 않도록 '<'를 이스케이프한다. */}
         <script
           type="application/ld+json"

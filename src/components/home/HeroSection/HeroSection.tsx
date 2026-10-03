@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import arrowRightCircle from '@/assets/images/arrow-right-circle.svg'
 import { APPLY_LABEL } from '@/constants/recruit'
 import { ROUTES } from '@/lib/site'
 
@@ -33,7 +34,7 @@ export default function HeroSection() {
             CMC {APPLY_LABEL}
             <Image
               className="size-11 transition-transform motion-safe:group-hover:translate-x-1 motion-safe:group-focus-visible:translate-x-1 md:size-16.5"
-              src="/images/arrow-right-circle.svg"
+              src={arrowRightCircle}
               width={66}
               height={66}
               alt=""

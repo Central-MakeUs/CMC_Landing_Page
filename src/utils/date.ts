@@ -26,8 +26,11 @@ export const formatDate = (date: IsoDate) => date.split('-').join('.')
 /** '2026-10-12' → '2026.10.12 (월)' */
 export const formatDateWithWeekday = (date: IsoDate) => `${formatDate(date)} (${weekday(date)})`
 
+/** '2026-11-22' → '11.22' */
+export const formatMonthDay = (date: IsoDate) => date.slice(5).replace('-', '.')
+
 /** '2026-10-13' → '10.13 (화)' */
-export const formatMonthDayWithWeekday = (date: IsoDate) => `${date.slice(5).replace('-', '.')} (${weekday(date)})`
+export const formatMonthDayWithWeekday = (date: IsoDate) => `${formatMonthDay(date)} (${weekday(date)})`
 
 /** 0 → '0th Week', 1 → '1st Week', 11 → '11th Week' */
 export const formatWeek = (week: number) => `${week}${ORDINAL_SUFFIX[ordinalRules.select(week)]} Week`

@@ -1,7 +1,7 @@
 import { SectionHeading } from '@/components/common/SectionHeading'
 import { SESSION_SCHEDULE } from '@/constants/recruit'
 import { cn } from '@/utils/cn'
-import { formatDate, formatWeek } from '@/utils/date'
+import { formatDate, formatMonthDay, formatWeek } from '@/utils/date'
 
 export default function SessionScheduleSection() {
   return (
@@ -15,8 +15,8 @@ export default function SessionScheduleSection() {
         <SectionHeading id="schedule-title" eyebrow="Calendar" title="정규 세션 일정" className="xl:gap-0" />
 
         <ol className="flex flex-col gap-4 md:grid md:grid-flow-col md:grid-cols-2 md:grid-rows-6 md:gap-x-2 md:gap-y-8 xl:mt-5">
-          {SESSION_SCHEDULE.map(({ week, title, date }, index) => (
-            <li key={date} className="flex flex-col gap-1">
+          {SESSION_SCHEDULE.map(({ week, title, start, end }, index) => (
+            <li key={start} className="flex flex-col gap-1">
               <p
                 className={cn(
                   'text-base leading-8 font-medium tracking-[-0.48px] xl:text-xl',
@@ -25,12 +25,15 @@ export default function SessionScheduleSection() {
               >
                 {formatWeek(week)} / {title}
               </p>
-              <time
-                dateTime={date}
-                className="text-[13px] leading-[25.6px] tracking-[-0.38px] text-gray-350 xl:text-base"
-              >
-                {formatDate(date)}
-              </time>
+              <p className="text-[13px] leading-[25.6px] tracking-[-0.38px] text-gray-350 xl:text-base">
+                <time dateTime={start}>{formatDate(start)}</time>
+                {end ? (
+                  <>
+                    {' - '}
+                    <time dateTime={end}>{formatMonthDay(end)}</time>
+                  </>
+                ) : null}
+              </p>
             </li>
           ))}
         </ol>
