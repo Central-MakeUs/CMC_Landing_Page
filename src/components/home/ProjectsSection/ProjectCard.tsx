@@ -30,7 +30,7 @@ export default function ProjectCard({ active, description, image, title }: Proje
             sizes="(max-width: 1279px) min(calc(100vw - 70px), 370px), 447px"
             quality={85}
             draggable={false}
-            className="pointer-events-none object-cover"
+            className="pointer-events-none object-cover object-top"
           />
         ) : null}
       </div>
