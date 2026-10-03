@@ -126,7 +126,8 @@ export default function ProjectCarousel() {
           aria-label="CMC 프로젝트"
           tabIndex={0}
           onKeyDown={handleKeyDown}
-          className="overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+          // 카드 그림자(아래로 16px)가 overflow-hidden에 잘리지 않도록 위아래에 여백을 두고 음수 margin으로 상쇄한다
+          className="-my-4 overflow-hidden py-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
         >
           <div className="flex [touch-action:pan-y_pinch-zoom] items-center">
             {SLIDES.map(({ key, projectIndex, ...project }, slideIndex) => (
