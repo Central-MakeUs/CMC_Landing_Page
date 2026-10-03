@@ -32,7 +32,7 @@ export default function ScrollReveal() {
             observer.unobserve(element)
           })
       },
-      { rootMargin: '0px 0px -10% 0px' },
+      { rootMargin: '0px 0px -80px 0px' },
     )
 
     document.querySelectorAll('[data-reveal]:not([data-revealed])').forEach((element) => observer.observe(element))
