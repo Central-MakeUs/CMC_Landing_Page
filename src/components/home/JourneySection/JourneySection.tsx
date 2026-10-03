@@ -13,6 +13,7 @@ export default function JourneySection() {
     >
       <div className="mx-auto flex w-full max-w-300 flex-col items-start">
         <SectionHeading
+          reveal
           id="journey-title"
           eyebrow="Why CMC"
           titleClassName="lg:leading-13.5"

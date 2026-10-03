@@ -20,14 +20,14 @@ export default function RecruitFaqSection() {
               key={id}
               name="recruit-faq"
               open={index === 0}
-              className="group border-b border-gray-125 open:bg-gray-110"
+              className="group details-slide border-b border-gray-125 transition-colors duration-300 open:bg-gray-110 motion-reduce:transition-none"
             >
               <summary className="flex min-h-14.5 cursor-pointer list-none items-center justify-between gap-3 px-4 py-3 xl:min-h-15.5 [&::-webkit-details-marker]:hidden">
                 <h3 className="flex-1 text-base leading-8 font-medium tracking-[-0.48px] text-gray-800 xl:text-xl">
                   Q. {question}
                 </h3>
                 <span className="flex size-5 shrink-0 items-center justify-center">
-                  <FaqToggleIcon className="text-gray-760 group-open:rotate-45 group-open:text-gray-575" />
+                  <FaqToggleIcon className="text-gray-760 transition-[rotate,color] duration-300 group-open:rotate-45 group-open:text-gray-575 motion-reduce:transition-none" />
                 </span>
               </summary>
               <p className="px-4 py-4 text-base leading-[25.6px] tracking-[-0.38px] text-gray-755">{answer}</p>

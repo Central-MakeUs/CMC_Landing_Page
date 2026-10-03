@@ -22,8 +22,12 @@ export default function HeroSection() {
             id="hero-title"
             className="sr-only text-[clamp(3.25rem,8.333vw,7.5rem)] leading-none font-bold tracking-[-0.01em] md:not-sr-only"
           >
-            <span className="block">PICK YOUR</span>
-            <span className="block">POSSIBILITY</span>
+            <span data-hero-line="lead" className="block">
+              PICK YOUR
+            </span>
+            <span data-hero-line="accent" className="block hero-accent">
+              POSSIBILITY
+            </span>
           </h1>
         }
         cta={

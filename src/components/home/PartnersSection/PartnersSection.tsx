@@ -23,6 +23,7 @@ export default function PartnersSection() {
     >
       <div className="mx-auto flex w-full max-w-300 flex-col items-start gap-12">
         <SectionHeading
+          reveal
           id="partners-title"
           eyebrow="CMC Partners"
           className="gap-3 lg:gap-4"

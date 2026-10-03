@@ -21,6 +21,7 @@ export default function AboutSection() {
     >
       <div className="mx-auto flex w-full max-w-275 flex-col items-center gap-15 lg:gap-20">
         <SectionHeading
+          reveal
           id="about-title"
           align="center"
           titleClassName="leading-7"
@@ -40,6 +41,7 @@ export default function AboutSection() {
           {ABOUT_VALUES.map(({ title, description }) => (
             <li
               key={title}
+              data-reveal
               className="rounded-[10px] bg-[linear-gradient(106deg,var(--blue-50)_0%,var(--blue-100)_100%)] px-5 py-4.5 text-navy-900 lg:rounded-xl lg:p-10"
             >
               <h3 className="text-lg leading-[38.4px] font-bold lg:text-2xl">{title}</h3>

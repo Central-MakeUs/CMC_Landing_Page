@@ -23,6 +23,8 @@ interface SectionHeadingProps {
   align?: 'start' | 'center'
   /** 제목 태그. 페이지 제목(h1)으로 쓸 때만 변경*/
   as?: 'h1' | 'h2'
+  /** 스크롤해서 화면에 들어올 때 나타난다 */
+  reveal?: boolean
   /** 묶음(라벨 + 제목)에 더할 클래스 */
   className?: string
   titleClassName?: string
@@ -34,11 +36,12 @@ export default function SectionHeading({
   eyebrow,
   align,
   as: Heading = 'h2',
+  reveal = false,
   className,
   titleClassName,
 }: SectionHeadingProps) {
   return (
-    <div className={cn(headingVariants({ align }), className)}>
+    <div data-reveal={reveal || undefined} className={cn(headingVariants({ align }), className)}>
       {eyebrow ? <SectionEyebrow>{eyebrow}</SectionEyebrow> : null}
       <Heading
         id={id}

@@ -31,6 +31,7 @@ export default function RolesSection() {
       <div className="mx-auto flex w-full max-w-237.5 flex-col items-center gap-8">
         <div className="flex flex-col items-center gap-1.5 text-center lg:gap-2.5">
           <SectionHeading
+            reveal
             id="roles-title"
             eyebrow="What CMC do"
             align="center"

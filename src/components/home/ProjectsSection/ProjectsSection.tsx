@@ -15,6 +15,7 @@ export default function ProjectsSection() {
       className="flex flex-col items-center gap-10 bg-gray-50 px-5 py-25 xl:gap-16 xl:px-0 xl:py-40"
     >
       <SectionHeading
+        reveal
         id="projects-title"
         eyebrow="CMC Projects"
         align="center"
