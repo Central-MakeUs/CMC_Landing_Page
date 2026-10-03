@@ -25,8 +25,10 @@ const INITIAL_SLIDE = PROJECTS.length + 1
 
 type EmblaApi = NonNullable<UseEmblaCarouselType[1]>
 
+// 이전·다음 버튼은 캐러셀에 마우스를 올리거나 키보드 포커스가 들어왔을 때만 보인다(시안 696:343).
+// hover가 없는 기기에서는 누를 방법이 없어지므로 계속 보여준다.
 const controlClassName =
-  'absolute top-1/2 hidden size-9 -translate-y-1/2 items-center justify-center rounded-md bg-black/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 xl:flex cursor-pointer'
+  'absolute top-1/2 hidden size-9 -translate-y-1/2 cursor-pointer items-center justify-center rounded-md bg-black/40 transition-opacity duration-200 group-hover:opacity-100 group-has-focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 motion-reduce:transition-none xl:flex [@media(hover:hover)]:opacity-0'
 
 function updateScale(emblaApi: EmblaApi) {
   const engine = emblaApi.internalEngine()
@@ -117,7 +119,7 @@ export default function ProjectCarousel() {
 
   return (
     <div className="flex w-full flex-col items-center gap-6 xl:gap-16">
-      <div className="relative -mx-5 w-[calc(100%+40px)] max-w-325.5 select-none xl:mx-0 xl:w-full">
+      <div className="group relative -mx-5 w-[calc(100%+40px)] max-w-325.5 select-none xl:mx-0 xl:w-full">
         <div
           id="projects-carousel"
           ref={emblaRef}
