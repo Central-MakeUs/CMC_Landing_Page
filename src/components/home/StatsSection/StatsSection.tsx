@@ -18,6 +18,7 @@ export default function StatsSection() {
     >
       <div className="mx-auto flex w-full max-w-300 flex-col items-center gap-8">
         <SectionHeading
+          reveal
           id="stats-title"
           align="center"
           titleClassName="text-white"
@@ -28,6 +29,7 @@ export default function StatsSection() {
           <dl className="grid md:grid-cols-2 lg:grid-cols-4">
             {STATS.map(({ label, value, unit }) => (
               <div
+                data-reveal
                 key={label}
                 className={cn(
                   'relative flex flex-col items-start gap-2 px-6 py-4.5 lg:gap-4 lg:px-8 lg:py-10 xl:px-15',

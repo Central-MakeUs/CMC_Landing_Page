@@ -151,3 +151,21 @@ html.lenis:not(.lenis-autoToggle).lenis-stopped {
     transform: translateY(0) scale(1);
   }
 }
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    translate: 0 40px;
+  }
+}
+
+/* data-revealed는 ScrollReveal이 붙인다. JS가 없거나 동작 줄이기면 처음부터 보인다. */
+@media (scripting: enabled) and (prefers-reduced-motion: no-preference) {
+  [data-reveal]:not([data-revealed]) {
+    opacity: 0;
+  }
+
+  [data-reveal][data-revealed] {
+    animation: reveal-up 700ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) both;
+  }
+}

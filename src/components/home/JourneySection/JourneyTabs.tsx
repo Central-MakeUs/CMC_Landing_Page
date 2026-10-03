@@ -19,7 +19,7 @@ export default function JourneyTabs({ journeys }: JourneyTabsProps) {
   const active = journeys[activeIndex]
 
   return (
-    <div className="flex w-full flex-col items-start gap-6 pt-8 lg:flex-row lg:gap-10 xl:pt-12">
+    <div data-reveal className="flex w-full flex-col items-start gap-6 pt-8 lg:flex-row lg:gap-10 xl:pt-12">
       {/* lg부터 사진은 목록을 뺀 남은 너비를 채운다.*/}
       <div className="relative aspect-320/208 w-full overflow-hidden rounded bg-black/5 lg:w-auto lg:min-w-0 lg:flex-1 xl:rounded-lg">
         {active.image ? (
