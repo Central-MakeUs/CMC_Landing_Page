@@ -9,6 +9,7 @@ import { useEffect, useId, useRef, useState } from 'react'
 import mobileMenuIcon from '@/assets/images/mobile-menu.svg'
 import { APPLY_LABEL } from '@/constants/recruit'
 import { ROUTES } from '@/lib/site'
+import { cn } from '@/utils/cn'
 
 import { isActivePath, NAVIGATION } from './navigation'
 
@@ -71,8 +72,12 @@ export default function MobileMenu() {
       <div
         ref={panelRef}
         id={panelId}
-        hidden={!isOpen}
-        className="absolute inset-x-0 top-full flex flex-col items-center gap-7 bg-linear-to-b/srgb from-blue-400 to-blue-350 py-9.5 md:hidden"
+        className={cn(
+          'absolute inset-x-0 top-full flex flex-col items-center gap-7 bg-linear-to-b/srgb from-blue-400 to-blue-350 py-9.5 md:hidden',
+          // 닫힌 동안은 invisible이라 Tab 이동과 스크린리더에서 빠진다. 닫힐 때도 transition이 끝난 뒤 숨는다.
+          'transition-[opacity,translate,visibility] duration-200 ease-out motion-reduce:transition-none',
+          isOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0',
+        )}
       >
         <nav aria-label="모바일 메뉴">
           <ul className="flex flex-col items-center gap-5 text-base leading-6 font-semibold tracking-[-0.02em]">

@@ -17,6 +17,7 @@ export default function RoleCard({ title, description, hoverDescription, image }
   return (
     <Link
       href={ROUTES.recruit}
+      data-reveal
       className="group relative flex min-h-80 w-full flex-col items-center gap-4 rounded-xl bg-navy-850 p-6 text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600 md:w-[calc((100%-2rem)/2)] lg:w-68.5 xl:min-h-73 xl:justify-between xl:gap-0 xl:p-8"
     >
       {hoverDescription ? (
