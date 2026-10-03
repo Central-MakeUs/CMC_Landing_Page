@@ -3,6 +3,7 @@
 import type { KeyboardEvent } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import type { UseEmblaCarouselType } from 'embla-carousel-react'
 import useEmblaCarousel from 'embla-carousel-react'
 
@@ -10,6 +11,7 @@ import chevronLeft from '@/assets/images/carousel-chevron-left.svg'
 import chevronRight from '@/assets/images/carousel-chevron-right.svg'
 import { PROJECTS } from '@/constants/projects'
 import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion'
+import { ROUTES } from '@/lib/site'
 import { cn } from '@/utils/cn'
 
 import ProjectCard from './ProjectCard'
@@ -143,7 +145,16 @@ export default function ProjectCarousel() {
               >
                 {/* 가운데에서 한 칸 멀어질 때마다 0.25배씩 작아짐 */}
                 <div className="flex origin-center transform-[scale(calc(1-var(--distance,0)*0.25))] items-center justify-center">
-                  <ProjectCard {...project} active={slideIndex === selectedSlide} />
+                  {/* 드래그로 넘길 때는 Embla가 click을 막아 주므로 페이지가 이동하지 않는다 */}
+                  <Link
+                    href={ROUTES.project}
+                    draggable={false}
+                    // aria-hidden인 양옆 슬라이드의 링크는 Tab 순서에서 뺀다
+                    tabIndex={slideIndex === selectedSlide ? undefined : -1}
+                    className="block w-full rounded-[9px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 xl:rounded-[14px]"
+                  >
+                    <ProjectCard {...project} active={slideIndex === selectedSlide} />
+                  </Link>
                 </div>
               </div>
             ))}
