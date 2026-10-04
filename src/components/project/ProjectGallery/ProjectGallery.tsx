@@ -8,6 +8,23 @@ import { cn } from '@/utils/cn'
 import ProjectGalleryCard from './ProjectGalleryCard'
 
 const PAGE_SIZE = 4
+// 첫 화면에 보이는 카드 수(웹 3열 × 2행). lazy 이미지는 CSS와 레이아웃 계산을 기다렸다가 받기 시작해서 늦게 뜬다.
+const EAGER_COUNT = 6
+
+// 카드가 아래에서 올라오며 50ms 간격으로 차례로 나타난다.
+// 지연은 모바일에서 더보기 단위(4장), 웹에서 첫 화면 단위(6장)로 반복한다.
+// animation 단축 속성이 animation-delay를 덮어쓰지 않도록 지연은 변수로 넘긴다.
+const cardEnterClassName =
+  'motion-safe:animate-[project-card-in_800ms_cubic-bezier(0.6,-0.05,0.01,0.99)_var(--enter-delay)_both]'
+const ENTER_DELAY = ['[--enter-delay:0ms]', '[--enter-delay:50ms]', '[--enter-delay:100ms]', '[--enter-delay:150ms]']
+const ENTER_DELAY_LG = [
+  'lg:[--enter-delay:0ms]',
+  'lg:[--enter-delay:50ms]',
+  'lg:[--enter-delay:100ms]',
+  'lg:[--enter-delay:150ms]',
+  'lg:[--enter-delay:200ms]',
+  'lg:[--enter-delay:250ms]',
+]
 
 const focusClassName = 'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy-900'
 
@@ -53,16 +70,30 @@ export default function ProjectGallery() {
       </div>
 
       <div className="w-full">
-        <ul id="project-list" className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-[30px]">
+        {/* 기수를 바꾸면 목록을 다시 마운트해 등장 애니메이션을 처음부터 재생한다 */}
+        <ul
+          key={generation}
+          id="project-list"
+          className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-[30px]"
+        >
           {projects.map((project, index) => (
-            <li key={project.id} className={cn(index >= visibleCount && 'hidden lg:block')}>
+            <li
+              key={project.id}
+              className={cn(
+                cardEnterClassName,
+                ENTER_DELAY[index % ENTER_DELAY.length],
+                ENTER_DELAY_LG[index % ENTER_DELAY_LG.length],
+                index >= visibleCount && 'hidden lg:block',
+              )}
+            >
               <ProjectGalleryCard
                 title={project.title}
                 description={project.description}
                 generation={project.generation}
                 image={project.logo}
+                link={project.link}
                 fetchPriority={index === 0 ? 'high' : 'auto'}
-                loading={index < PAGE_SIZE ? 'eager' : 'lazy'}
+                loading={index < EAGER_COUNT ? 'eager' : 'lazy'}
               />
             </li>
           ))}

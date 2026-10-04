@@ -1,5 +1,13 @@
 import type { StaticImageData } from 'next/image'
 
+import project19Mody from '@/assets/images/project/19/mody.webp'
+import project19Tripfit from '@/assets/images/project/19/tripfit.webp'
+import project19Ssoss from '@/assets/images/project/19/ssoss.webp'
+import project19Moyeo from '@/assets/images/project/19/moyeo.webp'
+import project19Rodi from '@/assets/images/project/19/rodi.webp'
+import project19Recap from '@/assets/images/project/19/recap.webp'
+import project19Dearbloom from '@/assets/images/project/19/dearbloom.webp'
+import project19Comma from '@/assets/images/project/19/comma.webp'
 import project18Semo from '@/assets/images/project/18/semo.webp'
 import project18Fourday from '@/assets/images/project/18/fourday.webp'
 import project18Azit from '@/assets/images/project/18/azit.webp'
@@ -84,6 +92,7 @@ import project10Finder from '@/assets/images/project/10/finder.webp'
 
 export const PROJECT_TAB_ITEMS = [
   { id: 'all', label: '전체' },
+  { id: '19', label: '19기' },
   { id: '18', label: '18기' },
   { id: '17', label: '17기' },
   { id: '16', label: '16기' },
@@ -108,6 +117,95 @@ export interface ProjectEntry {
 }
 
 export const PROJECTS: ProjectEntry[] = [
+  {
+    name: 'MODY',
+    year: '19',
+    description: '친구들과 함께하는 다이어트 챌린지, 운동과 식단을 인증하고 서로 응원하며 건강한 습관을 만들어보세요.',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/mody-%EB%AA%A8%EB%94%94-%EB%8B%A4%EC%9D%B4%EC%96%B4%ED%8A%B8-%EC%B1%8C%EB%A6%B0%EC%A7%80/id6785124295',
+      android: 'https://play.google.com/store/apps/details?id=com.makeus.mody',
+    },
+    logo: project19Mody,
+    rank: '1',
+  },
+  {
+    name: 'TripFit',
+    year: '19',
+    description: '연차, 늦참까지 고려해 최적의 여행 날짜를 추천해주는 앱',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/tripfit-%ED%95%A8%EA%BB%98-%EA%B0%80%EB%8A%94-%EC%97%AC%ED%96%89-%EC%89%AC%EC%9A%B4-%EC%9D%BC%EC%A0%95-%EC%A1%B0%EC%9C%A8/id6791188870',
+      android: 'https://play.google.com/store/apps/details?id=com.tripfit.app',
+    },
+    logo: project19Tripfit,
+    rank: '2',
+  },
+  {
+    name: '쏘쓰',
+    year: '19',
+    description: '매장 홍보 콘텐츠를 쉽고 빠르게 만드는 AI 마케팅 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/%EC%8F%98%EC%93%B0-%EC%82%AC%EC%9E%A5%EB%8B%98%EC%9D%84-%EC%9C%84%ED%95%9C-ai-%EC%BD%98%ED%85%90%EC%B8%A0-%EC%83%9D%EC%84%B1-%EC%84%9C%EB%B9%84%EC%8A%A4/id6788269957',
+      android: 'https://play.google.com/store/apps/details?id=com.ssoss.app',
+    },
+    logo: project19Ssoss,
+    rank: '3',
+  },
+  {
+    name: '모여',
+    year: '19',
+    description: '“언제 볼까?”부터 “어디서 볼까?”까지, 길어지던 일정과 위치 조율을 쉽고 편하게 끝내보세요.',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/%EB%AA%A8%EC%97%AC-%ED%95%A8%EA%BB%98-%EB%A7%8C%EB%82%98%EB%8A%94-%EA%B0%80%EC%9E%A5-%EC%89%AC%EC%9A%B4-%EB%B0%A9%EB%B2%95/id6797212723',
+      android: 'https://play.google.com/store/apps/details?id=com.moyeozo.moyeo',
+    },
+    logo: project19Moyeo,
+    rank: '4',
+  },
+  {
+    name: 'Rodi',
+    year: '19',
+    description:
+      '내 주변 익숙한 길에서 시작해 원하는 곳까지 나아갈 수 있도록, 초보운전자를 위한 운전 연습코스 탐색 서비스',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/rodi-%EC%B4%88%EB%B3%B4-%EC%9A%B4%EC%A0%84%EC%9E%90%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%9A%B4%EC%A0%84-%EC%97%B0%EC%8A%B5%EC%BD%94%EC%8A%A4-%ED%83%90%EC%83%89-%EC%95%B1/id6785479816',
+      android: 'https://play.google.com/store/apps/details?id=com.dororong.rodi',
+    },
+    logo: project19Rodi,
+    rank: '4',
+  },
+  {
+    name: 'Recap',
+    year: '19',
+    description: '쌓아둔 스크린샷을 자동으로 요약해, 필요할 때 바로 찾아주는 앱',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/recap-%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7-%EC%9A%94%EC%95%BD-%EC%A0%95%EB%A6%AC/id6795902468',
+      android: 'https://play.google.com/store/apps/details?id=com.chalkak.recap',
+    },
+    logo: project19Recap,
+    rank: '4',
+  },
+  {
+    name: 'DearBloom',
+    year: '19',
+    description: '취향에 맞는 졸업스냅 작가를 찾고, 문의부터 예약까지 한 번에 함께 할 수 있는 졸업스냅 매칭 플랫폼',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/dearbloom-%EB%94%94%EC%96%B4%EB%B8%94%EB%A3%B8-%EC%A1%B8%EC%97%85%EC%8A%A4%EB%83%85/id6792470769',
+      android: 'https://play.google.com/store/apps/details?id=kr.co.dearbloom.mobile',
+    },
+    logo: project19Dearbloom,
+    rank: '4',
+  },
+  {
+    name: 'Comma',
+    year: '19',
+    description: '뭘 할지 몰라도 괜찮아요. 혼자지만 함께, 나에게 맞는 휴식을 추천받고 기록해보세요.',
+    link: {
+      ios: 'https://apps.apple.com/kr/app/comma-%EC%98%A4%EB%8A%98%EC%9D%98-%EC%89%BC%ED%91%9C/id6786727870',
+      android: 'https://play.google.com/store/apps/details?id=app.comma.mobile',
+    },
+    logo: project19Comma,
+    rank: '4',
+  },
   {
     name: '세모',
     year: '18',
@@ -206,7 +304,7 @@ export const PROJECTS: ProjectEntry[] = [
     logo: project17Malmo,
     link: {
       android: 'https://play.google.com/store/apps/details?id=com.malmo.app',
-      ios: 'https://apps.apple.com/kr/app/%EB%A7%90%EB%AA%A8-malmo-ai-%EC%97%B0%EC%95%A0-%EC%83%81%EB%8B%B4-%EB%A7%88%EC%9D%8C-%EC%A7%88%EB%AC%B8/id6749349296',
+      ios: '',
     },
   },
   {
@@ -239,7 +337,7 @@ export const PROJECTS: ProjectEntry[] = [
     logo: project17Openeye,
     link: {
       android: 'https://play.google.com/store/apps/details?id=com.whiplash.akuma&pcampaignid=web_share',
-      ios: 'https://apps.apple.com/kr/app/%EB%88%88-%EB%96%A0-%EB%AA%A9%ED%91%9C-%EC%9E%A5%EC%86%8C-%EB%8F%84%EC%B0%A9-%EC%9D%B8%EC%A6%9D-%EA%B0%95%EC%A0%9C-%EC%95%8C%EB%9E%8C/id6749834236',
+      ios: '',
     },
   },
   {
@@ -294,7 +392,7 @@ export const PROJECTS: ProjectEntry[] = [
     rank: '1',
     logo: project16Gulbi,
     link: {
-      android: 'https://play.google.com/store/apps/details?id=com.project.goolbi&hl=ko',
+      android: '',
       ios: 'https://apps.apple.com/kr/app/%EA%B5%B4%EB%B9%84%EC%9E%87%EA%B8%B0/id6741732715',
     },
   },
@@ -306,7 +404,7 @@ export const PROJECTS: ProjectEntry[] = [
     logo: project16Patata,
     link: {
       android: 'https://play.google.com/store/apps/details?id=com.cmc.patata',
-      ios: 'https://apps.apple.com/kr/app/%ED%8C%8C%ED%83%80%ED%83%80-%EC%82%AC%EC%A7%84-%EC%8A%A4%ED%8C%9F%EC%9D%98-%EB%AA%A8%EB%93%A4-%EA%B2%83/id6742177268',
+      ios: '',
     },
   },
   {
@@ -326,7 +424,7 @@ export const PROJECTS: ProjectEntry[] = [
     rank: '4',
     logo: project16Whidy,
     link: {
-      android: 'https://play.google.com/store/apps/details?id=com.whidy.whidyandroid&pcampaignid=web_share',
+      android: '',
       ios: '',
     },
   },
@@ -357,7 +455,7 @@ export const PROJECTS: ProjectEntry[] = [
     logo: project16Dice,
     link: {
       android: 'https://play.google.com/store/apps/details?id=com.cmc.dice.minipop.expo',
-      ios: 'https://apps.apple.com/kr/app/dice-%ED%8C%9D%EC%97%85-%EC%9A%B4%EC%98%81-%EC%98%84%EC%9D%B8%EC%9B%90-%EC%86%94%EB%A3%A8%EC%85%98/id6742072988',
+      ios: '',
     },
   },
   {
@@ -367,7 +465,7 @@ export const PROJECTS: ProjectEntry[] = [
     rank: '4',
     logo: project16Mercury,
     link: {
-      android: 'https://play.google.com/store/apps/details?id=kr.co.mercuryplanet.www&pcampaignid=web_share',
+      android: '',
       ios: 'https://apps.apple.com/kr/app/%EB%A8%B8%ED%81%90%EB%A6%AC/id6741918517',
     },
   },
@@ -387,8 +485,8 @@ export const PROJECTS: ProjectEntry[] = [
     year: '15',
     description: '링크 아카이빙 서비스',
     link: {
-      ios: 'https://apps.apple.com/us/app/b-link/id6630368733',
-      android: 'https://play.google.com/store/apps/details?id=com.blinkapplication&hl=ko',
+      ios: '',
+      android: '',
     },
     logo: project15BLink,
     rank: '1',
@@ -399,7 +497,7 @@ export const PROJECTS: ProjectEntry[] = [
     description: '감성 사진을 위한 필터 서비스',
     link: {
       ios: 'https://apps.apple.com/kr/app/%ED%93%A8%EB%A6%AC%EC%A6%98/id6523427087',
-      android: 'https://play.google.com/store/apps/details?id=com.cmc.purithm&pcampaignid=web_share',
+      android: '',
     },
     logo: project15Purithm,
     rank: '2',
@@ -432,7 +530,7 @@ export const PROJECTS: ProjectEntry[] = [
     description: '분위기 맞춤형 스냅사진 매칭 서비스',
     link: {
       ios: 'https://apps.apple.com/kr/app/snapfit/id6642695481',
-      android: 'https://play.google.com/store/apps/details?id=memory.fabricators.snapfit&pli=1',
+      android: '',
     },
     logo: project15Snapfit,
     rank: '4',
@@ -442,7 +540,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '15',
     description: '플레이리스트 통합 관리 서비스',
     link: {
-      ios: 'https://apps.apple.com/kr/app/pluv/id6645736556',
+      ios: '',
       android: 'https://play.google.com/store/apps/details?id=com.cmc15th.pluv&hl=ko',
     },
     logo: project15Pluv,
@@ -464,7 +562,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '15',
     description: '공지사항 관리 서비스',
     link: {
-      ios: 'https://apps.apple.com/kr/app/noffice-노피스/id6529546973?l=en-GB',
+      ios: '',
       android: 'https://play.google.com/store/apps/details?id=com.easyhz.noffice.release&pcampaignid=web_share',
     },
     logo: project15Noffice,
@@ -475,8 +573,8 @@ export const PROJECTS: ProjectEntry[] = [
     year: '14',
     description: '특수고용직 노동자의 파트너, 블루클럽',
     link: {
-      ios: 'https://apps.apple.com/kr/app/블루클럽-blueclub/id6477823755',
-      android: 'https://play.google.com/store/apps/details?id=org.blueclub&pcampaignid=web_share',
+      ios: '',
+      android: '',
     },
     logo: project14BlueClub,
     rank: '1',
@@ -486,7 +584,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '14',
     description: '마음으로 채우는 특별한 선물박스 커스텀 앱, 패키(Packy) 입니다.',
     link: {
-      ios: 'https://apps.apple.com/kr/app/패키/id6477327987',
+      ios: '',
       android: 'https://play.google.com/store/apps/details?id=com.packy',
     },
     logo: project14Packy,
@@ -497,7 +595,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '14',
     description: '영화ㆍ영상 전공생들의 영화덕질 플랫폼',
     link: {
-      ios: 'https://apps.apple.com/kr/app/popcorn-mate/id6476854398',
+      ios: '',
       android: 'https://play.google.com/store/apps/details?id=com.popcornmate',
     },
     logo: project14PopcornMate,
@@ -508,7 +606,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '14',
     description: 'DayCarat은 취준생을 위한 ‘경험 기록 서비스’입니다.',
     link: {
-      ios: 'https://apps.apple.com/kr/app/데이캐럿/id6476876242',
+      ios: '',
       android: 'https://play.google.com/store/apps/details?id=com.makeus.daycarat',
     },
     logo: project14DayCarat,
@@ -519,7 +617,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '14',
     description: '소프트 스킬 기반 프로젝트 동료 탐색 & 제안 서비스',
     link: {
-      ios: 'https://apps.apple.com/kr/app/피어나-나와-꼭-맞는-동료가-피어나는-곳/id6477722172',
+      ios: '',
       android: 'https://play.google.com/store/apps/details?id=com.peerna',
     },
     logo: project14Peerna,
@@ -564,7 +662,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '13',
     description: '연극과 뮤지컬의 매력에 빠지다.',
     link: {
-      ios: 'https://apps.apple.com/kr/app/%EC%BB%A4%ED%8A%BC%EC%BD%9C/id6450673014',
+      ios: '',
       android: 'https://play.google.com/store/apps/details?id=com.cmc.curtaincall&pli=1',
     },
     logo: project13Curtaincall,
@@ -575,8 +673,8 @@ export const PROJECTS: ProjectEntry[] = [
     year: '13',
     description: '‘특별한’ 운동 정보 탐색 및 공유 플랫폼 서비스',
     link: {
-      ios: 'https://apps.apple.com/kr/app/fithub/id6450687753',
-      android: 'https://play.google.com/store/apps/details?id=com.proteam.fithub&pcampaignid=web_share',
+      ios: '',
+      android: '',
     },
     logo: project13Fithub,
     rank: '2',
@@ -597,8 +695,8 @@ export const PROJECTS: ProjectEntry[] = [
     year: '13',
     description: '오프라인 이벤트의 새로운 시대를 열 오픈오프',
     link: {
-      ios: 'https://apps.apple.com/kr/app/오픈오프/id6451419698',
-      android: 'https://play.google.com/store/apps/details?id=com.opener.openoff&pcampaignid=web_share',
+      ios: '',
+      android: '',
     },
     logo: project13Openoff,
     rank: '4',
@@ -609,7 +707,7 @@ export const PROJECTS: ProjectEntry[] = [
     description: '친구에 자신의 마음을 표현하고 싶지만, 주변 친구들과의 관계가 망가질까 주저하지 마세요.',
     link: {
       ios: '',
-      android: 'https://play.google.com/store/apps/details?id=com.qfeed&pcampaignid=web_share',
+      android: '',
     },
     logo: project13Qfeed,
     rank: '4',
@@ -619,8 +717,8 @@ export const PROJECTS: ProjectEntry[] = [
     year: '13',
     description: '금융 루틴을 만들고, 함께 도전하며, 금융 습관을 만드는 챌린지 앱 지금입니다!',
     link: {
-      ios: 'https://apps.apple.com/kr/app/지금-지금-실천하는-금융-챌린지/id6461050868',
-      android: 'https://play.google.com/store/apps/details?id=com.cider.cider',
+      ios: '',
+      android: '',
     },
     logo: project13Now,
     rank: '4',
@@ -651,7 +749,7 @@ export const PROJECTS: ProjectEntry[] = [
     description: '내 손안에 간편한 패션 쇼핑지도',
     link: {
       ios: 'https://apps.apple.com/kr/app/런웨이-runway-내-손-안의-간편한-패션-쇼핑-지도/id1671808515',
-      android: 'https://play.google.com/store/apps/details?id=com.cmc12th.runway&hl=ko',
+      android: '',
     },
     logo: project12Runway,
     rank: '1',
@@ -662,7 +760,7 @@ export const PROJECTS: ProjectEntry[] = [
     description: '일상을 공유하고, 다른 커플의 이야기를 들을 수 있는 따뜻한 앱',
     link: {
       ios: '',
-      android: 'https://play.google.com/store/apps/details?id=com.fromu.fromu&pcampaignid=web_share',
+      android: '',
     },
     logo: project12Fromu,
     rank: '2',
@@ -672,7 +770,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '12',
     description: '고객별 기술 업무관리 어플',
     link: {
-      ios: 'https://apps.apple.com/kr/app/fieldmate/id6446427396',
+      ios: '',
       android: '',
     },
     logo: project12Fieldmate,
@@ -683,7 +781,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '12',
     description: '나에게 딱 맞는 워크 스페이스 추천 서비스',
     link: {
-      ios: 'https://apps.apple.com/kr/app/workus/id6446238129',
+      ios: '',
       android: '',
     },
     logo: project12Workus,
@@ -705,7 +803,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '12',
     description: '코스 기록 및 큐레이션 서비스',
     link: {
-      ios: 'https://apps.apple.com/kr/app/sole-쏠-코스-기록-공유/id6446045060',
+      ios: '',
       android: 'https://play.google.com/store/apps/details?id=cmc.sole.android&pcampaignid=web_share',
     },
     logo: project12Sole,
@@ -716,7 +814,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '12',
     description: '부모와 자녀의 속마음 소통앱 - 일편마다',
     link: {
-      ios: 'https://apps.apple.com/kr/app/부모와-자녀-간의-깊은-대화-일편마다/id6446275837',
+      ios: '',
       android: '',
     },
     logo: project12Ilpyun,
@@ -735,7 +833,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '12',
     description: '힙하게 만나는 나의 일상',
     link: {
-      ios: 'https://apps.apple.com/kr/app/heet/id6446604089',
+      ios: '',
       android: '',
     },
     logo: project12Heet,
@@ -770,7 +868,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '11',
     description: '한눈에 쉽게 확인하는 항공 교통약자 서비스',
     link: {
-      ios: 'https://apps.apple.com/kr/app/가치가자/id6444365638',
+      ios: '',
       android: '',
     },
     logo: project11Together,
@@ -781,7 +879,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '11',
     description: '탭 세번으로 끝나는 스크랩',
     link: {
-      ios: 'https://apps.apple.com/kr/app/sparky-탭-세-번으로-끝나는-스크랩/id6444295657',
+      ios: '',
       android: '',
     },
     logo: project11Sparky,
@@ -792,7 +890,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '11',
     description: '소중한 사람과 함께쓰는 장소기반 기록장',
     link: {
-      ios: 'https://apps.apple.com/kr/app/멜리-melly-장소-기반-추억-기록장/id6444202109',
+      ios: '',
       android: '',
     },
     logo: project11Melly,
@@ -812,7 +910,7 @@ export const PROJECTS: ProjectEntry[] = [
     description: '사진이 작품이 되는 공간, OEUVRE',
     link: {
       ios: 'https://apps.apple.com/kr/app/oeuvre/id6443660575',
-      android: 'https://play.google.com/store/apps/details?id=com.curator.oeuvre&pcampaignid=web_share',
+      android: '',
     },
     logo: project11Oeuvre,
     rank: '4',
@@ -822,7 +920,7 @@ export const PROJECTS: ProjectEntry[] = [
     year: '11',
     description: 'Chalkak과 함께 필카를 더욱 쉽게 즐겨보세요.',
     link: {
-      ios: 'https://apps.apple.com/kr/app/chalkak/id6444452971',
+      ios: '',
       android: 'https://play.google.com/store/apps/details?id=com.chalkak&pcampaignid=web_share',
     },
     logo: project11Chalkak,
@@ -844,8 +942,8 @@ export const PROJECTS: ProjectEntry[] = [
     year: '11',
     description: '미래의 나를 위해 오늘 내가 해야하는 일을 정리해보세요',
     link: {
-      ios: 'https://apps.apple.com/kr/app/오늘의조약돌-pebbles-목표를-위한-오늘-관리/id6444320103',
-      android: 'https://play.google.com/store/apps/details?id=com.todaypebble.pebbles&pcampaignid=web_share',
+      ios: '',
+      android: '',
     },
     logo: project11Rock,
     rank: '4',
@@ -874,8 +972,8 @@ export const PROJECTS: ProjectEntry[] = [
     year: '10',
     description: '밥 미션을 수행하고, 포인트를 적립하라!',
     link: {
-      ios: 'https://apps.apple.com/kr/app/밥플레이스/id1634665858',
-      android: 'https://play.google.com/store/apps/details?id=com.bob_frontend&pli=1',
+      ios: '',
+      android: '',
     },
     logo: project10BobPlace,
     rank: '4',
@@ -885,8 +983,8 @@ export const PROJECTS: ProjectEntry[] = [
     year: '10',
     description: '덕질을 하는 사용자들이 보다 편하게 굿즈를 나눔 혹은 판매할 수 있는 교류 플랫폼',
     link: {
-      ios: 'https://apps.apple.com/kr/app/한입-hannip/id1635377027?l=en',
-      android: 'https://play.google.com/store/apps/details?id=com.hannib&hl=ko&gl=KR',
+      ios: '',
+      android: '',
     },
     logo: project10Hannib,
     rank: '4',
@@ -904,8 +1002,8 @@ export const PROJECTS: ProjectEntry[] = [
     year: '10',
     description: '원하는 지역의 케이크 가게들을 모아보고\n커스텀 케이크를 간편하게 주문할 수 있도록 돕는 서비스!',
     link: {
-      ios: 'https://apps.apple.com/kr/app/onecake/id1635032032',
-      android: 'https://play.google.com/store/apps/details?id=com.onecake_frontend',
+      ios: '',
+      android: '',
     },
     logo: project10Onecake,
     rank: '4',
@@ -923,8 +1021,8 @@ export const PROJECTS: ProjectEntry[] = [
     year: '10',
     description: '일정 공유 장소 아카이빙 서비스',
     link: {
-      ios: 'https://apps.apple.com/kr/app/와플-일정-공유-장소-아카이빙-서비스/id1635155102',
-      android: 'https://play.google.com/store/apps/details?id=com.wapple.android',
+      ios: '',
+      android: '',
     },
     logo: project10Waffle,
     rank: '4',
@@ -935,7 +1033,7 @@ export const PROJECTS: ProjectEntry[] = [
     description: '국내에는 없었던 새로운 중고거래 플랫폼',
     link: {
       ios: '',
-      android: 'https://play.google.com/store/apps/details?id=com.alexk.bidit',
+      android: '',
     },
     logo: project10Bidit,
     rank: '4',

@@ -14,7 +14,13 @@ interface ProjectCardProps {
 // 양옆 카드의 축소는 ProjectCarousel이 transform으로 처리
 export default function ProjectCard({ active, description, image, title }: ProjectCardProps) {
   return (
-    <article className="flex w-full flex-col items-start gap-[11px] rounded-[9px] bg-white p-[15px] xl:gap-4.5 xl:rounded-[14px] xl:p-6">
+    <article
+      className={cn(
+        'flex w-full flex-col items-start gap-[11px] rounded-[9px] bg-white p-[15px] xl:gap-4.5 xl:rounded-[14px] xl:p-6',
+        // hover한 카드에만 그림자를 보여준다(시안 688:1229). 기본 상태(696:310)에는 그림자가 없다.
+        'transition-shadow duration-200 hover:shadow-[0_8px_8px_color-mix(in_srgb,var(--gray-760)_10%,transparent),0_0_1px_color-mix(in_srgb,var(--gray-760)_15%,transparent)] motion-reduce:transition-none',
+      )}
+    >
       <div className="relative aspect-447/270 w-full shrink-0 overflow-hidden rounded-[10px] bg-black/5 xl:rounded-[14px]">
         {image ? (
           <Image
@@ -24,7 +30,7 @@ export default function ProjectCard({ active, description, image, title }: Proje
             sizes="(max-width: 1279px) min(calc(100vw - 70px), 370px), 447px"
             quality={85}
             draggable={false}
-            className="pointer-events-none object-cover"
+            className="pointer-events-none object-cover object-top"
           />
         ) : null}
       </div>

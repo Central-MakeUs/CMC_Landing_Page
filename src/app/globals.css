@@ -29,6 +29,7 @@
   --gray-500: #6f7a8d;
   --gray-400: #757e89;
   --gray-350: #949497;
+  --gray-325: #9aa4b6;
   --gray-300: #c4c4c6;
   --gray-200: #ccd2dd;
   --gray-150: #d5dbec;
@@ -75,6 +76,7 @@
   --color-gray-500: var(--gray-500);
   --color-gray-400: var(--gray-400);
   --color-gray-350: var(--gray-350);
+  --color-gray-325: var(--gray-325);
   --color-gray-300: var(--gray-300);
   --color-gray-200: var(--gray-200);
   --color-gray-150: var(--gray-150);
@@ -178,6 +180,17 @@ html.lenis:not(.lenis-autoToggle).lenis-stopped {
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes project-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

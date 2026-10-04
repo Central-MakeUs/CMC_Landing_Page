@@ -3,6 +3,7 @@
 import type { KeyboardEvent } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import type { UseEmblaCarouselType } from 'embla-carousel-react'
 import useEmblaCarousel from 'embla-carousel-react'
 
@@ -10,6 +11,7 @@ import chevronLeft from '@/assets/images/carousel-chevron-left.svg'
 import chevronRight from '@/assets/images/carousel-chevron-right.svg'
 import { PROJECTS } from '@/constants/projects'
 import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion'
+import { ROUTES } from '@/lib/site'
 import { cn } from '@/utils/cn'
 
 import ProjectCard from './ProjectCard'
@@ -25,8 +27,10 @@ const INITIAL_SLIDE = PROJECTS.length + 1
 
 type EmblaApi = NonNullable<UseEmblaCarouselType[1]>
 
+// 이전·다음 버튼은 캐러셀에 마우스를 올리거나 키보드 포커스가 들어왔을 때만 보인다(시안 696:343).
+// hover가 없는 기기에서는 누를 방법이 없어지므로 계속 보여준다.
 const controlClassName =
-  'absolute top-1/2 hidden size-9 -translate-y-1/2 items-center justify-center rounded-md bg-black/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 xl:flex cursor-pointer'
+  'absolute top-1/2 hidden size-9 -translate-y-1/2 cursor-pointer items-center justify-center rounded-md bg-black/40 transition-opacity duration-200 group-hover:opacity-100 group-has-focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 motion-reduce:transition-none xl:flex [@media(hover:hover)]:opacity-0'
 
 function updateScale(emblaApi: EmblaApi) {
   const engine = emblaApi.internalEngine()
@@ -117,7 +121,7 @@ export default function ProjectCarousel() {
 
   return (
     <div className="flex w-full flex-col items-center gap-6 xl:gap-16">
-      <div className="relative -mx-5 w-[calc(100%+40px)] max-w-325.5 select-none xl:mx-0 xl:w-full">
+      <div className="group relative -mx-5 w-[calc(100%+40px)] max-w-325.5 select-none xl:mx-0 xl:w-full">
         <div
           id="projects-carousel"
           ref={emblaRef}
@@ -126,7 +130,8 @@ export default function ProjectCarousel() {
           aria-label="CMC 프로젝트"
           tabIndex={0}
           onKeyDown={handleKeyDown}
-          className="overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
+          // 카드 그림자(아래로 16px)가 overflow-hidden에 잘리지 않도록 위아래에 여백을 두고 음수 margin으로 상쇄한다
+          className="-my-4 overflow-hidden py-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
         >
           <div className="flex [touch-action:pan-y_pinch-zoom] items-center">
             {SLIDES.map(({ key, projectIndex, ...project }, slideIndex) => (
@@ -140,7 +145,16 @@ export default function ProjectCarousel() {
               >
                 {/* 가운데에서 한 칸 멀어질 때마다 0.25배씩 작아짐 */}
                 <div className="flex origin-center transform-[scale(calc(1-var(--distance,0)*0.25))] items-center justify-center">
-                  <ProjectCard {...project} active={slideIndex === selectedSlide} />
+                  {/* 드래그로 넘길 때는 Embla가 click을 막아 주므로 페이지가 이동하지 않는다 */}
+                  <Link
+                    href={ROUTES.project}
+                    draggable={false}
+                    // aria-hidden인 양옆 슬라이드의 링크는 Tab 순서에서 뺀다
+                    tabIndex={slideIndex === selectedSlide ? undefined : -1}
+                    className="block w-full rounded-[9px] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 xl:rounded-[14px]"
+                  >
+                    <ProjectCard {...project} active={slideIndex === selectedSlide} />
+                  </Link>
                 </div>
               </div>
             ))}
