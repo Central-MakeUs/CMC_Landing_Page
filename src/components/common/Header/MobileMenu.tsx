@@ -70,7 +70,7 @@ export default function MobileMenu({ recruitPhase }: MobileMenuProps) {
         aria-controls={panelId}
         className="-mr-2 p-2 md:hidden"
       >
-        <Image src={mobileMenuIcon} width={24} height={24} alt="" unoptimized />
+        <Image src={mobileMenuIcon} width={24} height={24} alt="" loading="eager" unoptimized />
       </button>
 
       <div
