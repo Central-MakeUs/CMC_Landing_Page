@@ -7,8 +7,8 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useId, useRef, useState } from 'react'
 
 import mobileMenuIcon from '@/assets/images/mobile-menu.svg'
-import { APPLY_LABEL } from '@/constants/recruit'
-import { ROUTES } from '@/lib/site'
+import { RecruitApplyLink } from '@/components/common/RecruitApplyLink'
+import type { RecruitPhase } from '@/constants/recruit'
 import { cn } from '@/utils/cn'
 
 import { isActivePath, NAVIGATION } from './navigation'
@@ -18,7 +18,11 @@ import { isActivePath, NAVIGATION } from './navigation'
  * - 헤더 바로 아래로 펼쳐지는 패널이다. 헤더는 가리지 않는다.
  * - Esc, 패널 밖 클릭, 링크 클릭으로 닫힌다.
  */
-export default function MobileMenu() {
+interface MobileMenuProps {
+  recruitPhase: RecruitPhase
+}
+
+export default function MobileMenu({ recruitPhase }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false)
   const toggleRef = useRef<HTMLButtonElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
@@ -66,7 +70,7 @@ export default function MobileMenu() {
         aria-controls={panelId}
         className="-mr-2 p-2 md:hidden"
       >
-        <Image src={mobileMenuIcon} width={24} height={24} alt="" unoptimized />
+        <Image src={mobileMenuIcon} width={24} height={24} alt="" loading="eager" unoptimized />
       </button>
 
       <div
@@ -100,13 +104,11 @@ export default function MobileMenu() {
           </ul>
         </nav>
 
-        <Link
-          href={ROUTES.apply}
+        <RecruitApplyLink
+          initialPhase={recruitPhase}
           onClick={closeMenu}
           className="rounded-[5px] bg-white px-3.75 py-1.25 text-base leading-6 font-semibold tracking-[-0.02em] text-navy-900"
-        >
-          {APPLY_LABEL}
-        </Link>
+        />
       </div>
     </>
   )

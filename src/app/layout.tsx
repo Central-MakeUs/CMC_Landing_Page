@@ -40,6 +40,9 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
+// 모집 단계가 바뀌어도 재배포 없이 최대 1시간 안에 CTA 문구가 반영되도록 HTML을 다시 만든다.
+export const revalidate = 3600
+
 const jsonLd = [
   {
     '@context': 'https://schema.org',

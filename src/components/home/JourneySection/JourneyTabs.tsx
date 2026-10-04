@@ -42,7 +42,7 @@ export default function JourneyTabs({ journeys }: JourneyTabsProps) {
     return () => window.clearTimeout(timer)
   }, [activeIndex, isInView, isHovered, isKeyboardFocused, prefersReducedMotion, journeys.length])
 
-  // 터치는 pointerleave가 오지 않을 수 있어 마우스만 본다.
+  // 목록에 마우스를 올렸을 때만 멈춘다. 터치는 pointerleave가 오지 않을 수 있어 마우스만 본다.
   const handlePointerEnter = (event: PointerEvent) => {
     if (event.pointerType === 'mouse') setIsHovered(true)
   }
@@ -60,8 +60,6 @@ export default function JourneyTabs({ journeys }: JourneyTabsProps) {
     <div
       data-reveal
       ref={rootRef}
-      onPointerEnter={handlePointerEnter}
-      onPointerLeave={handlePointerLeave}
       onFocus={handleFocus}
       onBlur={handleBlur}
       className="flex w-full flex-col items-start gap-6 pt-8 lg:flex-row lg:gap-10 xl:pt-12"
@@ -86,7 +84,11 @@ export default function JourneyTabs({ journeys }: JourneyTabsProps) {
         )}
       </div>
 
-      <ul className="flex w-full flex-col items-start gap-5 lg:w-80 lg:shrink-0 xl:w-95 xl:gap-8">
+      <ul
+        onPointerEnter={handlePointerEnter}
+        onPointerLeave={handlePointerLeave}
+        className="flex w-full flex-col items-start gap-5 lg:w-80 lg:shrink-0 xl:w-95 xl:gap-8"
+      >
         {journeys.map((journey, index) => (
           <JourneyItem
             key={journey.title}

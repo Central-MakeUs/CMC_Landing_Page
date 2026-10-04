@@ -16,15 +16,6 @@ import { cn } from '@/utils/cn'
 
 import ProjectCard from './ProjectCard'
 
-// TODO: 시안에 카드 세 개밖에 없어서 임의로 슬라이드를 복제했습니다(무한루프를 돌게 하기 위해). 추후에 제거할 예정입니다.
-const MIN_SLIDE_COUNT = 6
-const COPY_COUNT = Math.max(2, Math.ceil(MIN_SLIDE_COUNT / PROJECTS.length))
-const SLIDES = Array.from({ length: COPY_COUNT }, (_, copy) =>
-  PROJECTS.map((project, projectIndex) => ({ ...project, key: `${copy}-${project.title}`, projectIndex })),
-).flat()
-
-const INITIAL_SLIDE = PROJECTS.length + 1
-
 type EmblaApi = NonNullable<UseEmblaCarouselType[1]>
 
 // 이전·다음 버튼은 캐러셀에 마우스를 올리거나 키보드 포커스가 들어왔을 때만 보인다(시안 696:343).
@@ -62,9 +53,8 @@ function updateScale(emblaApi: EmblaApi) {
 
 export default function ProjectCarousel() {
   const prefersReducedMotion = usePrefersReducedMotion()
-  const [selectedSlide, setSelectedSlide] = useState(INITIAL_SLIDE)
-  const [emblaRef, emblaApi] = useEmblaCarousel({ align: 'center', loop: true, startIndex: INITIAL_SLIDE })
-  const selectedProject = SLIDES[selectedSlide].projectIndex
+  const [selectedSlide, setSelectedSlide] = useState(0)
+  const [emblaRef, emblaApi] = useEmblaCarousel({ align: 'center', loop: true })
 
   useEffect(() => {
     if (!emblaApi) return
@@ -87,23 +77,8 @@ export default function ProjectCarousel() {
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(prefersReducedMotion), [emblaApi, prefersReducedMotion])
   const scrollNext = useCallback(() => emblaApi?.scrollNext(prefersReducedMotion), [emblaApi, prefersReducedMotion])
-  // 점 버튼은 같은 프로젝트의 복제본 중 지금 위치에서 가장 가까운 슬라이드로 이동한다.
-  const scrollToProject = useCallback(
-    (projectIndex: number) => {
-      if (!emblaApi) return
-
-      const current = emblaApi.selectedScrollSnap()
-      const distance = (slide: number) => {
-        const gap = Math.abs(slide - current)
-        return Math.min(gap, SLIDES.length - gap)
-      }
-      const target = SLIDES.reduce<number>((nearest, slide, index) => {
-        if (slide.projectIndex !== projectIndex) return nearest
-        return nearest === -1 || distance(index) < distance(nearest) ? index : nearest
-      }, -1)
-
-      emblaApi.scrollTo(target, prefersReducedMotion)
-    },
+  const scrollTo = useCallback(
+    (index: number) => emblaApi?.scrollTo(index, prefersReducedMotion),
     [emblaApi, prefersReducedMotion],
   )
 
@@ -134,12 +109,12 @@ export default function ProjectCarousel() {
           className="-my-4 overflow-hidden py-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600"
         >
           <div className="flex [touch-action:pan-y_pinch-zoom] items-center">
-            {SLIDES.map(({ key, projectIndex, ...project }, slideIndex) => (
+            {PROJECTS.map((project, slideIndex) => (
               <div
-                key={key}
+                key={project.title}
                 role="group"
                 aria-roledescription="slide"
-                aria-label={`${projectIndex + 1} / ${PROJECTS.length}`}
+                aria-label={`${slideIndex + 1} / ${PROJECTS.length}`}
                 aria-hidden={slideIndex !== selectedSlide}
                 className="relative z-(--z) mr-[calc(var(--gap)_-_var(--card)_*_0.125)] min-w-0 flex-[0_0_var(--card)] [--card:min(100%_-_40px,400px)] [--gap:11px] xl:[--card:495px] xl:[--gap:32px]"
               >
@@ -183,7 +158,7 @@ export default function ProjectCarousel() {
 
       <div role="group" aria-label="프로젝트 슬라이드 선택" className="flex items-center gap-[4.286px] xl:gap-1.5">
         {PROJECTS.map(({ title }, index) => {
-          const active = selectedProject === index
+          const active = selectedSlide === index
 
           return (
             <button
@@ -191,10 +166,10 @@ export default function ProjectCarousel() {
               type="button"
               aria-label={`${index + 1}번째 프로젝트 보기`}
               aria-current={active ? 'true' : undefined}
-              onClick={() => scrollToProject(index)}
+              onClick={() => scrollTo(index)}
               className={cn(
                 "relative h-2.5 w-2.5 rounded-full bg-gray-200 after:absolute after:-inset-2 after:content-[''] xl:h-3.5 xl:w-3.5",
-                'focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600',
+                'cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600',
                 active && 'w-[22.857px] bg-gray-760 xl:w-8',
               )}
             />
@@ -203,7 +178,7 @@ export default function ProjectCarousel() {
       </div>
 
       <p className="sr-only" aria-live="polite">
-        {PROJECTS[selectedProject].title} 프로젝트, {selectedProject + 1} / {PROJECTS.length}
+        {PROJECTS[selectedSlide].title} 프로젝트, {selectedSlide + 1} / {PROJECTS.length}
       </p>
     </div>
   )

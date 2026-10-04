@@ -1,13 +1,8 @@
 import type { NextConfig } from 'next'
 
-import { APPLY_FORM_URL } from './src/constants/recruit'
-
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  async redirects() {
-    return [{ source: '/apply', destination: APPLY_FORM_URL ?? '/recruit', permanent: false }]
-  },
   images: {
     // 반응형 이미지의 srcset에 사용할 화면 기준 너비
     deviceSizes: [640, 828, 1080, 1440, 1920],

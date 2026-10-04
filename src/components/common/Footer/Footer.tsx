@@ -1,15 +1,15 @@
 import Image from 'next/image'
 
 import instagramIcon from '@/assets/images/instagram.svg'
-import kakaoTalkIcon from '@/assets/images/kakao-talk.svg'
+import linkedInIcon from '@/assets/images/linkedin.svg'
 import { CmcLogo } from '@/components/common/CmcLogo'
-import { INSTAGRAM_URL, KAKAO_CHANNEL_URL } from '@/lib/site'
+import { INSTAGRAM_URL, LINKEDIN_URL } from '@/lib/site'
 
 // 빌드 시점의 연도 사용
 const COPYRIGHT_YEAR = new Date().getFullYear()
 
 const SOCIAL_LINKS = [
-  { label: 'CMC 카카오톡 채널', href: KAKAO_CHANNEL_URL, icon: kakaoTalkIcon },
+  { label: 'CMC 링크드인', href: LINKEDIN_URL, icon: linkedInIcon },
   { label: 'CMC 인스타그램', href: INSTAGRAM_URL, icon: instagramIcon },
 ]
 

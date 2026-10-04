@@ -2,8 +2,7 @@ export const SITE_URL = 'https://cmc.neordinary.com'
 export const SITE_NAME = 'CMC'
 export const SITE_DESCRIPTION = '우리만의 룰을 세워 세상을 바꾸는 조직, CMC'
 export const INSTAGRAM_URL = 'https://www.instagram.com/cmc__official/'
-// TODO: CMC 카카오톡 채널 주소로 교체
-export const KAKAO_CHANNEL_URL = ''
+export const LINKEDIN_URL = 'https://www.linkedin.com/company/central-makeus-challenge-cmc/'
 
 // 최종 OG 이미지가 나오면 파일과 URL을 함께 교체한다.
 export const OG_IMAGE = { url: '/opengraph-image', width: 1200, height: 630, alt: SITE_NAME }

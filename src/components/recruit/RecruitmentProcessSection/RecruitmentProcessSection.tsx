@@ -8,7 +8,7 @@ export default function RecruitmentProcessSection() {
       data-header-theme="light"
       id="process"
       aria-labelledby="process-title"
-      className="bg-white px-5 py-25 xl:px-10 xl:py-30"
+      className="bg-gray-25 px-5 py-25 xl:px-10 xl:py-30"
     >
       <div className="mx-auto flex w-full max-w-300 flex-col gap-8 xl:grid xl:grid-cols-[1fr_692px] xl:gap-6">
         <SectionHeading id="process-title" eyebrow="Recruitment Process" title="모집 일정" className="xl:gap-0" />

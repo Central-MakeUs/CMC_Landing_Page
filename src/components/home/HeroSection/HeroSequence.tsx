@@ -40,18 +40,25 @@ export default function HeroSequence({ title, cta }: HeroSequenceProps) {
   // 터치·키보드·스크롤바 입력은 잠금이 고장처럼 느껴지지 않도록 즉시 해제한다.
   useEffect(() => {
     if (!lenis || prefersReducedMotion || isRevealedRef.current) return
-    if (window.scrollY > 0 || !window.matchMedia('(min-width: 768px)').matches) return
+    if (!window.matchMedia('(min-width: 768px)').matches) return
 
+    let frame = 0
     let firstWheelAt = 0
     let timer = 0
 
     function release() {
+      window.cancelAnimationFrame(frame)
       window.clearTimeout(timer)
       window.removeEventListener('wheel', handleWheel)
-      window.removeEventListener('scroll', release)
+      window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('touchstart', release)
       releaseScrollRef.current = () => {}
       lenis?.start()
+    }
+
+    // 페이지 이동으로 맨 위가 될 때도 scroll이 오므로, 실제로 내려간 경우만 해제한다.
+    function handleScroll() {
+      if (window.scrollY > 0) release()
     }
 
     function handleWheel() {
@@ -62,11 +69,16 @@ export default function HeroSequence({ title, cta }: HeroSequenceProps) {
       timer = window.setTimeout(release, Math.max(WHEEL_QUIET, MIN_LOCK - elapsed))
     }
 
-    lenis.stop()
-    releaseScrollRef.current = release
-    window.addEventListener('wheel', handleWheel, { passive: true })
-    window.addEventListener('scroll', release, { passive: true })
-    window.addEventListener('touchstart', release, { passive: true })
+    // 페이지 이동 직후에는 이전 페이지의 스크롤 위치가 남아 있을 수 있어 다음 프레임에 판단한다.
+    frame = window.requestAnimationFrame(() => {
+      if (window.scrollY > 0 || isRevealedRef.current) return
+
+      lenis.stop()
+      releaseScrollRef.current = release
+      window.addEventListener('wheel', handleWheel, { passive: true })
+      window.addEventListener('scroll', handleScroll, { passive: true })
+      window.addEventListener('touchstart', release, { passive: true })
+    })
     return release
   }, [lenis, prefersReducedMotion, revealContent])
 
@@ -76,11 +88,16 @@ export default function HeroSequence({ title, cta }: HeroSequenceProps) {
       if (window.scrollY > 0) revealContent()
     })
 
-    window.addEventListener('scroll', revealContent, { once: true, passive: true })
+    // 페이지 이동이나 복원으로 맨 위가 될 때 생기는 scroll은 무시한다.
+    const handleScroll = () => {
+      if (window.scrollY > 0) revealContent()
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
     window.addEventListener('touchmove', revealContent, { once: true, passive: true })
     return () => {
       window.cancelAnimationFrame(frame)
-      window.removeEventListener('scroll', revealContent)
+      window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('touchmove', revealContent)
     }
   }, [revealContent])
