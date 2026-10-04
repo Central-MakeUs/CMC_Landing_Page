@@ -109,11 +109,31 @@
     'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 
+/* 고무줄 스크롤로 페이지 바깥이 보일 때 아래는 푸터 색, 위는 헤더 색이 보이게 한다. */
+html {
+  background-color: var(--color-black);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
   word-break: keep-all;
+}
+
+/* 모바일 고정 헤더 아래 가려진 3rem도 당겨서 드러날 때 헤더와 이어지도록 같은 색으로 칠한다. */
+@media (width < 48rem) {
+  body {
+    background: linear-gradient(var(--blue-400) 3rem, var(--background) 3rem);
+  }
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0 0 50% 0;
+  z-index: -1;
+  background-color: var(--blue-400);
 }
 
 /*
