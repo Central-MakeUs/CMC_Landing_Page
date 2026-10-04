@@ -3,11 +3,26 @@ import { type IsoDate, toKstDate, toKstEndOfDay } from '../utils/date'
 
 /** 모집 기수 */
 export const GENERATION = 20
+export const NEXT_GENERATION = GENERATION + 1
 
 export const APPLY_LABEL = `${GENERATION}기 지원하기`
 
-// TODO: 네이버 폼 주소가 확정되면 입력
-export const APPLY_FORM_URL: string | null = null
+export type RecruitPhase = 'BEFORE' | 'OPEN' | 'CLOSED'
+
+export const RECRUIT_CTA = {
+  BEFORE: {
+    label: `${GENERATION}기 사전 예약하기`,
+    url: 'https://forms.gle/vXfBWMSXBfQFUXKq5',
+  },
+  OPEN: {
+    label: `${GENERATION}기 지원하기`,
+    url: 'https://forms.gle/pChkSLmiVMzam2La8',
+  },
+  CLOSED: {
+    label: `${NEXT_GENERATION}기 사전 예약하기`,
+    url: 'https://forms.gle/96WLHBW7Zkgp85K26',
+  },
+} as const satisfies Record<RecruitPhase, { label: string; url: string }>
 
 export interface ChallengerValue {
   title: string
