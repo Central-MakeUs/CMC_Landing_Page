@@ -1,8 +1,8 @@
 'use client'
 
-import { usePathname } from 'next/navigation'
 import type { ReactNode } from 'react'
 
+import useCurrentPathname from '@/hooks/useCurrentPathname'
 import { type HeaderTheme, useHeaderTheme } from '@/hooks/useHeaderTheme'
 import { ROUTES } from '@/lib/site'
 
@@ -22,7 +22,7 @@ type HeaderShellProps = Readonly<{
  * - 로고·메뉴·버튼은 children으로 받아 서버 컴포넌트로 유지한다.
  */
 export default function HeaderShell({ children }: HeaderShellProps) {
-  const pathname = usePathname()
+  const pathname = useCurrentPathname()
   const fallback: HeaderTheme = DARK_TOP_ROUTES.includes(pathname) ? 'dark' : 'light'
   const theme = useHeaderTheme(fallback)
 

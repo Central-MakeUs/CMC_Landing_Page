@@ -2,15 +2,15 @@
 
 import { useLenis } from 'lenis/react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import type { MouseEvent } from 'react'
 
 import { CmcLogo } from '@/components/common/CmcLogo'
+import useCurrentPathname from '@/hooks/useCurrentPathname'
 import { ROUTES } from '@/lib/site'
 
 /** 다른 페이지에서는 홈으로 이동하고, 홈에서 누르면 최상단으로 스크롤 */
 export default function HeaderLogoLink() {
-  const pathname = usePathname()
+  const pathname = useCurrentPathname()
   const lenis = useLenis()
 
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {

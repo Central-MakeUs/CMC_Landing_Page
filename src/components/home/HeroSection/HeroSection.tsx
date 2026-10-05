@@ -11,7 +11,7 @@ export default function HeroSection() {
   return (
     <section
       data-header-theme="dark"
-      className="relative mt-12 aspect-45/32 overflow-hidden bg-foreground md:mt-0 md:aspect-auto md:min-h-svh"
+      className="relative mt-12 h-[calc(100svh-3rem)] overflow-hidden bg-foreground md:mt-0 md:h-auto md:min-h-svh"
       aria-labelledby="hero-title"
     >
       <HeroPoster />
@@ -19,7 +19,7 @@ export default function HeroSection() {
         title={
           <h1
             id="hero-title"
-            className="sr-only text-[clamp(3.25rem,8.333vw,7.5rem)] leading-none font-bold tracking-[-0.01em] md:not-sr-only"
+            className="text-[10vw] leading-none font-bold tracking-[-0.01em] md:text-[clamp(3.25rem,8.333vw,7.5rem)]"
           >
             <span data-hero-line="lead" className="block">
               PICK YOUR
