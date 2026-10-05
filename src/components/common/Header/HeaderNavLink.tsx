@@ -1,8 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
+import useCurrentPathname from '@/hooks/useCurrentPathname'
 import type { RoutePath } from '@/lib/site'
 
 import { isActivePath } from './navigation'
@@ -13,7 +13,7 @@ type HeaderNavLinkProps = Readonly<{
 }>
 
 export default function HeaderNavLink({ href, label }: HeaderNavLinkProps) {
-  const isActive = isActivePath(usePathname(), href)
+  const isActive = isActivePath(useCurrentPathname(), href)
 
   return (
     <Link

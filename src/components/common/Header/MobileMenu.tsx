@@ -3,12 +3,12 @@
 import { useLenis } from 'lenis/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { useEffect, useId, useRef, useState } from 'react'
 
 import mobileMenuIcon from '@/assets/images/mobile-menu.svg'
 import { RecruitApplyLink } from '@/components/common/RecruitApplyLink'
 import type { RecruitPhase } from '@/constants/recruit'
+import useCurrentPathname from '@/hooks/useCurrentPathname'
 import { cn } from '@/utils/cn'
 
 import { isActivePath, NAVIGATION } from './navigation'
@@ -28,7 +28,7 @@ export default function MobileMenu({ recruitPhase }: MobileMenuProps) {
   const panelRef = useRef<HTMLDivElement>(null)
 
   const lenis = useLenis()
-  const pathname = usePathname()
+  const pathname = useCurrentPathname()
   const panelId = useId()
 
   const closeMenu = () => setIsOpen(false)
