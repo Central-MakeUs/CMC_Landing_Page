@@ -108,7 +108,7 @@ export default function HeroSequence({ title, cta }: HeroSequenceProps) {
 
       <div
         className={cn(
-          'absolute inset-0 hidden bg-black opacity-0 md:block',
+          'absolute inset-0 bg-black opacity-0',
           isRevealed && 'opacity-50 motion-safe:animate-[hero-overlay-in_1100ms_cubic-bezier(0.22,1,0.36,1)_both]',
         )}
       />
@@ -122,7 +122,7 @@ export default function HeroSequence({ title, cta }: HeroSequenceProps) {
           aria-hidden={!isRevealed}
           inert={!isRevealed}
           className={cn(
-            'mt-8 hidden opacity-0 md:mt-12 md:block',
+            'mt-8 opacity-0 md:mt-12',
             isRevealed
               ? 'pointer-events-auto opacity-100 motion-safe:animate-[hero-cta-in_700ms_cubic-bezier(0.22,1,0.36,1)_1000ms_both]'
               : 'pointer-events-none',
