@@ -70,6 +70,7 @@ export default function MobileMenu({ recruitPhase }: MobileMenuProps) {
         aria-controls={panelId}
         className="-mr-2 p-2 md:hidden"
       >
+        {/* SVG 아이콘은 원본 벡터로 제공한다. */}
         <Image src={mobileMenuIcon} width={24} height={24} alt="" loading="eager" unoptimized />
       </button>
 
@@ -77,7 +78,8 @@ export default function MobileMenu({ recruitPhase }: MobileMenuProps) {
         ref={panelRef}
         id={panelId}
         className={cn(
-          'absolute inset-x-0 top-full flex flex-col items-center gap-7 bg-linear-to-b/srgb from-blue-400 to-blue-350 py-9.5 md:hidden',
+          // Figma 배경은 256px이며 그라데이션 끝점은 y=313.344px(122.4%)이다.
+          'absolute inset-x-0 top-full flex flex-col items-center gap-7 bg-linear-to-b/srgb from-blue-400 to-blue-350 to-[122.4%] pt-9.5 pb-11 md:hidden',
           // 닫힌 동안은 invisible이라 Tab 이동과 스크린리더에서 빠진다. 닫힐 때도 transition이 끝난 뒤 숨는다.
           'transition-[opacity,translate,visibility] duration-200 ease-out motion-reduce:transition-none',
           isOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0',
@@ -106,6 +108,7 @@ export default function MobileMenu({ recruitPhase }: MobileMenuProps) {
 
         <RecruitApplyLink
           initialPhase={recruitPhase}
+          compactLabel
           onClick={closeMenu}
           className="rounded-[5px] bg-white px-3.75 py-1.25 text-base leading-6 font-semibold tracking-[-0.02em] text-navy-900"
         />

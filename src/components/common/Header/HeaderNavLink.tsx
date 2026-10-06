@@ -17,11 +17,7 @@ export default function HeaderNavLink({ href, label }: HeaderNavLinkProps) {
 
   return (
     <Link
-      className={
-        isActive
-          ? 'text-white header-light:text-navy-900'
-          : 'text-blue-200 transition-colors hover:text-white focus-visible:text-white header-light:text-gray-500 header-light:hover:text-navy-900 header-light:focus-visible:text-navy-900'
-      }
+      className={isActive ? 'text-white' : 'text-blue-200 transition-colors hover:text-white focus-visible:text-white'}
       href={href}
       aria-current={isActive ? 'page' : undefined}
     >

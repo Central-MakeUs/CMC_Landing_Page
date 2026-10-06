@@ -28,12 +28,7 @@ export default function HeaderLogoLink() {
   }
 
   return (
-    <Link
-      href={ROUTES.home}
-      onClick={handleClick}
-      aria-label="CMC 홈"
-      className="text-blue-50 md:header-light:text-gray-900"
-    >
+    <Link href={ROUTES.home} onClick={handleClick} aria-label="CMC 홈" className="text-white">
       <CmcLogo className="size-6 md:size-7.5" />
     </Link>
   )
