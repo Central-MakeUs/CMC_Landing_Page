@@ -12,17 +12,20 @@ export type RecruitPhase = 'BEFORE' | 'OPEN' | 'CLOSED'
 export const RECRUIT_CTA = {
   BEFORE: {
     label: `${GENERATION}기 사전 예약하기`,
+    shortLabel: '사전 예약하기',
     url: 'https://forms.gle/vXfBWMSXBfQFUXKq5',
   },
   OPEN: {
     label: `${GENERATION}기 지원하기`,
+    shortLabel: '지원하기',
     url: 'https://forms.gle/pChkSLmiVMzam2La8',
   },
   CLOSED: {
     label: `${NEXT_GENERATION}기 사전 예약하기`,
+    shortLabel: '사전 예약하기',
     url: 'https://forms.gle/96WLHBW7Zkgp85K26',
   },
-} as const satisfies Record<RecruitPhase, { label: string; url: string }>
+} as const satisfies Record<RecruitPhase, { label: string; shortLabel: string; url: string }>
 
 export interface ChallengerValue {
   title: string

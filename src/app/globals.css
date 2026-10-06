@@ -1,12 +1,6 @@
 @import 'tailwindcss';
 
 /*
- * 헤더가 밝은 배경 위에 있을 때만 적용되는 variant. 예: `header-light:text-navy-900`
- * HeaderShell이 스크롤 위치에 따라 <header data-header-theme="light|dark">를 바꾼다.
- */
-@custom-variant header-light (&:where(header[data-header-theme='light'] *));
-
-/*
  * 디자인 토큰
  * 20기 리브랜딩 Figma가 확정되면 이 값을 교체한다. (현재는 19기 팔레트 일부를 임시로 사용)
  * 색 토큰은 쓰이는 곳이 아니라 색 자체로 이름 짓는다(gray-900, blue-50). 숫자가 클수록 어둡다.
@@ -54,7 +48,7 @@
   --blue-300: #bcd6fa;
   --blue-350: #a6d3fb;
   --blue-375: #91c1f8;
-  --blue-400: #62a6f4;
+  --blue-400: #63a6f4;
   --blue-600: #1f62d0;
 
   --background: var(--white);

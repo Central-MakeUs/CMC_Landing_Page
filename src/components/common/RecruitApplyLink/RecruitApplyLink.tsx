@@ -9,15 +9,22 @@ import { ROUTES } from '@/lib/site'
 interface RecruitApplyLinkProps extends Omit<ComponentProps<'a'>, 'href'> {
   initialPhase: RecruitPhase
   labelPrefix?: string
+  compactLabel?: boolean
 }
 
-export default function RecruitApplyLink({ initialPhase, labelPrefix, children, ...props }: RecruitApplyLinkProps) {
+export default function RecruitApplyLink({
+  initialPhase,
+  labelPrefix,
+  compactLabel = false,
+  children,
+  ...props
+}: RecruitApplyLinkProps) {
   const phase = useRecruitPhase(initialPhase)
 
   return (
     <a {...props} href={ROUTES.apply} target="_blank" rel="noopener noreferrer">
       {labelPrefix}
-      {RECRUIT_CTA[phase].label}
+      {compactLabel ? RECRUIT_CTA[phase].shortLabel : RECRUIT_CTA[phase].label}
       {children}
       <span className="sr-only">(새 창)</span>
     </a>
