@@ -68,7 +68,7 @@ export default function MobileMenu({ recruitPhase }: MobileMenuProps) {
         aria-label={isOpen ? '메뉴 닫기' : '메뉴 열기'}
         aria-expanded={isOpen}
         aria-controls={panelId}
-        className="-mr-2 p-2 md:hidden"
+        className="-mr-2 cursor-pointer p-2 md:hidden"
       >
         {/* SVG 아이콘은 원본 벡터로 제공한다. */}
         <Image src={mobileMenuIcon} width={24} height={24} alt="" loading="eager" unoptimized />
