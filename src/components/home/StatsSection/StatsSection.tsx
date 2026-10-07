@@ -2,6 +2,8 @@ import { SectionHeading } from '@/components/common/SectionHeading'
 import { STATS } from '@/constants/stats'
 import { cn } from '@/utils/cn'
 
+import StatCount from './StatCount'
+
 const mutedTextClassName = 'text-sm leading-[25.6px] tracking-[-0.384px] text-gray-300 lg:text-base'
 
 // 칸 사이 세로 구분선
@@ -38,7 +40,10 @@ export default function StatsSection() {
               >
                 <dt className={mutedTextClassName}>{label}</dt>
                 <dd className="flex items-center gap-1 font-numeric text-white">
-                  <strong className="text-[52px] leading-18 font-extrabold lg:text-[60px]">{value}</strong>
+                  <StatCount
+                    value={value}
+                    className="text-[52px] leading-18 font-extrabold tabular-nums lg:text-[60px]"
+                  />
                   <span className="text-sm leading-[19.6px] font-semibold">{unit}</span>
                 </dd>
               </div>
