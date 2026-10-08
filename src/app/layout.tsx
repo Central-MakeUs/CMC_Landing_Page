@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata, Viewport } from 'next'
 import { Poppins } from 'next/font/google'
 
@@ -5,7 +6,7 @@ import { Footer } from '@/components/common/Footer'
 import { Header } from '@/components/common/Header'
 import { ScrollReveal } from '@/components/common/ScrollReveal'
 import { SmoothScroll } from '@/components/common/SmoothScroll'
-import { INSTAGRAM_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
+import { GA_MEASUREMENT_ID, INSTAGRAM_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
 
 import 'lenis/dist/lenis.css'
 import './globals.css'
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: { card: 'summary_large_image', title: SITE_NAME, description: SITE_DESCRIPTION },
   // TODO: Search Console / 네이버 서치어드바이저 등록 후 인증 값 추가
-  // verification: { google: '', other: { 'naver-site-verification': '' } },
+  verification: { google: 'S0mWlzomfxtwom_1Ezlb7xLVEtcwJWooIoXNsXWeiWg', other: { 'naver-site-verification': '' } },
 }
 
 export const viewport: Viewport = {
@@ -42,6 +43,9 @@ export const viewport: Viewport = {
 
 // 모집 단계가 바뀌어도 재배포 없이 최대 1시간 안에 CTA 문구가 반영되도록 HTML을 다시 만든다.
 export const revalidate = 3600
+
+// Preview와 로컬 방문이 통계에 섞이지 않도록 Production 배포에서만 수집한다.
+const isProduction = process.env.VERCEL_ENV === 'production'
 
 const jsonLd = [
   {
@@ -87,6 +91,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
         </SmoothScroll>
         <ScrollReveal />
       </body>
+      {isProduction && <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />}
     </html>
   )
 }

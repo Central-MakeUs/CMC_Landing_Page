@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
     // 최적화 결과를 31일간 캐시한다. 같은 경로의 이미지를 교체할 때는 파일명도 바꾼다.
     minimumCacheTTL: 60 * 60 * 24 * 31,
   },
+  async redirects() {
+    // 19기의 FAQ 페이지는 20기에서 모집 안내의 FAQ 섹션으로 합쳤다.
+    return [{ source: '/faq', destination: '/recruit#faq', permanent: true }]
+  },
 }
 
 export default nextConfig
