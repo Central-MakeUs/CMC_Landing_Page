@@ -3,6 +3,7 @@ export const SITE_NAME = 'CMC'
 export const SITE_DESCRIPTION = '우리만의 룰을 세워 세상을 바꾸는 조직, CMC'
 export const INSTAGRAM_URL = 'https://www.instagram.com/cmc__official/'
 export const LINKEDIN_URL = 'https://www.linkedin.com/company/central-makeus-challenge-cmc/'
+export const GA_MEASUREMENT_ID = 'G-F5BRH8W3GQ'
 
 // 최종 OG 이미지가 나오면 파일과 URL을 함께 교체한다.
 export const OG_IMAGE = { url: '/opengraph-image', width: 1200, height: 630, alt: SITE_NAME }

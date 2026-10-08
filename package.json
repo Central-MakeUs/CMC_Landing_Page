@@ -26,6 +26,7 @@
     "*.{css,json,md,yml,yaml}": "prettier --write"
   },
   "dependencies": {
+    "@next/third-parties": "16.3.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",
