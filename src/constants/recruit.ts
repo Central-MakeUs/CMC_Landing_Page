@@ -128,7 +128,7 @@ export interface RecruitmentStep {
 
 export const APPLICATION_STEP = {
   title: '서류접수',
-  start: '2026-10-12',
+  start: '2026-10-09',
   end: '2026-10-23',
   note: '자정 전까지 제출',
 } as const satisfies RecruitmentStep
