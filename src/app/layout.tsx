@@ -33,7 +33,10 @@ export const metadata: Metadata = {
   },
   twitter: { card: 'summary_large_image', title: SITE_NAME, description: SITE_DESCRIPTION },
   // TODO: Search Console / 네이버 서치어드바이저 등록 후 인증 값 추가
-  verification: { google: 'S0mWlzomfxtwom_1Ezlb7xLVEtcwJWooIoXNsXWeiWg', other: { 'naver-site-verification': '' } },
+  verification: {
+    google: 'S0mWlzomfxtwom_1Ezlb7xLVEtcwJWooIoXNsXWeiWg',
+    other: { 'naver-site-verification': '25f8ac35ca7f9516426c622ece6e23cf38b55f67' },
+  },
 }
 
 export const viewport: Viewport = {
