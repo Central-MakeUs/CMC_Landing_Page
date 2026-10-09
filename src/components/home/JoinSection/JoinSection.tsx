@@ -12,7 +12,7 @@ export default function JoinSection() {
       data-header-theme="dark"
       id="join"
       aria-labelledby="join-title"
-      className="bg-[radial-gradient(ellipse_50%_50%_at_center,rgb(255_255_255/2%)_0%,transparent_100%),linear-gradient(180deg,var(--navy-800)_0%,var(--navy-975)_100%)] px-5 py-25 md:px-10 xl:px-30 xl:py-40"
+      className="bg-[radial-gradient(ellipse_50%_50%_at_center,rgb(255_255_255/2%)_0%,transparent_100%),linear-gradient(180deg,var(--navy-800)_0%,var(--navy-975)_100%)] px-5 py-20 md:px-10 md:py-25 xl:px-30 xl:py-40"
     >
       <div className="mx-auto flex w-full max-w-300 flex-col items-center gap-20">
         <div className="flex flex-col items-center gap-8">

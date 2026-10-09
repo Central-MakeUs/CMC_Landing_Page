@@ -16,7 +16,7 @@ export default function StatsSection() {
       data-header-theme="dark"
       id="stats"
       aria-labelledby="stats-title"
-      className="bg-navy-975 px-5 py-25 text-white lg:py-50"
+      className="bg-navy-975 px-5 py-20 text-white md:py-25 lg:py-50"
     >
       <div className="mx-auto flex w-full max-w-300 flex-col items-center gap-8">
         <SectionHeading

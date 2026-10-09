@@ -19,7 +19,7 @@ export default function PartnersSection() {
       data-header-theme="light"
       id="partners"
       aria-labelledby="partners-title"
-      className="bg-gray-50 px-5 py-25 xl:px-20 xl:py-40"
+      className="bg-gray-50 px-5 py-20 md:py-25 xl:px-20 xl:py-40"
     >
       <div className="mx-auto flex w-full max-w-300 flex-col items-start gap-12">
         <SectionHeading

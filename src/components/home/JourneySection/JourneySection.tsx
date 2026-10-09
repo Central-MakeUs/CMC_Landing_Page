@@ -9,7 +9,7 @@ export default function JourneySection() {
       data-header-theme="light"
       id="journey"
       aria-labelledby="journey-title"
-      className="bg-white px-5 py-25 xl:py-30"
+      className="bg-white px-5 py-20 md:py-25 xl:py-30"
     >
       <div className="mx-auto flex w-full max-w-300 flex-col items-start">
         <SectionHeading
