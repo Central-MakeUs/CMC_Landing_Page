@@ -26,7 +26,7 @@ export default function RolesSection() {
       data-header-theme="light"
       id="roles"
       aria-labelledby="roles-title"
-      className="bg-white px-5 py-25 lg:py-50"
+      className="bg-white px-5 py-20 md:py-25 lg:py-50"
     >
       <div className="mx-auto flex w-full max-w-237.5 flex-col items-center gap-8">
         <div className="flex flex-col items-center gap-1.5 text-center lg:gap-2.5">

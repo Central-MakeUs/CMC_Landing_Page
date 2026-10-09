@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 
 import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion'
 
-/** 영상이 재생되지 않는 환경(로딩 지연·실패)에서 콘텐츠를 보여주기까지 기다리는 시간 */
+/** 재생 시작 또는 버퍼링을 기다리는 최대 시간. 재생이 이어지면 타이머를 취소한다. */
 const NO_PLAYBACK_REVEAL_DELAY = 2000
 
 type HeroVideoProps = Readonly<{
@@ -16,6 +16,7 @@ type HeroVideoProps = Readonly<{
  * Hero 배경 영상. 한 번만 재생하고 마지막 프레임에서 멈춘다.
  * - 재생이 시작되면 영상이 끝날 때(ended) 콘텐츠를 보여준다.
  * - 재생이 시작되지 않으면 NO_PLAYBACK_REVEAL_DELAY 뒤에 보여준다.
+ * - 재생 도중 버퍼링이 같은 시간 이상 지속되면 콘텐츠를 보여준다.
  * - poster 속성을 쓰지 않는다. 첫 프레임 전까지 투명해서 뒤에 깔린 HeroPoster가 보인다.
  * - 화면 밖에 있으면 멈추고, '동작 줄이기' 설정이면 재생하지 않는다.
  */
@@ -33,26 +34,48 @@ export default function HeroVideo({ onPlaybackComplete }: HeroVideoProps) {
       return
     }
 
-    // JS가 늦게 붙어 ended 이벤트를 놓친 경우
-    if (video.ended) {
+    // JS가 늦게 붙어 종료 또는 오류 이벤트를 놓친 경우
+    if (video.ended || video.error) {
       onPlaybackComplete()
       return
     }
 
-    // 재생이 시작되면 대기 타이머를 취소하고 ended를 기다린다.
-    const fallbackTimer = window.setTimeout(onPlaybackComplete, NO_PLAYBACK_REVEAL_DELAY)
-    const cancelFallback = () => window.clearTimeout(fallbackTimer)
+    let fallbackTimer: number | undefined
+    const cancelFallback = () => {
+      window.clearTimeout(fallbackTimer)
+      fallbackTimer = undefined
+    }
+    const waitForPlayback = () => {
+      // 같은 버퍼링 중 이벤트가 반복돼도 대기 시간을 늘리지 않는다.
+      fallbackTimer ??= window.setTimeout(() => {
+        fallbackTimer = undefined
+        onPlaybackComplete()
+      }, NO_PLAYBACK_REVEAL_DELAY)
+    }
+    const handleBuffering = () => {
+      // 네트워크가 멈춰도 버퍼가 충분하거나 화면 밖에서 일시정지한 경우에는 연출을 유지한다.
+      if (!video.paused && !video.ended && video.readyState < HTMLMediaElement.HAVE_FUTURE_DATA) {
+        waitForPlayback()
+      }
+    }
+
+    waitForPlayback()
     video.addEventListener('playing', cancelFallback)
-    // autoPlay로 하이드레이션 전에 이미 재생 중인 경우
-    if (!video.paused) cancelFallback()
+    video.addEventListener('waiting', handleBuffering)
+    video.addEventListener('stalled', handleBuffering)
+    video.addEventListener('pause', cancelFallback)
+    // autoPlay로 하이드레이션 전에 이미 정상 재생 중인 경우
+    if (!video.paused && video.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA) cancelFallback()
 
     // 화면 밖이면 멈춘다. 이미 끝난 영상은 다시 재생하지 않는다(play()는 끝난 영상을 처음부터 재생한다).
     const observer = new IntersectionObserver(([entry]) => {
       if (video.ended) return
 
       if (entry.isIntersecting) {
+        if (video.paused || video.readyState < HTMLMediaElement.HAVE_FUTURE_DATA) waitForPlayback()
         void video.play().catch(() => onPlaybackComplete())
       } else {
+        cancelFallback()
         video.pause()
       }
     })
@@ -61,6 +84,9 @@ export default function HeroVideo({ onPlaybackComplete }: HeroVideoProps) {
     return () => {
       cancelFallback()
       video.removeEventListener('playing', cancelFallback)
+      video.removeEventListener('waiting', handleBuffering)
+      video.removeEventListener('stalled', handleBuffering)
+      video.removeEventListener('pause', cancelFallback)
       observer.disconnect()
     }
   }, [onPlaybackComplete, shouldReduceMotion])

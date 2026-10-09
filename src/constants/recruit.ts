@@ -164,10 +164,10 @@ export const SESSION_SCHEDULE: readonly Session[] = [
   { week: 5, title: '기획안 최종 발표 및 팀매칭', start: '2026-12-19' },
   { week: 6, title: '디자인 GUI 세션', start: '2027-01-09' },
   { week: 7, title: '1차 모각작: UT', start: '2027-01-16' },
-  { week: 8, title: '2차 모각작', start: '2027-02-13' },
-  { week: 9, title: '런칭데이', start: '2027-02-27' },
-  { week: 10, title: '데모데이', start: '2027-03-06' },
-  { week: 11, title: '종무식', start: '2027-03-13' },
+  { week: 8, title: '2차 모각작', start: '2027-01-30' },
+  { week: 9, title: '런칭데이', start: '2027-02-13' },
+  { week: 10, title: '데모데이', start: '2027-02-20' },
+  { week: 11, title: '종무식', start: '2027-02-27' },
 ]
 
 export interface FaqItem {

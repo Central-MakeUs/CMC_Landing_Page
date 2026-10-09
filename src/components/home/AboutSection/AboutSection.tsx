@@ -17,7 +17,7 @@ export default function AboutSection() {
       data-header-theme="light"
       id="about"
       aria-labelledby="about-title"
-      className="bg-white px-5 py-25 lg:py-50"
+      className="bg-white px-5 py-20 md:py-25 lg:py-50"
     >
       <div className="mx-auto flex w-full max-w-275 flex-col items-center gap-15 lg:gap-20">
         <SectionHeading
