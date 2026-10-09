@@ -11,8 +11,15 @@ export default function RecruitIntroSection() {
       aria-labelledby="recruit-title"
       className="relative isolate flex items-center justify-center overflow-hidden bg-linear-to-b/srgb from-blue-400 to-blue-300 px-5 py-25 text-center md:pt-40 lg:py-50"
     >
-      {/* 이미지에 30% 투명도가 들어 있어서 그라디언트 위에 그대로 겹친다. */}
-      <Image src={recruitBg} alt="" fill sizes="100vw" fetchPriority="high" className="-z-10 object-cover" />
+      {/* 원본 alpha는 76/255(약 30%). 모바일 시안의 10%에 맞춰 보정하고 웹은 기존 값을 유지한다. */}
+      <Image
+        src={recruitBg}
+        alt=""
+        fill
+        sizes="100vw"
+        fetchPriority="high"
+        className="-z-10 object-cover opacity-[calc(0.1*255/76)] md:opacity-100"
+      />
       <div className="flex flex-col items-center gap-1.5 lg:gap-2.5">
         <SectionHeading
           as="h1"

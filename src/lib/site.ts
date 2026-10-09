@@ -1,12 +1,18 @@
 export const SITE_URL = 'https://cmc.neordinary.com'
 export const SITE_NAME = 'CMC'
-export const SITE_DESCRIPTION = '우리만의 룰을 세워 세상을 바꾸는 조직, CMC'
+export const SITE_FULL_NAME = 'Central Makeus Challenge'
+export const SITE_DESCRIPTION =
+  'CMC는 3개월 안에 아이디어의 시장성을 검증하고 수익형 앱을 개발해 실제 출시까지 완주하는 IT 연합동아리입니다. 활동 소개, 기수별 프로젝트와 모집 안내를 확인하세요.'
 export const INSTAGRAM_URL = 'https://www.instagram.com/cmc__official/'
 export const LINKEDIN_URL = 'https://www.linkedin.com/company/central-makeus-challenge-cmc/'
 export const GA_MEASUREMENT_ID = 'G-F5BRH8W3GQ'
 
-// 최종 OG 이미지가 나오면 파일과 URL을 함께 교체한다.
-export const OG_IMAGE = { url: '/opengraph-image', width: 1200, height: 630, alt: SITE_NAME }
+export const OG_IMAGE = {
+  url: '/opengraph-image',
+  width: 1200,
+  height: 630,
+  alt: `${SITE_NAME} | ${SITE_FULL_NAME}`,
+}
 
 // 기존 홈페이지와 URL 경로를 맞춘다. sitemap과 내부 링크도 이 값을 사용한다.
 export const ROUTES = {

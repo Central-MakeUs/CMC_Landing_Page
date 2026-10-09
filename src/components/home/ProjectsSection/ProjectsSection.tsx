@@ -12,7 +12,7 @@ export default function ProjectsSection() {
       data-header-theme="light"
       id="projects"
       aria-labelledby="projects-title"
-      className="flex flex-col items-center gap-10 bg-gray-50 px-5 py-25 xl:gap-16 xl:px-0 xl:py-40"
+      className="flex flex-col items-center gap-10 bg-gray-50 px-5 py-20 md:py-25 xl:gap-16 xl:px-0 xl:py-40"
     >
       <SectionHeading
         reveal

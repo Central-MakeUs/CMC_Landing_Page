@@ -18,6 +18,8 @@ type HeroSequenceProps = Readonly<{
 const WHEEL_QUIET = 200
 /** 첫 휠 뒤 슬로건이 자리 잡을 때까지 스크롤을 유지하는 최소 시간 */
 const MIN_LOCK = 600
+/** JS가 꺼져 있으면 초기 HTML의 문구·버튼·배경 오버레이를 그대로 보여준다. */
+const HIDDEN_WHILE_SCRIPTING = '[@media(scripting:enabled)]:opacity-0'
 
 export default function HeroSequence({ title, cta }: HeroSequenceProps) {
   const [isRevealed, setIsRevealed] = useState(false)
@@ -108,24 +110,24 @@ export default function HeroSequence({ title, cta }: HeroSequenceProps) {
 
       <div
         className={cn(
-          'absolute inset-0 bg-black opacity-0',
-          isRevealed && 'opacity-50 motion-safe:animate-[hero-overlay-in_1100ms_cubic-bezier(0.22,1,0.36,1)_both]',
+          'absolute inset-0 bg-black opacity-50',
+          isRevealed
+            ? 'motion-safe:animate-[hero-overlay-in_1100ms_cubic-bezier(0.22,1,0.36,1)_both]'
+            : HIDDEN_WHILE_SCRIPTING,
         )}
       />
 
       <div className="absolute inset-x-0 top-[33.4%] z-10 flex flex-col items-center px-5 text-center text-white">
-        <div data-hero-revealed={isRevealed || undefined} className={cn('opacity-0', isRevealed && 'opacity-100')}>
+        <div data-hero-revealed={isRevealed || undefined} className={cn(!isRevealed && HIDDEN_WHILE_SCRIPTING)}>
           {title}
         </div>
 
         <div
-          aria-hidden={!isRevealed}
-          inert={!isRevealed}
           className={cn(
-            'mt-8 opacity-0 md:mt-12',
+            'mt-8 md:mt-12',
             isRevealed
-              ? 'pointer-events-auto opacity-100 motion-safe:animate-[hero-cta-in_700ms_cubic-bezier(0.22,1,0.36,1)_1000ms_both]'
-              : 'pointer-events-none',
+              ? 'motion-safe:animate-[hero-cta-in_700ms_cubic-bezier(0.22,1,0.36,1)_1000ms_both]'
+              : cn(HIDDEN_WHILE_SCRIPTING, '[@media(scripting:enabled)]:invisible'),
           )}
         >
           {cta}
