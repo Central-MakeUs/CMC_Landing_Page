@@ -9,7 +9,7 @@ import { createPageMetadata } from '@/lib/metadata'
 import { ROUTES } from '@/lib/site'
 import { formatDateWithWeekday, formatMonthDayWithWeekday } from '@/utils/date'
 
-const TITLE = `${GENERATION}기 모집 안내`
+const TITLE = `${GENERATION}기 모집 · 지원 자격과 활동 일정`
 const DESCRIPTION = `CMC ${GENERATION}기 서류접수 ${formatDateWithWeekday(APPLICATION_STEP.start)}~${formatMonthDayWithWeekday(APPLICATION_STEP.end)}. 모집 일정, 지원 자격, 정규 세션 일정과 FAQ를 확인하세요.`
 
 export const metadata = createPageMetadata({ title: TITLE, description: DESCRIPTION, path: ROUTES.recruit })

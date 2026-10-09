@@ -6,7 +6,15 @@ import { Footer } from '@/components/common/Footer'
 import { Header } from '@/components/common/Header'
 import { ScrollReveal } from '@/components/common/ScrollReveal'
 import { SmoothScroll } from '@/components/common/SmoothScroll'
-import { GA_MEASUREMENT_ID, INSTAGRAM_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site'
+import {
+  GA_MEASUREMENT_ID,
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+  SITE_DESCRIPTION,
+  SITE_FULL_NAME,
+  SITE_NAME,
+  SITE_URL,
+} from '@/lib/site'
 
 import 'lenis/dist/lenis.css'
 import './globals.css'
@@ -32,7 +40,6 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
   },
   twitter: { card: 'summary_large_image', title: SITE_NAME, description: SITE_DESCRIPTION },
-  // TODO: Search Console / 네이버 서치어드바이저 등록 후 인증 값 추가
   verification: {
     google: 'S0mWlzomfxtwom_1Ezlb7xLVEtcwJWooIoXNsXWeiWg',
     other: { 'naver-site-verification': '25f8ac35ca7f9516426c622ece6e23cf38b55f67' },
@@ -55,17 +62,18 @@ const jsonLd = [
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: SITE_NAME,
+    alternateName: SITE_FULL_NAME,
     url: SITE_URL,
   },
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: SITE_NAME,
+    alternateName: SITE_FULL_NAME,
     url: SITE_URL,
-    // TODO: 리브랜딩 로고가 확정되면 PNG 또는 WebP 경로로 교체
-    logo: `${SITE_URL}/favicon.ico`,
+    logo: `${SITE_URL}/images/cmc-logo.png`,
     description: SITE_DESCRIPTION,
-    sameAs: [INSTAGRAM_URL],
+    sameAs: [INSTAGRAM_URL, LINKEDIN_URL],
   },
 ]
 

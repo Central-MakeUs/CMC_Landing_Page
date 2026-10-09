@@ -2,8 +2,9 @@ import { ProjectGallery } from '@/components/project/ProjectGallery'
 import { createPageMetadata } from '@/lib/metadata'
 import { ROUTES } from '@/lib/site'
 
-const TITLE = '프로젝트'
-const DESCRIPTION = 'CMC 챌린저들이 기획부터 런칭까지 완주한 기수별 프로젝트를 소개합니다.'
+const TITLE = '기수별 프로젝트 · 출시 서비스'
+const DESCRIPTION =
+  'IT 연합동아리 CMC 챌린저들이 기획부터 런칭까지 완주한 기수별 프로젝트를 소개합니다. 서비스별 소개와 출시 링크를 확인하세요.'
 
 export const metadata = createPageMetadata({ title: TITLE, description: DESCRIPTION, path: ROUTES.project })
 
