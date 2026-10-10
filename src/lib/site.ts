@@ -11,7 +11,7 @@ export const OG_IMAGE = {
   url: '/opengraph-image.png',
   width: 1200,
   height: 630,
-  alt: 'PICK YOUR POSSIBILITY IN CMC — CMC 20th, Starting October 12, 2026',
+  alt: 'PICK YOUR POSSIBILITY IN CMC — CMC 20th',
 }
 
 // 기존 홈페이지와 URL 경로를 맞춘다. sitemap과 내부 링크도 이 값을 사용한다.
