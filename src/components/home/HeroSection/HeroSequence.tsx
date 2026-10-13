@@ -33,7 +33,7 @@ export default function HeroSequence({ title, cta }: HeroSequenceProps) {
     setIsRevealed(true)
   }, [])
 
-  const handlePlaybackComplete = useCallback(() => {
+  const handleRevealReady = useCallback(() => {
     revealContent()
     releaseScrollRef.current()
   }, [revealContent])
@@ -106,7 +106,7 @@ export default function HeroSequence({ title, cta }: HeroSequenceProps) {
 
   return (
     <>
-      <HeroVideo onPlaybackComplete={handlePlaybackComplete} />
+      <HeroVideo onRevealReady={handleRevealReady} />
 
       <div
         className={cn(
