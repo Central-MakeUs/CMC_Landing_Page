@@ -2,6 +2,7 @@ import gridge from '@/assets/images/partner-gridge.webp'
 import softSquared from '@/assets/images/partner-soft-squared.webp'
 import computerScienceSenior from '@/assets/images/partner-computer-science-senior.webp'
 import neordinary from '@/assets/images/partner-neordinary.webp'
+import dawalAi from '@/assets/images/partner-dawal-ai.webp'
 import { SectionHeading } from '@/components/common/SectionHeading'
 
 import PartnerCard from './PartnerCard'
@@ -11,6 +12,7 @@ const PARTNERS = [
   { name: 'Soft Squared', image: softSquared },
   { name: '컴공선배', image: computerScienceSenior },
   { name: 'Ne(o)rdinary', image: neordinary },
+  { name: 'dawal.ai', image: dawalAi, zoomImage: true },
 ]
 
 export default function PartnersSection() {
@@ -31,8 +33,8 @@ export default function PartnersSection() {
           title="CMC의 여정에 함께하는 파트너"
         />
 
-        {/* 2열 → md: 4열(140px) → lg: 4열(220px) */}
-        <ul className="grid w-full grid-cols-[repeat(2,max-content)] justify-center gap-5 md:grid-cols-[repeat(4,max-content)] lg:gap-6.5">
+        {/* 2열 → md: 4열 → xl: 가용 너비에 맞춘 5열 */}
+        <ul className="grid w-full grid-cols-[repeat(2,max-content)] justify-start gap-5 md:grid-cols-[repeat(4,max-content)] md:justify-center lg:gap-6.5 xl:grid-cols-5">
           {PARTNERS.map((partner) => (
             <PartnerCard key={partner.name} {...partner} />
           ))}
