@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: { card: 'summary_large_image', title: SITE_NAME, description: SITE_DESCRIPTION },
   verification: {
-    google: 'S0mWlzomfxtwom_1Ezlb7xLVEtcwJWooIoXNsXWeiWg',
+    google: ['S0mWlzomfxtwom_1Ezlb7xLVEtcwJWooIoXNsXWeiWg', 'yw16ALPiLDFJyH46afA7H9_KwpLeLXOMt9r7tyPxJII'],
     other: { 'naver-site-verification': '25f8ac35ca7f9516426c622ece6e23cf38b55f67' },
   },
 }
